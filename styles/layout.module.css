@@ -24,7 +24,6 @@
 .menu {
   font-weight: 600;
   margin: var(--spacing) 0;
-
 }
 
 .menu ul {
@@ -83,7 +82,6 @@
 }
 
 @media (min-width: 1630px) {
-
   .header,
   .main,
   .footer {

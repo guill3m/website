@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-import styles from '../styles/layout.module.css'
+import styles from '../styles/Layout.module.css'
 
 interface LayoutProps {
   children: React.ReactNode,
