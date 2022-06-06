@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:ci": "git clone git@github.com:guill3m/private-assets.git && next build",
+    "build:ci": "sh ./build-ci.sh",
     "start": "next start",
     "lint": "next lint",
     "format": "next lint --fix"
