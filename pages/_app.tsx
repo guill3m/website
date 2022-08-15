@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+
 import Layout from '../components/Layout'
 
 import '../styles/font-face.css'
@@ -10,6 +11,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover' />
+        <title>Guillem Andreu</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

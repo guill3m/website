@@ -1,6 +1,7 @@
 const contentSecurityPolicy = `
   default-src 'self';
   font-src assets.guillemandreu.com;
+  img-src 'self' assets.guillemandreu.com;
 `
 
 const securityHeaders = [
