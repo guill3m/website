@@ -3,13 +3,13 @@ import React from 'react'
 
 import styles from '../styles/components/Layout.module.css'
 
-interface LayoutProps {
+interface LayoutInterface {
   children: React.ReactNode,
 }
 
 function Layout ({
   children,
-}: LayoutProps) {
+}: LayoutInterface) {
   const year = (new Date()).getFullYear()
 
   return (
