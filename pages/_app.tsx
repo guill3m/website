@@ -6,8 +6,8 @@ import Layout from '../components/Layout'
 import Link from '../components/Link'
 import linkResolver from '../lib/linkResolver'
 
-import 'styles/font-face.css'
-import 'styles/globals.css'
+import '../styles/font-face.css'
+import '../styles/globals.css'
 
 const richTextComponents : JSXMapSerializer = {
   hyperlink: ({ node, children, ...rest }) => (
