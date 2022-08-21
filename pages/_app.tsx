@@ -2,9 +2,9 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { JSXMapSerializer, PrismicProvider } from '@prismicio/react'
 
-import Layout from 'components/Layout'
-import Link from 'components/Link'
-import linkResolver from 'lib/linkResolver'
+import Layout from '../components/Layout'
+import Link from '../components/Link'
+import linkResolver from '../lib/linkResolver'
 
 import 'styles/font-face.css'
 import 'styles/globals.css'
