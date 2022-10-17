@@ -15,25 +15,19 @@ function Layout ({
   return (
     <>
       <header className={styles.header}>
-        <Link href='/'>
-          <a className={styles.logo}>Guillem Andreu.</a>
+        <Link href='/' className={styles.logo}>
+          Guillem Andreu.
         </Link>
         <nav className={styles.menu}>
           <ul>
             <li>
-              <Link href='/about/'>
-                <a>About me.</a>
-              </Link>
+              <Link href='/about/'>About me.</Link>
             </li>
             <li>
-              <Link href='/work/'>
-                <a>My work.</a>
-              </Link>
+              <Link href='/work/'>My work.</Link>
             </li>
             <li>
-              <Link href='/contact/'>
-                <a>Contact.</a>
-              </Link>
+              <Link href='/contact/'>Contact.</Link>
             </li>
           </ul>
         </nav>
@@ -46,10 +40,10 @@ function Layout ({
           <strong>© {year} Guillem Andreu Muñoz.</strong>
           {' '}
           <Link href='/privacy-policy/'>
-            <a>Privacy policy.</a>
+            Privacy policy.
           </Link>
         </p>
-        <p>Designed and developed by me. Text set with <a href='https://brandingwithtype.com/typefaces/bw-darius' target='_blank' rel='noopener noreferrer nofollow'>Bw Darius</a> and <a href='https://www.atipofoundry.com/fonts/geomanist' target='_blank' rel='noopener noreferrer nofollow'>Geomanist</a>.</p>
+        <p>Designed and developed by me. Text set with <Link href='https://brandingwithtype.com/typefaces/bw-darius'>Bw Darius</Link> and <Link href='https://www.atipofoundry.com/fonts/geomanist'>Geomanist</Link>.</p>
       </footer>
     </>
   )

@@ -5,11 +5,13 @@ import { UrlObject } from 'url'
 interface LinkInterface {
   children: ReactNode,
   href: UrlObject | string | undefined,
+  target: string | undefined,
 }
 
 function Link ({
   children,
   href,
+  target,
   ...rest
 }: LinkInterface) {
   if (!href) {
@@ -18,9 +20,22 @@ function Link ({
     )
   }
 
+  if (typeof href === 'string' && href.startsWith('https://')) {
+    return (
+      <a
+        href={href}
+        rel='noopener noreferrer nofollow'
+        target={target || '_blank'}
+        {...rest}
+      >
+        {children}
+      </a>
+    )
+  }
+
   return (
-    <NextLink href={href}>
-      <a {...rest}>{children}</a>
+    <NextLink href={href} target={target} {...rest}>
+      {children}
     </NextLink>
   )
 }

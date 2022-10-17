@@ -48,13 +48,11 @@ const Home: NextPage = () => {
         <p>
           <strong>Hi. I’m Guillem,</strong> a designer and web developer based in Berlin.
           <br />
-          <Link href='/about/'>
-            <a>More about me</a>
-          </Link>
+          <Link href='/about/'>More about me</Link>
         </p>
       </section>
       <section className={styles.work}>
-        <p>Here are some of the <Link href='/work/'><a>things I make</a></Link>:</p>
+        <p>Here are some of the <Link href='/work/'>things I make</Link>:</p>
       </section>
     </>
   )

@@ -10,18 +10,18 @@
     "format": "next lint --fix"
   },
   "dependencies": {
-    "@prismicio/react": "^2.4.4",
-    "next": "^12.2.5",
+    "@prismicio/react": "^2.5.0",
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@prismicio/types": "^0.2.2",
-    "@types/node": "^18.7.8",
-    "@types/react": "^18.0.17",
+    "@prismicio/types": "^0.2.3",
+    "@types/node": "^18.11.0",
+    "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "eslint": "^8.22.0",
-    "eslint-config-next": "^12.2.5",
-    "typescript": "^4.7.4"
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^12.3.1",
+    "typescript": "^4.8.0"
   }
 }
