@@ -41,7 +41,7 @@
 }
 
 .list span {
-  background: fade-out(var(--color-txt, .25));
+  background: var(--color-txt, .25);
   bottom: 0;
   display: inline-block;
   left: 0;

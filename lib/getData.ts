@@ -1,7 +1,8 @@
 import path from 'path'
 import { readdir, readFile } from 'fs/promises'
 
-import { ProjectInterface, ProjectThumbnailInterface } from '../types/Project'
+import ProjectInterface from '../types/ProjectInterface'
+import ProjectThumbnailInterface from '../types/ProjectThumbnailInterface'
 
 function mapProjectThumbnails (projects: Array<ProjectThumbnailInterface>) : Array<ProjectThumbnailInterface> {
   return projects.map((proj : ProjectThumbnailInterface) : ProjectThumbnailInterface => ({

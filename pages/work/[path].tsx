@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 import { getAllProjectPaths, getProject } from '../../lib/getData'
 import siteMetadata from '../../lib/siteMetadata'
-import { ProjectInterface } from '../../types/Project'
+import ProjectInterface from '../../types/ProjectInterface'
 
 import styles from '../../styles/pages/Project.module.css'
 

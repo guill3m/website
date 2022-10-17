@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { ProjectThumbnailInterface } from '../../types/Project'
+import ProjectThumbnailInterface from '../../types/ProjectThumbnailInterface'
 import ProjectThumbnailList from '../../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../../lib/getData'
 

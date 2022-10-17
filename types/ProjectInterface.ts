@@ -1,6 +1,6 @@
 import { RTTextNode } from '@prismicio/types'
 
-export interface ProjectInterface {
+export default interface ProjectInterface {
   date: {
     month: number,
     year: number,
@@ -8,6 +8,7 @@ export interface ProjectInterface {
   description: [RTTextNode],
   excerpt: string,
   featured: boolean,
+  imageColumns: number,
   images: {
     alt: string,
     src: string,
@@ -19,14 +20,4 @@ export interface ProjectInterface {
   },
   title: string,
   subtitle: string,
-}
-
-export interface ProjectThumbnailInterface {
-  featured: boolean,
-  path: string,
-  thumbnail: {
-    alt: string,
-    src: string,
-  },
-  title: string,
 }
