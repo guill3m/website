@@ -1,0 +1,43 @@
+{
+  "path": "cartoos",
+  "title": "Cartoos",
+  "subtitle": "Design of a Spanish deck of cards",
+  "excerpt": "Spanish deck of cards submitted to Fournier’s 140th anniversary contest. 6th finalist.",
+  "thumbnail": {
+    "alt": "",
+    "src": "/img/website/projects/cartoos-thumbnail.jpg"
+  },
+  "date": {
+    "month": 5,
+    "year": 2008
+  },
+  "featured": false,
+  "description": [
+    {
+      "type": "paragraph",
+      "text": "Fournier is a well known Spanish playing card manufacturer, one of the most important in the world. In 2008, to celebrate their 140th anniversary, they organised a 40 cards Spanish deck design contest.",
+      "spans": [
+        {
+          "start": 0,
+          "end": 8,
+          "type": "hyperlink",
+          "data": {
+            "url": "https://www.nhfournier.es/en/"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is my submission for the aformentioned contest, in which I finalised in 6th position.",
+      "spans": []
+    }
+  ],
+  "imageColumns": 1,
+  "images": [
+    {
+      "alt": "",
+      "src": "/img/website/projects/cartoos-1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "path": "retolar-en-valencia",
+  "title": "Retolar en Valencià",
+  "subtitle": "Promoting the use of the Valencian language in businesses",
+  "excerpt": "Adaptable signage/labeling pack to promote the Valencian language in businesses.",
+  "thumbnail": {
+    "alt": "",
+    "src": "/img/website/projects/retolar-en-valencia-thumbnail.png"
+  },
+  "date": {
+    "month": 12,
+    "year": 2008
+  },
+  "featured": false,
+  "description": [
+    {
+      "type": "paragraph",
+      "text": "To promote the use of the Valencian language, the Plataforma de Normalització Lingüística (Platform for Linguistic Normalization) every year releases an adaptable signage/labeling pack in valencian, aimed to all kind of businesses and spaces. This labeling is then distributed to valencian businesses. This was my proposal for the 2009 edition.",
+      "spans": [
+        {
+          "start": 50,
+          "end": 89,
+          "type": "hyperlink",
+          "data": {
+            "url": "https://www.dival.es/normalitzacio/"
+          }
+        }
+      ]
+    }
+  ],
+  "imageColumns": 1,
+  "images": [
+    {
+      "alt": "",
+      "src": "/img/website/projects/retolar-en-valencia-1.png"
+    }
+  ]
+}
