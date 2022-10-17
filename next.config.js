@@ -9,7 +9,7 @@ const securityHeaders = [
     source: '/:path*',
     headers: [
       {
-        key: 'Content-Security-Policy',
+        key: 'Content-Security-Policy-Report-Only',
         value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
       },
       {
