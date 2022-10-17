@@ -1,11 +1,10 @@
 import { ReactNode } from 'react'
 import NextLink from 'next/link'
-import { UrlObject } from 'url'
 
 interface LinkInterface {
   children: ReactNode,
-  href: UrlObject | string | undefined,
-  target: string | undefined,
+  href: string | null,
+  target?: string,
 }
 
 function Link ({

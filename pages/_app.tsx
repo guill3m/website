@@ -11,8 +11,8 @@ import '../styles/globals.css'
 import siteMetadata from '../lib/siteMetadata'
 
 const richTextComponents : JSXMapSerializer = {
-  hyperlink: ({ node, children, ...rest }) => (
-    <Link href={node?.data?.url} {...rest}>{children}</Link>
+  hyperlink: ({ node, children }) => (
+    <Link href={linkResolver(node?.data)}>{children}</Link>
   ),
 }
 
@@ -24,7 +24,6 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <title>Guillem Andreu</title>
       </Head>
       <PrismicProvider
-        linkResolver={linkResolver}
         richTextComponents={richTextComponents}
       >
         <Layout>
