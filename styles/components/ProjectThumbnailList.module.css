@@ -1,0 +1,55 @@
+.list {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list:hover li {
+  opacity: .5;
+}
+
+.list:hover img {
+  filter: sepia(1);
+}
+
+.list li {
+  flex: 1 0 calc(1/3 * 100% - 2px);
+  margin: 1px;
+  min-width: 225px;
+  position: relative;
+  transition: opacity 256ms var(--cubic-bezier-ease-out);
+}
+
+.list li:hover {
+  opacity: 1;
+  transition-timing-function: var(--cubic-bezier-ease-in);
+}
+
+.list li:hover img {
+  filter: none;
+  transition-timing-function: var(--cubic-bezier-ease-in);
+}
+
+.list img {
+  transition: filter 256ms var(--cubic-bezier-ease-out);
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.list span {
+  background: fade-out(var(--color-txt, .25));
+  bottom: 0;
+  display: inline-block;
+  left: 0;
+  padding: var(--spacing) calc(var(--spacing) * 1.5);
+  position: absolute;
+}
+
+.list a {
+  color: var(--color-bg);
+  text-decoration: none;
+}
