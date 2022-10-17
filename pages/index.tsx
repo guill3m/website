@@ -2,32 +2,33 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import siteMetadata from '../lib/siteMetadata'
+
 import styles from '../styles/pages/Home.module.css'
 
 const Home: NextPage = () => {
-  const metaTitle = 'Guillem Andreu :: Designer and Web Developer'
+  const metaTitle = 'Guillem Andreu - Designer and Web Developer'
   const metaDescription = 'Hi. I’m Guillem, a designer and web developer based in Berlin. This is my Portfolio Website.'
-  const url = 'https://www.guillemandreu.com/'
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: metaTitle,
     alternativeName: 'Guillem Andreu’s Portfolio Website.',
     description: metaDescription,
-    url,
+    url: siteMetadata.url,
     author: {
       '@type': 'Person',
-      name: 'Guillem Andreu',
-      url,
+      name: siteMetadata.author.name,
+      url: siteMetadata.url,
       sameAs: [
-        'https://twitter.com/guill3m',
-        'https://www.linkedin.com/in/guillemandreu',
-        'https://www.instagram.com/guill3m/',
+        `https://twitter.com/${siteMetadata.author.twitter}`,
+        `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+        `https://www.instagram.com/${siteMetadata.author.instagram}/`,
       ],
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': url,
+      '@id': siteMetadata.url,
     },
   }
 

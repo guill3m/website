@@ -8,6 +8,7 @@ import linkResolver from '../lib/linkResolver'
 
 import '../styles/font-face.css'
 import '../styles/globals.css'
+import siteMetadata from '../lib/siteMetadata'
 
 const richTextComponents : JSXMapSerializer = {
   hyperlink: ({ node, children, ...rest }) => (
@@ -35,8 +36,8 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#f68d2e' />
         <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@guill3m' />
-        <meta name='twitter:creator' content='@guill3m' />
+        <meta name='twitter:site' content={`@${siteMetadata.author}`} />
+        <meta name='twitter:creator' content={`@${siteMetadata.author}`} />
         <meta name='twitter:dnt' content='on' />
         <meta name='pinterest' content='nopin' />
       </Head>
