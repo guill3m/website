@@ -65,6 +65,7 @@ const ProjectPage = ({
         {project.images.map((image, idx) => (
           <img
             alt={image.alt}
+            className={project.imageColumns === 2 ? styles.twoCol : null}
             key={idx}
             src={`${siteMetadata.cdnUrl}${image.src}`}
           />
