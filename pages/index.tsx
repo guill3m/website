@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 import ProjectThumbnailInterface from '../types/ProjectInterface'
+import Link from '../components/Link'
 import ProjectThumbnailList from '../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../lib/getData'
 import siteMetadata from '../lib/siteMetadata'

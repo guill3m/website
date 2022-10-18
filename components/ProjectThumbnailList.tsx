@@ -1,5 +1,4 @@
-import Link from 'next/link'
-
+import Link from './Link'
 import ProjectThumbnailInterface from '../types/ProjectThumbnailInterface'
 
 import styles from '../styles/components/ProjectThumbnailList.module.css'
