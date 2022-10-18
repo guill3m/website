@@ -22,7 +22,8 @@
           "end": 34,
           "type": "hyperlink",
           "data": {
-            "url": "https://easdvalencia.com"
+            "link_type": "Web",
+            "url": "https://www.easdvalencia.com"
           }
         },
         {
@@ -30,6 +31,7 @@
           "end": 177,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://www.ibanramon.com"
           }
         }
@@ -44,6 +46,7 @@
           "end": 55,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://esadvalencia.com"
           }
         }

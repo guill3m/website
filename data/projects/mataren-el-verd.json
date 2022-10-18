@@ -27,6 +27,7 @@
           "end": 93,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://carmemiquel.com"
           }
         }
@@ -41,7 +42,8 @@
           "end": 196,
           "type": "hyperlink",
           "data": {
-            "url": "http://www.verkami.com/projects/3969-mataren-el-verd-una-novella-sobre-la-punta/"
+            "link_type": "Web",
+            "url": "https://www.verkami.com/projects/3969-mataren-el-verd-una-novella-sobre-la-punta/"
           }
         }
       ]

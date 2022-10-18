@@ -22,6 +22,7 @@
           "end": 2,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://universalunits.com/en/products/universal-units"
           }
         },
@@ -30,6 +31,7 @@
           "end": 21,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://universalunits.com"
           }
         }

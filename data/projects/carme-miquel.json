@@ -22,6 +22,7 @@
           "end": 70,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://carmemiquel.com"
           }
         },
@@ -30,6 +31,7 @@
           "end": 232,
           "type": "hyperlink",
           "data": {
+            "link_type": "Web",
             "url": "https://www.levante-emv.com"
           }
         }
