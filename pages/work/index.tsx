@@ -22,9 +22,9 @@ const WorkPage = ({
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
       </Head>
-      <section>
+      <article>
         <ProjectThumbnailList items={projects} />
-      </section>
+      </article>
     </>
   )
 }

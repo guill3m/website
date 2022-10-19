@@ -15,7 +15,7 @@ const ContactPage = () => {
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
       </Head>
-      <section className={styles.contact}>
+      <article className={styles.contact}>
         <h1>Contact.</h1>
         <PrismicRichText field={[
           {
@@ -40,7 +40,7 @@ const ContactPage = () => {
           },
         ]}
         />
-      </section>
+      </article>
     </>
   )
 }
