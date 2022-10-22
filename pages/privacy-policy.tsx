@@ -20,63 +20,73 @@ export default function PrivacyPolicyPage () {
         <PrismicRichText field={[
           {
             type: 'paragraph',
-            text: 'This Privacy Policy document describes how your personal information is collected and used when you visit https://www.guillemandreu.com (the “Site”).',
+            text: 'This Privacy Policy document describes which information is collected, and how it is used when you visit https://www.guillemandreu.com (the “Site”).',
             spans: [
               {
-                start: 106,
-                end: 135,
+                start: 105,
+                end: 134,
                 type: 'em',
               },
             ],
           },
           {
             type: 'heading2',
-            text: 'Personal Information collected.',
+            text: 'Which information is collected.',
             spans: [],
           },
           {
             type: 'paragraph',
-            text: 'When you visit the Site, it automatically collects certain information about your device and your visit. This data is collected using the following technologies:',
+            text: 'When you visit the Site:',
             spans: [],
           },
           {
             type: 'list-item',
-            text: '“Log files” track actions occurring on the Site, and collect data that may include your IP address, browser type and version, Internet service provider, referring/exit pages, and date/time stamps. This data is essential for the Site to function correctly and cannot be turned off.',
+            text: 'No personal information is collected',
             spans: [],
           },
           {
             type: 'list-item',
-            text: '“Cookies” are text files which the Site may put on your device during your visit. The cookie helps the website to recognize returning visits and preferences.',
+            text: 'No information such as cookies is stored in the browser',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'No information is shared with advertising companies',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'No information is monetized',
             spans: [],
           },
           {
             type: 'heading2',
-            text: 'How do I use your Personal Information?',
+            text: 'How do I use the information collected.',
             spans: [],
           },
           {
             type: 'paragraph',
-            text: 'The personal information collected (as described in the previous section) is used to help improve and optimise the Site, to find possible errors on the Site, or to mitigate and prevent malicious attacks on the Site.',
+            text: 'The information collected (as described in the previous section) is used to help improve and optimise the Site, to find possible errors on the Site, or to mitigate and prevent malicious attacks on the Site.',
             spans: [],
           },
           {
             type: 'paragraph',
-            text: 'Your Personal Information is not, and will not be, used for anything else than what is described in the previous paragraph and how it is described in this privacy policy.',
+            text: 'The information collected is not used for anything else than what is described in this Privacy Policy.',
             spans: [],
           },
           {
             type: 'heading2',
-            text: 'Third-party Services.',
+            text: 'Third-Party Services.',
             spans: [],
           },
           {
             type: 'paragraph',
-            text: 'To make this website possible and available, there are third party services being used:',
+            text: 'To make the Site possible and available, there are third-party services being used:',
             spans: [],
           },
           {
             type: 'list-item',
-            text: 'Vercel. Used to host the website, Privacy Policy.',
+            text: 'Vercel, to host and serve the website.',
             spans: [
               {
                 start: 0,
@@ -84,12 +94,12 @@ export default function PrivacyPolicyPage () {
                 type: 'strong',
               },
               {
-                start: 34,
-                end: 49,
+                start: 0,
+                end: 7,
                 type: 'hyperlink',
                 data: {
                   link_type: 'Web',
-                  url: 'https://vercel.com/legal/privacy-policy',
+                  url: 'https://vercel.com',
                 },
               },
             ],
@@ -101,7 +111,12 @@ export default function PrivacyPolicyPage () {
           },
           {
             type: 'paragraph',
-            text: 'I may update this privacy policy from time to time in order to reflect, for example, changes to my practices or for other operational, legal or regulatory reasons.',
+            text: 'I may update this privacy policy from time to time in order to reflect changes to my practices or for other operational, legal or regulatory reasons.',
+            spans: [],
+          },
+          {
+            type: 'paragraph',
+            text: 'Last updated on October 23, 2022.',
             spans: [],
           },
           {

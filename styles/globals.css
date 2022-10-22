@@ -60,6 +60,10 @@ p {
   margin: .75em 0;
 }
 
+strong {
+  font-weight: 600;
+}
+
 @media (min-width: 1400px) {
   html {
     font-size: 1.1875em;
