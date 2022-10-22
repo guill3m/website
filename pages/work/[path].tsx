@@ -5,17 +5,17 @@ import Head from 'next/head'
 
 import { getAllProjectPaths, getProject } from '../../lib/getData'
 import siteMetadata from '../../lib/siteMetadata'
-import ProjectInterface from '../../types/ProjectInterface'
+import { Project } from '../../types/Project'
 
 import styles from '../../styles/pages/Project.module.css'
 
-interface ProjectPageInterface {
-  project: ProjectInterface,
+type ProjectPageProps = {
+  project: Project,
 }
 
 const ProjectPage = ({
   project,
-} : ProjectPageInterface) => {
+} : ProjectPageProps) => {
   const metaTitle = `${project.title} - Work - Guillem Andreu`
   const schema = {
     '@context': 'https://schema.org',
@@ -61,7 +61,7 @@ const ProjectPage = ({
       <article className={styles.project}>
         <h1>{project.title}.</h1>
         <h2>{project.subtitle}.</h2>
-        <PrismicRichText field={project.description}/>
+        <PrismicRichText field={project.description} />
         {project.images.map((image, idx) => (
           <img
             alt={image.alt}

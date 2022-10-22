@@ -1,16 +1,16 @@
 import Head from 'next/head'
 
-import ProjectThumbnailInterface from '../../types/ProjectThumbnailInterface'
 import ProjectThumbnailList from '../../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../../lib/getData'
+import { ProjectThumbnail } from '../../types/Project'
 
-interface WorkPageInterface {
-  projects: ProjectThumbnailInterface[],
+type WorkPageProps = {
+  projects: ProjectThumbnail[],
 }
 
 const WorkPage = ({
   projects,
-} : WorkPageInterface) => {
+} : WorkPageProps) => {
   const metaTitle = 'Work - Guillem Andreu'
   const metaDescription = 'Here is a list of some of the projects I have done or I’m currently working on.'
 

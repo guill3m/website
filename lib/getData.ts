@@ -1,11 +1,10 @@
 import path from 'path'
 import { readdir, readFile } from 'fs/promises'
 
-import ProjectInterface from '../types/ProjectInterface'
-import ProjectThumbnailInterface from '../types/ProjectThumbnailInterface'
+import { Project, ProjectThumbnail } from '../types/Project'
 
-function mapProjectThumbnails (projects: Array<ProjectThumbnailInterface>) : Array<ProjectThumbnailInterface> {
-  return projects.map((proj : ProjectThumbnailInterface) : ProjectThumbnailInterface => ({
+function mapProjectThumbnails (projects: Project[]) : ProjectThumbnail[] {
+  return projects.map((proj : Project) : ProjectThumbnail => ({
     featured: proj.featured,
     path: proj.path,
     thumbnail: proj.thumbnail,
@@ -13,11 +12,11 @@ function mapProjectThumbnails (projects: Array<ProjectThumbnailInterface>) : Arr
   }))
 }
 
-export async function getAllProjects () : Promise<Array<ProjectInterface>> {
+export async function getAllProjects () : Promise<Project[]> {
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const projectsFiles = await readdir(projectsDataFolder)
 
-  const projectsPromises : Array<Promise<string>> = []
+  const projectsPromises : Promise<string>[] = []
   projectsFiles.forEach((projectFileName) => {
     const projectFilePath = path.join(projectsDataFolder, projectFileName)
     projectsPromises.push(readFile(projectFilePath, { encoding: 'utf-8' }))
@@ -28,19 +27,19 @@ export async function getAllProjects () : Promise<Array<ProjectInterface>> {
   return projectsAsStrings.map((project: string) => JSON.parse(project))
 }
 
-export async function getAllProjectPaths () : Promise<Array<string>> {
+export async function getAllProjectPaths () : Promise<string[]> {
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const projectsFiles = await readdir(projectsDataFolder)
 
   return projectsFiles.map((path: string) => path.slice(0, -5))
 }
 
-export async function getAllProjectThumbnails () : Promise<Array<ProjectThumbnailInterface>> {
+export async function getAllProjectThumbnails () : Promise<ProjectThumbnail[]> {
   const projects = await getAllProjects()
   return mapProjectThumbnails(projects)
 }
 
-export async function getProject (projectPath: string) : Promise<ProjectInterface> {
+export async function getProject (projectPath: string) : Promise<Project> {
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const fullProjectPath = path.join(projectsDataFolder, `${projectPath}.json`)
 

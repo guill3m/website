@@ -16,7 +16,7 @@ const richTextComponents : JSXMapSerializer = {
   ),
 }
 
-function MyApp ({ Component, pageProps }: AppProps) {
+export default function MyApp ({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -43,5 +43,3 @@ function MyApp ({ Component, pageProps }: AppProps) {
     </>
   )
 }
-
-export default MyApp

@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import styles from '../styles/pages/PrivacyPolicy.module.css'
 
-const PrivacyPolicyPage = () => {
+export default function PrivacyPolicyPage () {
   const metaTitle = 'Privacy Policy - Guillem Andreu'
   const metaDescription = 'This Privacy Policy describes how your personal information is collected and used when you visit https://www.guillemandreu.com.'
 
@@ -130,5 +130,3 @@ const PrivacyPolicyPage = () => {
     </>
   )
 }
-
-export default PrivacyPolicyPage

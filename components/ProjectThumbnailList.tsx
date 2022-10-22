@@ -1,15 +1,15 @@
 import Link from './Link'
-import ProjectThumbnailInterface from '../types/ProjectThumbnailInterface'
+import { ProjectThumbnail } from '../types/Project'
 
 import styles from '../styles/components/ProjectThumbnailList.module.css'
 
-export interface ProjectThumbnailListInterface {
-  items: ProjectThumbnailInterface[],
+type ProjectThumbnailListProps = {
+  items: ProjectThumbnail[],
 }
 
-function ProjectThumbnailList ({
+export default function ProjectThumbnailList ({
   items,
-}: ProjectThumbnailListInterface) {
+}: ProjectThumbnailListProps) {
   return (
     <ul className={styles.list}>
       {items.map((project) => (
@@ -30,5 +30,3 @@ function ProjectThumbnailList ({
     </ul>
   )
 }
-
-export default ProjectThumbnailList

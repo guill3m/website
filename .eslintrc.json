@@ -1,6 +1,8 @@
 {
   "extends": [
-    "eslint:recommended",
+    "standard",
+    "standard-jsx",
+    "standard-react",
     "next/core-web-vitals"
   ],
   "rules": {
@@ -14,8 +16,17 @@
         "functions": "never"
       }
     ],
-    "quotes": ["error", "single", { "avoidEscape": true }],
-    "react/jsx-closing-bracket-location": ["error", "line-aligned"],
-    "semi": ["error", "never"]
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ]
   }
 }

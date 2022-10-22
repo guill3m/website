@@ -1,20 +1,20 @@
 import Head from 'next/head'
 
-import ProjectThumbnailInterface from '../types/ProjectInterface'
 import Link from '../components/Link'
 import ProjectThumbnailList from '../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../lib/getData'
 import siteMetadata from '../lib/siteMetadata'
+import { ProjectThumbnail } from '../types/Project'
 
 import styles from '../styles/pages/Home.module.css'
 
-interface HomePageInterface {
-  featuredProjects: ProjectThumbnailInterface[],
+type HomePageProps = {
+  featuredProjects: ProjectThumbnail[],
 }
 
-const HomePage = ({
+export default function HomePage ({
   featuredProjects,
-} : HomePageInterface) => {
+} : HomePageProps) {
   const metaTitle = 'Guillem Andreu - Designer and Web Developer'
   const metaDescription = 'Hi. I’m Guillem, a designer and web developer based in Berlin. This is my Portfolio Website.'
   const schema = {
@@ -79,5 +79,3 @@ export async function getStaticProps () {
     },
   }
 }
-
-export default HomePage

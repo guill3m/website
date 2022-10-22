@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import styles from '../styles/pages/Contact.module.css'
 
-const ContactPage = () => {
+export default function ContactPage () {
   const metaTitle = 'Contact - Guillem Andreu'
   const metaDescription = 'If you are interested in my work, here you can find out how to contact me.'
 
@@ -44,5 +44,3 @@ const ContactPage = () => {
     </>
   )
 }
-
-export default ContactPage

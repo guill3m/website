@@ -1,19 +1,19 @@
 import { ReactNode } from 'react'
 import NextLink from 'next/link'
 
-interface LinkInterface {
+type LinkProps = {
   className?: string,
   children: ReactNode,
   href: string | null,
   target?: string,
 }
 
-function Link ({
+export default function Link ({
   children,
   href,
   target,
   ...rest
-}: LinkInterface) {
+}: LinkProps) {
   if (!href) {
     return (
       <span {...rest}>{children}</span>
@@ -39,5 +39,3 @@ function Link ({
     </NextLink>
   )
 }
-
-export default Link

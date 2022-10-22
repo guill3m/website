@@ -1,16 +1,16 @@
-import React from 'react'
+import { ReactNode } from 'react'
 
 import Link from './Link'
 
 import styles from '../styles/components/Layout.module.css'
 
-interface LayoutInterface {
-  children: React.ReactNode,
+type LayoutProps = {
+  children: ReactNode,
 }
 
-function Layout ({
+export default function Layout ({
   children,
-}: LayoutInterface) {
+}: LayoutProps) {
   const year = (new Date()).getFullYear()
 
   return (
@@ -49,5 +49,3 @@ function Layout ({
     </>
   )
 }
-
-export default Layout

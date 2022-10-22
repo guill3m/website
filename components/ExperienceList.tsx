@@ -2,33 +2,28 @@ import Link from './Link'
 
 import styles from '../styles/components/ExperienceList.module.css'
 
-export interface ExperienceItemInterface {
-  city?: string,
-  date: string,
-  description?: string,
-  title: string,
-  titleUnion?: string,
-  url?: string,
-  where?: string,
+type ExperienceListProps = {
+  items: {
+    city?: string,
+    date: string,
+    description?: string,
+    title: string,
+    titleUnion?: string,
+    url?: string,
+    where?: string,
+  }[],
 }
 
-export interface ExperienceListInterface {
-  items: ExperienceItemInterface[],
-}
-
-function ExperienceList ({
+export default function ExperienceList ({
   items,
-}: ExperienceListInterface) {
+}: ExperienceListProps) {
   return (
     <ul className={styles.list}>
       {items.map((item, idx) => (
         <li className={styles.item} key={idx}>
           <strong>
             <em>{item.title}</em>
-            {item.titleUnion
-              ? ` ${item.titleUnion} `
-              : ' at '
-            }
+            {item.titleUnion ? ` ${item.titleUnion} ` : ' at '}
             {item.where && (
               <em>
                 {item.url
@@ -36,9 +31,8 @@ function ExperienceList ({
                     <Link href={item.url}>
                       {item.where}
                     </Link>
-                  )
-                  : item.where
-                }
+                    )
+                  : item.where}
               </em>
             )}
           </strong>
@@ -58,5 +52,3 @@ function ExperienceList ({
     </ul>
   )
 }
-
-export default ExperienceList

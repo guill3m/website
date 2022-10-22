@@ -1,12 +1,11 @@
-// import { PrismicRichText } from '@prismicio/react'
 import Head from 'next/head'
-import ExperienceList from '../components/ExperienceItemList'
 
+import ExperienceList from '../components/ExperienceList'
 import siteMetadata from '../lib/siteMetadata'
 
 import styles from '../styles/pages/About.module.css'
 
-const AboutPage = () => {
+export default function AboutPage () {
   const metaTitle = 'About me - Guillem Andreu'
   const metaDescription = 'Hi, my name is Guillem and I’m a graphic designer from València (ES), currently living in Berlin (DE). I’m also a self-taught front-end web developer.'
 
@@ -146,5 +145,3 @@ const AboutPage = () => {
     </>
   )
 }
-
-export default AboutPage
