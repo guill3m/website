@@ -60,6 +60,31 @@ export default function PrivacyPolicyPage () {
             spans: [],
           },
           {
+            type: 'paragraph',
+            text: 'The data collected includes: ',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'Top pages',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'Referral sources',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'Visit duration',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'Information from the devices used during the visit\n(device type, browser, operating system, country, region, and city)',
+            spans: [],
+          },
+          {
             type: 'heading2',
             text: 'How do I use the information collected.',
             spans: [],
@@ -90,16 +115,36 @@ export default function PrivacyPolicyPage () {
             spans: [
               {
                 start: 0,
-                end: 7,
+                end: 6,
                 type: 'strong',
               },
               {
                 start: 0,
-                end: 7,
+                end: 6,
                 type: 'hyperlink',
                 data: {
                   link_type: 'Web',
                   url: 'https://vercel.com',
+                },
+              },
+            ],
+          },
+          {
+            type: 'list-item',
+            text: 'Plausible Analytics, to better understand how the Site is being used in order to improve it.',
+            spans: [
+              {
+                start: 0,
+                end: 19,
+                type: 'strong',
+              },
+              {
+                start: 0,
+                end: 19,
+                type: 'hyperlink',
+                data: {
+                  link_type: 'Web',
+                  url: 'https://plausible.io',
                 },
               },
             ],

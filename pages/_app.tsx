@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Script from 'next/script'
 import { JSXMapSerializer, PrismicProvider } from '@prismicio/react'
 
 import Layout from '../components/Layout'
@@ -17,12 +18,29 @@ const richTextComponents : JSXMapSerializer = {
 }
 
 export default function App ({ Component, pageProps }: AppProps) {
+  const enableAnalytics = process.env.NODE_ENV === 'production' && (!process.env.NEXT_PUBLIC_VERCEL_ENV || process.env.NEXT_PUBLIC_VERCEL_ENV === 'production')
+
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover' />
         <title>Guillem Andreu</title>
       </Head>
+      {enableAnalytics && (
+        <>
+          <Script
+            data-domain='guillemandreu.com'
+            defer
+            src='/stats.js'
+          />
+          <Script
+            id='plausible-init'
+            dangerouslySetInnerHTML={{
+              __html: 'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
+            }}
+          />
+        </>
+      )}
       <PrismicProvider
         richTextComponents={richTextComponents}
       >

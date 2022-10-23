@@ -26,6 +26,17 @@ const securityHeaders = [
   },
 ]
 
+const plausibleAnalyticsProxyRewrites = [
+  {
+    source: '/stats.js',
+    destination: 'https://plausible.io/js/script.outbound-links.js',
+  },
+  {
+    source: '/api/event/',
+    destination: 'https://plausible.io/api/event',
+  },
+]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -43,6 +54,11 @@ const nextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  async rewrites () {
+    return [
+      ...plausibleAnalyticsProxyRewrites,
+    ]
+  },
   trailingSlash: true,
 }
 
