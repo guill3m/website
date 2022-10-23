@@ -23,7 +23,7 @@ export default function ExperienceList ({
         <li className={styles.item} key={idx}>
           <strong>
             <em>{item.title}</em>
-            {item.titleUnion ? ` ${item.titleUnion} ` : ' at '}
+            {item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
             {item.where && (
               <em>
                 {item.url

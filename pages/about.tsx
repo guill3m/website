@@ -75,6 +75,7 @@ export default function AboutPage () {
                 description: 'Worked with CuldeSac™ on some projects after my internship. And other Graphic Design work as freelancer: web design and development, editorial design, signage, video, posters.',
                 city: 'València',
                 title: 'Freelance Graphic and Web Designer',
+                titleUnion: '',
                 url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
               },
               {
