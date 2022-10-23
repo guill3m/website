@@ -1,17 +1,7 @@
-const contentSecurityPolicy = `
-  default-src 'self';
-  font-src assets.guillemandreu.com;
-  img-src 'self' assets.guillemandreu.com;
-`
-
 const securityHeaders = [
   {
     source: '/:path*',
     headers: [
-      {
-        key: 'Content-Security-Policy-Report-Only',
-        value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
-      },
       {
         key: 'Referrer-Policy',
         value: 'strict-origin-when-cross-origin',
