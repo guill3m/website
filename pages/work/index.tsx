@@ -8,9 +8,9 @@ type WorkPageProps = {
   projects: ProjectThumbnail[],
 }
 
-const WorkPage = ({
+export default function WorkPage ({
   projects,
-} : WorkPageProps) => {
+} : WorkPageProps) {
   const metaTitle = 'Work - Guillem Andreu'
   const metaDescription = 'Here is a list of some of the projects I have done or I’m currently working on.'
 
@@ -38,5 +38,3 @@ export async function getStaticProps () {
     },
   }
 }
-
-export default WorkPage

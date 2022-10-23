@@ -1,6 +1,6 @@
 import { FilledLinkToDocumentField, FilledLinkToMediaField, FilledLinkToWebField } from '@prismicio/types'
 
-function linkResolver (target : FilledLinkToWebField | FilledLinkToDocumentField | FilledLinkToMediaField) {
+export default function linkResolver (target : FilledLinkToWebField|FilledLinkToDocumentField|FilledLinkToMediaField) : string|null {
   if (target.link_type !== 'Web') {
     return null
   }
@@ -12,5 +12,3 @@ function linkResolver (target : FilledLinkToWebField | FilledLinkToDocumentField
 
   return target.url
 }
-
-export default linkResolver

@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 type LinkProps = {
   className?: string,
   children: ReactNode,
-  href: string | null,
+  href: string|null,
   target?: string,
 }
 

@@ -13,9 +13,9 @@ type ProjectPageProps = {
   project: Project,
 }
 
-const ProjectPage = ({
+export default function ProjectPage ({
   project,
-} : ProjectPageProps) => {
+} : ProjectPageProps) {
   const metaTitle = `${project.title} - Work - Guillem Andreu`
   const schema = {
     '@context': 'https://schema.org',
@@ -75,7 +75,7 @@ const ProjectPage = ({
   )
 }
 
-export const getStaticPaths = async () => {
+export async function getStaticPaths () {
   const projectPaths = await getAllProjectPaths()
   const paths = projectPaths.map((path) => {
     return {
@@ -100,5 +100,3 @@ export async function getStaticProps ({ params } : { params : { path: string }})
     },
   }
 }
-
-export default ProjectPage
