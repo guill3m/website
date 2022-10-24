@@ -1,0 +1,24 @@
+.textWrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.textWrapper h1 {
+  font-family: var(--font-stack-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  margin: .75em 0;
+}
+
+.textWrapper h2 {
+  font-family: var(--font-stack-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1em 0 .5em;
+}
+
+@media (min-width: 600px) {
+  .textWrapper {
+    width: 80%;
+  }
+}

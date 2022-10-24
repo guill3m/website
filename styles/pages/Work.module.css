@@ -5,3 +5,9 @@
   margin: .75em auto;
   max-width: 1000px;
 }
+
+@media (min-width: 600px) {
+  .work h1 {
+    width: 80%;
+  }
+}
