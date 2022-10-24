@@ -24,7 +24,9 @@ export async function getAllProjects () : Promise<Project[]> {
 
   const projectsAsStrings = await Promise.all(projectsPromises)
 
-  return projectsAsStrings.map((project: string) => JSON.parse(project))
+  const projects = projectsAsStrings.map((project: string) => JSON.parse(project))
+
+  return projects.sort((a, b) => b.date.year - a.date.year || b.date.month - a.date.month)
 }
 
 export async function getAllProjectPaths () : Promise<string[]> {
