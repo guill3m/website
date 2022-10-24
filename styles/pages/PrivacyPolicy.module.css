@@ -7,14 +7,18 @@
   font-family: var(--font-stack-serif);
   font-size: 2rem;
   font-weight: 900;
-  margin: .75em 0 0;
+  margin: .75em 0;
 }
 
 .privacyPolicy h2 {
   font-family: var(--font-stack-serif);
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 1em 0 0;
+  margin: 1em 0 .5em;
+}
+
+.privacyPolicy li::marker {
+  color: var(--color-primary);
 }
 
 @media (min-width: 600px) {

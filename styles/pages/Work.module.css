@@ -1,0 +1,7 @@
+.work h1 {
+  font-family: var(--font-stack-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  margin: .75em auto;
+  max-width: 1000px;
+}

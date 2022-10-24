@@ -32,5 +32,6 @@
 }
 
 .item > em::before {
+  color: var(--color-primary-light);
   content: '— ';
 }

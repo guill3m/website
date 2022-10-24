@@ -4,6 +4,8 @@ import ProjectThumbnailList from '../../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../../lib/getData'
 import { ProjectThumbnail } from '../../types/Project'
 
+import styles from '../../styles/pages/Work.module.css'
+
 type WorkPageProps = {
   projects: ProjectThumbnail[],
 }
@@ -22,7 +24,8 @@ export default function WorkPage ({
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
       </Head>
-      <article>
+      <article className={styles.work}>
+        <h1>My work.</h1>
         <ProjectThumbnailList items={projects} />
       </article>
     </>

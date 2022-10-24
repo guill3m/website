@@ -41,15 +41,16 @@
 }
 
 .list span {
-  background: var(--color-txt, .25);
+  background: var(--color-primary-light, .25);
+  border-top-right-radius: .5em;
   bottom: 0;
   display: inline-block;
   left: 0;
-  padding: var(--spacing) calc(var(--spacing) * 1.5);
+  padding: calc(var(--spacing) / 1.5) calc(var(--spacing) * 1);
   position: absolute;
 }
 
 .list a {
-  color: var(--color-bg);
+  color: var(--color-txt);
   text-decoration: none;
 }
