@@ -1,20 +1,16 @@
 import { PrismicRichText } from '@prismicio/react'
-import Head from 'next/head'
+
+import Meta from '../components/Meta'
 
 import styles from '../styles/pages/PrivacyPolicy.module.css'
 
 export default function PrivacyPolicyPage () {
-  const metaTitle = 'Privacy Policy - Guillem Andreu'
-  const metaDescription = 'This Privacy Policy describes how your personal information is collected and used when you visit https://www.guillemandreu.com.'
-
   return (
     <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
-      </Head>
+      <Meta
+        title='Privacy Policy - Guillem Andreu'
+        description='This Privacy Policy describes how your personal information is collected and used when you visit https://www.guillemandreu.com.'
+      />
       <article className={styles.privacyPolicy}>
         <h1>Privacy Policy.</h1>
         <PrismicRichText field={[

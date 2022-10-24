@@ -1,6 +1,5 @@
-import Head from 'next/head'
-
 import Link from '../components/Link'
+import Meta from '../components/Meta'
 import ProjectThumbnailList from '../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../lib/getData'
 import siteMetadata from '../lib/siteMetadata'
@@ -17,40 +16,38 @@ export default function HomePage ({
 } : HomePageProps) {
   const metaTitle = 'Guillem Andreu - Designer and Web Developer'
   const metaDescription = 'Hi. I’m Guillem, a designer and web developer based in Berlin. This is my Portfolio Website.'
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: metaTitle,
-    alternativeName: 'Guillem Andreu’s Portfolio Website.',
-    description: metaDescription,
-    url: siteMetadata.url,
-    author: {
-      '@type': 'Person',
-      name: siteMetadata.author.name,
-      url: siteMetadata.url,
-      sameAs: [
-        `https://twitter.com/${siteMetadata.author.twitter}`,
-        `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
-        `https://www.instagram.com/${siteMetadata.author.instagram}/`,
-      ],
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': siteMetadata.url,
-    },
-  }
 
   return (
     <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
+      <Meta
+        title={metaTitle}
+        description={metaDescription}
+      >
         <script type='application/ld+json'>
-          {JSON.stringify(schema)}
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: metaTitle,
+            alternativeName: 'Guillem Andreu’s Portfolio Website.',
+            description: metaDescription,
+            url: siteMetadata.url,
+            author: {
+              '@type': 'Person',
+              name: siteMetadata.author.name,
+              url: siteMetadata.url,
+              sameAs: [
+                `https://twitter.com/${siteMetadata.author.twitter}`,
+                `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+                `https://www.instagram.com/${siteMetadata.author.instagram}/`,
+              ],
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': siteMetadata.url,
+            },
+          })}
         </script>
-      </Head>
+      </Meta>
       <section className={styles.about}>
         <img
           alt='A drawn silouethe of myself'

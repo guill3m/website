@@ -1,5 +1,4 @@
-import Head from 'next/head'
-
+import Meta from '../../components/Meta'
 import ProjectThumbnailList from '../../components/ProjectThumbnailList'
 import { getAllProjectThumbnails } from '../../lib/getData'
 import { ProjectThumbnail } from '../../types/Project'
@@ -13,17 +12,12 @@ type WorkPageProps = {
 export default function WorkPage ({
   projects,
 } : WorkPageProps) {
-  const metaTitle = 'Work - Guillem Andreu'
-  const metaDescription = 'Here is a list of some of the projects I have done or I’m currently working on.'
-
   return (
     <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
-      </Head>
+      <Meta
+        title='Work - Guillem Andreu'
+        description='Here is a list of some of the projects I have done or I’m currently working on.'
+      />
       <article className={styles.work}>
         <h1>My work.</h1>
         <ProjectThumbnailList items={projects} />

@@ -1,8 +1,6 @@
-// import Head from 'next/head'
-
 import { PrismicRichText } from '@prismicio/react'
-import Head from 'next/head'
 
+import Meta from '../../components/Meta'
 import { getAllProjectPaths, getProject } from '../../lib/getData'
 import siteMetadata from '../../lib/siteMetadata'
 import { Project } from '../../types/Project'
@@ -16,48 +14,44 @@ type ProjectPageProps = {
 export default function ProjectPage ({
   project,
 } : ProjectPageProps) {
-  const metaTitle = `${project.title} - Work - Guillem Andreu`
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    author: {
-      '@type': 'Person',
-      name: siteMetadata.author.name,
-      url: siteMetadata.url,
-      sameAs: [
-        `https://twitter.com/${siteMetadata.author.twitter}`,
-        `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
-        `https://www.instagram.com/${siteMetadata.author.instagram}/`,
-      ],
-    },
-    url: `${siteMetadata.url}${project.path}`,
-    image: {
-      '@type': 'ImageObject',
-      url: project.thumbnail.src,
-    },
-    headline: `${project.title}: ${project.subtitle}`,
-    description: project.excerpt,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': siteMetadata.url,
-    },
-  }
-
   return (
     <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={project.excerpt} />
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={project.excerpt} />
+      <Meta
+        title={`${project.title} - Work - Guillem Andreu`}
+        description={project.excerpt}
+      >
         <meta property='og:type' content='article' />
         <meta property='og:image' content={`${siteMetadata.cdnUrl}${project.thumbnail.src}`} />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:image' content={`${siteMetadata.cdnUrl}${project.thumbnail.src}`} />
         <script type='application/ld+json'>
-          {JSON.stringify(schema)}
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            author: {
+              '@type': 'Person',
+              name: siteMetadata.author.name,
+              url: siteMetadata.url,
+              sameAs: [
+                `https://twitter.com/${siteMetadata.author.twitter}`,
+                `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+                `https://www.instagram.com/${siteMetadata.author.instagram}/`,
+              ],
+            },
+            url: `${siteMetadata.url}${project.path}`,
+            image: {
+              '@type': 'ImageObject',
+              url: project.thumbnail.src,
+            },
+            headline: `${project.title}: ${project.subtitle}`,
+            description: project.excerpt,
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': siteMetadata.url,
+            },
+          })}
         </script>
-      </Head>
+      </Meta>
       <article className={styles.project}>
         <h1>{project.title}.</h1>
         <h2>{project.subtitle}.</h2>

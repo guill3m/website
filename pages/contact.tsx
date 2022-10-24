@@ -1,20 +1,16 @@
 import { PrismicRichText } from '@prismicio/react'
-import Head from 'next/head'
+
+import Meta from '../components/Meta'
 
 import styles from '../styles/pages/Contact.module.css'
 
 export default function ContactPage () {
-  const metaTitle = 'Contact - Guillem Andreu'
-  const metaDescription = 'If you are interested in my work, here you can find out how to contact me.'
-
   return (
     <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
-      </Head>
+      <Meta
+        title='Contact - Guillem Andreu'
+        description='If you are interested in my work, here you can find out how to contact me.'
+      />
       <article className={styles.contact}>
         <h1>Contact.</h1>
         <PrismicRichText field={[
