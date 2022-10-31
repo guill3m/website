@@ -43,9 +43,7 @@ const nextConfig = {
     dirs: ['.'],
   },
   experimental: {
-    browsersListForSwc: true,
     legacyBrowsers: false,
-    newNextLinkBehavior: true,
   },
   async headers () {
     return [
