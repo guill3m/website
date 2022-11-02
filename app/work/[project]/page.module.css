@@ -1,5 +1,5 @@
 .project {
-  composes: textWrapper from '../utils.css';
+  composes: textWrapper from '../../../styles/utils.css';
 }
 
 .project img {

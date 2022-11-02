@@ -1,7 +1,0 @@
-.contact {
-  composes: textWrapper from '../utils.css';
-}
-
-.contact a {
-  font-weight: 600;
-}

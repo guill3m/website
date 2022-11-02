@@ -41,6 +41,11 @@ export async function getAllProjectThumbnails () : Promise<ProjectThumbnail[]> {
   return mapProjectThumbnails(projects)
 }
 
+export async function getFeaturedProjectThumbnails () : Promise<ProjectThumbnail[]> {
+  const allProjectThumbnails = await getAllProjectThumbnails()
+  return allProjectThumbnails.filter((projectThumbnail) => projectThumbnail.featured)
+}
+
 export async function getProject (projectPath: string) : Promise<Project> {
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const fullProjectPath = path.join(projectsDataFolder, `${projectPath}.json`)

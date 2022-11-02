@@ -1,0 +1,7 @@
+.contact {
+  composes: textWrapper from '../../styles/utils.css';
+}
+
+.contact a {
+  font-weight: 600;
+}

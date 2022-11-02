@@ -1,5 +1,5 @@
 .about {
-  composes: textWrapper from '../utils.css';
+  composes: textWrapper from '../../styles/utils.css';
 }
 
 .about h2 {

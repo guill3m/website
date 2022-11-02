@@ -43,6 +43,7 @@ const nextConfig = {
     dirs: ['.'],
   },
   experimental: {
+    appDir: true,
     legacyBrowsers: false,
   },
   async headers () {

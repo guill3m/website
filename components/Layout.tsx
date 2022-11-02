@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 import Link from './Link'
 
-import styles from '../styles/components/Layout.module.css'
+import styles from '../styles/layout.module.css'
 
 type LayoutProps = {
   children: ReactNode,
