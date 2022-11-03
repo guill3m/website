@@ -6,7 +6,7 @@ import siteMetadata from '../lib/siteMetadata'
 
 import '../styles/font-face.css'
 import '../styles/globals.css'
-import styles from '../styles/layout.module.css'
+import styles from './layout.module.css'
 
 type LayoutProps = {
   children: ReactNode,
