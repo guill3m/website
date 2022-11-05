@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage () {
             },
             {
               start: 0,
-              end: 19,
+              end: 5,
               type: 'hyperlink',
               data: {
                 link_type: 'Web',
