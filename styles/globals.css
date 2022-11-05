@@ -16,6 +16,10 @@
   --spacing: .5rem;
 }
 
+[data-nextjs-scroll-focus-boundary] {
+  display: contents;
+}
+
 html {
   background: var(--color-bg);
   box-sizing: border-box;
