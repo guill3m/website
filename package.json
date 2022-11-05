@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@prismicio/react": "^2.5.0",
-    "next": "^13.0.1",
+    "next": "^13.0.2",
     "next-axiom": "^0.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -19,10 +19,10 @@
   "devDependencies": {
     "@prismicio/types": "^0.2.3",
     "@types/node": "^18.11.9",
-    "@types/react": "^18.0.24",
+    "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.26.0",
-    "eslint-config-next": "^13.0.1",
+    "eslint-config-next": "^13.0.2",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "github:standard/eslint-config-standard-react#f4524992516ede26dc2d4264966acb6bd6744d66",
