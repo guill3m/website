@@ -139,6 +139,26 @@ export default function PrivacyPolicyPage () {
           ],
         },
         {
+          type: 'list-item',
+          text: 'Axiom, for log storage (retained for 30 days) and observability, to better understand if there are issues with the website.',
+          spans: [
+            {
+              start: 0,
+              end: 5,
+              type: 'strong',
+            },
+            {
+              start: 0,
+              end: 19,
+              type: 'hyperlink',
+              data: {
+                link_type: 'Web',
+                url: 'https://www.axiom.co',
+              },
+            },
+          ],
+        },
+        {
           type: 'heading2',
           text: 'Changes to this Privacy Policy.',
           spans: [],
@@ -150,7 +170,7 @@ export default function PrivacyPolicyPage () {
         },
         {
           type: 'paragraph',
-          text: 'Last updated on October 23, 2022.',
+          text: 'Last updated on November 5, 2022.',
           spans: [],
         },
         {

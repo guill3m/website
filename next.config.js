@@ -1,3 +1,5 @@
+const { withAxiom } = require('next-axiom')
+
 const securityHeaders = [
   {
     source: '/:path*',
@@ -61,4 +63,4 @@ const nextConfig = {
   trailingSlash: true,
 }
 
-module.exports = nextConfig
+module.exports = withAxiom(nextConfig)
