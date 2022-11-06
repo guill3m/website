@@ -39,7 +39,7 @@ export default async function HomePage () {
       <section className={styles.about}>
         <img
           alt='A drawn silouethe of myself'
-          src={`${siteMetadata.cdnUrl}/img/website/me.svg`}
+          src='/me.svg'
         />
         <p>
           <strong>Hi. I’m Guillem,</strong> a designer and web developer based in Berlin.
