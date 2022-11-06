@@ -48,10 +48,10 @@ export default async function ProjectPage ({
                 `https://www.instagram.com/${siteMetadata.author.instagram}/`,
             ],
           },
-          url: `${siteMetadata.url}${project.path}`,
+          url: `${siteMetadata.url}/${project.path}/`,
           image: {
             '@type': 'ImageObject',
-            url: project.thumbnail.src,
+            url: `${siteMetadata.cdnUrl}${project.thumbnail.src}`,
           },
           headline: `${project.title}: ${project.subtitle}`,
           description: project.excerpt,
