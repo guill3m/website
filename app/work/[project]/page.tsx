@@ -24,7 +24,7 @@ type PageProps = {
 
 export default async function ProjectPage ({
   params,
-} : PageProps) {
+}: PageProps) {
   const project = params?.project ? await getProject(params.project) : null
 
   if (!project) {

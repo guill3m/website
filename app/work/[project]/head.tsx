@@ -1,7 +1,13 @@
 import { getProject } from '../../../lib/getData'
 import siteMetadata from '../../../lib/siteMetadata'
 
-export default async function ProjectHead ({ params } : { params: { project: string }}) {
+type ProjectHeadProps = {
+  params: {
+    project: string,
+  }
+}
+
+export default async function ProjectHead ({ params }: ProjectHeadProps) {
   const project = await getProject(params.project)
 
   const title = `${project.title} - Work - Guillem Andreu`

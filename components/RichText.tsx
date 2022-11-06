@@ -6,7 +6,7 @@ import { RTTextNode } from '@prismicio/types'
 import linkResolver from '../lib/linkResolver'
 import Link from './Link'
 
-const components : JSXMapSerializer = {
+const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => (
     <Link href={linkResolver(node?.data)}>{children}</Link>
   ),

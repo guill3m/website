@@ -39,7 +39,9 @@ const plausibleAnalyticsProxyRewrites = [
   },
 ]
 
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   eslint: {
     dirs: ['.'],
