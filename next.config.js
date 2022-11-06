@@ -39,6 +39,11 @@ const plausibleAnalyticsProxyRewrites = [
   },
 ]
 
+const robotsRewrite = {
+  source: '/robots.txt',
+  destination: '/api/robots/',
+}
+
 /**
  * @type {import('next').NextConfig}
  */
@@ -60,6 +65,7 @@ const nextConfig = {
   async rewrites () {
     return [
       ...plausibleAnalyticsProxyRewrites,
+      robotsRewrite,
     ]
   },
   trailingSlash: true,
