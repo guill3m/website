@@ -6,6 +6,7 @@ const siteMetadata = {
     twitter: 'guill3m',
   },
   cdnUrl: 'https://assets.guillemandreu.com',
+  host: 'www.guillemandreu.com',
   url: 'https://www.guillemandreu.com',
 }
 

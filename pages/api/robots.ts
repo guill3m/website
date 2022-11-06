@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+import siteMetadata from '../../lib/siteMetadata'
+
 export default async function robots (
   req: NextApiRequest,
   res: NextApiResponse<string>
@@ -8,7 +10,7 @@ export default async function robots (
 
   res.setHeader('Content-Type', 'text/plain')
 
-  if (host !== 'www.guillemandreu.com') {
+  if (host !== siteMetadata.host) {
     res.status(200).send(`User-agent: *
 Disallow: /`)
   } else {

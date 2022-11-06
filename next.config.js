@@ -44,6 +44,11 @@ const robotsRewrite = {
   destination: '/api/robots/',
 }
 
+const sitemapRewrite = {
+  source: '/sitemap.xml',
+  destination: '/api/sitemap/',
+}
+
 /**
  * @type {import('next').NextConfig}
  */
@@ -66,6 +71,7 @@ const nextConfig = {
     return [
       ...plausibleAnalyticsProxyRewrites,
       robotsRewrite,
+      sitemapRewrite,
     ]
   },
   trailingSlash: true,
