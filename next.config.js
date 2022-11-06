@@ -1,3 +1,5 @@
+// @ts-check
+
 const { withAxiom } = require('next-axiom')
 
 const securityHeaders = [
