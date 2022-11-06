@@ -120,6 +120,26 @@ export default function PrivacyPolicyPage () {
         },
         {
           type: 'list-item',
+          text: 'Cloudflare, to manage the domain’ DNS and handle network security and performance improvements.',
+          spans: [
+            {
+              start: 0,
+              end: 10,
+              type: 'strong',
+            },
+            {
+              start: 0,
+              end: 10,
+              type: 'hyperlink',
+              data: {
+                link_type: 'Web',
+                url: 'https://www.cloudflare.com',
+              },
+            },
+          ],
+        },
+        {
+          type: 'list-item',
           text: 'Plausible Analytics, to better understand how the Site is being used in order to improve it.',
           spans: [
             {
@@ -170,7 +190,7 @@ export default function PrivacyPolicyPage () {
         },
         {
           type: 'paragraph',
-          text: 'Last updated on November 5, 2022.',
+          text: 'Last updated on November 6, 2022.',
           spans: [],
         },
         {
