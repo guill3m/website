@@ -47,7 +47,7 @@ export default async function sitemap (
 
   projectPaths.forEach((projectPath) => {
     paths.push({
-      path: `/${projectPath}/`,
+      path: `/work/${projectPath}/`,
       priority: '0.8',
     })
   })
