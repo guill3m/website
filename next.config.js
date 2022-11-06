@@ -65,8 +65,7 @@ const nextConfig = {
       ...securityHeaders,
     ]
   },
-  outputFileTracing: true,
-  poweredByHeader: false,
+  productionBrowserSourceMaps: true,
   reactStrictMode: true,
   async rewrites () {
     return [
