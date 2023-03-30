@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { headers } from 'next/headers'
 
 import { getAllProjectPaths } from '../../lib/getData'
 import siteMetadata from '../../lib/siteMetadata'
@@ -8,16 +8,12 @@ type SitemapPath = {
   priority: string,
 }
 
-export default async function sitemap (
-  req: NextApiRequest,
-  res: NextApiResponse<string>
-) {
-  const { headers: { host } } = req
+export async function GET () {
+  const headersList = headers()
+  const host = headersList.get('host')
 
-  if (host !== siteMetadata.host) {
-    res.setHeader('Content-Type', 'text/plain')
-    res.status(404).send('Not found')
-    return
+  if (host === siteMetadata.host) {
+    return new Response('Not found', { status: 404 })
   }
 
   const projectPaths = await getAllProjectPaths()
@@ -60,6 +56,5 @@ export default async function sitemap (
 
   const sitemapResponse = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.join('')}</urlset>`
 
-  res.setHeader('Content-Type', 'text/xml')
-  res.status(200).send(sitemapResponse)
+  return new Response(sitemapResponse, { status: 200 })
 }

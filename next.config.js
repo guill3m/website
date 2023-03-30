@@ -41,16 +41,6 @@ const plausibleAnalyticsProxyRewrites = [
   },
 ]
 
-const robotsRewrite = {
-  source: '/robots.txt',
-  destination: '/api/robots/',
-}
-
-const sitemapRewrite = {
-  source: '/sitemap.xml',
-  destination: '/api/sitemap/',
-}
-
 /**
  * @type {import('next').NextConfig}
  */
@@ -60,7 +50,6 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    legacyBrowsers: false,
   },
   async headers () {
     return [
@@ -72,8 +61,6 @@ const nextConfig = {
   async rewrites () {
     return [
       ...plausibleAnalyticsProxyRewrites,
-      robotsRewrite,
-      sitemapRewrite,
     ]
   },
   trailingSlash: true,
