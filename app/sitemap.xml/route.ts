@@ -12,7 +12,7 @@ export async function GET () {
   const headersList = headers()
   const host = headersList.get('host')
 
-  if (host === siteMetadata.host) {
+  if (host !== siteMetadata.host) {
     return new Response('Not found', { status: 404 })
   }
 
