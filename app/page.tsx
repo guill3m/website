@@ -17,8 +17,6 @@ export async function generateMetadata (
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
-  const title = 'Guillem Andreu - Designer and Web Developer'
-  const description = 'Hi. I’m Guillem, a designer and web developer based in Berlin. This is my Portfolio Website.'
   const url = '/'
 
   return {
