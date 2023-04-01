@@ -1,7 +1,35 @@
+import { Metadata } from 'next'
+import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
+
 import ExperienceList from '../../components/ExperienceList'
 import siteMetadata from '../../lib/siteMetadata'
 
 import styles from './page.module.css'
+
+export async function generateMetadata (
+  params: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const parentOpenGraph = (await parent).openGraph
+  const title = 'About me - Guillem Andreu'
+  const description = 'Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE).'
+  const url = '/about/'
+
+  return {
+    alternates: {
+      canonical: url,
+    },
+    title,
+    description,
+    openGraph: {
+      description,
+      locale: parentOpenGraph?.locale,
+      siteName: parentOpenGraph?.siteName,
+      title,
+      url,
+    },
+  }
+}
 
 export default function AboutPage () {
   return (
@@ -14,7 +42,7 @@ export default function AboutPage () {
             src={`${siteMetadata.cdnUrl}/img/website/me-kid.jpg`}
           />
         </p>
-        <p>Hi, my name is Guillem and I’m a graphic designer from València (ES), currently living in Berlin (DE). I’m also a self-taught front end web developer. Passionate about design and technology.</p>
+        <p>Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE). Passionate about design and technology.</p>
       </section>
       <section>
         <h2 id='experience'>Experience.</h2>

@@ -1,6 +1,35 @@
+import { Metadata } from 'next'
+import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
+
 import RichText from '../../components/RichText'
 
 import styles from './page.module.css'
+
+export async function generateMetadata (
+  params: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const parentOpenGraph = (await parent).openGraph
+  const title = 'Privacy Policy - Guillem'
+  const description = 'This Privacy Policy describes how your personal information is collected and used when you visit https://www.guillemandreu.com.'
+  const url = '/privacy-policy/'
+
+  return {
+    alternates: {
+      canonical: url,
+    },
+    title,
+    description,
+    openGraph: {
+      description,
+      locale: parentOpenGraph?.locale,
+      siteName: parentOpenGraph?.siteName,
+      title,
+      type: 'website',
+      url,
+    },
+  }
+}
 
 export default function PrivacyPolicyPage () {
   return (

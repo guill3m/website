@@ -1,3 +1,7 @@
+import type { Metadata } from 'next'
+import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
+import { WebSite, WithContext } from 'schema-dts'
+
 import Link from '../components/Link'
 import ProjectThumbnailList from '../components/ProjectThumbnailList'
 import { getFeaturedProjectThumbnails } from '../lib/getData'
@@ -5,44 +9,74 @@ import siteMetadata from '../lib/siteMetadata'
 
 import styles from './page.module.css'
 
-export default async function HomePage () {
-  const featuredProjectThumbnails = await getFeaturedProjectThumbnails()
+const title = 'Guillem Andreu - Web Developer and Designer'
+const description = 'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Portfolio Website.'
+
+export async function generateMetadata (
+  params: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const parentOpenGraph = (await parent).openGraph
   const title = 'Guillem Andreu - Designer and Web Developer'
   const description = 'Hi. I’m Guillem, a designer and web developer based in Berlin. This is my Portfolio Website.'
+  const url = '/'
+
+  return {
+    alternates: {
+      canonical: url,
+    },
+    title,
+    description,
+    openGraph: {
+      locale: parentOpenGraph?.locale,
+      siteName: parentOpenGraph?.siteName,
+      title,
+      type: 'website',
+      description,
+      url,
+    },
+  }
+}
+
+export default async function HomePage () {
+  const jsonLd: WithContext<WebSite> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: title,
+    alternateName: 'Guillem Andreu’s Portfolio Website.',
+    description,
+    url: siteMetadata.url,
+    author: {
+      '@type': 'Person',
+      name: siteMetadata.author.name,
+      url: siteMetadata.url,
+      sameAs: [
+      `https://twitter.com/${siteMetadata.author.twitter}`,
+      `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+      `https://www.instagram.com/${siteMetadata.author.instagram}/`,
+      ],
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': siteMetadata.url,
+    },
+  }
+
+  const featuredProjectThumbnails = await getFeaturedProjectThumbnails()
 
   return (
     <>
-      <script type='application/ld+json'>
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: title,
-          alternativeName: 'Guillem Andreu’s Portfolio Website.',
-          description,
-          url: siteMetadata.url,
-          author: {
-            '@type': 'Person',
-            name: siteMetadata.author.name,
-            url: siteMetadata.url,
-            sameAs: [
-              `https://twitter.com/${siteMetadata.author.twitter}`,
-              `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
-              `https://www.instagram.com/${siteMetadata.author.instagram}/`,
-            ],
-          },
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': siteMetadata.url,
-          },
-        })}
-      </script>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className={styles.about}>
         <img
           alt='A drawn silouethe of myself'
           src='/me.svg'
         />
         <p>
-          <strong>Hi. I’m Guillem,</strong> a designer and web developer based in Berlin.
+          <strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
           <br />
           <Link href='/about/'>More about me</Link>
         </p>

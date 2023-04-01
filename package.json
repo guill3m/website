@@ -25,10 +25,11 @@
     "eslint-config-next": "^13.2.4",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
-    "eslint-config-standard-react": "github:standard/eslint-config-standard-react#f4524992516ede26dc2d4264966acb6bd6744d66",
+    "eslint-config-standard-react": "13.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "typescript": "^5.0.2"
+    "schema-dts": "^1.1.2",
+    "typescript": "^5.0.3"
   }
 }

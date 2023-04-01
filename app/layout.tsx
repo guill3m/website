@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import Script from 'next/script'
+import type { Metadata } from 'next'
 
 import Link from '../components/Link'
 import siteMetadata from '../lib/siteMetadata'
@@ -8,27 +9,61 @@ import '../styles/font-face.css'
 import '../styles/globals.css'
 import styles from './layout.module.css'
 
-type LayoutProps = {
-  children: ReactNode,
+export const metadata: Metadata = {
+  authors: {
+    name: 'Guillem Andreu',
+    url: siteMetadata.url,
+  },
+  icons: {
+    icon: [
+      {
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned.tab.svg',
+        // color: '#f68d2e',
+      },
+    ],
+  },
+  metadataBase: new URL(siteMetadata.url),
+  openGraph: {
+    locale: 'en',
+    siteName: 'Guillem Andreu',
+  },
+  other: {
+    pinterest: 'nopin',
+    'twitter:dnt': 'on',
+  },
+  themeColor: '#f68d2e',
+  twitter: {
+    creator: `@${siteMetadata.author.twitter}`,
+    creatorId: '2672731',
+  },
+  viewport: {
+    initialScale: 1,
+    viewportFit: 'cover',
+    width: 'device-width',
+  },
 }
 
-export default function Layout ({ children }: LayoutProps) {
+export default function Layout ({ children }: {
+  children: ReactNode,
+}) {
   const enableAnalytics = process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
   const year = (new Date()).getFullYear()
 
   return (
     <html lang='en'>
-      <head>
-        <meta name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#f68d2e' />
-        <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content={`@${siteMetadata.author.twitter}`} />
-        <meta name='twitter:creator' content={`@${siteMetadata.author.twitter}`} />
-        <meta name='twitter:dnt' content='on' />
-        <meta name='pinterest' content='nopin' />
-      </head>
       <body>
         {enableAnalytics && (
           <>
