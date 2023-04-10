@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@prismicio/react": "^2.5.2",
-    "next": "^13.2.4",
+    "next": "^13.3.0",
     "next-axiom": "^0.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -19,10 +19,10 @@
   "devDependencies": {
     "@prismicio/types": "^0.2.7",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.34",
     "@types/react-dom": "^18.0.11",
-    "eslint": "^8.37.0",
-    "eslint-config-next": "^13.2.4",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "13.0.0",
@@ -30,6 +30,6 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "schema-dts": "^1.1.2",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   }
 }
