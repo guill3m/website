@@ -10,9 +10,10 @@ import siteMetadata from '../lib/siteMetadata'
 import styles from './page.module.css'
 
 const title = 'Guillem Andreu - Web Developer and Designer'
-const description = 'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Portfolio Website.'
+const description =
+  'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Portfolio Website.'
 
-export async function generateMetadata (
+export async function generateMetadata(
   params: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
@@ -36,7 +37,7 @@ export async function generateMetadata (
   }
 }
 
-export default async function HomePage () {
+export default async function HomePage() {
   const jsonLd: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -49,9 +50,9 @@ export default async function HomePage () {
       name: siteMetadata.author.name,
       url: siteMetadata.url,
       sameAs: [
-      `https://twitter.com/${siteMetadata.author.twitter}`,
-      `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
-      `https://www.instagram.com/${siteMetadata.author.instagram}/`,
+        `https://twitter.com/${siteMetadata.author.twitter}`,
+        `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+        `https://www.instagram.com/${siteMetadata.author.instagram}/`,
       ],
     },
     mainEntityOfPage: {
@@ -65,22 +66,22 @@ export default async function HomePage () {
   return (
     <>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className={styles.about}>
-        <img
-          alt='A drawn silouethe of myself'
-          src='/me.svg'
-        />
+        <img alt="A drawn silouethe of myself" src="/me.svg" />
         <p>
-          <strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
+          <strong>Hi. I’m Guillem,</strong> a web developer and designer based
+          in Berlin.
           <br />
-          <Link href='/about/'>More about me</Link>
+          <Link href="/about/">More about me</Link>
         </p>
       </section>
       <section className={styles.work}>
-        <p>Here are some of the <Link href='/work/'>things I make</Link>:</p>
+        <p>
+          Here are some of the <Link href="/work/">things I make</Link>:
+        </p>
         <ProjectThumbnailList items={featuredProjectThumbnails} />
       </section>
     </>

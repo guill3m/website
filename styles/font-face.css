@@ -3,8 +3,10 @@
   font-family: 'Bw Darius';
   font-style: normal;
   font-weight: 200;
-  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-light.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-light.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-light.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-light.woff')
+      format('woff');
 }
 
 @font-face {
@@ -12,8 +14,10 @@
   font-family: 'Bw Darius';
   font-style: normal;
   font-weight: 400;
-  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular.woff')
+      format('woff');
 }
 
 @font-face {
@@ -21,8 +25,10 @@
   font-family: 'Bw Darius';
   font-style: italic;
   font-weight: 400;
-  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular-italic.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular-italic.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular-italic.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-regular-italic.woff')
+      format('woff');
 }
 
 @font-face {
@@ -30,8 +36,10 @@
   font-family: 'Bw Darius';
   font-style: normal;
   font-weight: 700;
-  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-bold.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-bold.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-bold.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-bold.woff')
+      format('woff');
 }
 
 @font-face {
@@ -39,51 +47,63 @@
   font-family: 'Bw Darius';
   font-style: normal;
   font-weight: 900;
-  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-black.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-black.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-black.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/bw-darius/bw-darius-black.woff')
+      format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Geomanist';
+  font-family: Geomanist;
   font-style: normal;
   font-weight: 200;
-  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-extralight.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-extralight.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-extralight.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-extralight.woff')
+      format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Geomanist';
+  font-family: Geomanist;
   font-style: normal;
   font-weight: 400;
-  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular.woff')
+      format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Geomanist';
+  font-family: Geomanist;
   font-style: italic;
   font-weight: 400;
-  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular-italic.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular-italic.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular-italic.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-regular-italic.woff')
+      format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Geomanist';
+  font-family: Geomanist;
   font-style: normal;
   font-weight: 600;
-  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-medium.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-medium.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-medium.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-medium.woff')
+      format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Geomanist';
+  font-family: Geomanist;
   font-style: normal;
   font-weight: 900;
-  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-ultra.woff2') format('woff2'),
-       url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-ultra.woff') format('woff');
+  src: url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-ultra.woff2')
+      format('woff2'),
+    url('https://assets.guillemandreu.com/fonts/geomanist/geomanist-ultra.woff')
+      format('woff');
 }

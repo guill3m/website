@@ -51,17 +51,13 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  async headers () {
-    return [
-      ...securityHeaders,
-    ]
+  async headers() {
+    return [...securityHeaders]
   },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
-  async rewrites () {
-    return [
-      ...plausibleAnalyticsProxyRewrites,
-    ]
+  async rewrites() {
+    return [...plausibleAnalyticsProxyRewrites]
   },
   trailingSlash: true,
 }

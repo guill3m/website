@@ -6,13 +6,14 @@ import siteMetadata from '../../lib/siteMetadata'
 
 import styles from './page.module.css'
 
-export async function generateMetadata (
+export async function generateMetadata(
   params: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const title = 'About me - Guillem Andreu'
-  const description = 'Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE).'
+  const description =
+    'Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE).'
   const url = '/about/'
 
   return {
@@ -31,21 +32,25 @@ export async function generateMetadata (
   }
 }
 
-export default function AboutPage () {
+export default function AboutPage() {
   return (
     <article className={styles.about}>
       <h1>About me.</h1>
-      <section className={styles.intro} id='intro'>
+      <section className={styles.intro} id="intro">
         <p>
           <img
-            alt='Me when I was a kid'
+            alt="Me when I was a kid"
             src={`${siteMetadata.cdnUrl}/img/website/me-kid.jpg`}
           />
         </p>
-        <p>Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE). Passionate about design and technology.</p>
+        <p>
+          Hi, my name is Guillem and I’m a web developer and graphic designer
+          from València (ES), currently living in Berlin (DE). Passionate about
+          design and technology.
+        </p>
       </section>
       <section>
-        <h2 id='experience'>Experience.</h2>
+        <h2 id="experience">Experience.</h2>
         <ExperienceList
           items={[
             {
@@ -64,7 +69,8 @@ export default function AboutPage () {
             },
             {
               date: 'June 2015 to June 2018',
-              description: 'Previously “netdudes GmbH”. User interface design and front end development of web based financial applications for major european corporations, as well as implementation and standardisation of the company’s brand image and website.',
+              description:
+                'Previously “netdudes GmbH”. User interface design and front end development of web based financial applications for major european corporations, as well as implementation and standardisation of the company’s brand image and website.',
               city: 'Berlin',
               title: 'UI/UX Designer & Front-end Developer',
               url: 'https://universalunits.com',
@@ -72,7 +78,8 @@ export default function AboutPage () {
             },
             {
               date: 'October 2013 to May 2015',
-              description: 'Later “Universal Units GmbH”. User interface design and front end development of web based financial applications for major european corporations.',
+              description:
+                'Later “Universal Units GmbH”. User interface design and front end development of web based financial applications for major european corporations.',
               city: 'Berlin',
               title: 'UI/UX Designer & Front-end Developer',
               url: 'https://web.archive.org/web/20160817001617/http://www.netdudes.de/',
@@ -80,7 +87,8 @@ export default function AboutPage () {
             },
             {
               date: 'April 2012 to April 2013',
-              description: 'In charge of the graphic and web design of the company. Mainly web design and development, as well as advertising banners and brand application through the various company websites and services.',
+              description:
+                'In charge of the graphic and web design of the company. Mainly web design and development, as well as advertising banners and brand application through the various company websites and services.',
               city: 'València',
               title: 'Graphic Designer and Web Developer',
               url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
@@ -88,7 +96,8 @@ export default function AboutPage () {
             },
             {
               date: 'May 2011 to October 2013',
-              description: 'Worked with CuldeSac™ on some projects after my internship. And other Graphic Design work as freelancer: web design and development, editorial design, signage, video, posters.',
+              description:
+                'Worked with CuldeSac™ on some projects after my internship. And other Graphic Design work as freelancer: web design and development, editorial design, signage, video, posters.',
               city: 'València',
               title: 'Freelance Graphic and Web Designer',
               titleUnion: '',
@@ -96,7 +105,8 @@ export default function AboutPage () {
             },
             {
               date: 'November 2010 to May 2011',
-              description: 'Graphic Design internship in the “Espacio Creativo” (Interior and Product Design) department: editorial design, graphics for events and retail spaces, presentations, artwork preparation for print.',
+              description:
+                'Graphic Design internship in the “Espacio Creativo” (Interior and Product Design) department: editorial design, graphics for events and retail spaces, presentations, artwork preparation for print.',
               city: 'València',
               title: 'Graphic Design Internship',
               url: 'https://www.culdesac.es',
@@ -106,7 +116,7 @@ export default function AboutPage () {
         />
       </section>
       <section>
-        <h2 id='studies'>Studies.</h2>
+        <h2 id="studies">Studies.</h2>
         <ExperienceList
           items={[
             {
@@ -121,7 +131,7 @@ export default function AboutPage () {
         />
       </section>
       <section>
-        <h2 id='courses'>Courses.</h2>
+        <h2 id="courses">Courses.</h2>
         <ExperienceList
           items={[
             {
@@ -134,13 +144,14 @@ export default function AboutPage () {
         />
       </section>
       <section>
-        <h2 id='others'>Others.</h2>
+        <h2 id="others">Others.</h2>
         <ExperienceList
           items={[
             {
               date: 'September 2010',
               city: 'València',
-              description: 'Event organised by the Association of Designers of the Region of Valencia (ADCV) consisting on several design-related activities carried out in Valencia city during a week coinciding with the Feria Hábitat Valencia Trade Fair.',
+              description:
+                'Event organised by the Association of Designers of the Region of Valencia (ADCV) consisting on several design-related activities carried out in Valencia city during a week coinciding with the Feria Hábitat Valencia Trade Fair.',
               title: 'Organisation Assistance',
               titleUnion: 'at the',
               url: 'https://www.valenciadissenyweek.com',
@@ -149,7 +160,8 @@ export default function AboutPage () {
             {
               date: 'June 2010',
               city: 'València',
-              description: 'Considered the most impotant event about typography and graphic design in Spain, it is composed of a mix of workshops, expositions, talks, book presentations… and organised by the ADCV.',
+              description:
+                'Considered the most impotant event about typography and graphic design in Spain, it is composed of a mix of workshops, expositions, talks, book presentations… and organised by the ADCV.',
               title: 'Organisation Assistance',
               titleUnion: 'at the',
               url: 'https://www.congresotipografia.com',

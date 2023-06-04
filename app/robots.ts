@@ -3,7 +3,7 @@ import { headers } from 'next/headers'
 
 import siteMetadata from '../lib/siteMetadata'
 
-export default function robots (): MetadataRoute.Robots {
+export default function robots(): MetadataRoute.Robots {
   const headersList = headers()
   const host = headersList.get('host')
 

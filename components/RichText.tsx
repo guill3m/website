@@ -16,13 +16,6 @@ type RichTextProps = {
   field: [RTTextNode, ...RTTextNode[]]
 }
 
-export default function RichText ({
-  field,
-}: RichTextProps) {
-  return (
-    <PrismicRichText
-      components={components}
-      field={field}
-    />
-  )
+export default function RichText({ field }: RichTextProps) {
+  return <PrismicRichText components={components} field={field} />
 }

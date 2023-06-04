@@ -1,5 +1,5 @@
 .privacyPolicy {
-  composes: textWrapper from '../../styles/utils.css';
+  composes: txtwrap from '../../styles/utils.css';
 }
 
 .privacyPolicy li::marker {

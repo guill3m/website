@@ -5,10 +5,8 @@ import '../styles/font-face.css'
 import '../styles/globals.css'
 import '../styles/error.css'
 
-export default function ErrorPage ({ statusCode }: ErrorProps) {
-  return (
-    <NextError statusCode={statusCode} withDarkMode={false} />
-  )
+export default function ErrorPage({ statusCode }: ErrorProps) {
+  return <NextError statusCode={statusCode} withDarkMode={false} />
 }
 
 ErrorPage.getInitialProps = async (contextData: NextPageContext) => {

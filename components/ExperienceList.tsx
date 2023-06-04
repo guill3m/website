@@ -4,19 +4,17 @@ import styles from '../styles/components/ExperienceList.module.css'
 
 type ExperienceListProps = {
   items: {
-    city?: string,
-    date: string,
-    description?: string,
-    title: string,
-    titleUnion?: string,
-    url?: string,
-    where?: string,
-  }[],
+    city?: string
+    date: string
+    description?: string
+    title: string
+    titleUnion?: string
+    url?: string
+    where?: string
+  }[]
 }
 
-export default function ExperienceList ({
-  items,
-}: ExperienceListProps) {
+export default function ExperienceList({ items }: ExperienceListProps) {
   return (
     <ul className={styles.list}>
       {items.map((item, idx) => (
@@ -26,13 +24,11 @@ export default function ExperienceList ({
             {item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
             {item.where && (
               <em>
-                {item.url
-                  ? (
-                    <Link href={item.url}>
-                      {item.where}
-                    </Link>
-                    )
-                  : item.where}
+                {item.url ? (
+                  <Link href={item.url}>{item.where}</Link>
+                ) : (
+                  item.where
+                )}
               </em>
             )}
           </strong>

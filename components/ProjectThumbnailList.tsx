@@ -4,10 +4,10 @@ import { ProjectThumbnail } from '../types/Project'
 import styles from '../styles/components/ProjectThumbnailList.module.css'
 
 type ProjectThumbnailListProps = {
-  items: ProjectThumbnail[],
+  items: ProjectThumbnail[]
 }
 
-export default function ProjectThumbnailList ({
+export default function ProjectThumbnailList({
   items,
 }: ProjectThumbnailListProps) {
   return (
@@ -20,9 +20,7 @@ export default function ProjectThumbnailList ({
                 alt={project.thumbnail.alt}
                 src={`https://assets.guillemandreu.com${project.thumbnail.src}`}
               />
-              <span>
-                {project.title}
-              </span>
+              <span>{project.title}</span>
             </Link>
           </article>
         </li>

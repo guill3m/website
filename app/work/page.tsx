@@ -6,13 +6,14 @@ import { getAllProjectThumbnails } from '../../lib/getData'
 
 import styles from './page.module.css'
 
-export async function generateMetadata (
+export async function generateMetadata(
   params: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const title = 'Work - Guillem Andreu'
-  const description = 'Here is a list of some of the projects I have done or I’m currently working on.'
+  const description =
+    'Here is a list of some of the projects I have done or I’m currently working on.'
   const url = '/work/'
 
   return {
@@ -32,7 +33,7 @@ export async function generateMetadata (
   }
 }
 
-export default async function WorkPage () {
+export default async function WorkPage() {
   const projectThumbnails = await getAllProjectThumbnails()
 
   return (

@@ -56,60 +56,62 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Layout ({ children }: {
-  children: ReactNode,
-}) {
-  const enableAnalytics = process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-  const year = (new Date()).getFullYear()
+export default function Layout({ children }: { children: ReactNode }) {
+  const enableAnalytics =
+    process.env.NODE_ENV === 'production' &&
+    process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
+  const year = new Date().getFullYear()
 
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         {enableAnalytics && (
           <>
+            <Script data-domain="guillemandreu.com" defer src="/stats.js" />
             <Script
-              data-domain='guillemandreu.com'
-              defer
-              src='/stats.js'
-            />
-            <Script
-              id='plausible-init'
+              id="plausible-init"
               dangerouslySetInnerHTML={{
-                __html: 'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
+                __html:
+                  'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
               }}
             />
           </>
         )}
         <header className={styles.header}>
-          <Link href='/' className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             Guillem Andreu.
           </Link>
           <nav className={styles.menu}>
             <ul>
               <li>
-                <Link href='/about/'>About me.</Link>
+                <Link href="/about/">About me.</Link>
               </li>
               <li>
-                <Link href='/work/'>My work.</Link>
+                <Link href="/work/">My work.</Link>
               </li>
               <li>
-                <Link href='/contact/'>Contact.</Link>
+                <Link href="/contact/">Contact.</Link>
               </li>
             </ul>
           </nav>
         </header>
-        <main className={styles.main}>
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <p>
-            <strong>© {year} Guillem Andreu Muñoz.</strong>
-            {' '}
-            <Link href='/privacy-policy/'>
-              Privacy policy.
-            </Link>
+            <strong>© {year} Guillem Andreu Muñoz.</strong>{' '}
+            <Link href="/privacy-policy/">Privacy policy.</Link>
           </p>
-          <p>Designed and developed by me. Text set with <Link href='https://brandingwithtype.com/typefaces/bw-darius'>Bw Darius</Link> and <Link href='https://www.atipofoundry.com/fonts/geomanist'>Geomanist</Link>.</p>
+          <p>
+            Designed and developed by me. Text set with{' '}
+            <Link href="https://brandingwithtype.com/typefaces/bw-darius">
+              Bw Darius
+            </Link>{' '}
+            and{' '}
+            <Link href="https://www.atipofoundry.com/fonts/geomanist">
+              Geomanist
+            </Link>
+            .
+          </p>
         </footer>
       </body>
     </html>

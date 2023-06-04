@@ -11,13 +11,13 @@ import styles from './page.module.css'
 
 type Props = {
   params: {
-    project: string,
-  },
+    project: string
+  }
 }
 
 export const dynamicParams = false
 
-export async function generateStaticParams () {
+export async function generateStaticParams() {
   const projectPaths = await getAllProjectPaths()
 
   return projectPaths.map((path) => ({
@@ -25,7 +25,7 @@ export async function generateStaticParams () {
   }))
 }
 
-export async function generateMetadata (
+export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
@@ -55,9 +55,7 @@ export async function generateMetadata (
   }
 }
 
-export default async function ProjectPage ({
-  params,
-}: Props) {
+export default async function ProjectPage({ params }: Props) {
   const project = params?.project ? await getProject(params.project) : null
 
   if (!project) {
@@ -72,9 +70,9 @@ export default async function ProjectPage ({
       name: siteMetadata.author.name,
       url: siteMetadata.url,
       sameAs: [
-          `https://twitter.com/${siteMetadata.author.twitter}`,
-          `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
-          `https://www.instagram.com/${siteMetadata.author.instagram}/`,
+        `https://twitter.com/${siteMetadata.author.twitter}`,
+        `https://www.linkedin.com/in/${siteMetadata.author.linkedin}`,
+        `https://www.instagram.com/${siteMetadata.author.instagram}/`,
       ],
     },
     url: `${siteMetadata.url}/${project.path}/`,
@@ -93,7 +91,7 @@ export default async function ProjectPage ({
   return (
     <>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <article className={styles.project}>

@@ -5,13 +5,14 @@ import RichText from '../../components/RichText'
 
 import styles from './page.module.css'
 
-export async function generateMetadata (
+export async function generateMetadata(
   params: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const title = 'Contact - Guillem Andreu'
-  const description = 'If you are interested in my work, here you can find out how to contact me.'
+  const description =
+    'If you are interested in my work, here you can find out how to contact me.'
   const url = '/contact/'
 
   return {
@@ -31,32 +32,33 @@ export async function generateMetadata (
   }
 }
 
-export default function ContactPage () {
+export default function ContactPage() {
   return (
     <article className={styles.contact}>
       <h1>Contact.</h1>
-      <RichText field={[
-        {
-          type: 'paragraph',
-          text: 'If you are interested in my work, please contact me via contact@guillemandreu.com.',
-          spans: [
-            {
-              start: 56,
-              end: 81,
-              type: 'hyperlink',
-              data: {
-                link_type: 'Web',
-                url: 'mailto:contact@guillemandreu.com',
+      <RichText
+        field={[
+          {
+            type: 'paragraph',
+            text: 'If you are interested in my work, please contact me via contact@guillemandreu.com.',
+            spans: [
+              {
+                start: 56,
+                end: 81,
+                type: 'hyperlink',
+                data: {
+                  link_type: 'Web',
+                  url: 'mailto:contact@guillemandreu.com',
+                },
               },
-            },
-          ],
-        },
-        {
-          type: 'paragraph',
-          text: 'I look forward to hearing from you.',
-          spans: [],
-        },
-      ]}
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'I look forward to hearing from you.',
+            spans: [],
+          },
+        ]}
       />
     </article>
   )

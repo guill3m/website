@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 import { getAllProjectPaths } from '../lib/getData'
 import siteMetadata from '../lib/siteMetadata'
 
-export default async function sitemap (): Promise<MetadataRoute.Sitemap> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectPaths = await getAllProjectPaths()
 
   const paths = [
@@ -42,6 +42,5 @@ export default async function sitemap (): Promise<MetadataRoute.Sitemap> {
     })
   })
 
-  return paths
-    .sort((a, b) => Number(b.priority) - Number(a.priority))
+  return paths.sort((a, b) => Number(b.priority) - Number(a.priority))
 }
