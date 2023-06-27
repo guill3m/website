@@ -26,6 +26,10 @@
   transition: opacity 256ms var(--cubic-bezier-ease-out);
 }
 
+.list:hover li {
+  opacity: 0.5;
+}
+
 .list li:hover {
   opacity: 1;
   transition-timing-function: var(--cubic-bezier-ease-in);
@@ -34,10 +38,6 @@
 .list li:hover img {
   filter: none;
   transition-timing-function: var(--cubic-bezier-ease-in);
-}
-
-.list:hover li {
-  opacity: 0.5;
 }
 
 .list span {
