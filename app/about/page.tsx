@@ -13,7 +13,7 @@ export async function generateMetadata(
   const parentOpenGraph = (await parent).openGraph
   const title = 'About me - Guillem Andreu'
   const description =
-    'Hi, my name is Guillem and I’m a web developer and graphic designer from València (ES), currently living in Berlin (DE).'
+    'Hi, my name is Guillem. I’m an experienced Tech Lead, Web Developer, and Designer. With a predilection for front-end web development and a people-first approach. Passionate about design and technology.'
   const url = '/about/'
 
   return {
@@ -44,9 +44,9 @@ export default function AboutPage() {
           />
         </p>
         <p>
-          Hi, my name is Guillem and I’m a web developer and graphic designer
-          from València (ES), currently living in Berlin (DE). Passionate about
-          design and technology.
+          Hi, my name is Guillem. I’m an Experienced Tech Lead, Web Developer,
+          and Designer. With a predilection for front-end web development and a
+          people-first approach. Passionate about design and technology.
         </p>
       </section>
       <section>
@@ -55,14 +55,18 @@ export default function AboutPage() {
           items={[
             {
               date: 'Since June 2019',
-              city: 'Berlin',
+              city: 'Hybrid, Berlin',
+              description:
+                'I align with different stakeholders in the organisation to plan and implement the teams’s roadmap and tech initiatives. I make sure the team has the knowledge, resources and support they need to grow and consistently deliver excellent work. I have guided the team through many changes on the website, including a redesign as well as CMS and framework migrations, with end-user performance and usability as the focus. I also led the hiring of Developers, Designers, and SEO Managers',
               title: 'Team Lead, Website',
               url: 'https://ada.com',
               where: 'Ada Health',
             },
             {
               date: 'July 2018 to June 2019',
-              city: 'Berlin',
+              description:
+                'Worked on the development of the company website, a mix of a corporate website and an SEO-driven user-acquisition channel. I worked closely with designers and copywriters, and my first focus was on building capabilities on the site: new components, landing pages, and languages.',
+              city: 'On-site, Berlin',
               title: 'Web Developer',
               url: 'https://ada.com',
               where: 'Ada Health',
@@ -70,8 +74,8 @@ export default function AboutPage() {
             {
               date: 'June 2015 to June 2018',
               description:
-                'Previously “netdudes GmbH”. User interface design and front end development of web based financial applications for major european corporations, as well as implementation and standardisation of the company’s brand image and website.',
-              city: 'Berlin',
+                'Led the front-end development and user interface design of web-based financial applications for multinational European corporations. With the aim of improving efficiency, I expanded and improved the component library and design system. I also implemented the company’s brand refresh.',
+              city: 'On-site, Berlin',
               title: 'UI/UX Designer & Front-end Developer',
               url: 'https://universalunits.com',
               where: 'Universal Units',
@@ -79,35 +83,34 @@ export default function AboutPage() {
             {
               date: 'October 2013 to May 2015',
               description:
-                'Later “Universal Units GmbH”. User interface design and front end development of web based financial applications for major european corporations.',
-              city: 'Berlin',
+                'Front-end development and user interface design of a suite of web-based financial applications for multinational European corporations. Besides, I started and led the development of a design system, improving efficiency and consistency through the suite of applications.',
+              city: 'On-site, Berlin',
               title: 'UI/UX Designer & Front-end Developer',
               url: 'https://web.archive.org/web/20160817001617/http://www.netdudes.de/',
               where: 'netdudes',
             },
             {
+              date: 'May 2011 to October 2013',
+              description:
+                'Worked with multiple clients on web design and development, book design, signage iconography, video editing, and posters. Further, I continued to work with CuldeSac™️ on various projects as a freelancer after my internship.',
+              city: 'València',
+              title: 'Freelance Graphic and Web Designer',
+              titleUnion: '',
+            },
+            {
               date: 'April 2012 to April 2013',
               description:
-                'In charge of the graphic and web design of the company. Mainly web design and development, as well as advertising banners and brand application through the various company websites and services.',
-              city: 'València',
-              title: 'Graphic Designer and Web Developer',
+                'Designed and developed the company websites of a reseller for three network providers. I built marketing sites for each of the brands and a DSL-comparison site with a focus on SEO.',
+              city: 'On-site, València',
+              title: 'Web Designer and Developer',
               url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
               where: 'AMP Servicios',
             },
             {
-              date: 'May 2011 to October 2013',
-              description:
-                'Worked with CuldeSac™ on some projects after my internship. And other Graphic Design work as freelancer: web design and development, editorial design, signage, video, posters.',
-              city: 'València',
-              title: 'Freelance Graphic and Web Designer',
-              titleUnion: '',
-              url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
-            },
-            {
               date: 'November 2010 to May 2011',
               description:
-                'Graphic Design internship in the “Espacio Creativo” (Interior and Product Design) department: editorial design, graphics for events and retail spaces, presentations, artwork preparation for print.',
-              city: 'València',
+                'Worked on editorial design, graphics for events and retail spaces, client presentations, and artwork preparation for print in the “Espacio Creativo” (Interior and Product Design) department.',
+              city: 'On-site, València',
               title: 'Graphic Design Internship',
               url: 'https://www.culdesac.es',
               where: 'CuldeSac™',
@@ -120,12 +123,11 @@ export default function AboutPage() {
         <ExperienceList
           items={[
             {
-              date: 'Finished April 2011',
-              city: 'València',
-              title: 'Bachelor’s Degree on Graphic Design',
+              date: 'October 2006 to April 2011',
+              title: 'Bachelor’s Degree in Graphic Design',
               titleUnion: 'at the',
               url: 'https://www.easdvalencia.com',
-              where: 'EASD Valencia',
+              where: 'EASD València',
             },
           ]}
         />
@@ -135,10 +137,10 @@ export default function AboutPage() {
         <ExperienceList
           items={[
             {
+              city: '359 hours, in-person',
               date: 'June to October 2006',
-              city: 'València',
               title: 'Web Design and Multimedia',
-              titleUnion: '(359 hours)',
+              titleUnion: '',
             },
           ]}
         />
@@ -151,7 +153,7 @@ export default function AboutPage() {
               date: 'September 2010',
               city: 'València',
               description:
-                'Event organised by the Association of Designers of the Region of Valencia (ADCV) consisting on several design-related activities carried out in Valencia city during a week coinciding with the Feria Hábitat Valencia Trade Fair.',
+                'Supported the organisation of the Valencia Disseny Week, a week-long event consisting of design-related activities around various locations in Valencia city highlighting the work of Valencian designers. The event was organised by the Association of Designers of the Region of Valencia (ADCV).',
               title: 'Organisation Assistance',
               titleUnion: 'at the',
               url: 'https://www.valenciadissenyweek.com',
@@ -161,7 +163,7 @@ export default function AboutPage() {
               date: 'June 2010',
               city: 'València',
               description:
-                'Considered the most impotant event about typography and graphic design in Spain, it is composed of a mix of workshops, expositions, talks, book presentations… and organised by the ADCV.',
+                'Supported the organisation of a conference composed of a mix of workshops, exhibitions, talks, and book presentations with national and international guests. The conference was organised by the ADCV and considered the most important event about typography and graphic design in Spain.',
               title: 'Organisation Assistance',
               titleUnion: 'at the',
               url: 'https://www.congresotipografia.com',
