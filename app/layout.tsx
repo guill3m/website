@@ -3,6 +3,7 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 
 import Link from '../components/Link'
+import WebVitalsReporter from '../components/WebVitalsReporter'
 import siteMetadata from '../lib/siteMetadata'
 
 import '../styles/font-face.css'
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const enableAnalytics =
+  const isProduction =
     process.env.NODE_ENV === 'production' &&
     process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
   const year = new Date().getFullYear()
@@ -65,7 +66,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {enableAnalytics && (
+        {isProduction && (
           <Script
             data-domain="guillemandreu.com"
             defer
@@ -109,6 +110,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             .
           </p>
         </footer>
+        {isProduction && <WebVitalsReporter />}
       </body>
     </html>
   )
