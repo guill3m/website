@@ -66,16 +66,12 @@ export default function Layout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         {enableAnalytics && (
-          <>
-            <Script data-domain="guillemandreu.com" defer src="/stats.js" />
-            <Script
-              id="plausible-init"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
-              }}
-            />
-          </>
+          <Script
+            data-domain="guillemandreu.com"
+            defer
+            src="/stats.js"
+            strategy="afterInteractive"
+          />
         )}
         <header className={styles.header}>
           <Link href="/" className={styles.logo}>
