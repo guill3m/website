@@ -1,5 +1,3 @@
-'use client'
-
 import { JSXMapSerializer, PrismicRichText } from '@prismicio/react'
 import { RTTextNode } from '@prismicio/types'
 
