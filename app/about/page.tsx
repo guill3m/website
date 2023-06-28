@@ -44,9 +44,9 @@ export default function AboutPage() {
           />
         </p>
         <p>
-          Hi, my name is Guillem. I’m an Experienced Tech Lead, Web Developer,
-          and Designer. With a predilection for front-end web development and a
-          people-first approach. Passionate about design and technology.
+          Hi, my name is Guillem. I’m a Tech Lead, Web Developer, and Designer.
+          With a predilection for front-end web development and a people-first
+          approach. Passionate about design and technology.
         </p>
       </section>
       <section>
