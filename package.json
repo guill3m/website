@@ -13,6 +13,7 @@
     "format": "stylelint '**/*.css' -- fix && prettier --write ."
   },
   "dependencies": {
+    "@guill3m/fonts": "^1.0.0",
     "@prismicio/react": "^2.7.1",
     "next": "^13.4.7",
     "next-axiom": "^0.18.0",

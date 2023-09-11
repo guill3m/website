@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import Link from '../components/Link'
 import WebVitalsReporter from '../components/WebVitalsReporter'
 import siteMetadata from '../lib/siteMetadata'
+import { fontSourceSans, fontBwDarius } from '../styles/fonts'
 
-import '../styles/font-face.css'
 import '../styles/globals.css'
 import styles from './layout.module.css'
 
@@ -64,7 +64,10 @@ export default function Layout({ children }: { children: ReactNode }) {
   const year = new Date().getFullYear()
 
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={[fontSourceSans.variable, fontBwDarius.variable].join(' ')}
+    >
       <body>
         {isProduction && (
           <Script
@@ -96,18 +99,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         <footer className={styles.footer}>
           <p>
             <strong>© {year} Guillem Andreu Muñoz.</strong>{' '}
+            Made in Berlin.{' '}
             <Link href="/privacy-policy/">Privacy policy.</Link>
-          </p>
-          <p>
-            Designed and developed by me. Text set with{' '}
-            <Link href="https://brandingwithtype.com/typefaces/bw-darius">
-              Bw Darius
-            </Link>{' '}
-            and{' '}
-            <Link href="https://www.atipofoundry.com/fonts/geomanist">
-              Geomanist
-            </Link>
-            .
           </p>
         </footer>
         {isProduction && <WebVitalsReporter />}

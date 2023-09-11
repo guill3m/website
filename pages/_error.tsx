@@ -1,7 +1,6 @@
 import { NextPageContext } from 'next'
 import NextError, { ErrorProps } from 'next/error'
 
-import '../styles/font-face.css'
 import '../styles/globals.css'
 import '../styles/error.css'
 
