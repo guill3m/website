@@ -10,27 +10,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${siteMetadata.url}/`,
       lastModified: new Date(),
-      priority: '1.0',
+      priority: 1.0,
     },
     {
       url: `${siteMetadata.url}/about/`,
       lastModified: new Date(),
-      priority: '0.9',
+      priority: 0.9,
     },
     {
       url: `${siteMetadata.url}/contact/`,
       lastModified: new Date(),
-      priority: '0.9',
+      priority: 0.9,
     },
     {
       url: `${siteMetadata.url}/privacy-policy/`,
       lastModified: new Date(),
-      priority: '0.7',
+      priority: 0.7,
     },
     {
       url: `${siteMetadata.url}/work/`,
       lastModified: new Date(),
-      priority: '0.9',
+      priority: 0.9,
     },
   ]
 
@@ -38,9 +38,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     paths.push({
       url: `${siteMetadata.url}/work/${projectPath}/`,
       lastModified: new Date(),
-      priority: '0.8',
+      priority: 0.8,
     })
   })
 
-  return paths.sort((a, b) => Number(b.priority) - Number(a.priority))
+  return paths.sort((a, b) => b.priority - a.priority)
 }
