@@ -57,7 +57,7 @@ export default function AboutPage() {
               date: 'Since June 2019',
               city: 'Hybrid, Berlin',
               description:
-                'I align with different stakeholders in the organisation to plan and implement the teams’s roadmap and tech initiatives. I make sure the team has the knowledge, resources and support they need to grow and consistently deliver excellent work. I have guided the team through many changes on the website, including a redesign as well as CMS and framework migrations, with end-user performance and usability as the focus. I also led the hiring of Developers, Designers, and SEO Managers.',
+                'I align with different stakeholders in the organisation to plan and implement the team’s roadmap and tech initiatives. I make sure the team has the knowledge, resources and support they need to grow and consistently deliver excellent work. I have guided the team through many changes on the website, including a redesign as well as CMS and framework migrations, with end-user performance and usability as the focus. I also led the hiring of Developers, Designers, and SEO Managers.',
               title: 'Team Lead, Website',
               url: 'https://ada.com',
               where: 'Ada Health',
