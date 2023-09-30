@@ -9,7 +9,7 @@ const securityHeaders = [
       {
         key: 'Permissions-Policy',
         value:
-          'camera=(), display-capture(), geolocation=(), microphone=(), usb()',
+          'camera=(), display-capture=(), geolocation=(), microphone=(), usb=()',
       },
       {
         key: 'Referrer-Policy',
