@@ -53,9 +53,6 @@ const nextConfig = {
   eslint: {
     dirs: ['.'],
   },
-  experimental: {
-    appDir: true,
-  },
   async headers() {
     return [...securityHeaders]
   },

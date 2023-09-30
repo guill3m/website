@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 import Script from 'next/script'
+import { AxiomWebVitals } from 'next-axiom'
 import type { Metadata } from 'next'
 
 import Link from '../components/Link'
-import WebVitalsReporter from '../components/WebVitalsReporter'
 import siteMetadata from '../lib/siteMetadata'
 import { fontSourceSans, fontBwDarius } from '../styles/fonts'
 
@@ -77,12 +77,11 @@ export default function Layout({ children }: { children: ReactNode }) {
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <p>
-            <strong>© {year} Guillem Andreu Muñoz.</strong>{' '}
-            Made in Berlin.{' '}
+            <strong>© {year} Guillem Andreu Muñoz.</strong> Made in Berlin.{' '}
             <Link href="/privacy-policy/">Privacy policy.</Link>
           </p>
         </footer>
-        {isProduction && <WebVitalsReporter />}
+        {isProduction && <AxiomWebVitals />}
       </body>
     </html>
   )
