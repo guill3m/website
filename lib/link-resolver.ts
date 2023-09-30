@@ -4,7 +4,7 @@ import {
   FilledLinkToWebField,
 } from '@prismicio/types'
 
-import siteMetadata from './siteMetadata'
+import siteMetadata from './site-metadata'
 
 export default function linkResolver(
   target:

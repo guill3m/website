@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { WebSite, WithContext } from 'schema-dts'
 
-import Link from '../components/Link'
-import ProjectThumbnailList from '../components/ProjectThumbnailList'
-import { getFeaturedProjectThumbnails } from '../lib/getData'
-import siteMetadata from '../lib/siteMetadata'
+import Link from '../components/link'
+import ProjectThumbnailList from '../components/project-thumbnail-list'
+import { getFeaturedProjectThumbnails } from '../lib/get-data'
+import siteMetadata from '../lib/site-metadata'
 
 import styles from './page.module.css'
 

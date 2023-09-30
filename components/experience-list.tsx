@@ -1,6 +1,6 @@
-import Link from './Link'
+import Link from './link'
 
-import styles from '../styles/components/ExperienceList.module.css'
+import styles from './experience-list.module.css'
 
 type ExperienceListProps = {
   items: {

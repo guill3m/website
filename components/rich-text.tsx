@@ -1,8 +1,8 @@
 import { JSXMapSerializer, PrismicRichText } from '@prismicio/react'
 import { RTTextNode } from '@prismicio/types'
 
-import linkResolver from '../lib/linkResolver'
-import Link from './Link'
+import linkResolver from '../lib/link-resolver'
+import Link from './link'
 
 const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => (

@@ -3,7 +3,7 @@ import { readdir, readFile } from 'fs/promises'
 
 import { log } from 'next-axiom'
 
-import { Project, ProjectThumbnail } from '../types/Project'
+import { Project, ProjectThumbnail } from '../types/project'
 
 function mapProjectThumbnails(projects: Project[]): ProjectThumbnail[] {
   return projects.map(

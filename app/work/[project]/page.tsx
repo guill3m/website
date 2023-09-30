@@ -3,9 +3,9 @@ import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interfa
 import { notFound } from 'next/navigation'
 import { Article, WithContext } from 'schema-dts'
 
-import RichText from '../../../components/RichText'
-import { getAllProjectPaths, getProject } from '../../../lib/getData'
-import siteMetadata from '../../../lib/siteMetadata'
+import RichText from '../../../components/rich-text'
+import { getAllProjectPaths, getProject } from '../../../lib/get-data'
+import siteMetadata from '../../../lib/site-metadata'
 
 import styles from './page.module.css'
 

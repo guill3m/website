@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 
-import RichText from '../../components/RichText'
+import RichText from '../../components/rich-text'
 
 import styles from './page.module.css'
 

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 
-import ExperienceList from '../../components/ExperienceList'
-import siteMetadata from '../../lib/siteMetadata'
+import ExperienceList from '../../components/experience-list'
+import siteMetadata from '../../lib/site-metadata'
 
 import styles from './page.module.css'
 

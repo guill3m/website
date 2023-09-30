@@ -1,7 +1,7 @@
-import Link from './Link'
-import { ProjectThumbnail } from '../types/Project'
+import Link from './link'
+import { ProjectThumbnail } from '../types/project'
 
-import styles from '../styles/components/ProjectThumbnailList.module.css'
+import styles from './project-thumbnail-list.module.css'
 
 type ProjectThumbnailListProps = {
   items: ProjectThumbnail[]

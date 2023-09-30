@@ -3,8 +3,8 @@ import Script from 'next/script'
 import { AxiomWebVitals } from 'next-axiom'
 import type { Metadata } from 'next'
 
-import Link from '../components/Link'
-import siteMetadata from '../lib/siteMetadata'
+import Link from '../components/link'
+import siteMetadata from '../lib/site-metadata'
 import { fontSourceSans, fontBwDarius } from '../styles/fonts'
 
 import '../styles/globals.css'
