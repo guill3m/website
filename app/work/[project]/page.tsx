@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const project = await getProject(params.project)

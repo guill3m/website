@@ -12,7 +12,7 @@ function mapProjectThumbnails(projects: Project[]): ProjectThumbnail[] {
       path: proj.path,
       thumbnail: proj.thumbnail,
       title: proj.title,
-    })
+    }),
   )
 }
 
@@ -32,11 +32,11 @@ export async function getAllProjects(): Promise<Project[]> {
   const projectsAsStrings = await Promise.all(projectsPromises)
 
   const projects = projectsAsStrings.map((project: string) =>
-    JSON.parse(project)
+    JSON.parse(project),
   )
 
   return projects.sort(
-    (a, b) => b.date.year - a.date.year || b.date.month - a.date.month
+    (a, b) => b.date.year - a.date.year || b.date.month - a.date.month,
   )
 }
 
@@ -65,7 +65,7 @@ export async function getFeaturedProjectThumbnails(): Promise<
   const allProjectThumbnails = await getAllProjectThumbnails()
 
   return allProjectThumbnails.filter(
-    (projectThumbnail) => projectThumbnail.featured
+    (projectThumbnail) => projectThumbnail.featured,
   )
 }
 

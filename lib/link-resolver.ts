@@ -10,7 +10,7 @@ export default function linkResolver(
   target:
     | FilledLinkToWebField
     | FilledLinkToDocumentField
-    | FilledLinkToMediaField
+    | FilledLinkToMediaField,
 ): string | null {
   if (target.link_type !== 'Web') {
     return null

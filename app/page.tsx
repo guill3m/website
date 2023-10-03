@@ -15,7 +15,7 @@ const description =
 
 export async function generateMetadata(
   params: any,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const url = '/'

@@ -8,7 +8,7 @@ import styles from './page.module.css'
 
 export async function generateMetadata(
   params: any,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentOpenGraph = (await parent).openGraph
   const title = 'About me - Guillem Andreu'
