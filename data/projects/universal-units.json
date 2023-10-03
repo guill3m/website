@@ -5,7 +5,9 @@
   "excerpt": "Universal Units logo redesign, brand unification, and company website design.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/universal-units-thumbnail.png"
+    "src": "/projects/universal-units-thumbnail.png",
+    "height": 500,
+    "width": 900
   },
   "date": {
     "month": 10,
@@ -38,23 +40,23 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/universal-units-1.png"
+      "src": "/projects/universal-units-1.png"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/universal-units-2.jpg"
+      "src": "/projects/universal-units-2.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/universal-units-3.jpg"
+      "src": "/projects/universal-units-3.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/universal-units-4.jpg"
+      "src": "/projects/universal-units-4.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/universal-units-5.jpg"
+      "src": "/projects/universal-units-5.jpg"
     }
   ]
 }

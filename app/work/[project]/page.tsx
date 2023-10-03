@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { notFound } from 'next/navigation'
 import { Article, WithContext } from 'schema-dts'
@@ -88,6 +89,8 @@ export default async function ProjectPage({ params }: Props) {
     },
   }
 
+  const twoColumnsImages = project.imageColumns === 2
+
   return (
     <>
       <script
@@ -99,11 +102,17 @@ export default async function ProjectPage({ params }: Props) {
         <h2>{project.subtitle}.</h2>
         <RichText field={project.description} />
         {project.images.map((image, idx) => (
-          <img
+          <Image
             alt={image.alt}
-            className={project.imageColumns === 2 ? styles.twoCol : undefined}
+            className={twoColumnsImages ? styles.twoCol : undefined}
             key={idx}
-            src={`${siteMetadata.cdnUrl}${image.src}`}
+            priority={idx === 0 || (twoColumnsImages && idx === 1)}
+            sizes={
+              twoColumnsImages
+                ? '(min-width: 1325px) 640px, (min-width: 600px) calc((100vw - 5rem) / 2), calc(100vw - 4rem)'
+                : '(min-width: 1325px) 1300px, calc(100vw - 4rem)'
+            }
+            src={require(`@guill3m/website-img${image.src}`)}
           />
         ))}
       </article>

@@ -56,6 +56,9 @@ const nextConfig = {
   async headers() {
     return [...securityHeaders]
   },
+  images: {
+    imageSizes: [200, 250, 280, 320, 360, 385, 450, 515, 550, 600],
+  },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
   async rewrites() {

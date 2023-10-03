@@ -5,7 +5,7 @@
   "excerpt": "Design and layout of a novel by the valencian author Carme Miquel.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/mataren-el-verd-thumbnail.png"
+    "src": "/projects/mataren-el-verd-thumbnail.png"
   },
   "date": {
     "month": 5,
@@ -53,19 +53,19 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/mataren-el-verd-1.jpg"
+      "src": "/projects/mataren-el-verd-1.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/mataren-el-verd-2.jpg"
+      "src": "/projects/mataren-el-verd-2.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/mataren-el-verd-3.jpg"
+      "src": "/projects/mataren-el-verd-3.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/mataren-el-verd-4.jpg"
+      "src": "/projects/mataren-el-verd-4.jpg"
     }
   ]
 }

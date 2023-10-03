@@ -5,7 +5,7 @@
   "excerpt": "Web-based application for tax accounting and management.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/u2-thumbnail.png"
+    "src": "/projects/u2-thumbnail.png"
   },
   "date": {
     "month": 5,
@@ -47,19 +47,19 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/u2-1.jpg"
+      "src": "/projects/u2-1.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/u2-2.jpg"
+      "src": "/projects/u2-2.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/u2-3.jpg"
+      "src": "/projects/u2-3.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/u2-4.jpg"
+      "src": "/projects/u2-4.jpg"
     }
   ]
 }

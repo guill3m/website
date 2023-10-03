@@ -3,6 +3,7 @@
 }
 
 .project img {
+  height: auto;
   margin: var(--spacing) 0;
 }
 
@@ -19,7 +20,7 @@
   .project img.twoCol {
     display: inline-block;
     margin: calc(var(--spacing) / 2) -15%;
-    width: calc(65% - var(--spacing));
+    width: calc(65% - var(--spacing) - 2px);
   }
 
   .project img.twoCol:nth-of-type(odd) {

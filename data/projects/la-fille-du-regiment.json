@@ -5,7 +5,7 @@
   "excerpt": "Poster for the opera “La Fille du Régiment”.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/la-fille-du-regiment-thumbnail.png"
+    "src": "/projects/la-fille-du-regiment-thumbnail.png"
   },
   "date": {
     "month": 4,
@@ -57,7 +57,7 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/la-fille-du-regiment-1.jpg"
+      "src": "/projects/la-fille-du-regiment-1.jpg"
     }
   ]
 }

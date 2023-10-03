@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from './link'
 import { ProjectThumbnail } from '../types/project'
 
@@ -16,9 +17,11 @@ export default function ProjectThumbnailList({
         <li key={project.path}>
           <article>
             <Link href={`/work/${project.path}/`}>
-              <img
+              <Image
                 alt={project.thumbnail.alt}
-                src={`https://assets.guillemandreu.com${project.thumbnail.src}`}
+                placeholder="blur"
+                sizes="(min-width: 744px) calc((100vw - 4rem) / 3), calc(100vw - 4rem)"
+                src={require(`@guill3m/website-img${project.thumbnail.src}`)}
               />
               <span>{project.title}</span>
             </Link>

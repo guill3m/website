@@ -5,7 +5,7 @@
   "excerpt": "Spanish deck of cards submitted to Fournier’s 140th anniversary contest. 6th finalist.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/cartoos-thumbnail.jpg"
+    "src": "/projects/cartoos-thumbnail.jpg"
   },
   "date": {
     "month": 5,
@@ -38,7 +38,7 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/cartoos-1.jpg"
+      "src": "/projects/cartoos-1.jpg"
     }
   ]
 }

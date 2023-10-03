@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { WebSite, WithContext } from 'schema-dts'
 
@@ -7,6 +8,7 @@ import ProjectThumbnailList from '../components/project-thumbnail-list'
 import { getFeaturedProjectThumbnails } from '../lib/get-data'
 import siteMetadata from '../lib/site-metadata'
 
+import meSvg from '../public/me.svg'
 import styles from './page.module.css'
 
 const title = 'Guillem Andreu - Web Developer and Designer'
@@ -70,7 +72,7 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className={styles.about}>
-        <img alt="A drawn silouethe of myself" src="/me.svg" />
+        <Image alt="A drawn silouethe of myself" priority src={meSvg} />
         <p>
           <strong>Hi. I’m Guillem,</strong> a web developer and designer based
           in Berlin.

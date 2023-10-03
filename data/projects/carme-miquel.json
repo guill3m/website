@@ -5,7 +5,7 @@
   "excerpt": "Design and development of the official website for the valencian writer Carme Miquel.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/carme-miquel-thumbnail.png"
+    "src": "/projects/carme-miquel-thumbnail.png"
   },
   "date": {
     "month": 9,
@@ -47,19 +47,19 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/carme-miquel-1.jpg"
+      "src": "/projects/carme-miquel-1.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/carme-miquel-2.jpg"
+      "src": "/projects/carme-miquel-2.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/carme-miquel-3.jpg"
+      "src": "/projects/carme-miquel-3.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/carme-miquel-4.jpg"
+      "src": "/projects/carme-miquel-4.jpg"
     }
   ]
 }

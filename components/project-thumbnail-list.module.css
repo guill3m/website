@@ -9,6 +9,7 @@
 }
 
 .list img {
+  height: auto;
   transition: filter 256ms var(--cubic-bezier-ease-out);
   vertical-align: bottom;
   width: 100%;

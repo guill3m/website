@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 
 import ExperienceList from '../../components/experience-list'
-import siteMetadata from '../../lib/site-metadata'
 
+import meKidJpg from '@guill3m/website-img/me-kid.jpg'
 import styles from './page.module.css'
 
 export async function generateMetadata(
@@ -38,9 +39,12 @@ export default function AboutPage() {
       <h1>About me.</h1>
       <section className={styles.intro} id="intro">
         <p>
-          <img
+          <Image
             alt="Me when I was a kid"
-            src={`${siteMetadata.cdnUrl}/img/website/me-kid.jpg`}
+            placeholder="blur"
+            priority
+            sizes="(min-width: 1325px) 410px, (min-width: 830px) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem), (min-width: 600px) calc((100vw - 4rem) * 0.8), calc(100vw - 4rem)"
+            src={meKidJpg}
           />
         </p>
         <p>

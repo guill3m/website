@@ -5,7 +5,7 @@
   "excerpt": "Web service for comparison of broadband Internet offers in Spain.",
   "thumbnail": {
     "alt": "",
-    "src": "/img/website/projects/comparativa-de-adsl-thumbnail.png"
+    "src": "/projects/comparativa-de-adsl-thumbnail.png"
   },
   "date": {
     "month": 2,
@@ -28,19 +28,19 @@
   "images": [
     {
       "alt": "",
-      "src": "/img/website/projects/comparativa-de-adsl-1.jpg"
+      "src": "/projects/comparativa-de-adsl-1.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/comparativa-de-adsl-2.jpg"
+      "src": "/projects/comparativa-de-adsl-2.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/comparativa-de-adsl-3.jpg"
+      "src": "/projects/comparativa-de-adsl-3.jpg"
     },
     {
       "alt": "",
-      "src": "/img/website/projects/comparativa-de-adsl-4.jpg"
+      "src": "/projects/comparativa-de-adsl-4.jpg"
     }
   ]
 }
