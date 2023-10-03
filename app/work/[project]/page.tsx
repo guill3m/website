@@ -101,20 +101,22 @@ export default async function ProjectPage({ params }: Props) {
         <h1>{project.title}.</h1>
         <h2>{project.subtitle}.</h2>
         <RichText field={project.description} />
-        {project.images.map((image, idx) => (
-          <Image
-            alt={image.alt}
-            className={twoColumnsImages ? styles.twoCol : undefined}
-            key={idx}
-            priority={idx === 0 || (twoColumnsImages && idx === 1)}
-            sizes={
-              twoColumnsImages
-                ? '(min-width: 1325px) 640px, (min-width: 600px) calc((100vw - 5rem) / 2), calc(100vw - 4rem)'
-                : '(min-width: 1325px) 1300px, calc(100vw - 4rem)'
-            }
-            src={require(`@guill3m/website-img${image.src}`)}
-          />
-        ))}
+        {project.images.map(
+          (image: { alt: string; src: string }, idx: number) => (
+            <Image
+              alt={image.alt}
+              className={twoColumnsImages ? styles.twoCol : undefined}
+              key={idx}
+              priority={idx === 0 || (twoColumnsImages && idx === 1)}
+              sizes={
+                twoColumnsImages
+                  ? '(min-width: 1325px) 640px, (min-width: 600px) calc((100vw - 5rem) / 2), calc(100vw - 4rem)'
+                  : '(min-width: 1325px) 1300px, calc(100vw - 4rem)'
+              }
+              src={require(`@guill3m/website-img${image.src}`)}
+            />
+          ),
+        )}
       </article>
     </>
   )
