@@ -106,6 +106,7 @@ export default async function ProjectPage({ params }: Props) {
             alt={image.alt}
             className={twoColumnsImages ? styles.twoCol : undefined}
             key={idx}
+            placeholder="blur"
             priority={idx === 0 || (twoColumnsImages && idx === 1)}
             sizes={
               twoColumnsImages
