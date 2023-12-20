@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import Script from 'next/script'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 import Link from '../components/link'
 import siteMetadata from '../lib/site-metadata'
@@ -23,16 +23,17 @@ export const metadata: Metadata = {
     pinterest: 'nopin',
     'twitter:dnt': 'on',
   },
-  themeColor: '#f68d2e',
   twitter: {
     creator: `@${siteMetadata.author.twitter}`,
     creatorId: '2672731',
   },
-  viewport: {
-    initialScale: 1,
-    viewportFit: 'cover',
-    width: 'device-width',
-  },
+}
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  themeColor: '#f68d2e',
+  viewportFit: 'cover',
+  width: 'device-width',
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
