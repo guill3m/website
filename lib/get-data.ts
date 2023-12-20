@@ -1,8 +1,6 @@
 import path from 'path'
 import { readdir, readFile } from 'fs/promises'
 
-import { log } from 'next-axiom'
-
 import { Project, ProjectThumbnail } from '../types/project'
 
 function mapProjectThumbnails(projects: Project[]): ProjectThumbnail[] {
@@ -17,8 +15,6 @@ function mapProjectThumbnails(projects: Project[]): ProjectThumbnail[] {
 }
 
 export async function getAllProjects(): Promise<Project[]> {
-  log.debug('call to getAllProjects')
-
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const projectsFiles = await readdir(projectsDataFolder)
 
@@ -41,8 +37,6 @@ export async function getAllProjects(): Promise<Project[]> {
 }
 
 export async function getAllProjectPaths(): Promise<string[]> {
-  log.debug('call to getAllProjectPaths')
-
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const projectsFiles = await readdir(projectsDataFolder)
 
@@ -50,8 +44,6 @@ export async function getAllProjectPaths(): Promise<string[]> {
 }
 
 export async function getAllProjectThumbnails(): Promise<ProjectThumbnail[]> {
-  log.debug('call to getAllProjectThumbnails')
-
   const projects = await getAllProjects()
 
   return mapProjectThumbnails(projects)
@@ -60,8 +52,6 @@ export async function getAllProjectThumbnails(): Promise<ProjectThumbnail[]> {
 export async function getFeaturedProjectThumbnails(): Promise<
   ProjectThumbnail[]
 > {
-  log.debug('call to getFeaturedProjectThumbnails')
-
   const allProjectThumbnails = await getAllProjectThumbnails()
 
   return allProjectThumbnails.filter(
@@ -70,8 +60,6 @@ export async function getFeaturedProjectThumbnails(): Promise<
 }
 
 export async function getProject(projectPath: string): Promise<Project> {
-  log.debug(`call to getProject for '${projectPath}'`)
-
   const projectsDataFolder = path.join(process.cwd(), 'data/projects/')
   const fullProjectPath = path.join(projectsDataFolder, `${projectPath}.json`)
 

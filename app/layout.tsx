@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import Script from 'next/script'
-import { AxiomWebVitals } from 'next-axiom'
 import type { Metadata } from 'next'
 
 import Link from '../components/link'
@@ -81,7 +80,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link href="/privacy-policy/">Privacy policy.</Link>
           </p>
         </footer>
-        {isProduction && <AxiomWebVitals />}
       </body>
     </html>
   )

@@ -1,7 +1,5 @@
 // @ts-check
 
-const { withAxiom } = require('next-axiom')
-
 const securityHeaders = [
   {
     source: '/:path*',
@@ -67,4 +65,4 @@ const nextConfig = {
   trailingSlash: true,
 }
 
-module.exports = withAxiom(nextConfig)
+module.exports = nextConfig

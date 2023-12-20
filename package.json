@@ -17,7 +17,6 @@
     "@guill3m/website-img": "^1.0.0",
     "@prismicio/react": "^2.7.3",
     "next": "^14.0.4",
-    "next-axiom": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.33.1"
