@@ -17,8 +17,8 @@ type ExperienceListProps = {
 export default function ExperienceList({ items }: ExperienceListProps) {
   return (
     <ul className={styles.list}>
-      {items.map((item, idx) => (
-        <li className={styles.item} key={idx}>
+      {items.map((item) => (
+        <li className={styles.item} key={item.date}>
           <strong>
             <em>{item.title}</em>
             {item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
