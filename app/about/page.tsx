@@ -1,6 +1,5 @@
-import { Metadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
-import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 
 import ExperienceList from '../../components/experience-list'
 

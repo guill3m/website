@@ -1,6 +1,5 @@
-import { Metadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
-import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { notFound } from 'next/navigation'
 import { Article, WithContext } from 'schema-dts'
 

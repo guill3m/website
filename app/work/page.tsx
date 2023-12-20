@@ -1,5 +1,4 @@
-import type { Metadata } from 'next'
-import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 import ProjectThumbnailList from '../../components/project-thumbnail-list'
 import { getAllProjectThumbnails } from '../../lib/get-data'

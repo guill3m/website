@@ -1,6 +1,5 @@
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
-import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { WebSite, WithContext } from 'schema-dts'
 
 import Link from '../components/link'

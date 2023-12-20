@@ -1,5 +1,4 @@
-import { Metadata } from 'next'
-import { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface'
+import { Metadata, ResolvingMetadata } from 'next'
 
 import RichText from '../../components/rich-text'
 
