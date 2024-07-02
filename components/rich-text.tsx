@@ -3,8 +3,8 @@ import type { RTTextNode } from '@prismicio/types'
 
 import { PrismicRichText } from '@prismicio/react'
 
-import linkResolver from '../lib/link-resolver'
-import Link from './link'
+import linkResolver from '@/helpers/link-resolver'
+import Link from '@/components/link'
 
 const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => (

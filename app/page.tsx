@@ -3,10 +3,10 @@ import type { WebSite, WithContext } from 'schema-dts'
 
 import Image from 'next/image'
 
-import Link from '../components/link'
-import ProjectThumbnailList from '../components/project-thumbnail-list'
-import { getFeaturedProjectThumbnails } from '../lib/get-data'
-import siteMetadata from '../lib/site-metadata'
+import Link from '@/components/link'
+import ProjectThumbnailList from '@/components/project-thumbnail-list'
+import { getFeaturedProjectThumbnails } from '@/helpers/get-data'
+import siteMetadata from '@/helpers/site-metadata'
 
 import meSvg from '../public/me.svg'
 import styles from './page.module.css'

@@ -4,9 +4,9 @@ import type { Article, WithContext } from 'schema-dts'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-import RichText from '../../../components/rich-text'
-import { getAllProjectPaths, getProject } from '../../../lib/get-data'
-import siteMetadata from '../../../lib/site-metadata'
+import RichText from '@/components/rich-text'
+import { getAllProjectPaths, getProject } from '@/helpers/get-data'
+import siteMetadata from '@/helpers/site-metadata'
 
 import styles from './page.module.css'
 

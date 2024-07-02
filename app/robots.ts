@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 import { headers } from 'next/headers'
 
-import siteMetadata from '../lib/site-metadata'
+import siteMetadata from '@/helpers/site-metadata'
 
 export default function robots(): MetadataRoute.Robots {
   const headersList = headers()

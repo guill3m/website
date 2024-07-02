@@ -1,6 +1,6 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 
-import RichText from '../../components/rich-text'
+import RichText from '@/components/rich-text'
 
 import styles from './page.module.css'
 

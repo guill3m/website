@@ -3,11 +3,11 @@ import type { Metadata, Viewport } from 'next'
 
 import Script from 'next/script'
 
-import Link from '../components/link'
-import siteMetadata from '../lib/site-metadata'
-import { fontSourceSans, fontBwDarius } from '../styles/fonts'
+import Link from '@/components/link'
+import siteMetadata from '@/helpers/site-metadata'
+import { fontSourceSans, fontBwDarius } from '@/styles/fonts'
 
-import '../styles/globals.css'
+import '@/styles/globals.css'
 import styles from './layout.module.css'
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import Link from './link'
+import Link from '@/components/link'
 
 import styles from './experience-list.module.css'
 

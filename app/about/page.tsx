@@ -2,10 +2,11 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import Image from 'next/image'
 
-import ExperienceList from '../../components/experience-list'
+import ExperienceList from '@/components/experience-list'
+
+import styles from './page.module.css'
 
 import meKidJpg from '@guill3m/website-img/me-kid.jpg'
-import styles from './page.module.css'
 
 export async function generateMetadata(
   params: any,

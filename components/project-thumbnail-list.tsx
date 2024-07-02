@@ -2,7 +2,7 @@ import type { ProjectThumbnail } from '../types/project'
 
 import Image from 'next/image'
 
-import Link from './link'
+import Link from '@/components/link'
 
 import styles from './project-thumbnail-list.module.css'
 

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
-import { getAllProjectPaths } from '../lib/get-data'
-import siteMetadata from '../lib/site-metadata'
+import { getAllProjectPaths } from '@/helpers/get-data'
+import siteMetadata from '@/helpers/site-metadata'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectPaths = await getAllProjectPaths()
