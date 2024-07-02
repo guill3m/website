@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 import { getAllProjectPaths } from '../lib/get-data'
 import siteMetadata from '../lib/site-metadata'

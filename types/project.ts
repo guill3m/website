@@ -1,4 +1,4 @@
-import { RTTextNode } from '@prismicio/types'
+import type { RTTextNode } from '@prismicio/types'
 
 export type Project = {
   date: {

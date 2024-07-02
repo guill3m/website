@@ -1,5 +1,7 @@
-import { JSXMapSerializer, PrismicRichText } from '@prismicio/react'
-import { RTTextNode } from '@prismicio/types'
+import type { JSXMapSerializer } from '@prismicio/react'
+import type { RTTextNode } from '@prismicio/types'
+
+import { PrismicRichText } from '@prismicio/react'
 
 import linkResolver from '../lib/link-resolver'
 import Link from './link'

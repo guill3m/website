@@ -1,7 +1,8 @@
-import { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
+import type { Article, WithContext } from 'schema-dts'
+
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { Article, WithContext } from 'schema-dts'
 
 import RichText from '../../../components/rich-text'
 import { getAllProjectPaths, getProject } from '../../../lib/get-data'

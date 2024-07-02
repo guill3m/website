@@ -1,4 +1,5 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
+
 import { headers } from 'next/headers'
 
 import siteMetadata from '../lib/site-metadata'

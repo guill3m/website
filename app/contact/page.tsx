@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 import RichText from '../../components/rich-text'
 

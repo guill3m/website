@@ -1,7 +1,7 @@
+import type { Project, ProjectThumbnail } from '../types/project'
+
 import path from 'path'
 import { readdir, readFile } from 'fs/promises'
-
-import { Project, ProjectThumbnail } from '../types/project'
 
 function mapProjectThumbnails(projects: Project[]): ProjectThumbnail[] {
   return projects.map(

@@ -1,6 +1,8 @@
+import type { ProjectThumbnail } from '../types/project'
+
 import Image from 'next/image'
+
 import Link from './link'
-import { ProjectThumbnail } from '../types/project'
 
 import styles from './project-thumbnail-list.module.css'
 

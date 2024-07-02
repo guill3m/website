@@ -1,6 +1,7 @@
 import type { Metadata, ResolvingMetadata } from 'next'
+import type { WebSite, WithContext } from 'schema-dts'
+
 import Image from 'next/image'
-import { WebSite, WithContext } from 'schema-dts'
 
 import Link from '../components/link'
 import ProjectThumbnailList from '../components/project-thumbnail-list'

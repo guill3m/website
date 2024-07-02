@@ -1,6 +1,7 @@
-import { ReactNode } from 'react'
-import Script from 'next/script'
+import type { ReactNode } from 'react'
 import type { Metadata, Viewport } from 'next'
+
+import Script from 'next/script'
 
 import Link from '../components/link'
 import siteMetadata from '../lib/site-metadata'
