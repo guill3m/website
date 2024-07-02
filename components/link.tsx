@@ -8,7 +8,12 @@ type LinkProps = {
   target?: string
 }
 
-export default function Link({ children, href, target, ...rest }: LinkProps) {
+export default function Link({
+  children,
+  href,
+  target,
+  ...rest
+}: Readonly<LinkProps>) {
   if (!href) {
     return <span {...rest}>{children}</span>
   }

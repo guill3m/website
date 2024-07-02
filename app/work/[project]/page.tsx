@@ -55,7 +55,7 @@ export async function generateMetadata(
   }
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params }: Readonly<Props>) {
   const project = params?.project ? await getProject(params.project) : null
 
   if (!project) {

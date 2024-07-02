@@ -36,7 +36,9 @@ export const viewport: Viewport = {
   width: 'device-width',
 }
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   const isProduction =
     process.env.NODE_ENV === 'production' &&
     process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'

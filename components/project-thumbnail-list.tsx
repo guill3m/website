@@ -10,7 +10,7 @@ type ProjectThumbnailListProps = {
 
 export default function ProjectThumbnailList({
   items,
-}: ProjectThumbnailListProps) {
+}: Readonly<ProjectThumbnailListProps>) {
   return (
     <ul className={styles.list}>
       {items.map((project) => (

@@ -2,7 +2,7 @@
 
 import styles from './not-found.module.css'
 
-export default function Error() {
+export default function NotFound() {
   return (
     <section className={styles.notfound}>
       <h1>Not found.</h1>

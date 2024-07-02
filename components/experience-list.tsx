@@ -14,7 +14,9 @@ type ExperienceListProps = {
   }[]
 }
 
-export default function ExperienceList({ items }: ExperienceListProps) {
+export default function ExperienceList({
+  items,
+}: Readonly<ExperienceListProps>) {
   return (
     <ul className={styles.list}>
       {items.map((item) => (
