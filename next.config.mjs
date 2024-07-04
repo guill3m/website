@@ -60,7 +60,11 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
   async rewrites() {
-    return [...plausibleAnalyticsProxyRewrites]
+    return {
+      beforeFiles: [...plausibleAnalyticsProxyRewrites],
+      afterFiles: [],
+      fallback: [],
+    }
   },
   trailingSlash: true,
 }
