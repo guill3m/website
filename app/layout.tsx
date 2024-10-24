@@ -40,9 +40,6 @@ export const viewport: Viewport = {
 export default function Layout({
   children,
 }: Readonly<{ children: ReactNode }>) {
-  const isProduction =
-    process.env.NODE_ENV === 'production' &&
-    process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
   const year = new Date().getFullYear()
 
   return (
@@ -51,14 +48,14 @@ export default function Layout({
       className={[fontSourceSans.variable, fontBwDarius.variable].join(' ')}
     >
       <body>
-        {isProduction && (
-          <Script
-            data-domain="guillemandreu.com"
-            defer
-            src="/stats.js"
-            strategy="afterInteractive"
-          />
-        )}
+        <Script
+          data-domains={siteMetadata.host}
+          data-host-url="https://stats.guill3m.me"
+          data-website-id="536f1a13-2add-4a8d-86d9-ea58f657799b"
+          defer
+          src="/stats.js"
+          strategy="afterInteractive"
+        />
         <header className={styles.header}>
           <Link href="/" className={styles.logo}>
             Guillem Andreu.

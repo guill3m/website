@@ -80,12 +80,12 @@ export default function PrivacyPolicyPage() {
           },
           {
             type: 'paragraph',
-            text: 'The data collected includes: ',
+            text: 'The following information is collected for analytics purposes, to better understand how the Site is being used in order to improve it:',
             spans: [],
           },
           {
             type: 'list-item',
-            text: 'Top pages',
+            text: 'Page views',
             spans: [],
           },
           {
@@ -100,12 +100,22 @@ export default function PrivacyPolicyPage() {
           },
           {
             type: 'list-item',
-            text: 'Information from the devices used during the visit\n(device type, browser, operating system, country, region, and city)',
+            text: 'Device (browser, operating system, device type, screen size, and language)',
+            spans: [],
+          },
+          {
+            type: 'list-item',
+            text: 'Location (country, region, and city)',
+            spans: [],
+          },
+          {
+            type: 'paragraph',
+            text: 'The information collected is irreversibly anonymized and can’t be traced back to an individual person.',
             spans: [],
           },
           {
             type: 'heading2',
-            text: 'How do I use the information collected.',
+            text: 'How is the information collected used.',
             spans: [],
           },
           {
@@ -130,27 +140,7 @@ export default function PrivacyPolicyPage() {
           },
           {
             type: 'list-item',
-            text: 'Vercel, to host and serve the website.',
-            spans: [
-              {
-                start: 0,
-                end: 6,
-                type: 'strong',
-              },
-              {
-                start: 0,
-                end: 6,
-                type: 'hyperlink',
-                data: {
-                  link_type: 'Web',
-                  url: 'https://vercel.com',
-                },
-              },
-            ],
-          },
-          {
-            type: 'list-item',
-            text: 'Cloudflare, to manage the domain’ DNS and handle network security and performance improvements.',
+            text: 'Cloudflare, to manage the domain’s DNS and handle network security and performance improvements.',
             spans: [
               {
                 start: 0,
@@ -170,20 +160,20 @@ export default function PrivacyPolicyPage() {
           },
           {
             type: 'list-item',
-            text: 'Plausible Analytics, to better understand how the Site is being used in order to improve it.',
+            text: 'Vercel, to host and serve the website.',
             spans: [
               {
                 start: 0,
-                end: 19,
+                end: 6,
                 type: 'strong',
               },
               {
                 start: 0,
-                end: 19,
+                end: 6,
                 type: 'hyperlink',
                 data: {
                   link_type: 'Web',
-                  url: 'https://plausible.io',
+                  url: 'https://vercel.com',
                 },
               },
             ],
@@ -200,8 +190,14 @@ export default function PrivacyPolicyPage() {
           },
           {
             type: 'paragraph',
-            text: 'Last updated on December 20, 2023.',
-            spans: [],
+            text: 'Last updated on October 24, 2024.',
+            spans: [
+              {
+                start: 0,
+                end: 33,
+                type: 'em',
+              },
+            ],
           },
           {
             type: 'heading2',

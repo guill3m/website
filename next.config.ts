@@ -33,14 +33,10 @@ const securityHeaders = [
   },
 ]
 
-const plausibleAnalyticsProxyRewrites = [
+const umamiAnalyticsProxyRewrites = [
   {
     source: '/stats.js',
-    destination: 'https://plausible.io/js/script.outbound-links.js',
-  },
-  {
-    source: '/api/event/',
-    destination: 'https://plausible.io/api/event',
+    destination: 'https://stats.guill3m.me/script.js',
   },
 ]
 
@@ -58,7 +54,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   async rewrites() {
     return {
-      beforeFiles: [...plausibleAnalyticsProxyRewrites],
+      beforeFiles: [...umamiAnalyticsProxyRewrites],
       afterFiles: [],
       fallback: [],
     }
