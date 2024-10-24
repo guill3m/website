@@ -59,18 +59,18 @@ export default function AboutPage() {
         <ExperienceList
           items={[
             {
-              date: 'Since June 2019',
+              date: 'June 2019 to date',
               city: 'Hybrid, Berlin',
               description:
-                'I align with different stakeholders in the organisation to plan and implement the team’s roadmap and tech initiatives. I make sure the team has the knowledge, resources and support they need to grow and consistently deliver excellent work. I have guided the team through many changes on the website, including a redesign as well as CMS and framework migrations, with end-user performance and usability as the focus. I also led the hiring of Developers, Designers, and SEO Managers.',
-              title: 'Team Lead, Website',
+                'Over the years, my role and team at Ada constantly evolved. From working with and managing a multi-disciplinary team in Marketing, to a hands-on Engineering Manager in a product-focused team. Spearheaded the transformation of Ada’s website, overseeing a complete redesign, CMS overhaul, and framework migration that boosted end-user performance, efficiency, and usability. Facilitated cross-functional collaboration, aligning with stakeholders on tech initiatives and roadmap, driving organisational priorities, and ensuring team execution on high-impact projects. Led the recruitment and managed developers, designers, and SEO managers. Strengthening the team’s ability to consistently deliver results aligned with business priorities. Guided the team through multiple business changes and strategic pivots. Providing mentorship, resources, and support to foster individual growth and team success.',
+              title: 'Team Lead, Web',
               url: 'https://ada.com',
               where: 'Ada Health',
             },
             {
               date: 'July 2018 to June 2019',
               description:
-                'Worked on the development of the company website, a mix of a corporate website and an SEO-driven user-acquisition channel. I worked closely with designers and copywriters, and my first focus was on building capabilities on the site: new components, landing pages, and languages.',
+                'Joined Ada to bring the development of the company website in-house, a mix of a corporate website and an SEO-driven user-acquisition channel. Drove the development of the website, optimising for user acquisition. Collaborated closely with designers and copywriters to launch new components, landing pages, and languages. Contributed to the SEO strategy by improving site performance and enhancing discoverability.',
               city: 'On-site, Berlin',
               title: 'Web Developer',
               url: 'https://ada.com',
@@ -79,25 +79,25 @@ export default function AboutPage() {
             {
               date: 'June 2015 to June 2018',
               description:
-                'Led the front-end development and user interface design of web-based financial applications for multinational European corporations. With the aim of improving efficiency, I expanded and improved the component library and design system. I also implemented the company’s brand refresh.',
+                'Led the front-end development and UI design for a suite of web-based financial applications for multinational European corporations. With a focus on performance and user-friendliness. Expanded and improved the component library and design system, streamlining development processes and ensuring visual consistency across applications. Implemented the company’s brand refresh, from logo to stationary to website redesign.',
               city: 'On-site, Berlin',
-              title: 'UI/UX Designer & Front-end Developer',
+              title: 'UI/UX Developer',
               url: 'https://universalunits.com',
               where: 'Universal Units',
             },
             {
               date: 'October 2013 to May 2015',
               description:
-                'Front-end development and user interface design of a suite of web-based financial applications for multinational European corporations. Besides, I started and led the development of a design system, improving efficiency and consistency through the suite of applications.',
+                'Designed and developed the user interface for a suite of web-based financial applications for multinational European corporations. With a focus on performance and user-friendliness. Started and led the development of a scalable design system that improved development efficiency and visual consistency across applications.',
               city: 'On-site, Berlin',
-              title: 'UI/UX Designer & Front-end Developer',
+              title: 'UI/UX Developer',
               url: 'https://web.archive.org/web/20160817001617/http://www.netdudes.de/',
               where: 'netdudes',
             },
             {
               date: 'May 2011 to October 2013',
               description:
-                'Worked with multiple clients on web design and development, book design, signage iconography, video editing, and posters. Further, I continued to work with CuldeSac™️ on various projects as a freelancer after my internship.',
+                'Worked with multiple clients on a diverse range of projects. Web design and development, book layout, iconography for signage, video editing, and posters. Continued to work with CuldeSac™️ on various projects for clients such as Havaianas, TAG Heuer and Nike, among others, as a freelance designer.',
               city: 'València',
               title: 'Freelance Graphic and Web Designer',
               titleUnion: '',
@@ -105,7 +105,7 @@ export default function AboutPage() {
             {
               date: 'April 2012 to April 2013',
               description:
-                'Designed and developed the company websites of a reseller for three network providers. I built marketing sites for each of the brands and a DSL-comparison site with a focus on SEO.',
+                'Built the company websites of a reseller for three major network providers in Spain. Designed and developed SEO-optimised websites for multiple telecom brands, driving leads and improving search visibility through regular experiments and optimisation. Built a DSL comparison site that served as a critical marketing tool for the company, attracting new leads through targeted SEO strategies.',
               city: 'On-site, València',
               title: 'Web Designer and Developer',
               url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
@@ -114,7 +114,7 @@ export default function AboutPage() {
             {
               date: 'November 2010 to May 2011',
               description:
-                'Worked on editorial design, graphics for events and retail spaces, client presentations, and artwork preparation for print in the “Espacio Creativo” (Interior and Product Design) department.',
+                'Joined the “Espacio Creativo” (Interior and Product Design) department of this design studio. Assisted on projects in editorial design, events and retail spaces graphics, and client presentations. Prepared artwork for print, ensuring the highest quality standards were met.',
               city: 'On-site, València',
               title: 'Graphic Design Internship',
               url: 'https://www.culdesac.es',
