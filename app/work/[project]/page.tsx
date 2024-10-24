@@ -11,9 +11,9 @@ import siteMetadata from '@/helpers/site-metadata'
 import styles from './page.module.css'
 
 type Props = {
-  params: {
+  params: Promise<{
     project: string
-  }
+  }>
 }
 
 export const dynamicParams = false
@@ -27,9 +27,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  { params }: Props,
+  props: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
+  const params = await props.params
   const parentOpenGraph = (await parent).openGraph
   const project = await getProject(params.project)
   const url = `/work/${project.path}/`
@@ -56,8 +57,9 @@ export async function generateMetadata(
   }
 }
 
-export default async function ProjectPage({ params }: Readonly<Props>) {
-  const project = params?.project ? await getProject(params.project) : null
+export default async function ProjectPage(props: Readonly<Props>) {
+  const params = await props.params
+  const project = params.project ? await getProject(params.project) : null
 
   if (!project) {
     notFound()

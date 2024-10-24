@@ -1,4 +1,4 @@
-// @ts-check
+import type { NextConfig } from 'next'
 
 const securityHeaders = [
   {
@@ -44,10 +44,7 @@ const plausibleAnalyticsProxyRewrites = [
   },
 ]
 
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
+const nextConfig: NextConfig = {
   eslint: {
     dirs: ['.'],
   },

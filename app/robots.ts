@@ -4,9 +4,8 @@ import { headers } from 'next/headers'
 
 import siteMetadata from '@/helpers/site-metadata'
 
-export default function robots(): MetadataRoute.Robots {
-  const headersList = headers()
-  const host = headersList.get('host')
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const host = (await headers()).get('host')
 
   if (host === siteMetadata.host) {
     return {
