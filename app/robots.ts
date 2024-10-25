@@ -12,52 +12,46 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       rules: [
         {
           userAgent: '*',
-          allow: '/',
+          disallow: ' ',
         },
-        // AI bots
+        // AI bots, see: https://github.com/ai-robots-txt/ai.robots.txt
         {
-          userAgent: 'CCBot',
-          disallow: '/',
-        },
-        {
-          userAgent: 'ChatGPT-User',
-          disallow: '/',
-        },
-        {
-          userAgent: 'GPTBot',
-          disallow: '/',
-        },
-        {
-          userAgent: 'Google-Extended',
-          disallow: '/',
-        },
-        {
-          userAgent: 'anthropic-ai',
-          disallow: '/',
-        },
-        {
-          userAgent: 'Claude-Web',
-          disallow: '/',
-        },
-        {
-          userAgent: 'Omgilibot',
-          disallow: '/',
-        },
-        {
-          userAgent: 'FacebookBot',
-          disallow: '/',
-        },
-        {
-          userAgent: 'Amazonbot',
-          disallow: '/',
-        },
-        {
-          userAgent: 'cohere-ai',
+          userAgent: [
+            'AI2Bot',
+            'Amazonbot',
+            'anthropic-ai',
+            'Apple-Extended',
+            'Bytespider',
+            'CCBot',
+            'ChatGPT-User',
+            'Claude-Web',
+            'ClaudeBot',
+            'cohere-ai',
+            'Diffbot',
+            'FacebookBot',
+            'FriendlyCrawler',
+            'Google-Extended',
+            'GPTBot',
+            'ICC-Crawler',
+            'ImagesiftBot',
+            'img2dataset',
+            'ISSCyberRiskCrawler',
+            'Kangaroo Bot',
+            'Meta-ExternalAgent',
+            'Meta-ExternalFetcher',
+            'omgili',
+            'PetalBot',
+            'Scrapy',
+            'Sidetrade indexer bot',
+            'Timpibot',
+            'VelenPublicWebCrawler',
+            'Webzio-Extended',
+            'YouBot',
+          ],
           disallow: '/',
         },
       ],
       sitemap: `${siteMetadata.url}/sitemap.xml`,
-      host: siteMetadata.host,
     }
   }
 
