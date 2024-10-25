@@ -66,6 +66,21 @@ strong {
   font-weight: 600;
 }
 
+small {
+  font-size: 0.8em;
+}
+
+hr {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  border: 0;
+  height: 1px;
+}
+
 @media (width >= 1400px) {
   html {
     font-size: 1.1875em;

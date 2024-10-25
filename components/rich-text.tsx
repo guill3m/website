@@ -10,6 +10,12 @@ const components: JSXMapSerializer = {
   hyperlink: ({ node, children }) => (
     <Link href={linkResolver(node?.data)}>{children}</Link>
   ),
+  label: ({ node, children }) => {
+    if (node.data.label === 'small') {
+      return <small>{children}</small>
+    }
+    return <span>{children}</span>
+  },
 }
 
 type RichTextProps = {

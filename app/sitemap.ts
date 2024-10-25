@@ -18,14 +18,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${siteMetadata.url}/ai/`,
+      lastModified: new Date('2024-10-25'),
+      priority: 0.7,
+    },
+    {
       url: `${siteMetadata.url}/contact/`,
       lastModified: new Date(),
       priority: 0.9,
     },
     {
       url: `${siteMetadata.url}/privacy-policy/`,
-      lastModified: new Date(),
-      priority: 0.7,
+      lastModified: new Date('2024-10-24'),
+      priority: 0.6,
     },
     {
       url: `${siteMetadata.url}/work/`,

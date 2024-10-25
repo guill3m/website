@@ -78,7 +78,8 @@ export default function Layout({
         <footer className={styles.footer}>
           <p>
             <strong>© {year} Guillem Andreu Muñoz.</strong> Made in Berlin.{' '}
-            <Link href="/privacy-policy/">Privacy policy.</Link>
+            <Link href="/privacy-policy/">Privacy policy.</Link>{' '}
+            <Link href="/ai/">AI (non)usage.</Link>
           </p>
         </footer>
       </body>

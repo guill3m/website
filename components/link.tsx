@@ -23,8 +23,8 @@ export default function Link({
     return (
       <a
         href={href}
-        rel="noopener noreferrer nofollow"
-        target={target || '_blank'}
+        rel="noopener noreferrer"
+        target={target ?? '_blank'}
         {...rest}
       >
         {children}
