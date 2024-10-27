@@ -9,11 +9,11 @@
 }
 
 .item a {
-  color: var(--color-txt);
+  color: var(--color-foreground);
 }
 
 .item a:hover {
-  color: var(--color-highlight);
+  color: var(--color-anchor);
 }
 
 .item > strong {

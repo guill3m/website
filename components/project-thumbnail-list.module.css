@@ -52,6 +52,6 @@
 }
 
 .list a {
-  color: var(--color-txt);
+  color: var(--color-foreground);
   text-decoration: none;
 }

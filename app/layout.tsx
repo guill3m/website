@@ -9,6 +9,8 @@ import { fontSourceSans, fontBwDarius } from '@/styles/fonts'
 
 import '@/styles/globals.css'
 import styles from './layout.module.css'
+import SocialIconSprite from '@/components/social-icon-sprite'
+import SocialIcon from '@/components/social-icon'
 
 export const metadata: Metadata = {
   authors: {
@@ -76,12 +78,47 @@ export default function Layout({
         </header>
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
-          <p>
+          <span>
             <strong>© {year} Guillem Andreu Muñoz.</strong> Made in Berlin.{' '}
             <Link href="/privacy-policy/">Privacy policy.</Link>{' '}
             <Link href="/ai/">AI (non)usage.</Link>
-          </p>
+          </span>
+          <span className={styles.social}>
+            <Link
+              aria-label="Bluesky (opens in a new tab)"
+              className={styles.socialLink}
+              href="https://bsky.app/profile/guill3m.me"
+              title="Bluesky"
+            >
+              <SocialIcon platform="bluesky" />
+            </Link>
+            <Link
+              aria-label="GitHub (opens in a new tab)"
+              className={styles.socialLink}
+              href="https://github.com/guill3m"
+              title="GitHub"
+            >
+              <SocialIcon platform="github" />
+            </Link>
+            <Link
+              aria-label="Instagram (opens in a new tab)"
+              className={styles.socialLink}
+              href="https://www.instagram.com/guill3m/"
+              title="Instagram"
+            >
+              <SocialIcon platform="instagram" />
+            </Link>
+            <Link
+              aria-label="LinkedIn (opens in a new tab)"
+              className={styles.socialLink}
+              href="https://www.linkedin.com/in/guillemandreu/"
+              title="LinkedIn"
+            >
+              <SocialIcon platform="linkedin" />
+            </Link>
+          </span>
         </footer>
+        <SocialIconSprite />
       </body>
     </html>
   )

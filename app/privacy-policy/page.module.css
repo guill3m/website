@@ -1,7 +1,3 @@
 .privacyPolicy {
   composes: txtwrap from '@/styles/utils.css';
 }
-
-.privacyPolicy li::marker {
-  color: var(--color-primary);
-}

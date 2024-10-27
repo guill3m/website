@@ -7,6 +7,7 @@ type LinkProps = {
   children: ReactNode
   href: string | null
   target?: string
+  title?: string
 }
 
 export default function Link({

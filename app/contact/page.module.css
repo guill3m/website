@@ -2,6 +2,6 @@
   composes: txtwrap from '@/styles/utils.css';
 }
 
-.contact a {
-  font-weight: 600;
+.contact li a {
+  text-decoration: none;
 }
