@@ -8,12 +8,7 @@ export default function SocialIcon({
   size = 18,
 }: Readonly<SocialIconProps>) {
   return (
-    <svg
-      aria-hidden="true"
-      height={size}
-      viewBox="0 0 18 18"
-      width={size}
-    >
+    <svg aria-hidden="true" height={size} viewBox="0 0 18 18" width={size}>
       <use xlinkHref={`#social-icon-svg-${platform}`} />
     </svg>
   )

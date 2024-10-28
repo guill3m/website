@@ -63,15 +63,19 @@
   font-weight: 600;
 }
 
+.footer a::after {
+  display: none;
+}
+
 .social {
   margin-top: var(--margin-extrasmall);
 }
 
-.socialLink + .socialLink {
+.social a + a {
   margin-left: var(--spacing);
 }
 
-.socialLink svg {
+.social svg {
   height: 1rem;
   transition: fill 256ms var(--cubic-bezier-ease-out);
   vertical-align: bottom;

@@ -86,7 +86,6 @@ export default function Layout({
           <span className={styles.social}>
             <Link
               aria-label="Bluesky (opens in a new tab)"
-              className={styles.socialLink}
               href="https://bsky.app/profile/guill3m.me"
               title="Bluesky"
             >
@@ -94,7 +93,6 @@ export default function Layout({
             </Link>
             <Link
               aria-label="GitHub (opens in a new tab)"
-              className={styles.socialLink}
               href="https://github.com/guill3m"
               title="GitHub"
             >
@@ -102,7 +100,6 @@ export default function Layout({
             </Link>
             <Link
               aria-label="Instagram (opens in a new tab)"
-              className={styles.socialLink}
               href="https://www.instagram.com/guill3m/"
               title="Instagram"
             >
@@ -110,7 +107,6 @@ export default function Layout({
             </Link>
             <Link
               aria-label="LinkedIn (opens in a new tab)"
-              className={styles.socialLink}
               href="https://www.linkedin.com/in/guillemandreu/"
               title="LinkedIn"
             >

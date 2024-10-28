@@ -63,34 +63,22 @@ export default function ContactPage() {
       />
       <ul>
         <li>
-          <Link
-            aria-label="Bluesky (opens in a new tab)"
-            href="https://bsky.app/profile/guill3m.me"
-          >
+          <Link href="https://bsky.app/profile/guill3m.me">
             <SocialIcon platform="bluesky" /> Bluesky
           </Link>
         </li>
         <li>
-          <Link
-            aria-label="GitHub (opens in a new tab)"
-            href="https://github.com/guill3m"
-          >
+          <Link href="https://github.com/guill3m">
             <SocialIcon platform="github" /> GitHub
           </Link>
         </li>
         <li>
-          <Link
-            aria-label="Instagram (opens in a new tab)"
-            href="https://www.instagram.com/guill3m/"
-          >
+          <Link href="https://www.instagram.com/guill3m/">
             <SocialIcon platform="instagram" /> Instagram
           </Link>
         </li>
         <li>
-          <Link
-            aria-label="LinkedIn (opens in a new tab)"
-            href="https://www.linkedin.com/in/guillemandreu/"
-          >
+          <Link href="https://www.linkedin.com/in/guillemandreu/">
             <SocialIcon platform="linkedin" /> LinkedIn
           </Link>
         </li>

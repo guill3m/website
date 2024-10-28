@@ -8,14 +8,6 @@
   margin: var(--spacing) 0;
 }
 
-.item a {
-  color: var(--color-foreground);
-}
-
-.item a:hover {
-  color: var(--color-anchor);
-}
-
 .item > strong {
   font-family: var(--font-stack-serif);
   font-weight: 400;
