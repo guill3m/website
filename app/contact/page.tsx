@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import RichText from '@/components/rich-text'
 
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import Link from '@/components/link'
 import SocialIcon from '@/components/social-icon'
 

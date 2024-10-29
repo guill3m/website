@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import ExperienceList from '@/components/experience-list'
 
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 import meKidJpg from '@guill3m/website-img/me-kid.jpg'
 

@@ -8,7 +8,7 @@ import RichText from '@/components/rich-text'
 import { getAllProjectPaths, getProject } from '@/helpers/get-data'
 import siteMetadata from '@/helpers/site-metadata'
 
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 type Props = {
   params: Promise<{
@@ -106,7 +106,7 @@ export default async function ProjectPage(props: Readonly<Props>) {
         {project.images.map((image, idx) => (
           <Image
             alt={image.alt}
-            className={twoColumnsImages ? styles.twoCol : undefined}
+            className={twoColumnsImages ? styles['two-col'] : undefined}
             key={image.src}
             placeholder="blur"
             priority={idx === 0 || (twoColumnsImages && idx === 1)}

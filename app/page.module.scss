@@ -5,32 +5,32 @@
   font-size: 1.9rem;
   justify-content: center;
   margin: var(--margin-small) 0;
-}
 
-.about p,
-.about img {
-  margin: var(--margin-small) 1em;
-}
+  p,
+  img {
+    margin: var(--margin-small) 1em;
+  }
 
-.about p {
-  font-family: var(--font-stack-serif);
-  font-size: 1em;
-  font-weight: 200;
-  width: 8.5em;
-}
+  p {
+    font-family: var(--font-stack-serif);
+    font-size: 1em;
+    font-weight: 200;
+    width: 8.5em;
+  }
 
-.about strong {
-  font-weight: 700;
-}
+  strong {
+    font-weight: 700;
+  }
 
-.about a {
-  font-family: var(--font-stack-sans);
-  font-size: 1rem;
-  font-weight: 400;
-}
+  a {
+    font-family: var(--font-stack-sans);
+    font-size: 1rem;
+    font-weight: 400;
+  }
 
-.about img {
-  height: 5em;
+  img {
+    height: 5em;
+  }
 }
 
 .work {
@@ -41,14 +41,14 @@
   .about {
     font-size: 2.5rem;
     margin: var(--margin-medium) 0;
-  }
 
-  .about a {
-    font-size: 0.5em;
-  }
+    a {
+      font-size: 0.5em;
+    }
 
-  .about img {
-    height: 6.5em;
+    img {
+      height: 6.5em;
+    }
   }
 
   .work {
@@ -64,19 +64,21 @@
 
   .work {
     margin-top: var(--margin-extralarge);
-  }
 
-  .work p {
-    font-size: 1.5rem;
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
 
 @media (width >= 924px) {
-  .about p {
-    order: 1;
-  }
+  .about {
+    p {
+      order: 1;
+    }
 
-  .about img {
-    order: 2;
+    img {
+      order: 2;
+    }
   }
 }

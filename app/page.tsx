@@ -9,7 +9,7 @@ import { getFeaturedProjectThumbnails } from '@/helpers/get-data'
 import siteMetadata from '@/helpers/site-metadata'
 
 import meSvg from '../public/me.svg'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 const title = 'Guillem Andreu - Web Developer and Designer'
 const description =

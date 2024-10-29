@@ -3,7 +3,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import ProjectThumbnailList from '@/components/project-thumbnail-list'
 import { getAllProjectThumbnails } from '@/helpers/get-data'
 
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 export async function generateMetadata(
   params: any,

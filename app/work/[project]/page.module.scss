@@ -1,0 +1,35 @@
+@use '@/styles/utils';
+
+.project {
+  @extend %text-wrap;
+
+  img {
+    height: auto;
+    margin: var(--spacing) 0;
+
+    &.two-col {
+      border: 1px solid var(--color-border);
+    }
+  }
+}
+
+@media (width >= 600px) {
+  .project img {
+    margin: var(--spacing) -15%;
+    max-width: 130%;
+
+    &.two-col {
+      display: inline-block;
+      margin: calc(var(--spacing) / 2) -15%;
+      width: calc(65% - var(--spacing) - 2px);
+
+      &:nth-of-type(odd) {
+        margin-right: var(--spacing);
+      }
+
+      &:nth-of-type(even) {
+        margin-left: var(--spacing);
+      }
+    }
+  }
+}

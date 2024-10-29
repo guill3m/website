@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Link from '@/components/link'
 
-import styles from './project-thumbnail-list.module.css'
+import styles from './project-thumbnail-list.module.scss'
 
 type ProjectThumbnailListProps = {
   items: ProjectThumbnail[]

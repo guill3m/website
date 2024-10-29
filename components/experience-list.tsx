@@ -1,6 +1,6 @@
 import Link from '@/components/link'
 
-import styles from './experience-list.module.css'
+import styles from './experience-list.module.scss'
 
 type ExperienceListProps = {
   items: {
@@ -21,7 +21,7 @@ export default function ExperienceList({
     <ul className={styles.list}>
       {items.map((item) => (
         <li className={styles.item} key={item.date}>
-          <strong>
+          <strong  className={styles.title}>
             <em>{item.title}</em>
             {item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
             {item.where && (
@@ -41,7 +41,7 @@ export default function ExperienceList({
               <br />
             </>
           )}
-          <em>
+          <em className={styles.date}>
             {item.city && `${item.city}, `}
             {item.date}.
           </em>

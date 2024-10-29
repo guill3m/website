@@ -7,8 +7,8 @@ import Link from '@/components/link'
 import siteMetadata from '@/helpers/site-metadata'
 import { fontSourceSans, fontBwDarius } from '@/styles/fonts'
 
-import '@/styles/globals.css'
-import styles from './layout.module.css'
+import '@/styles/globals.scss'
+import styles from './layout.module.scss'
 import SocialIconSprite from '@/components/social-icon-sprite'
 import SocialIcon from '@/components/social-icon'
 

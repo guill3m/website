@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import RichText from '@/components/rich-text'
 
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 export async function generateMetadata(
   params: any,
@@ -33,7 +33,7 @@ export async function generateMetadata(
 
 export default function PrivacyPolicyPage() {
   return (
-    <article className={styles.privacyPolicy}>
+    <article className={styles['privacy-policy']}>
       <h1>Privacy Policy.</h1>
       <RichText
         field={[

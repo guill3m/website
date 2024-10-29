@@ -8,22 +8,22 @@
   margin: var(--spacing) 0;
 }
 
-.item > strong {
+.title {
   font-family: var(--font-stack-serif);
   font-weight: 400;
+
+  > em {
+    font-style: normal;
+    font-weight: 700;
+  }
 }
 
-.item > em {
+.date {
   font-size: 0.75em;
   font-style: normal;
-}
 
-.item > em::before {
-  color: var(--color-primary-light);
-  content: '— ';
-}
-
-.item > strong > em {
-  font-style: normal;
-  font-weight: 700;
+  &::before {
+    color: var(--color-primary-light);
+    content: '— ';
+  }
 }
