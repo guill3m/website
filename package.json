@@ -15,22 +15,22 @@
   "dependencies": {
     "@guill3m/fonts": "^1.0.0",
     "@guill3m/website-img": "^1.0.0",
-    "@prismicio/react": "^2.9.0",
-    "next": "^15.0.1",
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021"
+    "@prismicio/react": "^2.9.1",
+    "next": "^15.0.2",
+    "react": "19.0.0-rc-7c8e5e7a-20241101",
+    "react-dom": "19.0.0-rc-7c8e5e7a-20241101"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.9",
-    "@types/node": "^20.17.0",
+    "@types/node": "^20.17.6",
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc",
-    "@typescript-eslint/parser": "^8.11.0",
-    "eslint": "^9.13.0",
-    "eslint-config-next": "^15.0.1",
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.0.2",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
-    "sass": "^1.80.4",
+    "sass": "^1.80.6",
     "schema-dts": "^1.1.2",
     "stylelint": "^16.10.0",
     "stylelint-config-css-modules": "^4.4.0",
@@ -39,6 +39,8 @@
   },
   "overrides": {
     "@types/react": "npm:types-react@rc",
-    "@types/react-dom": "npm:types-react-dom@rc"
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "react": "19.0.0-rc-7c8e5e7a-20241101",
+    "react-dom": "19.0.0-rc-7c8e5e7a-20241101"
   }
 }
