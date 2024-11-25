@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# www.GuillemAndreu.com
 
-## Getting Started
+My personal site. a [Next.js](https://nextjs.org/) project.
 
-First, run the development server:
+## What is this project?
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This site is as much an experimentation tool as it is a way to have some fully-owned web presence. It is never considered finished or complete.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The way some details on the site are built might seem overkill in many cases. That's by design, I probably wanted to test or play with a different tech or approach at the time, "the right tool for the job" in this project is not so much what's better for the project by what's better for me at the time to learn more about.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Why Next.js for this project?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+I'm most familiar with React in terms of reactivity on the web and a framework like Next.js gives me a solid base to experiment on.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Previous iterations of the site
 
-## Learn More
+Previous iterations of the site include:
 
-To learn more about Next.js, take a look at the following resources:
+- fully static "by-hand" HTML builds,
+- using PHP for templating,
+- a [Wordpress](https://wordpress.org) theme,
+- built with [Ghost](https://ghost.org),
+- as a static site built with [Gatsby](https://www.gatsbyjs.com),
+- and many more that I can't remember anymore.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Some of these iterations live here on [my GitHub profile](https://github.com/guill3m?tab=repositories), some are from before I even knew what Git was so they only live in some dusty hard drive.
