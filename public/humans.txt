@@ -1,0 +1,16 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+
+  Content, Design, and Development:
+    Guillem Andreu
+      Site: https://www.guillemandreu.com
+      Location: Berlin, Germany
+
+
+/* SITE */
+
+  Language: English
+  Source Code: https://github.com/guill3m/website
