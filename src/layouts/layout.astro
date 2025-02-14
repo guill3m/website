@@ -1,0 +1,95 @@
+---
+import '../styles/font-face.scss'
+import '../styles/globals.scss'
+import styles from './layout.module.scss'
+
+import SocialIconSprite from '../components/social-icon-sprite.astro'
+import SocialIcon from '../components/social-icon.astro'
+import Link from '../components/link.astro'
+
+import siteMetadata from '../helpers/site-metadata.ts'
+
+interface Props {
+	title: string
+	meta: {
+		title?: string
+		description?: string
+	}
+}
+
+const { title, meta } = Astro.props
+
+const year = new Date().getFullYear()
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,viewport-fit=cover"
+		/>
+		<title>{meta?.title ? meta.title : `${title} - Guillem Andreu`}</title>
+		{
+			meta?.description && (
+				<meta name="description" content={meta.description} />
+			)
+		}
+		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
+		<link rel="author" href={`${Astro.site}humans.txt`} />
+	</head>
+	<body>
+		<script
+			is:inline
+			defer
+			data-domains={siteMetadata.host}
+			data-host-url={import.meta.env.UMAMI_ANALYTICS_HOST}
+			data-website-id={import.meta.env.UMAMI_ANALYTICS_ID}
+			src={import.meta.env.UMAMI_ANALYTICS_SCRIPT}></script>
+		<header class={styles.header}>
+			<a href="/" class={styles.logo}> Guillem Andreu. </a>
+			<nav class={styles.menu}>
+				<ul>
+					<li>
+						<Link href="/about/">About me.</Link>
+					</li>
+					<li>
+						<Link href="/work/">My work.</Link>
+					</li>
+					<li>
+						<Link href="/contact/">Contact.</Link>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class={styles.main}>
+			<slot>Hello world!</slot>
+		</main>
+		<footer class={styles.footer}>
+			<span>
+				<strong>© {year} Guillem Andreu Muñoz.</strong> Made in Berlin.{' '}
+				<Link href="/privacy-policy/">Privacy policy.</Link>{' '}
+				<Link href="/ai/">AI (non)usage.</Link>
+			</span>
+			<span class={styles.social}>
+				<Link
+					ariaLabel="Bluesky (opens in a new tab)"
+					href={`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`}
+					title="Bluesky"><SocialIcon platform="bluesky" /></Link
+				>
+				<Link
+					ariaLabel="GitHub (opens in a new tab)"
+					href={`https://github.com/${siteMetadata.author.social.github}`}
+					title="GitHub"><SocialIcon platform="github" /></Link
+				>
+				<Link
+					ariaLabel="LinkedIn (opens in a new tab)"
+					href={`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`}
+					title="LinkedIn"><SocialIcon platform="linkedin" /></Link
+				>
+			</span>
+		</footer>
+		<SocialIconSprite />
+	</body>
+</html>

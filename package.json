@@ -14,9 +14,11 @@
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.2.1",
+		"@fontsource/source-sans-3": "^5.1.1",
 		"@guill3m/fonts": "^1.0.0",
 		"@guill3m/website-img": "^1.0.0",
 		"astro": "^5.3.0",
+		"cheerio": "^1.0.0",
 		"schema-dts": "^1.1.2"
 	},
 	"devDependencies": {

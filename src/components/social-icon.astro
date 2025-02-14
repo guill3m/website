@@ -1,0 +1,12 @@
+---
+interface Props {
+	platform: 'bluesky' | 'github' | 'linkedin'
+	size?: number
+}
+
+const { platform, size = 18 } = Astro.props
+---
+
+<svg aria-hidden="true" height={size} viewBox="0 0 18 18" width={size}>
+	<use xlink:href={`#social-icon-${platform}`}></use>
+</svg>

@@ -1,0 +1,44 @@
+---
+import * as cheerio from 'cheerio'
+
+interface Props {
+	ariaLabel?: string
+	href: string | null
+	target?: string
+	[prop: string]: any
+}
+
+const { ariaLabel, href, target, ...rest } = Astro.props
+
+const isExternalLink = typeof href === 'string' && href.startsWith('https://')
+
+const linkTarget = target ?? (isExternalLink ? '_blank' : undefined)
+
+const linkContent = cheerio.load(await Astro.slots.render('default'))
+const linkText = linkContent('body').text()
+
+let ariaLabelOpensInNewTab = undefined
+if (linkTarget === '_blank') {
+	ariaLabelOpensInNewTab = `${linkText} (opens in a new tab)`
+}
+
+const linkAriaLabel = ariaLabel ?? ariaLabelOpensInNewTab
+---
+
+{
+	href ? (
+		<a
+			aria-label={linkAriaLabel?.trim()}
+			href={href}
+			rel={isExternalLink ? 'noopener noreferrer' : undefined}
+			target={linkTarget}
+			{...rest}
+		>
+			<slot />
+		</a>
+	) : (
+		<span {...rest}>
+			<slot />
+		</span>
+	)
+}

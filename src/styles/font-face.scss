@@ -1,0 +1,121 @@
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 200;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-200-normal.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-300-normal.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-400-italic.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 600;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-600-normal.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-700-normal.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 700;
+	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-700-italic.woff2')
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Sans 3 Fallback';
+	src: local('Arial');
+	ascent-override: 109.21%;
+	descent-override: 42.66%;
+	line-gap-override: 0%;
+	size-adjust: 93.76%;
+}
+
+@font-face {
+	font-family: 'Bw Darius';
+	src: url('@guill3m/fonts/bw-darius/bw-darius-light.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bw Darius';
+	src: url('@guill3m/fonts/bw-darius/bw-darius-regular.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bw Darius';
+	src: url('@guill3m/fonts/bw-darius/bw-darius-regular-italic.woff2')
+		format('woff2');
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Bw Darius';
+	src: url('@guill3m/fonts/bw-darius/bw-darius-bold.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bw Darius';
+	src: url('@guill3m/fonts/bw-darius/bw-darius-black.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bw Darius Fallback';
+	src: local('Times New Roman');
+	ascent-override: 78.71%;
+	descent-override: 15.74%;
+	line-gap-override: 0%;
+	size-adjust: 127.04%;
+}
