@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro'
-import Layout from '../layouts/layout.astro'
+import styles from './index.module.scss'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from 'astro:assets'
+
+import Layout from '../layouts/layout.astro'
+import Link from '../components/link.astro'
+import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
+import { getFeaturedProjectThumbnails } from '../helpers/get-data'
+
+import meSvg from '../assets/me.svg'
+
+const featuredProjectThumbnails = await getFeaturedProjectThumbnails()
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	meta={{
+		title: 'Guillem Andreu - Web Developer and Designer',
+		description:
+			'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Portfolio Website.',
+	}}
+>
+	<section class={styles.about}>
+		<Image alt="A drawn silouethe of myself" priority src={meSvg} />
+		<p>
+			<strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
+			<br />
+			<Link href="/about/">More about me</Link>
+		</p>
+	</section>
+	<section class={styles.work}>
+		<p>
+			Here are some of the <Link href="/work/">things I make</Link>:
+		</p>
+		<ProjectThumbnailList items={featuredProjectThumbnails} />
+	</section>
 </Layout>

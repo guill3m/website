@@ -1,0 +1,36 @@
+---
+import type { ProjectThumbnail } from '../types/project.ts'
+
+import styles from './project-thumbnail-list.module.scss'
+
+import { Image } from 'astro:assets'
+
+import Link from './link.astro'
+
+interface Props {
+	items: ProjectThumbnail[]
+}
+
+const { items } = Astro.props
+---
+
+<ul class={styles.list}>
+	{
+		items.map((project) => (
+			<li>
+				<article>
+					<Link href={`/work/${project.path}/`}>
+						<Image
+							alt={project.thumbnail.alt}
+							sizes="(min-width: 744px) calc((100vw - 4rem) / 3), calc(100vw - 4rem)"
+							src={`https://assets.guillemandreu.com${project.thumbnail.src}`}
+							height={500}
+							width={900}
+						/>
+						<span>{project.title}</span>
+					</Link>
+				</article>
+			</li>
+		))
+	}
+</ul>
