@@ -1,4 +1,4 @@
-import type { Project, ProjectThumbnail } from '../types/project'
+import type { Project, ProjectThumbnail } from './types.ts'
 
 import path from 'path'
 import { readdir, readFile } from 'fs/promises'
