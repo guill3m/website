@@ -1,4 +1,6 @@
 ---
+import type { WebSite, WithContext } from 'schema-dts'
+
 import styles from './index.module.scss'
 
 import { Image } from 'astro:assets'
@@ -6,20 +8,53 @@ import { Image } from 'astro:assets'
 import Layout from '../layouts/layout.astro'
 import Link from '../components/link.astro'
 import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
+import siteMetadata from '../helpers/site-metadata'
 import { getFeaturedProjectThumbnails } from '../helpers/get-data'
 
 import meSvg from '../assets/me.svg'
 
+const site = Astro.site?.toString()
 const featuredProjectThumbnails = await getFeaturedProjectThumbnails()
+
+const title = 'Guillem Andreu - Web Developer and Designer'
+const description =
+	'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Website.'
+
+const jsonLd: WithContext<WebSite> = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: title,
+	alternateName: 'Guillem Andreu’s Website.',
+	description,
+	url: site,
+	inLanguage: {
+		'@type': 'Language',
+		name: 'English',
+		alternateName: 'en',
+	},
+	author: {
+		'@type': 'Person',
+		name: siteMetadata.author.name,
+		url: site,
+		sameAs: [
+			`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`,
+			`https://github.com/${siteMetadata.author.social.github}`,
+			`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`,
+		],
+	},
+	locationCreated: {
+		'@type': 'City',
+		name: 'Berlin',
+	},
+}
 ---
 
-<Layout
-	meta={{
-		title: 'Guillem Andreu - Web Developer and Designer',
-		description:
-			'Hi. I’m Guillem, a web developer and designer based in Berlin. This is my Portfolio Website.',
-	}}
->
+<Layout meta={{ title, description }}>
+	<script
+		slot="head-meta"
+		type="application/ld+json"
+		set:html={JSON.stringify(jsonLd)}
+	/>
 	<section class={styles.about}>
 		<Image alt="A drawn silouethe of myself" priority src={meSvg} />
 		<p>
