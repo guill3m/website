@@ -3,6 +3,7 @@ import '../styles/font-face.scss'
 import '../styles/globals.scss'
 import styles from './layout.module.scss'
 
+import PageMeta from '../components/page-meta.astro'
 import SocialIconSprite from '../components/social-icon-sprite.astro'
 import SocialIcon from '../components/social-icon.astro'
 import Link from '../components/link.astro'
@@ -14,6 +15,13 @@ interface Props {
 	meta?: {
 		title?: string
 		description?: string
+		type?: string
+		image?: {
+			alt: string
+			url: string
+			height: number
+			width: number
+		}
 	}
 }
 
@@ -30,14 +38,15 @@ const year = new Date().getFullYear()
 			name="viewport"
 			content="width=device-width,initial-scale=1,viewport-fit=cover"
 		/>
-		<title>{meta?.title ? meta.title : `${title} - Guillem Andreu`}</title>
-		{
-			meta?.description && (
-				<meta name="description" content={meta.description} />
-			)
-		}
+		<PageMeta title={title} meta={meta} />
+		<meta property="og:site_name" content="Guillem Andreu" />
+		<meta property="og:locale" content="en" />
+		<meta property="og:type" content="website" />
 		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
+		<meta name="author" content={siteMetadata.author.name} />
 		<link rel="author" href={`${Astro.site}humans.txt`} />
+		<link rel="sitemap" href={`${Astro.site}sitemap-index.xml`} />
+		<meta name="pinterest" content="nopin" />
 		<slot name="head-meta" />
 	</head>
 	<body>

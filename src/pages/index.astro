@@ -51,6 +51,7 @@ const jsonLd: WithContext<WebSite> = {
 
 <Layout meta={{ title, description }}>
 	<script
+		is:inline
 		slot="head-meta"
 		type="application/ld+json"
 		set:html={JSON.stringify(jsonLd)}
