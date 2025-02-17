@@ -1,0 +1,33 @@
+---
+import styles from './basic-page.module.scss'
+
+import BaseLayout from './layout.astro'
+
+interface Props {
+	frontmatter: {
+		title?: string
+		meta?: {
+			title?: string
+			description?: string
+			type?: string
+			image?: {
+				alt: string
+				url: string
+				height: number
+				width: number
+			}
+		}
+	}
+}
+
+const {
+	frontmatter: { title, meta },
+} = Astro.props
+---
+
+<BaseLayout title={title} meta={meta}>
+	<article class={styles.page}>
+		<h1>{title}</h1>
+		<slot />
+	</article>
+</BaseLayout>

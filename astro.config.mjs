@@ -1,12 +1,14 @@
 // @ts-check
 
 import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 
 const site = 'https://www.guillemandreu.com'
 
 export default defineConfig({
 	integrations: [
+		mdx(),
 		sitemap({
 			lastmod: new Date(),
 			serialize(item) {

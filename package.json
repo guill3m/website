@@ -13,6 +13,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@astrojs/mdx": "^4.0.8",
 		"@astrojs/sitemap": "^3.2.1",
 		"@fontsource/source-sans-3": "^5.1.1",
 		"@guill3m/fonts": "^1.0.0",
@@ -30,7 +31,7 @@
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"prettier": "^3.5.1",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.84.0",
+		"sass": "^1.85.0",
 		"typescript": "^5.7.3"
 	}
 }
