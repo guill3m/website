@@ -50,6 +50,7 @@ const year = new Date().getFullYear()
 		<link rel="author" href={new URL('/humans.txt', Astro.site)} />
 		<link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
 		<meta name="pinterest" content="nopin" />
+		<meta name="generator" content={Astro.generator} />
 		<slot name="head-meta" />
 	</head>
 	<body>
