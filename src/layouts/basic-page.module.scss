@@ -2,4 +2,15 @@
 
 .page {
 	@extend %text-wrap;
+
+	li a:has(svg) {
+    text-decoration: none;
+
+    svg {
+      height: 1em;
+      margin-top: -0.2em;
+      vertical-align: middle;
+      width: 1em;
+    }
+  }
 }

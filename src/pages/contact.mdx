@@ -1,0 +1,18 @@
+---
+layout: '../layouts/basic-page.astro'
+title: 'Contact'
+meta:
+  description: 'If you are interested in my work, here you can find out how to contact me.'
+---
+
+import SocialIcon from '../components/social-icon.astro'
+import Link from '../components/link.astro'
+export const components = { a: Link }
+
+If you are interested in my work, please contact me via [contact@guillemandreu.com](mailto:contact@guillemandreu.com).
+
+Or find me on:
+
+- [<SocialIcon platform="bluesky" /> Bluesky](https://bsky.app/profile/guill3m.me)
+- [<SocialIcon platform="github" /> GitHub](https://github.com/guill3m)
+- [<SocialIcon platform="linkedin" /> LinkedIn](https://www.linkedin.com/in/guillemandreu/)
