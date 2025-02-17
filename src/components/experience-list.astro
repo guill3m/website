@@ -1,0 +1,52 @@
+---
+import styles from './experience-list.module.scss'
+
+import Link from './link.astro'
+
+interface Props {
+	items: {
+		city?: string
+		date: string
+		description?: string
+		title: string
+		titleUnion?: string
+		url?: string
+		where?: string
+	}[]
+}
+
+const { items } = Astro.props
+---
+
+<ul class={styles.list}>
+	{
+		items.map((item) => (
+			<li class={styles.item}>
+				<strong class={styles.title}>
+					<em>{item.title}</em>
+					{item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
+					{item.where && (
+						<em>
+							{item.url ? (
+								<Link href={item.url}>{item.where}</Link>
+							) : (
+								item.where
+							)}
+						</em>
+					)}
+				</strong>
+				<br />
+				{item.description && (
+					<>
+						<span>{item.description}</span>
+						<br />
+					</>
+				)}
+				<small class={styles.date}>
+					{item.city && `${item.city}, `}
+					{item.date}.
+				</small>
+			</li>
+		))
+	}
+</ul>

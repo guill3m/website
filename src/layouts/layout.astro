@@ -10,7 +10,7 @@ import Link from '../components/link.astro'
 
 import siteMetadata from '../helpers/site-metadata.ts'
 
-import icon from '../assets/icon.svg'
+import iconSvg from '../assets/icon.svg'
 
 interface Props {
 	title?: string
@@ -45,7 +45,7 @@ const year = new Date().getFullYear()
 		<meta property="og:locale" content="en" />
 		<meta property="og:type" content="website" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
-		<link rel="icon" type="image/svg+xml" href={icon.src} sizes="any" />
+		<link rel="icon" type="image/svg+xml" href={iconSvg.src} sizes="any" />
 		<meta name="author" content={siteMetadata.author.name} />
 		<link rel="author" href={new URL('/humans.txt', Astro.site)} />
 		<link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
