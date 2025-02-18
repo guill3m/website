@@ -1,0 +1,66 @@
+---
+import type { CreativeWork, WithContext } from 'schema-dts'
+
+import styles from '../../styles/project-page.module.scss'
+
+import { getCollection, render } from 'astro:content'
+
+import Layout from '../../layouts/layout.astro'
+import Link from '../../components/link.astro'
+import siteMetadata from '../../helpers/site-metadata'
+
+export async function getStaticPaths() {
+	const projects = await getCollection('project')
+	return projects.map((project) => ({
+		params: { project: project.id },
+		props: { project },
+	}))
+}
+
+const { project } = Astro.props
+const { Content } = await render(project)
+const site = Astro.site?.toString()
+
+const jsonLd: WithContext<CreativeWork> = {
+	'@context': 'https://schema.org',
+	'@type': 'CreativeWork',
+	name: project.data.title,
+	headline: `${project.data.title}: ${project.data.subtitle}`,
+	description: project.data.excerpt,
+	url: Astro.url.toString(),
+	image: {
+		'@type': 'ImageObject',
+		url: new URL(project.data.thumbnail.src, Astro.url).toString(),
+	},
+	author: {
+		'@type': 'Person',
+		name: siteMetadata.author.name,
+		url: site,
+		sameAs: [
+			`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`,
+			`https://github.com/${siteMetadata.author.social.github}`,
+			`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`,
+		],
+	},
+}
+---
+
+<Layout
+	title={project.data.title}
+	meta={{
+		description: project.data.excerpt,
+		image: { alt: '', ...project.data.thumbnail },
+	}}
+>
+	<script
+		is:inline
+		slot="head-meta"
+		type="application/ld+json"
+		set:html={JSON.stringify(jsonLd)}
+	/>
+	<article class={styles.project}>
+		<h1>{project.data.title}.</h1>
+		<h2>{project.data.subtitle}.</h2>
+		<Content components={{ a: Link }} />
+	</article>
+</Layout>
