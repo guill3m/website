@@ -57,7 +57,11 @@ const jsonLd: WithContext<WebSite> = {
 		set:html={JSON.stringify(jsonLd)}
 	/>
 	<section class={styles.about}>
-		<Image alt="A drawn silouethe of myself" priority src={meSvg} />
+		<Image
+			alt="A drawn silouethe of myself"
+			loading="eager"
+			src={meSvg}
+		/>
 		<p>
 			<strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
 			<br />

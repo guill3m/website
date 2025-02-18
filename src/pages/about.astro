@@ -1,7 +1,7 @@
 ---
 import styles from '../styles/about-page.module.scss'
 
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 
 import Layout from '../layouts/layout.astro'
 import ExperienceList from '../components/experience-list.astro'
@@ -20,12 +20,19 @@ const meta = {
 		<h1>{title}.</h1>
 		<section class={styles.intro} id="intro">
 			<p>
-				<Image
+				<Picture
 					alt="Me when I was a kid"
-					sizes="(min-width: 1325px) 410px, (min-width: 830px) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem), (min-width: 600px) calc((100vw - 4rem) * 0.8), calc(100vw - 4rem)"
+					formats={['avif', 'webp']}
+					loading="eager"
+					sizes={[
+						'(min-width: 1325px) 410px',
+						'(min-width: 830px) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem)',
+						'(min-width: 600px) calc((100vw - 4rem) * 0.8)',
+						'calc(100vw - 4rem)',
+					].join()}
 					src={meKidJpg}
 					width={410}
-					widths={[320, 340, 360, 410, 600, 640, 680, 820, meKidJpg.width]}
+					widths={[340, 410, 600, 680, 820, meKidJpg.width]}
 				/>
 			</p>
 			<p>
