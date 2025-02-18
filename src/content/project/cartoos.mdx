@@ -1,0 +1,27 @@
+---
+title: 'Cartoos'
+subtitle: 'Design of a Spanish deck of cards'
+excerpt: 'Spanish deck of cards submitted to Fournier’s 140th anniversary contest. 6th finalist.'
+date:
+  month: 5
+  year: 2008
+featured: false
+thumbnail: '../../assets/projects/cartoos-thumbnail.jpg'
+---
+
+import { Picture } from 'astro:assets'
+import image1 from '../../assets/projects/cartoos-1.jpg'
+
+[Fournier](https://www.nhfournier.es/en/) is a well known Spanish playing card manufacturer, one of the most important in the world. In 2008, to celebrate their 140th anniversary, they organised a 40 cards Spanish deck design contest.
+
+This is my submission for the aformentioned contest, in which I finalised in 6th position.
+
+<Picture
+	alt=""
+	formats={['avif', 'webp']}
+	loading="eager"
+	sizes={['min-width: 1325px) 1300px', 'calc(100vw - 4rem)'].join()}
+	src={image1}
+	width={1300}
+	widths={[340, 680, 780, 1050, 1300, 1600, image1.width]}
+/>
