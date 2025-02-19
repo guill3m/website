@@ -1,5 +1,5 @@
 ---
-import type { ProjectThumbnail } from '../helpers/types.ts'
+import type { ImageMetadata } from 'astro'
 
 import styles from './project-thumbnail-list.module.scss'
 
@@ -8,9 +8,12 @@ import { Picture } from 'astro:assets'
 import Link from './link.astro'
 
 interface Props {
-	items: ProjectThumbnail[]
+	items: {
+		id: string
+		thumbnail: ImageMetadata
+		title: string
+	}[]
 }
-
 const { items } = Astro.props
 ---
 
@@ -19,15 +22,15 @@ const { items } = Astro.props
 		items.map((project) => (
 			<li>
 				<article>
-					<Link href={`/work/${project.path}/`}>
+					<Link href={`/work/${project.id}/`}>
 						<Picture
-							alt={project.thumbnail.alt}
+							alt=""
 							formats={['avif', 'webp']}
 							sizes={[
 								'(min-width: 744px) calc((100vw - 4rem) / 3)',
 								'calc(100vw - 4rem)',
 							].join()}
-							src={`https://assets.guillemandreu.com${project.thumbnail.src}`}
+							src={project.thumbnail}
 							height={500}
 							width={900}
 							widths={[250, 340, 450, 500, 680, project.thumbnail.width]}

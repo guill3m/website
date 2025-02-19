@@ -1,5 +1,6 @@
 ---
 import type { WebSite, WithContext } from 'schema-dts'
+import { getCollection } from 'astro:content'
 
 import styles from '../styles/home-page.module.scss'
 
@@ -9,12 +10,10 @@ import Layout from '../layouts/layout.astro'
 import Link from '../components/link.astro'
 import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
 import siteMetadata from '../helpers/site-metadata'
-import { getFeaturedProjectThumbnails } from '../helpers/get-data'
 
 import meSvg from '../assets/me.svg'
 
 const site = Astro.site?.toString()
-const featuredProjectThumbnails = await getFeaturedProjectThumbnails()
 
 const title = 'Guillem Andreu - Web Developer and Designer'
 const description =
@@ -47,6 +46,20 @@ const jsonLd: WithContext<WebSite> = {
 		name: 'Berlin',
 	},
 }
+
+const allProjects = await getCollection('project')
+const featuredProjects = allProjects
+	.filter((project) => project.data.featured === true)
+	.sort(
+		(a, b) =>
+			b.data.date.year - a.data.date.year ||
+			b.data.date.month - a.data.date.month,
+	)
+	.map((project) => ({
+		id: project.id,
+		thumbnail: project.data.thumbnail,
+		title: project.data.title,
+	}))
 ---
 
 <Layout meta={{ title, description }}>
@@ -57,11 +70,7 @@ const jsonLd: WithContext<WebSite> = {
 		set:html={JSON.stringify(jsonLd)}
 	/>
 	<section class={styles.about}>
-		<Image
-			alt="A drawn silouethe of myself"
-			loading="eager"
-			src={meSvg}
-		/>
+		<Image alt="A drawn silouethe of myself" loading="eager" src={meSvg} />
 		<p>
 			<strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
 			<br />
@@ -72,6 +81,6 @@ const jsonLd: WithContext<WebSite> = {
 		<p>
 			Here are some of the <Link href="/work/">things I make</Link>:
 		</p>
-		<ProjectThumbnailList items={featuredProjectThumbnails} />
+		<ProjectThumbnailList items={featuredProjects} />
 	</section>
 </Layout>
