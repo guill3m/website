@@ -22,16 +22,3 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
-
-
-### NEXT,JS STUFF
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# vercel
-.vercel
