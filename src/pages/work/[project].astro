@@ -53,13 +53,12 @@ const jsonLd: WithContext<CreativeWork> = {
 		image: { alt: '', ...project.data.thumbnail },
 	}}
 >
-	<script
-		is:inline
-		slot="head-meta"
-		type="application/ld+json"
-		set:html={JSON.stringify(jsonLd)}
-	/>
 	<article class={styles.project}>
+		<script
+			is:inline
+			type="application/ld+json"
+			set:html={JSON.stringify(jsonLd)}
+		/>
 		<h1>{project.data.title}.</h1>
 		<h2>{project.data.subtitle}.</h2>
 		<Content components={{ a: Link }} />
