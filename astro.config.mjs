@@ -37,4 +37,9 @@ export default defineConfig({
 	],
 	site,
 	trailingSlash: 'always',
+	vite: {
+		build: {
+			cssCodeSplit: false,
+		},
+	},
 })
