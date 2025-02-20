@@ -1,14 +1,14 @@
-.list {
+.experience-list {
 	margin: 0;
 	padding: 0;
 }
 
-.item {
+.experience-item {
 	list-style: none;
 	margin: var(--spacing) 0;
 }
 
-.title {
+.experience-item-title {
 	font-family: var(--font-stack-serif);
 	font-weight: 400;
 
@@ -18,7 +18,7 @@
 	}
 }
 
-.date {
+.experience-item-date {
 	font-size: 0.75em;
 	font-style: normal;
 

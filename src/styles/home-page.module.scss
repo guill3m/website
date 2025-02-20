@@ -1,4 +1,4 @@
-.about {
+.home-about {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
@@ -33,12 +33,12 @@
 	}
 }
 
-.work {
+.home-work {
 	margin: var(--margin-medium) 0 var(--margin-small);
 }
 
 @media (width >=450px) {
-	.about {
+	.home-about {
 		font-size: 2.5rem;
 		margin: var(--margin-medium) 0;
 
@@ -51,18 +51,18 @@
 		}
 	}
 
-	.work {
+	.home-work {
 		margin-top: var(--margin-large);
 	}
 }
 
 @media (width >=700px) {
-	.about {
+	.home-about {
 		font-size: 3rem;
 		margin: var(--margin-large) 0;
 	}
 
-	.work {
+	.home-work {
 		margin-top: var(--margin-extralarge);
 
 		p {
@@ -72,7 +72,7 @@
 }
 
 @media (width >=924px) {
-	.about {
+	.home-about {
 		p {
 			order: 1;
 		}

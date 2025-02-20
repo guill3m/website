@@ -1,11 +1,10 @@
 ---
 import type { ImageMetadata } from 'astro'
-
-import styles from './project-thumbnail-list.module.scss'
-
 import { Picture } from 'astro:assets'
 
 import Link from './link.astro'
+
+import styles from './project-thumbnail-list.module.scss'
 
 interface Props {
 	items: {
@@ -17,7 +16,7 @@ interface Props {
 const { items } = Astro.props
 ---
 
-<ul class={styles.list}>
+<ul class={styles['project-list']}>
 	{
 		items.map((project) => (
 			<li>

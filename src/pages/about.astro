@@ -1,11 +1,10 @@
 ---
-import styles from '../styles/about-page.module.scss'
-
 import { Picture } from 'astro:assets'
 
 import Layout from '../layouts/layout.astro'
 import ExperienceList from '../components/experience-list.astro'
 
+import styles from '../styles/about-page.module.scss'
 import meKidJpg from '../assets/me-kid.jpg'
 
 const title = 'About me'
@@ -18,7 +17,7 @@ const meta = {
 <Layout title={title} meta={meta}>
 	<article class={styles.about}>
 		<h1>{title}.</h1>
-		<section class={styles.intro} id="intro">
+		<section class={styles['about-intro']}>
 			<p>
 				<Picture
 					alt="Me when I was a kid"

@@ -8,7 +8,7 @@
 	}
 }
 
-.intro {
+.about-intro {
 	display: grid;
 	grid-gap: var(--spacing);
 
@@ -34,7 +34,7 @@
 }
 
 @media (width >= 830px) {
-	.intro {
+	.about-intro {
 		align-items: center;
 		grid-template-columns: 5fr 7fr;
 		grid-gap: calc(var(--spacing) * 2);
@@ -58,13 +58,13 @@
 }
 
 @media (width >= 1000px) {
-	.intro p:last-child {
+	.about-intro p:last-child {
 		font-size: 1.75rem;
 	}
 }
 
 @media (width >= 1180px) {
-	.intro p:last-child {
+	.about-intro p:last-child {
 		font-size: 2rem;
 	}
 }

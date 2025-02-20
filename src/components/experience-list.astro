@@ -1,7 +1,7 @@
 ---
-import styles from './experience-list.module.scss'
-
 import Link from './link.astro'
+
+import styles from './experience-list.module.scss'
 
 interface Props {
 	items: {
@@ -18,11 +18,11 @@ interface Props {
 const { items } = Astro.props
 ---
 
-<ul class={styles.list}>
+<ul class={styles['experience-list']}>
 	{
 		items.map((item) => (
-			<li class={styles.item}>
-				<strong class={styles.title}>
+			<li class={styles['experience-item']}>
+				<strong class={styles['experience-item-title']}>
 					<em>{item.title}</em>
 					{item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
 					{item.where && (
@@ -42,7 +42,7 @@ const { items } = Astro.props
 						<br />
 					</>
 				)}
-				<small class={styles.date}>
+				<small class={styles['experience-item-date']}>
 					{item.city && `${item.city}, `}
 					{item.date}.
 				</small>

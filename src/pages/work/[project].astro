@@ -1,13 +1,12 @@
 ---
 import type { CreativeWork, WithContext } from 'schema-dts'
-
-import styles from '../../styles/project-page.module.scss'
-
 import { getCollection, render } from 'astro:content'
 
 import Layout from '../../layouts/layout.astro'
 import Link from '../../components/link.astro'
 import siteMetadata from '../../helpers/site-metadata'
+
+import styles from '../../styles/project-page.module.scss'
 
 export async function getStaticPaths() {
 	const projects = await getCollection('project')
