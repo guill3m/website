@@ -20,25 +20,21 @@
 		min-width: 225px;
 		position: relative;
 		transition: opacity 256ms var(--cubic-bezier-ease-out);
+
+		&:hover {
+			transition-timing-function: var(--cubic-bezier-ease-in);
+
+			img {
+				transition-timing-function: var(--cubic-bezier-ease-in);
+			}
+		}
 	}
 
-	&:hover {
+	&:hover li:not(:hover) {
+		opacity: 0.5;
+
 		img {
 			filter: sepia(1);
-		}
-
-		li {
-			opacity: 0.5;
-		}
-	}
-
-	li:hover {
-		opacity: 1;
-		transition-timing-function: var(--cubic-bezier-ease-in);
-
-		img {
-			filter: none;
-			transition-timing-function: var(--cubic-bezier-ease-in);
 		}
 	}
 
