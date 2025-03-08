@@ -68,8 +68,10 @@ const featuredProjects = allProjects
 		set:html={JSON.stringify(jsonLd)}
 	/>
 	<section class={styles['home-about']}>
-		<Image alt="A drawn silouethe of myself" loading="eager" src={meSvg} />
-		<p>
+		<div class={styles['home-about-image']}>
+			<Image alt="A drawn silouethe of myself" loading="eager" src={meSvg} />
+		</div>
+		<p class={styles['home-about-text']}>
 			<strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin.
 			<br />
 			<Link href="/about/">More about me</Link>
