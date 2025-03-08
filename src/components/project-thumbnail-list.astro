@@ -32,16 +32,7 @@ const { items } = Astro.props
 						src={project.thumbnail}
 						height={500}
 						width={900}
-						widths={[
-							250,
-							320,
-							380,
-							440,
-							500,
-							640,
-							750,
-							project.thumbnail.width,
-						]}
+						widths={[500, 640, 750, project.thumbnail.width]}
 					/>
 					<span>{project.title}</span>
 				</Link>
