@@ -8,7 +8,7 @@
 .main,
 .footer {
 	margin: var(--margin-small);
-	max-width: 1550px;
+	max-width: 1520px;
 }
 
 .header,
@@ -82,7 +82,7 @@
 	}
 }
 
-@media (width >=550px) {
+@media (width >= 35em) {
 	.footer {
 		flex-direction: row;
 		justify-content: space-between;
@@ -93,7 +93,7 @@
 	}
 }
 
-@media (width >=1630px) {
+@media (width >= 100em) {
 	.header,
 	.main,
 	.footer {

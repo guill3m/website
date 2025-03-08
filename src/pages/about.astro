@@ -18,22 +18,20 @@ const meta = {
 	<article class={styles.about}>
 		<h1>{title}.</h1>
 		<section class={styles['about-intro']}>
-			<p>
-				<Picture
-					alt="Me when I was a kid"
-					formats={['avif', 'webp']}
-					loading="eager"
-					sizes={[
-						'(min-width: 1325px) 410px',
-						'(min-width: 830px) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem)',
-						'(min-width: 600px) calc((100vw - 4rem) * 0.8)',
-						'calc(100vw - 4rem)',
-					].join()}
-					src={meKidJpg}
-					width={410}
-					widths={[340, 410, 600, 680, 820, meKidJpg.width]}
-				/>
-			</p>
+			<Picture
+				alt="Me when I was a kid"
+				formats={['avif', 'webp']}
+				loading="eager"
+				sizes={[
+					'(min-width: 100em) 390px',
+					'(min-width: 52em) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem)',
+					'(min-width: 40em) calc((100vw - 4rem) * 0.8)',
+					'calc(100vw - 4rem)',
+				].join()}
+				src={meKidJpg}
+				width={390}
+				widths={[340, 390, 600, 680, 780, 975, 1170, meKidJpg.width]}
+			/>
 			<p>
 				Hi, my name is Guillem. I’m a Tech Lead, Web Developer, and Designer.
 				With a predilection for front-end web development and a people-first

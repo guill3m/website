@@ -4,34 +4,35 @@
 	@extend %text-wrap;
 
 	img {
+		border-radius: var(--spacing);
 		height: auto;
 		margin: var(--spacing) 0;
+	}
 
-		&:global(.two-col) {
-			border: 1px solid var(--color-border);
-		}
+	:global(.two-col-images) img {
+		border: 1px solid var(--color-border);
 	}
 }
 
-@media (width >= 600px) {
-	.project img {
-		margin: var(--spacing) -15%;
-		max-width: 130%;
-
-		&:global(.two-col) {
-			display: inline-block;
-			margin: calc(var(--spacing) / 2) -15%;
-			width: calc(65% - var(--spacing) - 2px);
-		}
-	}
-
-	.project picture {
-		&:nth-of-type(odd) img:global(.two-col) {
-			margin-right: var(--spacing);
+@media (width >= 40em) {
+	.project {
+		img {
+			margin: var(--spacing) -15%;
+			max-width: 130%;
 		}
 
-		&:nth-of-type(even) img:global(.two-col) {
-			margin-left: var(--spacing);
+		:global(.two-col-images) {
+			display: grid;
+			gap: calc(var(--spacing) * 2);
+			grid-template-columns: repeat(2, 1fr);
+			margin: var(--spacing) -15%;
+			width: 130%;
+
+			img {
+				margin: 0;
+				vertical-align: bottom;
+				width: 100%;
+			}
 		}
 	}
 }

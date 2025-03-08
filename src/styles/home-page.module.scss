@@ -30,6 +30,7 @@
 
 	img {
 		height: 5em;
+		width: auto;
 	}
 }
 
@@ -37,7 +38,7 @@
 	margin: var(--margin-medium) 0 var(--margin-small);
 }
 
-@media (width >=450px) {
+@media (width >= 28em) {
 	.home-about {
 		font-size: 2.5rem;
 		margin: var(--margin-medium) 0;
@@ -56,7 +57,7 @@
 	}
 }
 
-@media (width >=700px) {
+@media (width >= 44em) {
 	.home-about {
 		font-size: 3rem;
 		margin: var(--margin-large) 0;
@@ -71,7 +72,7 @@
 	}
 }
 
-@media (width >=924px) {
+@media (width >= 57.6875em) {
 	.home-about {
 		p {
 			order: 1;

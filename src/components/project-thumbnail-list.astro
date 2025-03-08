@@ -20,23 +20,31 @@ const { items } = Astro.props
 	{
 		items.map((project) => (
 			<li>
-				<article>
-					<Link href={`/work/${project.id}/`}>
-						<Picture
-							alt=""
-							formats={['avif', 'webp']}
-							sizes={[
-								'(min-width: 744px) calc((100vw - 4rem) / 3)',
-								'calc(100vw - 4rem)',
-							].join()}
-							src={project.thumbnail}
-							height={500}
-							width={900}
-							widths={[250, 340, 450, 500, 680, project.thumbnail.width]}
-						/>
-						<span>{project.title}</span>
-					</Link>
-				</article>
+				<Link href={`/work/${project.id}/`}>
+					<Picture
+						alt=""
+						formats={['avif', 'webp']}
+						sizes={[
+							'(min-width: 52em) calc((100vw - 4rem - 1rem) / 3)',
+							'(min-width: 35em) calc((100vw - 4rem - 0.5rem) / 2)',
+							'calc(100vw - 4rem)',
+						].join()}
+						src={project.thumbnail}
+						height={500}
+						width={900}
+						widths={[
+							250,
+							320,
+							380,
+							440,
+							500,
+							640,
+							750,
+							project.thumbnail.width,
+						]}
+					/>
+					<span>{project.title}</span>
+				</Link>
 			</li>
 		))
 	}

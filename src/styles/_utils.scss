@@ -1,6 +1,6 @@
 %text-wrap {
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 960px;
 
 	h1 {
 		font-family: var(--font-stack-serif);
@@ -17,7 +17,7 @@
 	}
 }
 
-@media (width >= 600px) {
+@media (width >= 40em) {
 	%text-wrap {
 		width: 80%;
 	}
