@@ -22,7 +22,7 @@ html {
 	background: var(--color-background);
 	box-sizing: border-box;
 	font-family: var(--font-stack-sans);
-	font-size: calc(75% + 0.5vw);
+	font-size: clamp(75%, 75% + 0.5vw, 125%);
 	min-height: 100%;
 	text-size-adjust: none;
 }
@@ -115,12 +115,6 @@ hr {
 	);
 	border: 0;
 	height: 1px;
-}
-
-@media (width >= 100em) {
-	html {
-		font-size: 125%;
-	}
 }
 
 ::selection {
