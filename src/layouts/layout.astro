@@ -51,8 +51,6 @@ const year = new Date().getFullYear()
 		<meta name="pinterest" content="nopin" />
 		<meta name="generator" content={Astro.generator} />
 		<slot name="head-meta" />
-	</head>
-	<body>
 		<script
 			is:inline
 			defer
@@ -60,6 +58,8 @@ const year = new Date().getFullYear()
 			data-host-url={import.meta.env.UMAMI_ANALYTICS_HOST}
 			data-website-id={import.meta.env.UMAMI_ANALYTICS_ID}
 			src={import.meta.env.UMAMI_ANALYTICS_SCRIPT}></script>
+	</head>
+	<body>
 		<header class={styles.header}>
 			<a href="/" class={styles.logo}> Guillem Andreu. </a>
 			<nav class={styles.menu}>
