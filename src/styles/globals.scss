@@ -1,10 +1,13 @@
 :root {
-	--color-background: #fff;
-	--color-foreground: #002a3a;
-	--color-primary: #f68d2e;
-	--color-primary-light: #fcc89b;
-	--color-anchor: #0077c8;
-	--color-border: #eee;
+	--color-background: hsl(0 0 100);
+	--color-background-dark: hsl(from var(--color-background) h s calc(l - 10));
+	--color-primary: hsl(28.5 91.74 57.25);
+	--color-primary-light: hsl(from var(--color-primary) h s calc(l + 20));
+	--color-foreground: hsl(
+		from var(--color-primary) calc(h + 165) s calc(l - 45)
+	);
+	--color-foreground-light: hsl(from var(--color-foreground) h s calc(l + 15));
+	--color-anchor: hsl(from var(--color-primary) calc(h + 180) s calc(l - 20));
 	--cubic-bezier-ease-in: cubic-bezier(0.3, 0, 1, 1);
 	--cubic-bezier-ease-out: cubic-bezier(0, 0, 0.7, 1);
 	--font-stack-sans: 'Source Sans 3', 'Source Sans 3 Fallback', sans-serif;
