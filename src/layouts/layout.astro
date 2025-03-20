@@ -75,9 +75,19 @@ const year = new Date().getFullYear()
 		</main>
 		<footer class={styles.footer}>
 			<span>
-				<strong>© {year} Guillem Andreu Muñoz.</strong> Made in Berlin.{' '}
-				<Link href="/privacy-policy/">Privacy policy.</Link>{' '}
+				<span class={styles['copyright-notice']}>
+					<strong>© 2009&ndash;{year} Guillem Andreu Muñoz.</strong>
+					All rights reserved.
+				</span>
+				<Link href="/privacy-policy/">Privacy policy.</Link>
 				<Link href="/ai/">AI (non)usage.</Link>
+				<br />
+				<small
+					>No part of this website may be used or reproduced in any manner for
+					the purpose of training artificial intelligence technologies or
+					systems. The author expressly reserves this work from the text and
+					data mining exception.</small
+				>
 			</span>
 			<span class={styles.social}>
 				<Link
