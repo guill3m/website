@@ -1,7 +1,7 @@
 :root {
-	--color-background: hsl(0 0 100);
+	--color-background: hsl(0deg, 0%, 100%);
 	--color-background-dark: hsl(from var(--color-background) h s calc(l - 10));
-	--color-primary: hsl(28.5 91.74 57.25);
+	--color-primary: hsl(28.5deg, 91.74%, 57.25%);
 	--color-primary-light: hsl(from var(--color-primary) h s calc(l + 20));
 	--color-foreground: hsl(
 		from var(--color-primary) calc(h + 165) s calc(l - 45)
