@@ -18,7 +18,6 @@
 	--margin-large: calc(var(--spacing) * 12);
 	--margin-extralarge: calc(var(--spacing) * 16);
 	--spacing: 0.5rem;
-	--social-icon-color: var(--color-foreground);
 }
 
 html {
@@ -42,22 +41,16 @@ body {
 }
 
 a {
-	--social-icon-color: var(--color-anchor);
-
 	color: var(--color-anchor);
 	transition: color 256ms var(--cubic-bezier-ease-out);
 
 	&:hover,
 	&:focus {
-		--social-icon-color: var(--color-foreground);
-
 		color: var(--color-foreground);
 		transition-timing-function: var(--cubic-bezier-ease-in);
 	}
 
 	&:active {
-		--social-icon-color: var(--color-primary);
-
 		color: var(--color-primary);
 	}
 
