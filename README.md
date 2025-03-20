@@ -20,7 +20,7 @@ After having used Astro in another project, it became clear that for a content-d
 
 Additionally, the [Islands Architecture](https://docs.astro.build/en/concepts/islands/) concept really resonated with me and how I believe sites with little need for reactivity should be built. It reminds me of the approach I took when integrating Vue into a “legacy” frontend application for the first time years ago and I still stand by, start by adding semi-isolated bits of reactivity/interactivity where needed instead of rewriting the entire thing.
 
-## Previous iterations of the site
+## Previous iterations
 
 Previous iterations of the site include:
 
@@ -33,3 +33,7 @@ Previous iterations of the site include:
 - and many more that I can't remember anymore.
 
 Some of these iterations live here on [my GitHub profile](https://github.com/guill3m?tab=repositories), some are from before I even knew what Git was so they only live in some dusty hard drive.
+
+## License
+
+The content of this project itself is proprietary, the underlying source code used to format and display that content is licensed under the MIT license.
