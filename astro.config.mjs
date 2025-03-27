@@ -7,6 +7,9 @@ import sitemap from '@astrojs/sitemap'
 const site = 'https://www.guillemandreu.com'
 
 export default defineConfig({
+	experimental: {
+		preserveScriptOrder: true,
+	},
 	integrations: [
 		mdx(),
 		sitemap({
