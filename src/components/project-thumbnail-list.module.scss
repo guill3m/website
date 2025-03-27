@@ -20,7 +20,7 @@
 		}
 	}
 
-	&:hover li:not(:hover) {
+	&:has(li:hover) li:not(:hover) {
 		opacity: 0.5;
 
 		img {
