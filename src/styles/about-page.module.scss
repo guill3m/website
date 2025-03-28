@@ -28,6 +28,7 @@
 		margin: 0;
 		font-size: 1.5rem;
 		font-weight: 300;
+		line-height: 1.6;
 		order: 1;
 	}
 }
@@ -43,6 +44,7 @@
 		}
 
 		p {
+			font-size: 1.3rem;
 			font-weight: 200;
 			margin-bottom: 0;
 			order: 2;
@@ -52,12 +54,12 @@
 
 @media (width >= 60em) {
 	.about-intro p {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 	}
 }
 
 @media (width >= 74em) {
 	.about-intro p {
-		font-size: 1.85rem;
+		font-size: 1.6rem;
 	}
 }
