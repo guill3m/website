@@ -41,9 +41,10 @@ const { items } = Astro.props
 					{item.city ? `${item.date}. ${item.city}` : item.date}.
 				</small>
 				{item.description && (
-					<p class={styles['experience-item-description']}>
-						{item.description}
-					</p>
+					<div
+						class={styles['experience-item-description']}
+						set:html={item.description}
+					/>
 				)}
 				{item.techStack && (
 					<small class={styles['experience-item-stack']}>
