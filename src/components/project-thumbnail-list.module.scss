@@ -23,6 +23,10 @@
 		filter: sepia(0.75);
 	}
 
+	a {
+		text-decoration: none;
+	}
+
 	img {
 		border: 1px solid var(--color-background-dark);
 		border-radius: var(--spacing);
@@ -37,7 +41,6 @@
 		border-top: 1px solid var(--color-background-dark);
 		border-top-right-radius: var(--spacing);
 		bottom: 0;
-		color: var(--color-anchor);
 		display: inline-block;
 		font-weight: 600;
 		left: 0;
@@ -74,11 +77,6 @@
 			bottom: 0;
 			right: calc(var(--spacing) * -1);
 		}
-	}
-
-	a {
-		color: var(--color-foreground);
-		text-decoration: none;
 	}
 }
 
