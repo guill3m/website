@@ -1,7 +1,11 @@
 @use './utils';
 
 .about {
-	@extend %text-wrap;
+	@include utils.forward-grid;
+
+	h1 {
+		@extend %text-wrap;
+	}
 
 	h2 {
 		color: var(--color-primary);
@@ -9,57 +13,87 @@
 }
 
 .about-intro {
-	display: grid;
-	grid-gap: var(--spacing);
+	@extend %text-wrap;
+	@include utils.forward-grid;
+	font-size: 1.5rem;
+	line-height: 1.75;
+	font-weight: 300;
 
 	picture {
-		order: 2;
+		grid-column: 1 / span 13;
+		grid-row: 2;
+		text-align: center;
 	}
 
 	img {
 		border-radius: var(--spacing);
-		height: 100%;
+		height: calc(1.75em * 6);
+		max-width: 100%;
 		object-fit: cover;
+		object-position: left;
 		vertical-align: top;
-		width: 100%;
+		width: auto;
 	}
 
 	p {
+		grid-column: 1 / span 13;
+		grid-row: 1;
 		margin: 0;
-		font-size: 1.5rem;
-		font-weight: 300;
-		line-height: 1.6;
-		order: 1;
+	}
+}
+
+.about-section {
+	@extend %text-wrap;
+}
+
+@media (width >= 40em) {
+	.about-intro {
+		align-items: center;
+		font-size: 1.4rem;
+
+		picture {
+			grid-column: 1 / span 5;
+			grid-row: 1;
+			text-align: left;
+		}
+
+		p {
+			grid-column: 6 / span 8;
+			margin-bottom: 0;
+		}
 	}
 }
 
 @media (width >= 52em) {
 	.about-intro {
-		align-items: center;
-		grid-template-columns: 5fr 7fr;
-		grid-gap: calc(var(--spacing) * 2);
+		font-size: 1.5rem;
 
+		img {
+			height: calc(1.75em * 5);
+		}
+	}
+}
+
+@media (width >= 72em) {
+	.about-intro {
 		picture {
-			order: 1;
+			grid-column: 2 / span 4;
 		}
 
 		p {
-			font-size: 1.3rem;
-			font-weight: 200;
-			margin-bottom: 0;
-			order: 2;
+			grid-column: 6 / span 6;
 		}
 	}
 }
 
-@media (width >= 60em) {
-	.about-intro p {
-		font-size: 1.5rem;
+@media (width >= 80em) {
+	.about-intro {
+		font-size: 1.65rem;
 	}
 }
 
-@media (width >= 74em) {
-	.about-intro p {
-		font-size: 1.6rem;
+@media (width >= 90em) {
+	.about-intro {
+		font-size: 1.75rem;
 	}
 }

@@ -7,16 +7,17 @@ import Link from './link.astro'
 import styles from './project-thumbnail-list.module.scss'
 
 interface Props {
+	class?: string
 	items: {
 		id: string
 		thumbnail: ImageMetadata
 		title: string
 	}[]
 }
-const { items } = Astro.props
+const { class: forwardedClass, items } = Astro.props
 ---
 
-<ul class={styles['project-list']}>
+<ul class:list={[styles['project-list'], forwardedClass]}>
 	{
 		items.map((project) => (
 			<li>

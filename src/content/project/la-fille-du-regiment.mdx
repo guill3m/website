@@ -18,10 +18,16 @@ This opera was interpreted by students of [ESAD València](https://esadvalencia.
 
 <Picture
 	alt=""
+	class="narrow-image"
 	formats={['avif', 'webp']}
 	loading="eager"
-	sizes={['(min-width: 80em) 1248px', 'calc(100vw - 4rem)'].join()}
+	sizes={[
+		'(min-width: 100em) 928px',
+		'(min-width: 72em) calc((100vw - 4rem) / 13 * 8)',
+		'(min-width: 52em) calc((100vw - 4rem) / 13 * 11)',
+		'calc(100vw - 4rem)',
+	].join()}
 	src={image1}
-	width={1248}
-	widths={[680, 780, 1050, 1248, 1600, image1.width]}
+	width={928}
+	widths={[680, 780, 928, 1050, 1300, 1520, 1750, image1.width]}
 />

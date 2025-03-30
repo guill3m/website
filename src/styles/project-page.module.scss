@@ -6,33 +6,59 @@
 	img {
 		border-radius: var(--spacing);
 		height: auto;
-		margin: var(--spacing) 0;
+		margin-top: var(--margin-extrasmall);
+		vertical-align: bottom;
 	}
 
-	:global(.two-col-images) img {
-		border: 1px solid var(--color-background-dark);
+	:global(.two-col-images) {
+		margin-top: var(--margin-extrasmall);
+
+		img {
+			border: 1px solid var(--color-background-dark);
+		}
 	}
 }
 
 @media (width >= 40em) {
 	.project {
-		img {
-			margin: var(--spacing) -15%;
-			max-width: 130%;
-		}
-
 		:global(.two-col-images) {
 			display: grid;
-			gap: calc(var(--spacing) * 2);
+			gap: var(--layout-column-gap);
 			grid-template-columns: repeat(2, 1fr);
-			margin: var(--spacing) -15%;
-			width: 130%;
+			width: var(--layout-width);
 
 			img {
 				margin: 0;
-				vertical-align: bottom;
 				width: 100%;
 			}
+		}
+	}
+}
+
+@media (width >= 52em) {
+	.project {
+		img,
+		:global(.two-col-images) {
+			margin-left: calc(var(--layout-column-width) * -1 - 1px);
+		}
+
+		img {
+			max-width: none;
+			width: var(--layout-width);
+
+			&:global(.narrow-image) {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (width >= 72em) {
+	.project {
+		img,
+		:global(.two-col-images) {
+			margin-left: calc(var(--layout-column-width) * -2 - 2px);
 		}
 	}
 }

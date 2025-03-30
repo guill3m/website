@@ -12,6 +12,14 @@
 	--cubic-bezier-ease-out: cubic-bezier(0, 0, 0.7, 1);
 	--font-stack-sans: 'Source Sans 3', 'Source Sans 3 Fallback', sans-serif;
 	--font-stack-serif: 'Bw Darius', 'Bw Darius Fallback', serif;
+	--layout-column-gap: calc(var(--spacing) * 2);
+	--layout-column-width: calc(var(--layout-width) / 13);
+	--layout-margin-left: max(var(--margin-small), env(safe-area-inset-left));
+	--layout-margin-right: max(var(--margin-small), env(safe-area-inset-right));
+	--layout-width: min(
+		1520px,
+		100vw - var(--layout-margin-left) - var(--layout-margin-right)
+	);
 	--margin-extrasmall: calc(var(--spacing) * 2);
 	--margin-small: calc(var(--spacing) * 4);
 	--margin-medium: calc(var(--spacing) * 8);
@@ -38,7 +46,8 @@ html {
 
 body {
 	color: var(--color-foreground);
-	margin: 0;
+	margin: var(--layout-margin-left) auto var(--layout-margin-right);
+	max-width: var(--layout-width);
 }
 
 a {
@@ -85,6 +94,24 @@ a {
 img {
 	max-width: 100%;
 	vertical-align: baseline;
+}
+
+h1 {
+	font-family: var(--font-stack-serif);
+	font-size: 2rem;
+	font-weight: 900;
+	margin: 0 0 0.25em;
+}
+
+h2 {
+	font-family: var(--font-stack-serif);
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 1em 0 0.5em;
+}
+
+h1 + h2 {
+	margin-top: 0;
 }
 
 p {

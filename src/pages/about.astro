@@ -19,18 +19,19 @@ const meta = {
 		<h1>{title}.</h1>
 		<section class={styles['about-intro']}>
 			<Picture
-				alt="Me when I was a kid"
+				alt="Me when I was a small kid. There is a white paper on the desk and scattered many colorful crayons, I am looking at the camera and holding one crayon on each hand"
 				formats={['avif', 'webp']}
 				loading="eager"
 				sizes={[
-					'(min-width: 100em) 390px',
-					'(min-width: 52em) calc((100vw - 4rem) * 0.8 / 12 * 5 - 1rem)',
-					'(min-width: 40em) calc((100vw - 4rem) * 0.8)',
-					'calc(100vw - 4rem)',
+					'(min-width: 90em) calc(1.75rem * 1.75 * 5 * (4 / 3))',
+					'(min-width: 80em) calc(1.65rem * 1.75 * 5 * (4 / 3))',
+					'(min-width: 52em) calc(1.5rem * 1.75 * 5 * (4 / 3))',
+					'(min-width: 40em) calc(1.4rem * 1.75 * 6 * (4 / 3))',
+					'calc(1.5rem * 1.75 * 6 * (4 / 3))',
 				].join()}
 				src={meKidJpg}
-				width={680}
-				widths={[600, 680, 780, 975, 1170, meKidJpg.width]}
+				width={410}
+				widths={[560, 640, 740, 820, 960, meKidJpg.width]}
 			/>
 			<p>
 				Hi, my name is Guillem. I’m a Tech Lead, Web Developer, and Designer.
@@ -39,7 +40,7 @@ const meta = {
 				convergence.
 			</p>
 		</section>
-		<section>
+		<section class={styles['about-section']}>
 			<h2 id="experience">Experience.</h2>
 			<ExperienceList
 				items={[
@@ -108,7 +109,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section>
+		<section class={styles['about-section']}>
 			<h2 id="studies">Studies.</h2>
 			<ExperienceList
 				items={[
@@ -122,7 +123,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section>
+		<section class={styles['about-section']}>
 			<h2 id="courses">Courses.</h2>
 			<ExperienceList
 				items={[
@@ -135,7 +136,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section>
+		<section class={styles['about-section']}>
 			<h2 id="others">Others.</h2>
 			<ExperienceList
 				items={[
