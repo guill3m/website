@@ -8,6 +8,7 @@ interface Props {
 		city?: string
 		date: string
 		description?: string
+		techStack?: string[]
 		title: string
 		titleUnion?: string
 		url?: string
@@ -36,16 +37,19 @@ const { items } = Astro.props
 					)}
 				</strong>
 				<br />
-				{item.description && (
-					<>
-						<span>{item.description}</span>
-						<br />
-					</>
-				)}
 				<small class={styles['experience-item-date']}>
-					{item.city && `${item.city}, `}
-					{item.date}.
+					{item.city ? `${item.date}. ${item.city}` : item.date}.
 				</small>
+				{item.description && (
+					<p class={styles['experience-item-description']}>
+						{item.description}
+					</p>
+				)}
+				{item.techStack && (
+					<small class={styles['experience-item-stack']}>
+						<span>Tech stack:</span> {item.techStack.join(', ')}.
+					</small>
+				)}
 			</li>
 		))
 	}

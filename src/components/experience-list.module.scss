@@ -5,7 +5,11 @@
 
 .experience-item {
 	list-style: none;
-	margin: var(--spacing) 0;
+	line-height: 1.2;
+
+	& + & {
+		margin-top: var(--margin-small);
+	}
 }
 
 .experience-item-title {
@@ -21,4 +25,18 @@
 .experience-item-date {
 	color: var(--color-primary-dark);
 	font-size: 0.8em;
+}
+
+.experience-item-description {
+	line-height: 1.5;
+	margin: 0.5em 0 0.25em;
+}
+
+.experience-item-stack {
+	color: var(--color-foreground-light);
+	font-weight: 300;
+
+	span {
+		font-weight: 400;
+	}
 }
