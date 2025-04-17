@@ -43,6 +43,22 @@
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: auto;
 	margin: var(--margin-extrasmall) 0 var(--margin-small);
+	view-transition-name: main;
+}
+
+::view-transition-group(main) {
+	animation-duration: var(--transition-timing-fast);
+	animation-fill-mode: both;
+}
+
+::view-transition-old(main) {
+	animation-timing-function: var(--cubic-bezier-ease-out);
+	animation-name: fade-out;
+}
+
+::view-transition-new(main) {
+	animation-timing-function: var(--cubic-bezier-ease-in);
+	animation-name: fade-in;
 }
 
 .footer {
@@ -75,7 +91,7 @@
 
 	svg {
 		height: 1rem;
-		transition: fill 256ms var(--cubic-bezier-ease-out);
+		transition: fill var(--transition-timing) var(--cubic-bezier-ease-out);
 		vertical-align: bottom;
 		width: 1rem;
 	}

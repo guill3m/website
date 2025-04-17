@@ -26,6 +26,34 @@
 	--margin-large: calc(var(--spacing) * 12);
 	--margin-extralarge: calc(var(--spacing) * 16);
 	--spacing: 0.5rem;
+	--transition-timing: 256ms;
+	--transition-timing-fast: calc(var(--transition-timing) / 2);
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+		mix-blend-mode: plus-lighter;
+	}
+	to {
+		opacity: 0;
+		mix-blend-mode: plus-lighter;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		mix-blend-mode: plus-lighter;
+	}
+	to {
+		opacity: 1;
+		mix-blend-mode: plus-lighter;
+	}
+}
+
+@view-transition {
+	navigation: auto;
 }
 
 html {
@@ -52,7 +80,7 @@ body {
 
 a {
 	color: var(--color-anchor);
-	transition: color 256ms var(--cubic-bezier-ease-out);
+	transition: color var(--transition-timing) var(--cubic-bezier-ease-out);
 
 	&:hover,
 	&:focus {
@@ -73,7 +101,8 @@ a {
 			margin: 0 0.15em;
 			mask: no-repeat center / 0.6em
 				url('../assets/opens-in-new-tab.svg?no-inline');
-			transition: background-color 256ms var(--cubic-bezier-ease-out);
+			transition: background-color var(--transition-timing)
+				var(--cubic-bezier-ease-out);
 			height: 1em;
 			vertical-align: middle;
 			width: 0.6em;

@@ -10,8 +10,8 @@
 	li {
 		position: relative;
 		transition:
-			filter 256ms var(--cubic-bezier-ease-out),
-			opacity 256ms var(--cubic-bezier-ease-out);
+			filter var(--transition-timing) var(--cubic-bezier-ease-out),
+			opacity var(--transition-timing) var(--cubic-bezier-ease-out);
 
 		&:hover {
 			transition-timing-function: var(--cubic-bezier-ease-in);
