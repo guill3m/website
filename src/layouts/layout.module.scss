@@ -46,6 +46,28 @@
 	view-transition-name: main;
 }
 
+@keyframes fade-out {
+	from {
+		mix-blend-mode: plus-lighter;
+		opacity: 1;
+	}
+	to {
+		mix-blend-mode: plus-lighter;
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		mix-blend-mode: plus-lighter;
+		opacity: 0;
+	}
+	to {
+		mix-blend-mode: plus-lighter;
+		opacity: 1;
+	}
+}
+
 ::view-transition-group(main) {
 	animation-duration: var(--transition-timing-fast);
 	animation-fill-mode: both;

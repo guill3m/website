@@ -30,28 +30,6 @@
 	--transition-timing-fast: calc(var(--transition-timing) / 2);
 }
 
-@keyframes fade-out {
-	0% {
-		opacity: 1;
-		mix-blend-mode: plus-lighter;
-	}
-	to {
-		opacity: 0;
-		mix-blend-mode: plus-lighter;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-		mix-blend-mode: plus-lighter;
-	}
-	to {
-		opacity: 1;
-		mix-blend-mode: plus-lighter;
-	}
-}
-
 @view-transition {
 	navigation: auto;
 }
