@@ -30,7 +30,7 @@ const linkAriaLabel = ariaLabel ?? ariaLabelOpensInNewTab
 		<a
 			aria-label={linkAriaLabel?.trim()}
 			href={href}
-			rel={isExternalLink ? 'noopener noreferrer' : undefined}
+			rel={isExternalLink ? 'noopener' : undefined}
 			target={linkTarget}
 			{...rest}
 		>
