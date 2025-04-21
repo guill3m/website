@@ -38,6 +38,9 @@ export default defineConfig({
 			},
 		}),
 	],
+	prefetch: {
+		prefetchAll: true,
+	},
 	site,
 	trailingSlash: 'always',
 	vite: {
