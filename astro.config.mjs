@@ -1,12 +1,31 @@
 // @ts-check
 
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 
 const site = 'https://www.guillemandreu.com'
 
 export default defineConfig({
+	env: {
+		schema: {
+			UMAMI_ANALYTICS_HOST: envField.string({
+				context: 'client',
+				access: 'public',
+				optional: true,
+			}),
+			UMAMI_ANALYTICS_ID: envField.string({
+				context: 'client',
+				access: 'public',
+				optional: true,
+			}),
+			UMAMI_ANALYTICS_SCRIPT: envField.string({
+				context: 'client',
+				access: 'public',
+				optional: true,
+			}),
+		},
+	},
 	experimental: {
 		preserveScriptOrder: true,
 	},

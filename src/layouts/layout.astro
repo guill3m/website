@@ -2,6 +2,12 @@
 import '../styles/font-face.scss'
 import '../styles/globals.scss'
 
+import {
+	UMAMI_ANALYTICS_HOST,
+	UMAMI_ANALYTICS_ID,
+	UMAMI_ANALYTICS_SCRIPT,
+} from 'astro:env/client'
+
 import SocialIconSprite from '../assets/social-icon-sprite.svg'
 import PageMeta from '../components/page-meta.astro'
 import SocialIcon from '../components/social-icon.astro'
@@ -52,13 +58,18 @@ const year = new Date().getFullYear()
 		<meta name="pinterest" content="nopin" />
 		<meta name="generator" content={Astro.generator} />
 		<slot name="head-meta" />
-		<script
-			is:inline
-			defer
-			data-domains={siteMetadata.host}
-			data-host-url={import.meta.env.UMAMI_ANALYTICS_HOST}
-			data-website-id={import.meta.env.UMAMI_ANALYTICS_ID}
-			src={import.meta.env.UMAMI_ANALYTICS_SCRIPT}></script>
+		{
+			UMAMI_ANALYTICS_HOST && UMAMI_ANALYTICS_ID && UMAMI_ANALYTICS_SCRIPT && (
+				<script
+					is:inline
+					defer
+					data-domains={siteMetadata.host}
+					data-host-url={UMAMI_ANALYTICS_HOST}
+					data-website-id={UMAMI_ANALYTICS_ID}
+					src={UMAMI_ANALYTICS_SCRIPT}
+				/>
+			)
+		}
 	</head>
 	<body>
 		<header class={styles.header}>
