@@ -34,6 +34,27 @@
 	navigation: auto;
 }
 
+::view-transition-group(*) {
+	animation-duration: var(--transition-timing);
+	animation-fill-mode: both;
+}
+
+::view-transition-old(*) {
+	animation-timing-function: var(--cubic-bezier-ease-out);
+}
+
+::view-transition-new(*) {
+	animation-timing-function: var(--cubic-bezier-ease-in);
+}
+
+@media (prefers-reduced-motion) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}
+
 html {
 	background: var(--color-background);
 	box-sizing: border-box;
