@@ -16,7 +16,7 @@
 
 @mixin forward-grid {
 	display: grid;
-	gap: var(--layout-column-gap);
+	gap: var(--layout-gap);
 	grid-column: 1 / span 13;
 	grid-template-columns: subgrid;
 }

@@ -11,7 +11,7 @@
 	font-size: 1.5rem;
 	font-weight: 900;
 	line-height: 0.9;
-	margin-bottom: var(--spacing);
+	margin-bottom: var(--margin-extrasmall);
 	margin-right: var(--margin-small);
 	padding: var(--spacing) calc(var(--spacing) / 2);
 	text-decoration: none;
@@ -39,7 +39,7 @@
 
 .main {
 	display: grid;
-	gap: var(--layout-column-gap);
+	gap: var(--layout-gap);
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: auto;
 	margin: var(--margin-extrasmall) 0 var(--margin-small);

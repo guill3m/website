@@ -21,7 +21,7 @@
 	.project {
 		:global(.two-col-images) {
 			display: grid;
-			gap: var(--layout-column-gap);
+			gap: var(--layout-gap);
 			grid-template-columns: repeat(2, 1fr);
 			width: var(--layout-width);
 

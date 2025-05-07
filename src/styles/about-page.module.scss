@@ -27,7 +27,7 @@
 
 	img {
 		border-radius: var(--spacing);
-		height: calc(1.75em * 6);
+		height: 6lh;
 		max-width: 100%;
 		object-fit: cover;
 		object-position: left;
@@ -69,7 +69,7 @@
 		font-size: 1.5rem;
 
 		img {
-			height: calc(1.75em * 5);
+			height: 5lh;
 		}
 	}
 }
