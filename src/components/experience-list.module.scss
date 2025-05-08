@@ -6,7 +6,8 @@
 .experience-item {
 	list-style: none;
 	line-height: 1.25;
-	margin: var(--margin-extrasmall) 0;
+	margin-block: var(--margin-extrasmall);
+	margin-inline: 0;
 }
 
 .experience-item-title {
@@ -26,7 +27,9 @@
 
 .experience-item-description {
 	line-height: 1.5;
-	margin: 0.25lh 0;
+	margin-block: 0.25lh;
+	margin-inline: 0;
+
 	p,
 	ul {
 		margin: 0;
@@ -34,7 +37,7 @@
 
 	ul {
 		list-style-type: disc;
-		padding-left: 1lh;
+		padding-inline-start: 1lh;
 	}
 }
 

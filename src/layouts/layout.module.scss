@@ -11,9 +11,10 @@
 	font-size: 1.5rem;
 	font-weight: 900;
 	line-height: 0.9;
-	margin-bottom: var(--margin-extrasmall);
-	margin-right: var(--margin-small);
-	padding: var(--spacing) calc(var(--spacing) / 2);
+	margin-block-end: var(--margin-extrasmall);
+	margin-inline-end: var(--margin-small);
+	padding-block: var(--spacing);
+	padding-inline: calc(var(--spacing) / 2);
 	text-decoration: none;
 }
 
@@ -28,7 +29,7 @@
 
 	li {
 		display: inline-block;
-		margin-right: var(--spacing);
+		margin-inline-end: var(--spacing);
 	}
 
 	a {
@@ -42,7 +43,8 @@
 	gap: var(--layout-gap);
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: auto;
-	margin: var(--margin-extrasmall) 0 var(--margin-small);
+	margin-block: var(--margin-extrasmall) var(--margin-small);
+	margin-inline: 0;
 	view-transition-name: main;
 }
 
@@ -98,10 +100,10 @@
 
 .social {
 	--color-anchor: var(--color-primary);
-	margin-top: var(--margin-extrasmall);
+	margin-block-start: var(--margin-extrasmall);
 
 	a + a {
-		margin-left: var(--spacing);
+		margin-inline-start: var(--spacing);
 	}
 
 	svg {
@@ -119,9 +121,9 @@
 	}
 
 	.social {
-		margin-left: auto;
-		margin-top: auto;
+		margin-block-start: auto;
+		margin-inline-start: auto;
 		min-width: 5rem;
-		text-align: right;
+		text-align: end;
 	}
 }

@@ -8,12 +8,12 @@
 		border: 1px solid var(--color-background-dark);
 		border-radius: var(--spacing);
 		height: auto;
-		margin-top: var(--margin-extrasmall);
+		margin-block-start: var(--margin-extrasmall);
 		vertical-align: bottom;
 	}
 
 	:global(.two-col-images) {
-		margin-top: var(--margin-extrasmall);
+		margin-block-start: var(--margin-extrasmall);
 	}
 }
 
@@ -37,7 +37,7 @@
 	.project {
 		img,
 		:global(.two-col-images) {
-			margin-left: calc(var(--layout-column-width) * -1 - 1px);
+			margin-inline-start: calc(var(--layout-column-width) * -1 - 1px);
 		}
 
 		img {
@@ -45,7 +45,7 @@
 			width: var(--layout-width);
 
 			&:global(.narrow-image) {
-				margin-left: 0;
+				margin-inline-start: 0;
 				width: 100%;
 			}
 		}
@@ -56,7 +56,7 @@
 	.project {
 		img,
 		:global(.two-col-images) {
-			margin-left: calc(var(--layout-column-width) * -2 - 2px);
+			margin-inline-start: calc(var(--layout-column-width) * -2 - 2px);
 		}
 	}
 }
