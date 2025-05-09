@@ -18,17 +18,32 @@ interface Props {
 				width: number
 			}
 		}
+		lastUpdated?: Date
 	}
 }
 
 const {
-	frontmatter: { title, meta },
+	frontmatter: { title, meta, lastUpdated },
 } = Astro.props
+
+const lastUpdatedDate = new Date(lastUpdated ?? '')
 ---
 
 <BaseLayout title={title} meta={meta}>
 	<article class={styles.page}>
 		<h1>{title}.</h1>
 		<slot />
+		{
+			lastUpdated && (
+				<p>
+					<em>
+						Last updated on{' '}
+						<time datetime={lastUpdatedDate.toISOString()}>
+							{lastUpdatedDate.toLocaleDateString('en', { dateStyle: 'long' })}.
+						</time>
+					</em>
+				</p>
+			)
+		}
 	</article>
 </BaseLayout>
