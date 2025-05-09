@@ -114,16 +114,16 @@
 	}
 }
 
-@media (width >= 35em) {
+@media (width >= 40em) {
 	.footer {
 		flex-direction: row;
 		justify-content: space-between;
 	}
 
 	.social {
-		margin-block-start: auto;
+		margin-block: auto;
 		margin-inline-start: auto;
-		min-width: 5rem;
+		min-width: 8rem;
 		text-align: end;
 	}
 }

@@ -107,19 +107,24 @@ const year = new Date().getFullYear()
 			</span>
 			<span class={styles.social}>
 				<Link
-					ariaLabel="Bluesky (opens in a new tab)"
+					ariaLabel="Bluesky profile (opens in a new tab)"
 					href={`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`}
-					title="Bluesky"><SocialIcon platform="bluesky" /></Link
+					title="Bluesky profile"><SocialIcon platform="bluesky" /></Link
 				>
 				<Link
-					ariaLabel="GitHub (opens in a new tab)"
+					ariaLabel="GitHub profile (opens in a new tab)"
 					href={`https://github.com/${siteMetadata.author.social.github}`}
-					title="GitHub"><SocialIcon platform="github" /></Link
+					title="GitHub profile"><SocialIcon platform="github" /></Link
 				>
 				<Link
-					ariaLabel="LinkedIn (opens in a new tab)"
+					ariaLabel="Last.fm profile (opens in a new tab)"
 					href={`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`}
-					title="LinkedIn"><SocialIcon platform="linkedin" /></Link
+					title="Last.fm profile"><SocialIcon platform="lastfm" /></Link
+				>
+				<Link
+					ariaLabel="LinkedIn profile (opens in a new tab)"
+					href={`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`}
+					title="LinkedIn profile"><SocialIcon platform="linkedin" /></Link
 				>
 			</span>
 		</footer>
