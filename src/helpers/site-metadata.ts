@@ -4,6 +4,7 @@ const siteMetadata = {
 		social: {
 			bluesky: 'guill3m.me',
 			github: 'guill3m',
+			lastfm: 'guill3m',
 			linkedin: 'guillemandreu',
 		},
 	},
