@@ -5,11 +5,12 @@ interface Props {
 	ariaLabel?: string
 	children: any
 	href: string | null
+	rel?: string
 	target?: string
 	[prop: string]: any
 }
 
-const { ariaLabel, href, target, ...rest } = Astro.props
+const { ariaLabel, href, rel, target, ...rest } = Astro.props
 
 const isExternalLink = typeof href === 'string' && href.startsWith('https://')
 
@@ -24,6 +25,11 @@ if (linkTarget === '_blank') {
 }
 
 const linkAriaLabel = ariaLabel ?? ariaLabelOpensInNewTab
+
+let linkRel = rel
+if (isExternalLink) {
+	linkRel = rel ? `${rel} noopener` : 'noopener'
+}
 ---
 
 {
@@ -31,7 +37,7 @@ const linkAriaLabel = ariaLabel ?? ariaLabelOpensInNewTab
 		<a
 			aria-label={linkAriaLabel?.trim()}
 			href={href}
-			rel={isExternalLink ? 'noopener' : undefined}
+			rel={linkRel}
 			target={linkTarget}
 			{...rest}
 		>
