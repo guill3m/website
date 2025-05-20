@@ -1,0 +1,35 @@
+---
+layout: '../layouts/basic-page.astro'
+title: 'Colophon'
+meta:
+  description: 'How this website is made, and credits.'
+---
+
+import Link from '../components/link.astro'
+export const components = { a: Link }
+
+This website is as much an experimentation tool as it is a way for me to have some fully-owned web presence. It is designed and built by me, and it is never considered finished or complete.
+
+The way some details on the site are built might seem overkill at times. That’s by design, I probably wanted to test or play with a different tech or approach at the time, “the right tool for the job” in this project is not so much what is better for the project but what is better for me (or I want to learn) at the time.
+
+Lately, I have grown quite interested in the concept of [digital gardens](https://maggieappleton.com/garden-history) and how this site (until now essentially static and far from interesting) could evolve in that direction. The rewrite in Astro was the first step in that direction.
+
+## Typography
+
+Text is set in [Source Sans 3](https://github.com/adobe-fonts/source-sans). Headings are set in [Bw Darius](https://brandingwithtype.com/typefaces/bw-darius).
+
+## Technology
+
+The site is built with [Astro](https://astro.build/), a framework for building content-driven websites.
+
+I enjoy writing CSS. On this site, I use [SCSS](https://sass-lang.com/) for syntactic sugar and [CSS modules](https://github.com/css-modules/css-modules) for scoping.
+
+There is no CMS powering this site, for the time being it's just MDX files that I usually edit directly in my code editor of choice.
+
+See also: [AI (non)usage](/ai/).
+
+The site is deployed to [Cloudflare Pages](https://pages.cloudflare.com/). The domain is registered and managed with [Cloudflare](https://www.cloudflare.com/).
+
+## Source Code
+
+The source code for the site is [available on GitHub](https://github.com/guill3m/website). Like many others, one way I learned to build websites was by inspecting the code on other sites. I still strongly believe in learning from others and continue to do it today, sharing the source code for this site is my way of passing this on by providing easier-to-read code than the optimised/minified output.
