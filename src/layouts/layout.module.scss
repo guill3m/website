@@ -3,6 +3,11 @@
 	align-items: baseline;
 	display: flex;
 	flex-wrap: wrap;
+	view-transition-name: header;
+}
+
+::view-transition-group(header) {
+	animation-duration: 1ms;
 }
 
 .logo {
@@ -50,22 +55,18 @@
 
 @keyframes fade-out {
 	from {
-		mix-blend-mode: plus-lighter;
 		opacity: 1;
 	}
 	to {
-		mix-blend-mode: plus-lighter;
 		opacity: 0;
 	}
 }
 
 @keyframes fade-in {
 	from {
-		mix-blend-mode: plus-lighter;
 		opacity: 0;
 	}
 	to {
-		mix-blend-mode: plus-lighter;
 		opacity: 1;
 	}
 }

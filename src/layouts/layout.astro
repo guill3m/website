@@ -57,6 +57,7 @@ const year = new Date().getFullYear()
 		<link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
 		<meta name="pinterest" content="nopin" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="expect" href="#main" blocking="render" />
 		<slot name="head-meta" />
 		{
 			UMAMI_ANALYTICS_HOST && UMAMI_ANALYTICS_ID && UMAMI_ANALYTICS_SCRIPT && (
@@ -88,7 +89,7 @@ const year = new Date().getFullYear()
 				</ul>
 			</nav>
 		</header>
-		<main class={styles.main}>
+		<main id="main" class={styles.main}>
 			<slot>Hello world!</slot>
 		</main>
 		<footer class={styles.footer}>
