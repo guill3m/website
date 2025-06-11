@@ -9,19 +9,16 @@
 
 	li {
 		position: relative;
+		transition:
+			filter var(--transition-timing) var(--cubic-bezier-ease-out),
+			opacity var(--transition-timing) var(--cubic-bezier-ease-out);
 
-		img {
-			transition:
-				filter var(--transition-timing) var(--cubic-bezier-ease-out),
-				opacity var(--transition-timing) var(--cubic-bezier-ease-out);
-		}
-
-		&:hover img {
+		&:hover {
 			transition-timing-function: var(--cubic-bezier-ease-in);
 		}
 	}
 
-	&:has(li:hover) li:not(:hover) img {
+	&:has(li:hover) li:not(:hover) {
 		opacity: 0.5;
 		filter: sepia(0.75);
 	}
