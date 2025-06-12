@@ -1,13 +1,11 @@
 :root {
-	--color-anchor: hsl(from var(--color-primary) calc(h + 185) s calc(l - 15));
-	--color-background: hsl(from var(--color-primary) h s calc(l + 40));
+	--color-anchor: hsl(228deg, 82%, 47%);
+	--color-background: hsl(28deg, 92%, 97%);
 	--color-background-dark: hsl(from var(--color-background) h s calc(l - 10));
-	--color-foreground: hsl(
-		from var(--color-primary) calc(h + 165) s calc(l - 45)
-	);
+	--color-foreground: hsl(194deg, 90%, 12%);
 	--color-foreground-light: hsl(from var(--color-foreground) h s calc(l + 15));
-	--color-primary: hsl(28.5deg, 91.74%, 57.25%);
-	--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 20));
+	--color-primary: hsl(28deg, 92%, 57%);
+	--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 25));
 	--cubic-bezier-ease-in: cubic-bezier(0.3, 0, 1, 1);
 	--cubic-bezier-ease-out: cubic-bezier(0, 0, 0.7, 1);
 	--font-stack-sans: 'Source Sans 3', 'Source Sans 3 Fallback', sans-serif;
@@ -28,6 +26,13 @@
 	--spacing: 0.5rlh;
 	--transition-timing: 256ms;
 	--transition-timing-fast: calc(var(--transition-timing) / 2);
+}
+
+@media (prefers-contrast: more) {
+	:root {
+		--color-primary: hsl(28deg, 92%, 46%);
+		--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 20));
+	}
 }
 
 @view-transition {

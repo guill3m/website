@@ -94,6 +94,12 @@
 	color: var(--color-primary);
 }
 
+@media (prefers-contrast: more) {
+	.copyright-notice {
+		color: var(--color-primary-dark);
+	}
+}
+
 .social {
 	--color-anchor: var(--color-primary);
 	margin-block-start: var(--margin-extrasmall);
