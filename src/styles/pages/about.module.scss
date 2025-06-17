@@ -19,19 +19,13 @@
 	line-height: 1.75;
 	font-weight: 300;
 
-	picture {
-		grid-column: 1 / span 13;
-		grid-row: 2;
-		text-align: center;
-	}
-
 	img {
 		border-radius: var(--spacing);
+		grid-column: 1 / span 13;
+		grid-row: 2;
 		height: 6lh;
-		max-width: 100%;
 		object-fit: cover;
 		object-position: left;
-		vertical-align: top;
 		width: auto;
 	}
 
@@ -52,7 +46,7 @@
 		align-items: center;
 		font-size: 1.4rem;
 
-		picture {
+		img {
 			grid-column: 1 / span 5;
 			grid-row: 1;
 			text-align: start;
@@ -76,7 +70,7 @@
 
 @media (width >= 72em) {
 	.about-intro {
-		picture {
+		img {
 			grid-column: 2 / span 4;
 		}
 

@@ -133,9 +133,19 @@ a {
 	}
 }
 
-img {
+picture {
+	display: contents;
+}
+
+source {
+	display: none;
+}
+
+img,
+svg {
+	height: auto;
 	max-width: 100%;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 
 h1,
