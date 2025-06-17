@@ -1,0 +1,51 @@
+---
+import Link from './link.astro'
+import SocialIcon from './social-icon.astro'
+import siteMetadata from '../helpers/site-metadata.ts'
+
+import styles from '../styles/components/site-footer.module.scss'
+
+const year = new Date().getFullYear()
+---
+
+<footer class={styles.footer}>
+	<span>
+		<span class={styles['copyright-notice']}>
+			<strong>© 2009&ndash;{year} Guillem Andreu Muñoz.</strong>
+			All rights reserved.
+		</span>
+		<Link href="/privacy-policy/">Privacy policy.</Link>
+		<Link href="/colophon/">Colophon.</Link>
+		<Link href="/ai/">AI (non)usage.</Link>
+		<br />
+		<small>
+			No part of this website may be used or reproduced in any manner for the
+			purpose of training artificial intelligence technologies or systems. The
+			author expressly reserves this work from the text and data mining
+			exception.
+		</small>
+	</span>
+	<span class={styles.social}>
+		<Link
+			ariaLabel="Bluesky profile (opens in a new tab)"
+			href={`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`}
+			rel="me"
+			title="Bluesky profile"><SocialIcon platform="bluesky" /></Link
+		><Link
+			ariaLabel="GitHub profile (opens in a new tab)"
+			href={`https://github.com/${siteMetadata.author.social.github}`}
+			rel="me"
+			title="GitHub profile"><SocialIcon platform="github" /></Link
+		><Link
+			ariaLabel="Last.fm profile (opens in a new tab)"
+			href={`https://www.last.fm/user/${siteMetadata.author.social.lastfm}`}
+			rel="me"
+			title="Last.fm profile"><SocialIcon platform="lastfm" /></Link
+		><Link
+			ariaLabel="LinkedIn profile (opens in a new tab)"
+			href={`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`}
+			rel="me"
+			title="LinkedIn profile"><SocialIcon platform="linkedin" /></Link
+		>
+	</span>
+</footer>

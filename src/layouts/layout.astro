@@ -8,10 +8,10 @@ import {
 	UMAMI_ANALYTICS_SCRIPT,
 } from 'astro:env/client'
 
-import SocialIconSprite from '../assets/social-icon-sprite.svg'
 import PageMeta from '../components/page-meta.astro'
-import SocialIcon from '../components/social-icon.astro'
-import Link from '../components/link.astro'
+import SiteHeader from '../components/site-header.astro'
+import SiteFooter from '../components/site-footer.astro'
+import SocialIconSprite from '../assets/social-icon-sprite.svg'
 import siteMetadata from '../helpers/site-metadata.ts'
 
 import styles from '../styles/layouts/layout.module.scss'
@@ -34,8 +34,6 @@ interface Props {
 }
 
 const { title, meta } = Astro.props
-
-const year = new Date().getFullYear()
 ---
 
 <!doctype html>
@@ -73,69 +71,11 @@ const year = new Date().getFullYear()
 		}
 	</head>
 	<body>
-		<header class={styles.header}>
-			<a href="/" class={styles.logo}> Guillem Andreu. </a>
-			<nav class={styles.menu}>
-				<ul>
-					<li>
-						<Link href="/about/">About me.</Link>
-					</li><li>
-						<Link href="/work/">My work.</Link>
-					</li><li>
-						<Link href="/contact/">Contact.</Link>
-					</li><li>
-						<Link href="/uses/">Uses.</Link>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<SiteHeader />
 		<main id="main" class={styles.main}>
 			<slot>Hello world!</slot>
 		</main>
-		<footer class={styles.footer}>
-			<span>
-				<span class={styles['copyright-notice']}>
-					<strong>© 2009&ndash;{year} Guillem Andreu Muñoz.</strong>
-					All rights reserved.
-				</span>
-				<Link href="/privacy-policy/">Privacy policy.</Link>
-				<Link href="/colophon/">Colophon.</Link>
-				<Link href="/ai/">AI (non)usage.</Link>
-				<br />
-				<small
-					>No part of this website may be used or reproduced in any manner for
-					the purpose of training artificial intelligence technologies or
-					systems. The author expressly reserves this work from the text and
-					data mining exception.</small
-				>
-			</span>
-			<span class={styles.social}>
-				<Link
-					ariaLabel="Bluesky profile (opens in a new tab)"
-					href={`https://bsky.app/profile/${siteMetadata.author.social.bluesky}`}
-					rel="me"
-					title="Bluesky profile"><SocialIcon platform="bluesky" /></Link
-				>
-				<Link
-					ariaLabel="GitHub profile (opens in a new tab)"
-					href={`https://github.com/${siteMetadata.author.social.github}`}
-					rel="me"
-					title="GitHub profile"><SocialIcon platform="github" /></Link
-				>
-				<Link
-					ariaLabel="Last.fm profile (opens in a new tab)"
-					href={`https://www.last.fm/user/${siteMetadata.author.social.lastfm}`}
-					rel="me"
-					title="Last.fm profile"><SocialIcon platform="lastfm" /></Link
-				>
-				<Link
-					ariaLabel="LinkedIn profile (opens in a new tab)"
-					href={`https://www.linkedin.com/in/${siteMetadata.author.social.linkedin}/`}
-					rel="me"
-					title="LinkedIn profile"><SocialIcon platform="linkedin" /></Link
-				>
-			</span>
-		</footer>
+		<SiteFooter />
 		<SocialIconSprite />
 	</body>
 </html>

@@ -1,0 +1,22 @@
+---
+import Link from './link.astro'
+
+import styles from '../styles/components/site-header.module.scss'
+---
+
+<header class={styles.header}>
+	<a href="/" class={styles.logo}> Guillem Andreu. </a>
+	<nav class={styles.menu}>
+		<ul>
+			<li>
+				<Link href="/about/">About me.</Link>
+			</li><li>
+				<Link href="/work/">My work.</Link>
+			</li><li>
+				<Link href="/contact/">Contact.</Link>
+			</li><li>
+				<Link href="/uses/">Uses.</Link>
+			</li>
+		</ul>
+	</nav>
+</header>

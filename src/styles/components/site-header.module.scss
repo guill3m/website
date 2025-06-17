@@ -1,0 +1,44 @@
+.header {
+	--color-anchor: var(--color-primary-dark);
+	align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+	view-transition-name: header;
+}
+
+::view-transition-group(header) {
+	animation-duration: 1ms;
+}
+
+.logo {
+	color: var(--color-primary);
+	font-family: var(--font-stack-serif);
+	font-size: 1.5rem;
+	font-weight: 900;
+	line-height: 0.9;
+	margin-block-end: var(--margin-extrasmall);
+	margin-inline-end: var(--margin-small);
+	padding-block: var(--spacing);
+	padding-inline: calc(var(--spacing) / 2);
+	text-decoration: none;
+}
+
+.menu {
+	font-weight: 600;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-inline-end: var(--spacing);
+	}
+
+	a {
+		padding: calc(var(--spacing) / 2);
+		text-decoration: none;
+	}
+}
