@@ -15,6 +15,16 @@
 	}
 }
 
+.subtitle {
+	color: var(--color-foreground-light);
+	font-family: var(--font-stack-sans);
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.25;
+	margin-block: 0.25lh 0.5lh;
+	margin-inline: 0;
+}
+
 @media (width >= 40em) {
 	.project {
 		:global(.two-col-images) {
