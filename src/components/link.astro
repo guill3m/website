@@ -3,7 +3,6 @@ import * as cheerio from 'cheerio'
 
 interface Props {
 	ariaLabel?: string
-	children: any
 	href: string | null
 	rel?: string
 	target?: string
@@ -17,7 +16,7 @@ const isExternalLink = typeof href === 'string' && href.startsWith('https://')
 const linkTarget = target ?? (isExternalLink ? '_blank' : undefined)
 
 const linkContent = cheerio.load(await Astro.slots.render('default'))
-const linkText = linkContent('body').text()
+const linkText = linkContent('body').text().trim()
 
 let ariaLabelOpensInNewTab = undefined
 if (linkTarget === '_blank') {
@@ -35,7 +34,7 @@ if (isExternalLink) {
 {
 	href ? (
 		<a
-			aria-label={linkAriaLabel?.trim()}
+			aria-label={linkAriaLabel}
 			href={href}
 			rel={linkRel}
 			target={linkTarget}

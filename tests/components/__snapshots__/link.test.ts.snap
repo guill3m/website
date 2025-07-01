@@ -1,0 +1,162 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Link component > external link > default 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="External link (opens in a new tab)"
+    href="https://www.test.com"
+    rel="noopener"
+    target="_blank"
+  >
+    External link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > external link > with HTML content 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="External link (opens in a new tab)"
+    href="https://www.test.com"
+    rel="noopener"
+    target="_blank"
+  >
+    <em>
+      External
+    </em>
+     link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > external link > with additional attributes 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="External link (opens in a new tab)"
+    class="link"
+    data-testid="test external"
+    href="https://www.test.com"
+    id="the-link"
+    rel="noopener"
+    target="_blank"
+  >
+    External link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > external link > with overwritten aria-label 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="Link that opens in a new tab"
+    href="https://www.test.com"
+    rel="noopener"
+    target="_blank"
+  >
+    External link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > external link > with rel 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="External link (opens in a new tab)"
+    href="https://www.test.com"
+    rel="nofollow noopener"
+    target="_blank"
+  >
+    External link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > internal link > default 1`] = `
+<DocumentFragment>
+  <a
+    href="/test/"
+  >
+    Internal link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > internal link > in a new tab 1`] = `
+<DocumentFragment>
+  <a
+    aria-label="Internal link in new tab (opens in a new tab)"
+    href="/test/"
+    target="_blank"
+  >
+    Internal link in new tab
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > internal link > with HTML content 1`] = `
+<DocumentFragment>
+  <a
+    href="/test/"
+  >
+    <em>
+      Internal
+    </em>
+     link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > internal link > with additional attributes 1`] = `
+<DocumentFragment>
+  <a
+    class="link"
+    data-testid="test internal"
+    href="/test/"
+    id="the-link"
+  >
+    Internal link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > internal link > with rel 1`] = `
+<DocumentFragment>
+  <a
+    href="/test/"
+    rel="nofollow"
+  >
+    Internal link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link component > without href > default 1`] = `
+<DocumentFragment>
+  <span>
+    Link without href
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Link component > without href > with HTML content 1`] = `
+<DocumentFragment>
+  <span>
+    Link 
+    <em>
+      without href
+    </em>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Link component > without href > with additional attributes 1`] = `
+<DocumentFragment>
+  <span
+    class="link"
+    data-testid="test non-href"
+    id="the-link"
+  >
+    Link without href
+  </span>
+</DocumentFragment>
+`;
