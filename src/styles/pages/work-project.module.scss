@@ -16,7 +16,9 @@
 }
 
 .subtitle {
-	color: var(--color-foreground-light);
+	@include utils.gradient-text(
+		hsl(from var(--color-foreground-light) h s calc(l + 5))
+	);
 	font-family: var(--font-stack-sans);
 	font-size: 1.5rem;
 	font-weight: 600;

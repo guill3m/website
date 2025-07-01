@@ -1,3 +1,5 @@
+@use '../utils';
+
 .experience-list {
 	margin: 0;
 	padding: 0;
@@ -15,6 +17,9 @@
 	font-weight: 300;
 
 	> em {
+		@include utils.gradient-text(
+			hsl(from var(--color-foreground) h s calc(l + 5))
+		);
 		font-style: normal;
 		font-weight: 700;
 	}

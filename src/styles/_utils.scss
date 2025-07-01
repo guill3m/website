@@ -20,3 +20,14 @@
 	grid-column: 1 / span 13;
 	grid-template-columns: subgrid;
 }
+
+@mixin gradient-text($color) {
+	background: linear-gradient(
+		to bottom,
+		$color,
+		$color 35%,
+		hsl(from $color h s calc(l - 10))
+	);
+	background-clip: text;
+	color: transparent;
+}

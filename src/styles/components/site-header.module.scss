@@ -1,3 +1,5 @@
+@use '../utils';
+
 .header {
 	--color-anchor: var(--color-primary-dark);
 	align-items: baseline;
@@ -11,7 +13,7 @@
 }
 
 .logo {
-	color: var(--color-primary);
+	@include utils.gradient-text(var(--color-primary));
 	font-family: var(--font-stack-serif);
 	font-size: 1.5rem;
 	font-weight: 900;
