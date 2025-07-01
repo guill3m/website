@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`robots.txt > with exclusions 1`] = `
+"
+User-Agent: *
+Disallow:
+
+User-Agent: AiBot
+User-Agent: BadBot
+Disallow: /
+
+Sitemap: https://www.test.com/sitemap-index.xml
+"
+`;
+
+exports[`robots.txt > without exclusions 1`] = `
+"
+User-Agent: *
+Disallow:
+
+
+
+Sitemap: https://www.test.com/sitemap-index.xml
+"
+`;
