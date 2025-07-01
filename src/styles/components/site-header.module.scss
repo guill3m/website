@@ -14,6 +14,7 @@
 
 .logo {
 	@include utils.gradient-text(var(--color-primary));
+	background-position: center;
 	font-family: var(--font-stack-serif);
 	font-size: 1.5rem;
 	font-weight: 900;

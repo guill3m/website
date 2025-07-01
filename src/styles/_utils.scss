@@ -29,5 +29,6 @@
 		hsl(from $color h s calc(l - 10))
 	);
 	background-clip: text;
+	background-size: auto 1lh;
 	color: transparent;
 }
