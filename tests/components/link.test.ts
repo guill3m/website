@@ -242,9 +242,7 @@ describe('Link component', () => {
 				slots: {
 					default: 'Link without href',
 				},
-				props: {
-					href: null,
-				},
+				props: {},
 			})
 			const linkElement = result.firstChild
 
@@ -262,7 +260,6 @@ describe('Link component', () => {
 				props: {
 					class: 'link',
 					'data-testid': 'test non-href',
-					href: null,
 					id: 'the-link',
 				},
 			})
@@ -282,9 +279,7 @@ describe('Link component', () => {
 				slots: {
 					default: 'Link <em>without href</em>',
 				},
-				props: {
-					href: null,
-				},
+				props: {},
 			})
 			const linkElement = result.firstChild
 

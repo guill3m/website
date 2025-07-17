@@ -1,17 +1,19 @@
 ---
+export interface PageMetadata {
+	title?: string
+	description?: string
+	type?: 'website' | 'article'
+	image?: {
+		alt: string
+		src: string
+		height: number
+		width: number
+	}
+}
+
 interface Props {
 	title?: string
-	meta?: {
-		title?: string
-		description?: string
-		type?: string
-		image?: {
-			alt: string
-			src: string
-			height: number
-			width: number
-		}
-	}
+	meta?: PageMetadata
 }
 
 const { title, meta } = Astro.props

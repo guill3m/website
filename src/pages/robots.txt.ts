@@ -40,7 +40,10 @@ const aiBots = [
 	'YouBot',
 ]
 
-export const getRobotsTxt = (sitemapURL: URL, disallowedBots: string[]) => `
+export const getRobotsTxt = (
+	sitemapURL: URL,
+	disallowedBots: string[],
+): string => `
 User-Agent: *
 Disallow:
 

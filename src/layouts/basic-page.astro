@@ -1,4 +1,5 @@
 ---
+import type { PageMetadata } from '../components/page-meta.astro'
 import BaseLayout from './layout.astro'
 
 import styles from '../styles/layouts/basic-page.module.scss'
@@ -7,17 +8,7 @@ interface Props {
 	children: any
 	frontmatter: {
 		title?: string
-		meta?: {
-			title?: string
-			description?: string
-			type?: string
-			image?: {
-				alt: string
-				src: string
-				height: number
-				width: number
-			}
-		}
+		meta?: PageMetadata
 		lastUpdated?: Date
 	}
 }

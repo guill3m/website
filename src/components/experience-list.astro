@@ -3,17 +3,19 @@ import Link from './link.astro'
 
 import styles from '../styles/components/experience-list.module.scss'
 
+interface ExperienceItem {
+	city?: string
+	date: string
+	description?: string
+	techStack?: string[]
+	title: string
+	titleUnion?: string
+	url?: string
+	where?: string
+}
+
 interface Props {
-	items: {
-		city?: string
-		date: string
-		description?: string
-		techStack?: string[]
-		title: string
-		titleUnion?: string
-		url?: string
-		where?: string
-	}[]
+	items: ExperienceItem[]
 }
 
 const { items } = Astro.props
@@ -28,11 +30,7 @@ const { items } = Astro.props
 					{item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
 					{item.where && (
 						<em>
-							{item.url ? (
-								<Link href={item.url}>{item.where}</Link>
-							) : (
-								item.where
-							)}
+							<Link href={item.url}>{item.where}</Link>
 						</em>
 					)}
 				</strong>
