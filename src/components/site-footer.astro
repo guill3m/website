@@ -14,11 +14,13 @@ const year = new Date().getFullYear()
 			<strong>© 2009&ndash;{year} Guillem Andreu Muñoz.</strong>
 			All rights reserved.
 		</span>
-		<Link href="/privacy-policy/">Privacy policy.</Link>
-		<Link href="/colophon/">Colophon.</Link>
-		<Link href="/ai/">AI (non)usage.</Link>
+		<span class={styles.links}>
+			<Link href="/privacy-policy/">Privacy policy.</Link>
+			<Link href="/colophon/">Colophon.</Link>
+			<Link href="/ai/">AI (non)usage.</Link>
+		</span>
 		<br />
-		<small>
+		<small class={styles['ai-notice']}>
 			No part of this website may be used or reproduced in any manner for the
 			purpose of training artificial intelligence technologies or systems. The
 			author expressly reserves this work from the text and data mining

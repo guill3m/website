@@ -49,3 +49,14 @@
 		font-weight: 400;
 	}
 }
+
+@media print {
+	.experience-item-title a {
+		color: var(--color-foreground);
+		text-decoration: none;
+
+		&::after {
+			display: none;
+		}
+	}
+}

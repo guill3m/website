@@ -22,13 +22,18 @@
 }
 
 @mixin gradient-text($color) {
-	background: linear-gradient(
+	background-clip: text;
+	background-image: linear-gradient(
 		to bottom,
 		$color,
 		$color 35%,
 		hsl(from $color h s calc(l - 10))
 	);
-	background-clip: text;
 	background-size: auto 1lh;
 	color: transparent;
+
+	@media print {
+		background: none;
+		color: $color;
+	}
 }

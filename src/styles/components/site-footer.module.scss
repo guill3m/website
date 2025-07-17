@@ -8,10 +8,6 @@
 
 	a {
 		font-weight: 600;
-
-		&::after {
-			display: none;
-		}
 	}
 }
 
@@ -29,8 +25,14 @@
 	--color-anchor: var(--color-primary);
 	margin-block-start: var(--margin-extrasmall);
 
-	a + a {
-		margin-inline-start: var(--spacing);
+	a {
+		&::after {
+			display: none;
+		}
+
+		& + a {
+			margin-inline-start: var(--spacing);
+		}
 	}
 
 	svg {
@@ -51,5 +53,13 @@
 		margin-inline-start: auto;
 		min-width: 8rem;
 		text-align: end;
+	}
+}
+
+@media print {
+	.ai-notice,
+	.links,
+	.social {
+		display: none !important;
 	}
 }

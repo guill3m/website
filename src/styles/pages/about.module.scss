@@ -91,3 +91,18 @@
 		font-size: 1.75rem;
 	}
 }
+
+@media print {
+	.about-intro {
+		font-size: 1.25rem;
+
+		img {
+			grid-column: 1 / span 3;
+			height: 4lh;
+		}
+
+		p {
+			grid-column: 4 / span 8;
+		}
+	}
+}

@@ -169,12 +169,12 @@ h3 {
 }
 
 h1 {
-	@include utils.gradient-text(
-		hsl(from var(--color-foreground) h s calc(l + 5))
-	);
 	font-size: 2rem;
 	font-weight: 900;
 	margin: 0;
+	@include utils.gradient-text(
+		hsl(from var(--color-foreground) h s calc(l + 5))
+	);
 }
 
 .period {
@@ -183,11 +183,11 @@ h1 {
 }
 
 h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
 	@include utils.gradient-text(
 		hsl(from var(--color-foreground) h s calc(l + 5))
 	);
-	font-size: 1.5rem;
-	font-weight: 700;
 
 	h1 + & {
 		margin-block-start: 0.5lh;
@@ -195,11 +195,11 @@ h2 {
 }
 
 h3 {
+	font-size: 1.25rem;
+	font-weight: 400;
 	@include utils.gradient-text(
 		hsl(from var(--color-foreground) h s calc(l + 5))
 	);
-	font-size: 1.25rem;
-	font-weight: 400;
 
 	h2 + & {
 		margin-block-start: 0.5lh;
@@ -269,4 +269,31 @@ hr {
 // Google Chrome translation
 .translated-rtl {
 	direction: rtl;
+}
+
+@media print {
+	:root {
+		--color-primary: hsl(28deg, 92%, 46%);
+	}
+
+	html {
+		background: #fff;
+		line-height: 1.35;
+		font-size: 9pt;
+	}
+
+	a[href]::after {
+		background: none;
+		content: ' (' attr(href) ')';
+		display: inline;
+		font-weight: lighter;
+		height: auto;
+		mask: none;
+		margin: 0;
+		vertical-align: baseline;
+	}
+
+	hr {
+		border-top: 1px solid var(--color-primary);
+	}
 }

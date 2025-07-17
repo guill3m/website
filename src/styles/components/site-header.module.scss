@@ -13,7 +13,6 @@
 }
 
 .logo {
-	@include utils.gradient-text(var(--color-primary));
 	background-position: center;
 	font-family: var(--font-stack-serif);
 	font-size: 1.5rem;
@@ -24,6 +23,7 @@
 	padding-block: var(--spacing);
 	padding-inline: calc(var(--spacing) / 2);
 	text-decoration: none;
+	@include utils.gradient-text(var(--color-primary));
 }
 
 .menu {
@@ -43,5 +43,19 @@
 	a {
 		padding: calc(var(--spacing) / 2);
 		text-decoration: none;
+	}
+}
+
+@media print {
+	.logo {
+		font-size: 2rem;
+
+		&::after {
+			display: none !important;
+		}
+	}
+
+	.menu {
+		display: none !important;
 	}
 }
