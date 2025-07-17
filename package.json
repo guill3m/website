@@ -14,11 +14,11 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^4.3.0",
+		"@astrojs/mdx": "^4.3.1",
 		"@astrojs/sitemap": "^3.4.1",
 		"@fontsource/source-sans-3": "^5.2.8",
 		"@guill3m/fonts": "^1.0.0",
-		"astro": "^5.11.2",
+		"astro": "^5.12.0",
 		"cheerio": "^1.1.0",
 		"schema-dts": "^1.1.5"
 	},
