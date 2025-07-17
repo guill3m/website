@@ -1,7 +1,7 @@
 // @vitest-environment node
 
 import { describe, expect, test } from 'vitest'
-import { GET, getRobotsTxt } from '../../src/pages/robots.txt'
+import { getRobotsTxt } from '../../src/pages/robots.txt'
 
 describe('robots.txt', () => {
 	test('with exclusions', () => {
