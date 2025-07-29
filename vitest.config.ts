@@ -9,12 +9,30 @@ export default getViteConfig({
 			exclude: [
 				'astro.config.mjs',
 				'**/content/config.ts',
+				'**/pages/**/*.astro',
 				...coverageConfigDefaults.exclude,
 			],
 			provider: 'v8',
 			reporter: ['text', 'text-summary'],
 		},
-		environment: 'happy-dom',
-		setupFiles: ['./tests/setup.ts'],
+		projects: [
+			{
+				extends: true,
+				test: {
+					environment: 'happy-dom',
+					include: ['tests/**/*.browser.test.{ts,js}'],
+					name: 'browser',
+					setupFiles: ['./tests/setup.browser.ts'],
+				},
+			},
+			{
+				extends: true,
+				test: {
+					environment: 'node',
+					include: ['tests/**/*.node.test.{ts,js}'],
+					name: 'node',
+				},
+			},
+		],
 	},
 })
