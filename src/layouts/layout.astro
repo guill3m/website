@@ -51,7 +51,7 @@ const { title, meta } = Astro.props
 				<script
 					is:inline
 					defer
-					data-domains={siteMetadata.host}
+					data-domains={Astro.url.host}
 					data-host-url={UMAMI_ANALYTICS_HOST}
 					data-website-id={UMAMI_ANALYTICS_ID}
 					src={UMAMI_ANALYTICS_SCRIPT}
