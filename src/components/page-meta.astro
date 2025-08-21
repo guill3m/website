@@ -1,54 +1,102 @@
 ---
+import type { HTMLAttributes } from 'astro/types'
+
 export interface PageMetadata {
 	title?: string
 	description?: string
-	type?: 'website' | 'article'
+	alternates?: {
+		isDefault?: boolean
+		lang?: HTMLAttributes<'html'>['lang']
+		href: URL | string
+	}[]
+	canonical?: URL
 	image?: {
 		alt: string
 		src: string
 		height: number
 		width: number
 	}
+	openGraph?: {
+		type?: 'website' | 'article'
+		title?: string
+		description?: string
+	}
 }
 
 interface Props {
-	title?: string
+	title: string
 	meta?: PageMetadata
+	lang?: HTMLAttributes<'html'>['lang']
 }
 
-const { title, meta } = Astro.props
-const metaTitle = meta?.title ? meta.title : `${title} - Guillem Andreu`
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+function getUrlForAlternate(href: URL | string): URL {
+	if (typeof href === 'string' && !href.startsWith('https://')) {
+		return new URL(href, origin)
+	}
+	return new URL(href)
+}
+
+const { title, meta, lang = 'en' } = Astro.props
+const metaTitle = meta?.title ?? `${title} - Guillem Andreu`
+const origin = Astro.site ?? Astro.url.origin
+const canonicalUrl = meta?.canonical ?? new URL(Astro.url.pathname, origin)
+const defaultAlternate =
+	meta?.alternates?.find((alternate) => alternate.isDefault)?.href ||
+	new URL(Astro.url.pathname, origin)
 ---
 
-<>
-	<title>{metaTitle}</title>
-	<meta property="og:title" content={metaTitle} />
-	{
-		meta?.description && (
+<title>{metaTitle}</title>
+<meta property="og:title" content={meta?.openGraph?.title ?? metaTitle} />
+{meta?.description && <meta name="description" content={meta.description} />}
+{
+	(meta?.description || meta?.openGraph?.description) && (
+		<meta
+			property="og:description"
+			content={meta?.openGraph?.description ?? meta.description}
+		/>
+	)
+}
+<link rel="canonical" href={canonicalUrl} />
+<meta property="og:url" content={canonicalUrl} />
+{
+	meta?.alternates &&
+		meta.alternates.some((alternate) => alternate.lang !== undefined) && (
 			<>
-				<meta name="description" content={meta.description} />
-				<meta property="og:description" content={meta.description} />
+				<link
+					rel="alternate"
+					href={getUrlForAlternate(defaultAlternate)}
+					hreflang="x-default"
+				/>
+				<link
+					rel="alternate"
+					href={new URL(Astro.url.pathname, origin)}
+					hreflang={lang}
+				/>
 			</>
 		)
-	}
-	<link rel="canonical" href={canonicalUrl} />
-	<meta property="og:url" content={canonicalUrl} />
-	<meta property="og:type" content={meta?.type ?? 'website'} />
-	{
-		meta?.image?.src && (
-			<>
-				<meta
-					property="og:image"
-					content={new URL(meta.image.src, Astro.url)}
+}
+{
+	meta?.alternates &&
+		meta.alternates.map((alternate) =>
+			alternate.lang ? (
+				<link
+					rel="alternate"
+					href={getUrlForAlternate(alternate.href)}
+					hreflang={alternate.lang}
 				/>
-				<meta property="og:image:alt" content={meta.image.alt} />
-				<meta
-					property="og:image:height"
-					content={meta.image.height.toString()}
-				/>
-				<meta property="og:image:width" content={meta.image.width.toString()} />
-			</>
+			) : (
+				<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
+			),
 		)
-	}
-</>
+}
+<meta property="og:type" content={meta?.openGraph?.type ?? 'website'} />
+{
+	meta?.image?.src && (
+		<>
+			<meta property="og:image" content={new URL(meta.image.src, origin)} />
+			<meta property="og:image:alt" content={meta.image.alt} />
+			<meta property="og:image:height" content={meta.image.height.toString()} />
+			<meta property="og:image:width" content={meta.image.width.toString()} />
+		</>
+	)
+}

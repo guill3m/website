@@ -1,0 +1,376 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page Metadata component > all props 1`] = `
+<DocumentFragment>
+  <title>
+    Meta title
+  </title>
+  <meta
+    content="OpenGraph title"
+    property="og:title"
+  />
+  <meta
+    content="Meta description"
+    name="description"
+  />
+  <meta
+    content="OpenGraph description"
+    property="og:description"
+  />
+  <link
+    href="https://production.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://production.dev/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test.dev/example-alt/"
+    rel="alternate"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="https://test.dev/assets/page-thumbnail.png"
+    property="og:image"
+  />
+  <meta
+    content="Alt text"
+    property="og:image:alt"
+  />
+  <meta
+    content="300"
+    property="og:image:height"
+  />
+  <meta
+    content="900"
+    property="og:image:width"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > minimal props 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with OpenGraph properties 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="OpenGraph title"
+    property="og:title"
+  />
+  <meta
+    content="OpenGraph description"
+    property="og:description"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with default localised alternate 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/de/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/de/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test.dev/example/"
+    hreflang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://test.dev/de/example/"
+    hreflang="de"
+    rel="alternate"
+  />
+  <link
+    href="https://test.dev/example/"
+    hreflang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://test.dev/es/example/"
+    hreflang="es"
+    rel="alternate"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with external non-localised alternate 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test-alt.dev/example/"
+    rel="alternate"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with external non-localised alternate as URL object 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test-alt.dev/example/"
+    rel="alternate"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with image 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+  <meta
+    content="https://test.dev/assets/page-thumbnail.png"
+    property="og:image"
+  />
+  <meta
+    content="Alt text"
+    property="og:image:alt"
+  />
+  <meta
+    content="300"
+    property="og:image:height"
+  />
+  <meta
+    content="900"
+    property="og:image:width"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with localised alternate 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test.dev/example/"
+    hreflang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://test.dev/example/"
+    hreflang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://test.dev/de/example/"
+    hreflang="de"
+    rel="alternate"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with non-localised alternate 1`] = `
+<DocumentFragment>
+  <title>
+    Test page - Guillem Andreu
+  </title>
+  <meta
+    content="Test page - Guillem Andreu"
+    property="og:title"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <link
+    href="https://test.dev/example-alt/"
+    rel="alternate"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with overwritten title and description 1`] = `
+<DocumentFragment>
+  <title>
+    Meta title
+  </title>
+  <meta
+    content="Meta title"
+    property="og:title"
+  />
+  <meta
+    content="Meta description"
+    name="description"
+  />
+  <meta
+    content="Meta description"
+    property="og:description"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+</DocumentFragment>
+`;
+
+exports[`Page Metadata component > with overwritten title and description and OpenGraph properties 1`] = `
+<DocumentFragment>
+  <title>
+    Meta title
+  </title>
+  <meta
+    content="OpenGraph title"
+    property="og:title"
+  />
+  <meta
+    content="Meta description"
+    name="description"
+  />
+  <meta
+    content="OpenGraph description"
+    property="og:description"
+  />
+  <link
+    href="https://test.dev/example/"
+    rel="canonical"
+  />
+  <meta
+    content="https://test.dev/example/"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+</DocumentFragment>
+`;

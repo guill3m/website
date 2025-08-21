@@ -8,6 +8,7 @@ import {
 	UMAMI_ANALYTICS_SCRIPT,
 } from 'astro:env/client'
 
+import type { HTMLAttributes } from 'astro/types'
 import PageMeta, { type PageMetadata } from '../components/page-meta.astro'
 import SiteHeader from '../components/site-header.astro'
 import SiteFooter from '../components/site-footer.astro'
@@ -19,15 +20,16 @@ import iconSvg from '../assets/icon.svg'
 
 interface Props {
 	children: any
-	title?: string
+	title: string
 	meta?: PageMetadata
+	lang?: HTMLAttributes<'html'>['lang']
 }
 
-const { title, meta } = Astro.props
+const { title, meta, lang = 'en' } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -36,7 +38,6 @@ const { title, meta } = Astro.props
 		/>
 		<PageMeta title={title} meta={meta} />
 		<meta property="og:site_name" content="Guillem Andreu" />
-		<meta property="og:locale" content="en" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
 		<link rel="icon" type="image/svg+xml" href={iconSvg.src} sizes="any" />
 		<meta name="author" content={siteMetadata.author.name} />
