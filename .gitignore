@@ -12,6 +12,9 @@ dist/
 # generated types
 .astro/
 
+# wrangler cache
+.wrangler/
+
 # environment variables
 .env
 .env.local

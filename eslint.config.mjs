@@ -9,6 +9,7 @@ export default [
 		ignores: [
 			'.astro/*',
 			'.vscode/*',
+			'.wrangler/*',
 			'dist/*',
 			'node_modules/*',
 			'**/package-lock.json',

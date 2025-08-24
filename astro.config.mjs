@@ -3,10 +3,12 @@
 import { defineConfig, envField } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
+import cloudflare from '@astrojs/cloudflare'
 
 const site = 'https://www.guillemandreu.com'
 
 export default defineConfig({
+	adapter: cloudflare(),
 	env: {
 		schema: {
 			UMAMI_ANALYTICS_HOST: envField.string({
