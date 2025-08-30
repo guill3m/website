@@ -15,6 +15,9 @@ dist/
 # wrangler cache
 .wrangler/
 
+# wrnagler generated types
+worker-configuration.d.ts
+
 # environment variables
 .env
 .env.local

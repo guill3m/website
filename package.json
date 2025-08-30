@@ -7,7 +7,7 @@
 		"build": "npm run lint && astro build",
 		"preview": "wrangler dev",
 		"astro": "astro",
-		"lint": "npm run lint:format && npm run lint:js && astro check",
+		"lint": "wrangler types && npm run lint:format && npm run lint:js && astro check",
 		"lint:format": "prettier --check .",
 		"lint:js": "eslint",
 		"format": "prettier --write .",
