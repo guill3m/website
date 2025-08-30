@@ -3,7 +3,7 @@
 :root {
 	--color-anchor: hsl(228deg, 82%, 47%);
 	--color-background: hsl(28deg, 92%, 97%);
-	--color-background-dark: hsl(from var(--color-background) h s calc(l - 10));
+	--color-background-dark: hsl(from var(--color-background) h s calc(l - 5));
 	--color-foreground: hsl(194deg, 90%, 12%);
 	--color-foreground-light: hsl(from var(--color-foreground) h s calc(l + 15));
 	--color-primary: hsl(28deg, 92%, 57%);

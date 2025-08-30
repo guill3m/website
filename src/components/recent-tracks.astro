@@ -1,0 +1,97 @@
+---
+import { actions } from 'astro:actions'
+import { Image, Picture } from 'astro:assets'
+
+import type { Track } from '../actions/lastfm'
+import timeAgo from '../utils/time-ago'
+import { blockText } from '../utils/random'
+
+import styles from '../styles/components/recent-tracks.module.scss'
+import albumPlaceholder from '../assets/placeholder-color-background.png'
+
+interface Props {
+	user?: string
+	limit?: number
+}
+
+const { user, limit = 10 } = Astro.props
+const isPlaceholder = user === undefined
+
+let recentTracks: Track[] = []
+if (isPlaceholder) {
+	recentTracks = Array.from({ length: limit }, () => ({
+		album: '',
+		artist: blockText(4, 10),
+		albumArt: '',
+		trackName: blockText(4, 10),
+		time: 0,
+	}))
+} else {
+	const { data } = await Astro.callAction(actions.lastfm.getRecentTracks, {
+		user,
+		limit,
+	})
+	recentTracks = data as Track[]
+}
+---
+
+<aside class:list={[styles.wrapper, isPlaceholder && styles.placeholder]}>
+	<p class={styles.description}>
+		I really enjoy listening to music. These are the latest tracks I’ve
+		scrobbled to {
+			isPlaceholder ? (
+				'my Last.fm profile:'
+			) : (
+				<a href={`https://www.last.fm/user/${user}`}>my Last.fm profile:</a>
+			)
+		}
+	</p>
+	<ul class={styles['track-list']}>
+		{
+			recentTracks.map((track) => (
+				<li
+					class={styles.track}
+					aria-label={
+						isPlaceholder
+							? undefined
+							: `“${track.trackName}” by ${track.artist}, ${timeAgo(track.time)}`
+					}
+				>
+					{isPlaceholder ? (
+						<Image
+							alt=""
+							class={styles.album}
+							src={albumPlaceholder}
+							height={60}
+							width={60}
+						/>
+					) : (
+						<Picture
+							alt=""
+							class={styles.album}
+							formats={['avif', 'webp']}
+							src={track.albumArt}
+							title={`Album: “${track.album}” by ${track.artist}`}
+							height={60}
+							width={60}
+						/>
+					)}
+					<span class={styles['track-details']}>
+						<strong class={styles['track-name']}>{track.trackName}</strong>
+						<br />
+						<span>{track.artist}</span>
+						<br />
+						<time
+							class={styles.time}
+							datetime={
+								isPlaceholder ? undefined : new Date(track.time).toISOString()
+							}
+						>
+							{isPlaceholder ? blockText(5, 7) : timeAgo(track.time)}
+						</time>
+					</span>
+				</li>
+			))
+		}
+	</ul>
+</aside>

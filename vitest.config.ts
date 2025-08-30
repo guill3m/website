@@ -8,6 +8,7 @@ export default getViteConfig({
 			enabled: true,
 			exclude: [
 				'astro.config.mjs',
+				'**/actions/index.ts',
 				'**/content/config.ts',
 				'**/pages/**/*.astro',
 				...coverageConfigDefaults.exclude,

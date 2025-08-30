@@ -1,0 +1,55 @@
+.wrapper {
+	background: var(--color-background-dark);
+	border-radius: var(--spacing);
+	grid-column: 1 / span 13;
+	margin-block: var(--margin-medium);
+	padding: 1rlh;
+}
+
+.description {
+	color: var(--color-primary-dark);
+	font-size: 0.8rem;
+	margin-block: 0 1rlh;
+}
+
+.track-list {
+	display: grid;
+	list-style: none;
+	gap: 1rlh;
+	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+	margin: 0;
+	padding: 0;
+}
+
+.track {
+	align-items: center;
+	display: flex;
+	line-height: 1.25;
+	gap: 0.5rlh;
+}
+
+.track-details {
+	font-size: 0.8em;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	.placeholder & {
+		opacity: 0.25;
+	}
+}
+
+.album {
+	background: var(--color-background);
+	border: 1px solid var(--color-background);
+	border-radius: calc(var(--spacing) / 2);
+}
+
+.track-name {
+	font-family: var(--font-stack-serif);
+}
+
+.time {
+	color: var(--color-primary-dark);
+	font-size: 0.8em;
+}

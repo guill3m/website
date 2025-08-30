@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; child-src 'none'; connect-src https://stats.guill3m.me 'self'; frame-ancestors 'none'; media-src 'none'; object-src 'none'; script-src https://stats.guill3m.me/script.js 'self';
+  Content-Security-Policy: default-src 'self'; child-src 'none'; connect-src 'self' https://stats.guill3m.me; frame-ancestors 'none'; media-src 'none'; object-src 'none'; script-src https://stats.guill3m.me/script.js 'self' 'unsafe-inline';
   Permissions-Policy: camera=(), display-capture=(), geolocation=(), microphone=(), usb=()
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload

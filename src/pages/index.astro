@@ -6,6 +6,7 @@ import { getCollection } from 'astro:content'
 import Layout from '../layouts/layout.astro'
 import Link from '../components/link.astro'
 import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
+import RecentTracks from '../components/recent-tracks.astro'
 import siteMetadata from '../helpers/site-metadata'
 
 import styles from '../styles/pages/index.module.scss'
@@ -86,4 +87,7 @@ const featuredProjects = allProjects
 		</p>
 		<ProjectThumbnailList items={featuredProjects} />
 	</section>
+	<RecentTracks user={siteMetadata.author.social.lastfm} server:defer>
+		<RecentTracks slot="fallback" />
+	</RecentTracks>
 </Layout>

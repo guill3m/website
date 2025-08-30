@@ -8,9 +8,15 @@ import cloudflare from '@astrojs/cloudflare'
 const site = 'https://www.guillemandreu.com'
 
 export default defineConfig({
-	adapter: cloudflare(),
+	adapter: cloudflare({
+		imageService: 'compile',
+	}),
 	env: {
 		schema: {
+			LASTFM_API_KEY: envField.string({
+				context: 'server',
+				access: 'secret',
+			}),
 			UMAMI_ANALYTICS_HOST: envField.string({
 				context: 'client',
 				access: 'public',
@@ -30,6 +36,15 @@ export default defineConfig({
 	},
 	experimental: {
 		preserveScriptOrder: true,
+	},
+	image: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'lastfm.freetls.fastly.net',
+				pathname: '/i/u/**',
+			},
+		],
 	},
 	integrations: [
 		mdx(),
