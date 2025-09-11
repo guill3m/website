@@ -249,21 +249,24 @@ const meta = {
 	@use '../styles/utils';
 
 	@layer layout {
-		.about-page {
+		.about-page h1,
+		.about-intro,
+		.about-section {
+			@include utils.text-wrap;
+		}
+
+		.about-page,
+		.about-intro {
 			@include utils.forward-grid;
+		}
 
-			h1 {
-				@extend %text-wrap;
-			}
-
+		.about-page {
 			h2 {
 				@include utils.gradient-text(var(--color-primary));
 			}
 		}
 
 		.about-intro {
-			@extend %text-wrap;
-			@include utils.forward-grid;
 			font-size: 1.5rem;
 			line-height: 1.75;
 			font-weight: 300;
@@ -284,10 +287,6 @@ const meta = {
 				margin: 0;
 				text-wrap: pretty;
 			}
-		}
-
-		.about-section {
-			@extend %text-wrap;
 		}
 
 		@media (width >= 40em) {

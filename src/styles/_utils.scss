@@ -37,3 +37,15 @@
 		color: $color;
 	}
 }
+
+@mixin text-wrap {
+	grid-column: 1 / span 13;
+
+	@media (width >= 52em) {
+		grid-column: 2 / span 11;
+	}
+
+	@media (width >= 72em) {
+		grid-column: 3 / span 8;
+	}
+}
