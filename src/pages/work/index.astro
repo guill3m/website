@@ -27,7 +27,9 @@ const projects = allProjects
 <Layout title={title} meta={meta}>
 	<article class="work-page">
 		<h1>{title}<span class="period">.</span></h1>
-		<ProjectThumbnailList class="work-list" items={projects} />
+		<div class="work-list">
+			<ProjectThumbnailList items={projects} />
+		</div>
 	</article>
 </Layout>
 

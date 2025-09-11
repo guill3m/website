@@ -5,7 +5,6 @@ import { Picture } from 'astro:assets'
 import Link from './link.astro'
 
 interface Props {
-	class?: string
 	items: {
 		id: string
 		thumbnail: ImageMetadata
@@ -13,10 +12,10 @@ interface Props {
 	}[]
 }
 
-const { class: forwardedClass, items } = Astro.props
+const { items } = Astro.props
 ---
 
-<ul class:list={['project-list', forwardedClass]}>
+<ul class="project-list">
 	{
 		items.map((project) => (
 			<li>
