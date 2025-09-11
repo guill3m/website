@@ -74,7 +74,7 @@ const jsonLd: WithContext<CreativeWork> = {
 		.project {
 			@include utils.text-wrap;
 
-			img {
+			:global(img) {
 				background: #fff;
 				border: 1px solid var(--color-background-dark);
 				border-radius: var(--spacing);
@@ -105,7 +105,7 @@ const jsonLd: WithContext<CreativeWork> = {
 				grid-template-columns: repeat(2, 1fr);
 				width: var(--layout-width);
 
-				img {
+				:global(img) {
 					margin: 0;
 					width: 100%;
 				}
@@ -114,12 +114,12 @@ const jsonLd: WithContext<CreativeWork> = {
 
 		@media (width >= 52em) {
 			.project {
-				img,
+				:global(img),
 				:global(.two-col-images) {
 					margin-inline-start: calc(var(--layout-column-width) * -1 - 1px);
 				}
 
-				img {
+				:global(img) {
 					max-width: none;
 					width: var(--layout-width);
 
@@ -133,7 +133,7 @@ const jsonLd: WithContext<CreativeWork> = {
 
 		@media (width >= 72em) {
 			.project {
-				img,
+				:global(img),
 				:global(.two-col-images) {
 					margin-inline-start: calc(var(--layout-column-width) * -2 - 2px);
 				}
