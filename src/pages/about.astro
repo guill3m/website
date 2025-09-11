@@ -4,7 +4,6 @@ import { Picture } from 'astro:assets'
 import Layout from '../layouts/layout.astro'
 import ExperienceList from '../components/experience-list.astro'
 
-import styles from '../styles/pages/about.module.scss'
 import meKidJpg from '../assets/me-kid.jpg'
 
 const title = 'About me'
@@ -15,9 +14,9 @@ const meta = {
 ---
 
 <Layout title={title} meta={meta}>
-	<article class={styles.about}>
+	<article class="about-page">
 		<h1>{title}<span class="period">.</span></h1>
-		<section class={styles['about-intro']}>
+		<section class="about-intro">
 			<Picture
 				alt="Me when I was a small kid. There is a white paper on the desk and scattered many colorful crayons, I am looking at the camera and holding one crayon on each hand"
 				formats={['avif', 'webp']}
@@ -40,7 +39,7 @@ const meta = {
 				convergence.
 			</p>
 		</section>
-		<section class={styles['about-section']}>
+		<section class="about-section">
 			<h2 id="experience">Experience.</h2>
 			<ExperienceList
 				items={[
@@ -189,7 +188,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section class={styles['about-section']}>
+		<section class="about-section">
 			<h2 id="studies">Studies.</h2>
 			<ExperienceList
 				items={[
@@ -203,7 +202,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section class={styles['about-section']}>
+		<section class="about-section">
 			<h2 id="courses">Courses.</h2>
 			<ExperienceList
 				items={[
@@ -216,7 +215,7 @@ const meta = {
 				]}
 			/>
 		</section>
-		<section class={styles['about-section']}>
+		<section class="about-section">
 			<h2 id="others">Others.</h2>
 			<ExperienceList
 				items={[
@@ -245,3 +244,116 @@ const meta = {
 		</section>
 	</article>
 </Layout>
+
+<style lang="scss">
+	@use '../styles/utils';
+
+	@layer layout {
+		.about-page {
+			@include utils.forward-grid;
+
+			h1 {
+				@extend %text-wrap;
+			}
+
+			h2 {
+				@include utils.gradient-text(var(--color-primary));
+			}
+		}
+
+		.about-intro {
+			@extend %text-wrap;
+			@include utils.forward-grid;
+			font-size: 1.5rem;
+			line-height: 1.75;
+			font-weight: 300;
+
+			img {
+				border-radius: var(--spacing);
+				grid-column: 1 / span 13;
+				grid-row: 2;
+				height: 6lh;
+				object-fit: cover;
+				object-position: left;
+				width: auto;
+			}
+
+			p {
+				grid-column: 1 / span 13;
+				grid-row: 1;
+				margin: 0;
+				text-wrap: pretty;
+			}
+		}
+
+		.about-section {
+			@extend %text-wrap;
+		}
+
+		@media (width >= 40em) {
+			.about-intro {
+				align-items: center;
+				font-size: 1.4rem;
+
+				img {
+					grid-column: 1 / span 5;
+					grid-row: 1;
+					text-align: start;
+				}
+
+				p {
+					grid-column: 6 / span 8;
+				}
+			}
+		}
+
+		@media (width >= 52em) {
+			.about-intro {
+				font-size: 1.5rem;
+
+				img {
+					height: 5lh;
+				}
+			}
+		}
+
+		@media (width >= 72em) {
+			.about-intro {
+				img {
+					grid-column: 2 / span 4;
+				}
+
+				p {
+					grid-column: 6 / span 6;
+				}
+			}
+		}
+
+		@media (width >= 80em) {
+			.about-intro {
+				font-size: 1.65rem;
+			}
+		}
+
+		@media (width >= 90em) {
+			.about-intro {
+				font-size: 1.75rem;
+			}
+		}
+
+		@media print {
+			.about-intro {
+				font-size: 1.25rem;
+
+				img {
+					grid-column: 1 / span 3;
+					height: 4lh;
+				}
+
+				p {
+					grid-column: 4 / span 8;
+				}
+			}
+		}
+	}
+</style>
