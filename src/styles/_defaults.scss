@@ -45,11 +45,13 @@
 	a {
 		color: var(--color-anchor);
 		transition: color var(--transition-timing) var(--cubic-bezier-ease-out);
+		text-decoration-thickness: 1px;
 
 		&:hover,
 		&:focus {
 			color: var(--color-foreground);
 			transition-timing-function: var(--cubic-bezier-ease-in);
+			text-decoration-thickness: 2px;
 		}
 
 		&:active {

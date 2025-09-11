@@ -66,6 +66,12 @@ import Link from './link.astro'
 			a {
 				padding: calc(var(--spacing) / 2);
 				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+					text-decoration-thickness: 2px;
+				}
 			}
 		}
 
