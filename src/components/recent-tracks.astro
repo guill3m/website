@@ -6,7 +6,6 @@ import type { Track } from '../actions/lastfm'
 import timeAgo from '../utils/time-ago'
 import { blockText } from '../utils/random'
 
-import styles from '../styles/components/recent-tracks.module.scss'
 import albumPlaceholder from '../assets/placeholder-color-background.png'
 
 interface Props {
@@ -35,8 +34,8 @@ if (isPlaceholder) {
 }
 ---
 
-<aside class:list={[styles.wrapper, isPlaceholder && styles.placeholder]}>
-	<p class={styles.description}>
+<aside class:list={['recent-tracks', isPlaceholder && 'is-placeholder']}>
+	<p class="recent-tracks-description">
 		I really enjoy listening to music. These are the latest tracks I’ve
 		scrobbled to {
 			isPlaceholder ? (
@@ -46,11 +45,11 @@ if (isPlaceholder) {
 			)
 		}
 	</p>
-	<ul class={styles['track-list']}>
+	<ul class="track-list">
 		{
 			recentTracks.map((track) => (
 				<li
-					class={styles.track}
+					class="track"
 					aria-label={
 						isPlaceholder
 							? undefined
@@ -60,7 +59,7 @@ if (isPlaceholder) {
 					{isPlaceholder ? (
 						<Image
 							alt=""
-							class={styles.album}
+							class="track-album"
 							src={albumPlaceholder}
 							height={60}
 							width={60}
@@ -68,7 +67,7 @@ if (isPlaceholder) {
 					) : (
 						<Picture
 							alt=""
-							class={styles.album}
+							class="track-album"
 							formats={['avif', 'webp']}
 							src={track.albumArt}
 							title={`Album: “${track.album}” by ${track.artist}`}
@@ -76,13 +75,13 @@ if (isPlaceholder) {
 							width={60}
 						/>
 					)}
-					<span class={styles['track-details']}>
-						<strong class={styles['track-name']}>{track.trackName}</strong>
+					<span class="track-details">
+						<strong class="track-name">{track.trackName}</strong>
 						<br />
 						<span>{track.artist}</span>
 						<br />
 						<time
-							class={styles.time}
+							class="track-time"
 							datetime={
 								isPlaceholder ? undefined : new Date(track.time).toISOString()
 							}
@@ -95,3 +94,63 @@ if (isPlaceholder) {
 		}
 	</ul>
 </aside>
+
+<style lang="scss">
+	@layer component {
+		.recent-tracks {
+			background: var(--color-background-dark);
+			border-radius: var(--spacing);
+			grid-column: 1 / span 13;
+			margin-block: var(--margin-medium);
+			padding: 1rlh;
+		}
+
+		.recent-tracks-description {
+			color: var(--color-primary-dark);
+			font-size: 0.8rem;
+			margin-block: 0 1rlh;
+		}
+
+		.track-list {
+			display: grid;
+			list-style: none;
+			gap: 1rlh;
+			grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+			margin: 0;
+			padding: 0;
+		}
+
+		.track {
+			align-items: center;
+			display: flex;
+			line-height: 1.25;
+			gap: 0.5rlh;
+		}
+
+		.track-details {
+			font-size: 0.8em;
+			text-wrap: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			.is-placeholder & {
+				opacity: 0.25;
+			}
+		}
+
+		.track-album {
+			background: var(--color-background);
+			border: 1px solid var(--color-background);
+			border-radius: calc(var(--spacing) / 2);
+		}
+
+		.track-name {
+			font-family: var(--font-stack-serif);
+		}
+
+		.track-time {
+			color: var(--color-primary-dark);
+			font-size: 0.8em;
+		}
+	}
+</style>
