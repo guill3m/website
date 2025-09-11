@@ -1,0 +1,40 @@
+@layer defaults {
+	:root {
+		--color-anchor: hsl(228deg, 82%, 47%);
+		--color-background: hsl(28deg, 92%, 97%);
+		--color-background-dark: hsl(from var(--color-background) h s calc(l - 5));
+		--color-foreground: hsl(194deg, 90%, 12%);
+		--color-foreground-light: hsl(
+			from var(--color-foreground) h s calc(l + 15)
+		);
+		--color-primary: hsl(28deg, 92%, 57%);
+		--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 25));
+		--cubic-bezier-ease-in: cubic-bezier(0.3, 0, 1, 1);
+		--cubic-bezier-ease-out: cubic-bezier(0, 0, 0.7, 1);
+		--font-stack-sans: 'Source Sans 3', 'Source Sans 3 Fallback', sans-serif;
+		--font-stack-serif: 'Bw Darius', 'Bw Darius Fallback', serif;
+		--layout-column-width: calc(var(--layout-width) / 13);
+		--layout-gap: calc(var(--spacing) * 1);
+		--layout-margin-left: max(var(--margin-small), env(safe-area-inset-left));
+		--layout-margin-right: max(var(--margin-small), env(safe-area-inset-right));
+		--layout-width: min(
+			1520px,
+			100vw - var(--layout-margin-left) - var(--layout-margin-right)
+		);
+		--margin-extrasmall: calc(var(--spacing) * 1);
+		--margin-small: calc(var(--spacing) * 3);
+		--margin-medium: calc(var(--spacing) * 5);
+		--margin-large: calc(var(--spacing) * 8);
+		--margin-extralarge: calc(var(--spacing) * 13);
+		--spacing: 0.5rlh;
+		--transition-timing: 256ms;
+		--transition-timing-fast: calc(var(--transition-timing) / 2);
+	}
+
+	@media (prefers-contrast: more) {
+		:root {
+			--color-primary: hsl(28deg, 92%, 46%);
+			--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 20));
+		}
+	}
+}
