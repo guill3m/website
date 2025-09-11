@@ -178,10 +178,6 @@
 	}
 
 	@media print {
-		:root {
-			--color-primary: hsl(28deg, 92%, 46%);
-		}
-
 		html {
 			background: #fff;
 			line-height: 1.35;

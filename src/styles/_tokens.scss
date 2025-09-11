@@ -37,4 +37,10 @@
 			--color-primary-dark: hsl(from var(--color-primary) h s calc(l - 20));
 		}
 	}
+
+	@media print {
+		:root {
+			--color-primary: hsl(28deg, 92%, 46%);
+		}
+	}
 }
