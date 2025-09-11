@@ -80,18 +80,6 @@ const { title, meta, lang = 'en' } = Astro.props
 			view-transition-name: main;
 		}
 
-		@keyframes fade-out {
-			to {
-				opacity: 0;
-			}
-		}
-
-		@keyframes fade-in {
-			from {
-				opacity: 0;
-			}
-		}
-
 		::view-transition-old(main) {
 			animation-name: fade-out;
 		}
