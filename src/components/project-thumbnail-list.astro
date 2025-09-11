@@ -4,8 +4,6 @@ import { Picture } from 'astro:assets'
 
 import Link from './link.astro'
 
-import styles from '../styles/components/project-thumbnail-list.module.scss'
-
 interface Props {
 	class?: string
 	items: {
@@ -18,7 +16,7 @@ interface Props {
 const { class: forwardedClass, items } = Astro.props
 ---
 
-<ul class:list={[styles['project-list'], forwardedClass]}>
+<ul class:list={['project-list', forwardedClass]}>
 	{
 		items.map((project) => (
 			<li>
@@ -36,9 +34,129 @@ const { class: forwardedClass, items } = Astro.props
 						width={900}
 						widths={[500, 640, 750, project.thumbnail.width]}
 					/>
-					<span>{project.title}</span>
+					<span class="project-title">{project.title}</span>
 				</Link>
 			</li>
 		))
 	}
 </ul>
+
+<style lang="scss">
+	@layer component {
+		.project-list {
+			display: grid;
+			font-size: 0.8rem;
+			gap: var(--spacing);
+			grid-template-columns: 1fr;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				position: relative;
+				transition:
+					filter var(--transition-timing) var(--cubic-bezier-ease-out),
+					opacity var(--transition-timing) var(--cubic-bezier-ease-out);
+
+				&:hover {
+					transition-timing-function: var(--cubic-bezier-ease-in);
+				}
+			}
+
+			&:has(li:hover) li:not(:hover) {
+				opacity: 0.5;
+				filter: sepia(0.75);
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			img {
+				border: 1px solid var(--color-background-dark);
+				border-radius: var(--spacing);
+				width: 100%;
+			}
+		}
+
+		.project-title {
+			background: var(--color-background);
+			border-block-start: 1px solid var(--color-background-dark);
+			border-inline-end: 1px solid var(--color-background-dark);
+			border-start-end-radius: var(--spacing);
+			display: inline-block;
+			font-weight: 600;
+			inset-block-end: 0;
+			inset-inline-start: 0;
+			padding-block: calc(var(--spacing) / 2);
+			padding-inline: var(--spacing);
+			position: absolute;
+
+			&::before,
+			&::after {
+				background-image: radial-gradient(
+					circle,
+					transparent 0,
+					transparent calc(var(--spacing) - 1px),
+					var(--color-background-dark) calc(var(--spacing) - 1px),
+					var(--color-background-dark) var(--spacing),
+					var(--color-background) var(--spacing),
+					var(--color-background) 100%
+				);
+				background-position: bottom left;
+				background-repeat: no-repeat;
+				background-size: calc(var(--spacing) * 2) calc(var(--spacing) * 2);
+				content: '';
+				display: block;
+				height: var(--spacing);
+				position: absolute;
+				width: var(--spacing);
+
+				:dir(rtl) &,
+				:global(.translated-rtl) & {
+					background-position: bottom right;
+				}
+			}
+
+			&::before {
+				inset-block-start: calc(var(--spacing) * -1);
+				inset-inline-start: 0;
+			}
+
+			&::after {
+				inset-block-end: 0;
+				inset-inline-end: calc(var(--spacing) * -1);
+			}
+		}
+
+		@media (width >= 35em) {
+			.project-list {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media (width >= 52em) {
+			.project-list {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		@media print {
+			.project-list {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			.project-title {
+				background: none;
+				border: none;
+				padding-inline: 0;
+				position: static;
+
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+</style>
