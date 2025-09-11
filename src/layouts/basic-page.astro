@@ -42,7 +42,7 @@ const lastUpdatedDate = new Date(lastUpdated ?? '')
 
 	@layer layout {
 		.page {
-			@extend %text-wrap;
+			@include utils.text-wrap;
 
 			li a:has(svg) {
 				text-decoration: none;
