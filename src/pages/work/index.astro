@@ -4,8 +4,6 @@ import { getCollection } from 'astro:content'
 import Layout from '../../layouts/layout.astro'
 import ProjectThumbnailList from '../../components/project-thumbnail-list.astro'
 
-import styles from '../../styles/pages/work.module.scss'
-
 const title = 'My work'
 const meta = {
 	description:
@@ -27,8 +25,26 @@ const projects = allProjects
 ---
 
 <Layout title={title} meta={meta}>
-	<article class={styles.work}>
+	<article class="work-page">
 		<h1>{title}<span class="period">.</span></h1>
-		<ProjectThumbnailList class={styles['work-list']} items={projects} />
+		<ProjectThumbnailList class="work-list" items={projects} />
 	</article>
 </Layout>
+
+<style lang="scss">
+	@use '../../styles/utils';
+
+	@layer layout {
+		.work-page {
+			@include utils.forward-grid;
+
+			h1 {
+				@include utils.text-wrap;
+			}
+		}
+
+		.work-list {
+			grid-column: 1 / span 13;
+		}
+	}
+</style>
