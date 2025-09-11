@@ -9,7 +9,6 @@ import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
 import RecentTracks from '../components/recent-tracks.astro'
 import siteMetadata from '../helpers/site-metadata'
 
-import styles from '../styles/pages/index.module.scss'
 import meSvg from '../assets/me.svg'
 
 const site = Astro.site?.toString()
@@ -69,19 +68,19 @@ const featuredProjects = allProjects
 		type="application/ld+json"
 		set:html={JSON.stringify(jsonLd)}
 	/>
-	<section class={styles['home-about']}>
-		<p class={styles['home-about-text']}>
+	<section class="home-about">
+		<p class="home-about-text">
 			<strong>Hi. I’m Guillem,</strong> a web developer and designer based in Berlin<span
 				class="period">.</span
 			>
 			<br />
 			<Link href="/about/">More about me</Link>
 		</p>
-		<div class={styles['home-about-image']}>
+		<div class="home-about-image">
 			<Image alt="A drawn silouethe of myself" loading="eager" src={meSvg} />
 		</div>
 	</section>
-	<section class={styles['home-work']}>
+	<section class="home-work">
 		<p>
 			Here are some of the <Link href="/work/">things I make</Link>:
 		</p>
@@ -91,3 +90,122 @@ const featuredProjects = allProjects
 		<RecentTracks slot="fallback" />
 	</RecentTracks>
 </Layout>
+
+<style lang="scss">
+	@use '../styles/utils';
+
+	@layer layout {
+		.home-about {
+			@include utils.forward-grid;
+			align-items: center;
+			font-size: 1.9rem;
+			justify-items: center;
+			line-height: 1.3;
+			margin-block: var(--margin-small);
+			margin-inline: 0;
+		}
+
+		.home-about-image,
+		.home-about-text {
+			grid-column: 2 / span 11;
+		}
+
+		.home-about-image {
+			display: flex;
+			grid-row: 1;
+
+			img {
+				filter: drop-shadow(0 0 var(--spacing) #fff);
+				height: 5em;
+				margin: auto;
+				width: auto;
+			}
+		}
+
+		.home-about-text {
+			font-family: var(--font-stack-serif);
+			font-weight: 200;
+			grid-row: 2;
+			margin: 0;
+			max-width: 8.5em;
+
+			strong {
+				font-weight: 700;
+			}
+
+			a {
+				font-family: var(--font-stack-sans);
+				font-size: 1rem;
+				font-weight: 400;
+			}
+		}
+
+		.home-work {
+			grid-column: 1 / span 13;
+		}
+
+		@media (width >= 35em) {
+			.home-about {
+				justify-items: start;
+			}
+
+			.home-about-image,
+			.home-about-text {
+				grid-row: 1;
+			}
+
+			.home-about-image {
+				grid-column: 9 / span 4;
+
+				img {
+					height: 6.5em;
+					margin: 0;
+				}
+			}
+
+			.home-about-text {
+				grid-column: 2 / span 7;
+			}
+		}
+
+		@media (width >= 40em) {
+			.home-about {
+				font-size: 2.4rem;
+				margin-block: var(--margin-medium);
+				margin-inline: 0;
+			}
+
+			.home-about-text a {
+				font-size: 0.5em;
+			}
+
+			.home-work {
+				p {
+					font-size: 1.25rem;
+				}
+			}
+		}
+
+		@media (width >= 52em) {
+			.home-about {
+				font-size: 3rem;
+			}
+
+			.home-work {
+				p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		@media (width >= 72em) {
+			.home-about-image {
+				grid-column: 9 / span 3;
+			}
+
+			.home-about-text {
+				grid-column: 3 / span 6;
+			}
+		}
+	}
+</style>
