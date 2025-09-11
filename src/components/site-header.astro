@@ -1,12 +1,10 @@
 ---
 import Link from './link.astro'
-
-import styles from '../styles/components/site-header.module.scss'
 ---
 
-<header class={styles.header}>
-	<a href="/" class={styles.logo}> Guillem Andreu. </a>
-	<nav class={styles.menu}>
+<header class="header">
+	<a href="/" class="logo"> Guillem Andreu. </a>
+	<nav class="menu">
 		<ul>
 			<li>
 				<Link href="/about/">About me.</Link>
@@ -20,3 +18,69 @@ import styles from '../styles/components/site-header.module.scss'
 		</ul>
 	</nav>
 </header>
+
+<style lang="scss">
+	@use '../styles/utils';
+
+	@layer layout {
+		.header {
+			--color-anchor: var(--color-primary-dark);
+			align-items: baseline;
+			display: flex;
+			flex-wrap: wrap;
+			view-transition-name: header;
+		}
+
+		::view-transition-group(header) {
+			animation-duration: 1ms;
+		}
+
+		.logo {
+			background-position: center;
+			font-family: var(--font-stack-serif);
+			font-size: 1.5rem;
+			font-weight: 900;
+			line-height: 0.9;
+			margin-block-end: var(--margin-extrasmall);
+			margin-inline-end: var(--margin-small);
+			padding-block: var(--spacing);
+			padding-inline: calc(var(--spacing) / 2);
+			text-decoration: none;
+			@include utils.gradient-text(var(--color-primary));
+		}
+
+		.menu {
+			font-weight: 600;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				display: inline-block;
+				margin-inline-end: var(--spacing);
+			}
+
+			a {
+				padding: calc(var(--spacing) / 2);
+				text-decoration: none;
+			}
+		}
+
+		@media print {
+			.logo {
+				font-size: 2rem;
+
+				&::after {
+					display: none !important;
+				}
+			}
+
+			.menu {
+				display: none !important;
+			}
+		}
+	}
+</style>
