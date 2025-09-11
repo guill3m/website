@@ -14,7 +14,6 @@ import SiteFooter from '../components/site-footer.astro'
 import SocialIconSprite from '../assets/social-icon-sprite.svg'
 import siteMetadata from '../helpers/site-metadata.ts'
 
-import styles from '../styles/layouts/layout.module.scss'
 import iconSvg from '../assets/icon.svg'
 
 interface Props {
@@ -61,10 +60,44 @@ const { title, meta, lang = 'en' } = Astro.props
 	</head>
 	<body>
 		<SiteHeader />
-		<main id="main" class={styles.main}>
+		<main id="main" class="main">
 			<slot>Hello world!</slot>
 		</main>
 		<SiteFooter />
 		<SocialIconSprite />
 	</body>
 </html>
+
+<style lang="scss">
+	@layer layout {
+		.main {
+			display: grid;
+			gap: var(--layout-gap);
+			grid-template-columns: repeat(13, 1fr);
+			grid-template-rows: auto;
+			margin-block: var(--margin-extrasmall) var(--margin-small);
+			margin-inline: 0;
+			view-transition-name: main;
+		}
+
+		@keyframes fade-out {
+			to {
+				opacity: 0;
+			}
+		}
+
+		@keyframes fade-in {
+			from {
+				opacity: 0;
+			}
+		}
+
+		::view-transition-old(main) {
+			animation-name: fade-out;
+		}
+
+		::view-transition-new(main) {
+			animation-name: fade-in;
+		}
+	}
+</style>
