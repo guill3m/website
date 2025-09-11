@@ -7,8 +7,6 @@ import Layout from '../../layouts/layout.astro'
 import Link from '../../components/link.astro'
 import siteMetadata from '../../helpers/site-metadata'
 
-import styles from '../../styles/pages/work-project.module.scss'
-
 export const getStaticPaths = (async () => {
 	const projects = await getCollection('project')
 	return projects.map((project) => ({
@@ -55,14 +53,91 @@ const jsonLd: WithContext<CreativeWork> = {
 		image: { alt: '', ...project.data.thumbnail },
 	}}
 >
-	<article class={styles.project}>
+	<article class="project">
 		<script
 			is:inline
 			type="application/ld+json"
 			set:html={JSON.stringify(jsonLd)}
 		/>
 		<h1>{project.data.title}<span class="period">.</span></h1>
-		<p class={styles.subtitle}>{project.data.subtitle}.</p>
+		<p class="project-subtitle">
+			{project.data.subtitle}.
+		</p>
 		<Content components={{ a: Link }} />
 	</article>
 </Layout>
+
+<style lang="scss">
+	@use '../../styles/utils';
+
+	@layer layout {
+		.project {
+			@include utils.text-wrap;
+
+			img {
+				background: #fff;
+				border: 1px solid var(--color-background-dark);
+				border-radius: var(--spacing);
+				margin-block-start: var(--margin-extrasmall);
+			}
+
+			:global(.two-col-images) {
+				margin-block-start: var(--margin-extrasmall);
+			}
+		}
+
+		.project-subtitle {
+			font-family: var(--font-stack-sans);
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 1.25;
+			margin-block: 0.25lh 0.5lh;
+			margin-inline: 0;
+			@include utils.gradient-text(
+				hsl(from var(--color-foreground-light) h s calc(l + 5))
+			);
+		}
+
+		@media (width >= 40em) {
+			.project :global(.two-col-images) {
+				display: grid;
+				gap: var(--layout-gap);
+				grid-template-columns: repeat(2, 1fr);
+				width: var(--layout-width);
+
+				img {
+					margin: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		@media (width >= 52em) {
+			.project {
+				img,
+				:global(.two-col-images) {
+					margin-inline-start: calc(var(--layout-column-width) * -1 - 1px);
+				}
+
+				img {
+					max-width: none;
+					width: var(--layout-width);
+
+					&:global(.narrow-image) {
+						margin-inline-start: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		@media (width >= 72em) {
+			.project {
+				img,
+				:global(.two-col-images) {
+					margin-inline-start: calc(var(--layout-column-width) * -2 - 2px);
+				}
+			}
+		}
+	}
+</style>
