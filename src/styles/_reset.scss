@@ -3,8 +3,11 @@
 		navigation: auto;
 	}
 
-	html {
+	* {
 		box-sizing: border-box;
+	}
+
+	html {
 		line-height: 1.5;
 		min-height: 100%;
 		scroll-behavior: smooth;
@@ -15,14 +18,8 @@
 
 	@media (prefers-reduced-motion: reduce) {
 		html {
-			scroll-behavior: auto;
+			scroll-behavior: auto !important;
 		}
-	}
-
-	*,
-	*::before,
-	*::after {
-		box-sizing: inherit;
 	}
 
 	picture {

@@ -65,14 +65,14 @@
 				content: ' ';
 				display: inline-block;
 				margin-block: 0;
-				margin-inline: 0.15em;
-				mask: no-repeat center / 0.6em
+				margin-inline: 0.1em;
+				mask: no-repeat center / 0.65em
 					url('../assets/opens-in-new-tab.svg?no-inline');
 				transition: background-color var(--transition-timing)
 					var(--cubic-bezier-ease-out);
 				height: 1em;
 				vertical-align: middle;
-				width: 0.6em;
+				width: 0.7em;
 			}
 
 			&:hover::after,
@@ -187,6 +187,7 @@
 			mask: none;
 			margin: 0;
 			vertical-align: baseline;
+			width: auto;
 		}
 
 		hr {
