@@ -87,15 +87,13 @@ const jsonLd: WithContext<CreativeWork> = {
 		}
 
 		.project-subtitle {
+			color: var(--color-foreground-light);
 			font-family: var(--font-stack-sans);
 			font-size: 1.5rem;
 			font-weight: 600;
 			line-height: 1.25;
 			margin-block: 0.25lh 0.5lh;
 			margin-inline: 0;
-			@include m.gradient-text(
-				hsl(from var(--color-foreground-light) h s calc(l + 5))
-			);
 		}
 
 		@media (width >= 40em) {

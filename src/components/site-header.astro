@@ -37,6 +37,7 @@ import Link from './link.astro'
 
 		.logo {
 			background-position: center;
+			color: var(--color-primary);
 			font-family: var(--font-stack-serif);
 			font-size: 1.5rem;
 			font-weight: 900;
@@ -46,7 +47,18 @@ import Link from './link.astro'
 			padding-block: var(--spacing);
 			padding-inline: calc(var(--spacing) / 2);
 			text-decoration: none;
-			@include m.gradient-text(var(--color-primary));
+
+			&:hover,
+			&:focus {
+				color: var(--color-foreground);
+				text-decoration: underline;
+				text-decoration-thickness: 2px;
+				text-underline-offset: 3px;
+			}
+
+			&:active {
+				color: var(--color-primary-dark);
+			}
 		}
 
 		.menu {
@@ -71,6 +83,7 @@ import Link from './link.astro'
 				&:focus {
 					text-decoration: underline;
 					text-decoration-thickness: 2px;
+					text-underline-offset: 2px;
 				}
 			}
 		}
