@@ -246,23 +246,23 @@ const meta = {
 </Layout>
 
 <style lang="scss">
-	@use '../styles/utils';
+	@use '../styles/utils/mixins' as m;
 
 	@layer layout {
 		.about-page h1,
 		.about-intro,
 		.about-section {
-			@include utils.text-wrap;
+			@include m.text-wrap;
 		}
 
 		.about-page,
 		.about-intro {
-			@include utils.forward-grid;
+			@include m.forward-grid;
 		}
 
 		.about-page {
 			h2 {
-				@include utils.gradient-text(var(--color-primary));
+				@include m.gradient-text(var(--color-primary));
 			}
 		}
 

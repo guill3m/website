@@ -1,4 +1,4 @@
-@use './utils';
+@use './utils/mixins' as m;
 
 @layer defaults {
 	::view-transition-group(*) {
@@ -100,17 +100,13 @@
 		font-size: 2rem;
 		font-weight: 900;
 		margin: 0;
-		@include utils.gradient-text(
-			hsl(from var(--color-foreground) h s calc(l + 5))
-		);
+		@include m.gradient-text(hsl(from var(--color-foreground) h s calc(l + 5)));
 	}
 
 	h2 {
 		font-size: 1.5rem;
 		font-weight: 700;
-		@include utils.gradient-text(
-			hsl(from var(--color-foreground) h s calc(l + 5))
-		);
+		@include m.gradient-text(hsl(from var(--color-foreground) h s calc(l + 5)));
 
 		h1 + & {
 			margin-block-start: 0.5lh;
@@ -120,9 +116,7 @@
 	h3 {
 		font-size: 1.25rem;
 		font-weight: 400;
-		@include utils.gradient-text(
-			hsl(from var(--color-foreground) h s calc(l + 5))
-		);
+		@include m.gradient-text(hsl(from var(--color-foreground) h s calc(l + 5)));
 
 		h2 + & {
 			margin-block-start: 0.5lh;

@@ -38,11 +38,11 @@ const lastUpdatedDate = new Date(lastUpdated ?? '')
 </BaseLayout>
 
 <style lang="scss">
-	@use '../styles/utils';
+	@use '../styles/utils/mixins' as m;
 
 	@layer layout {
 		.page {
-			@include utils.text-wrap;
+			@include m.text-wrap;
 
 			li a:has(svg) {
 				text-decoration: none;

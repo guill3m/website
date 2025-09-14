@@ -34,14 +34,14 @@ const projects = allProjects
 </Layout>
 
 <style lang="scss">
-	@use '../../styles/utils';
+	@use '../../styles/utils/mixins' as m;
 
 	@layer layout {
 		.work-page {
-			@include utils.forward-grid;
+			@include m.forward-grid;
 
 			h1 {
-				@include utils.text-wrap;
+				@include m.text-wrap;
 			}
 		}
 

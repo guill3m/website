@@ -20,7 +20,7 @@ import Link from './link.astro'
 </header>
 
 <style lang="scss">
-	@use '../styles/utils';
+	@use '../styles/utils/mixins' as m;
 
 	@layer layout {
 		.header {
@@ -46,7 +46,7 @@ import Link from './link.astro'
 			padding-block: var(--spacing);
 			padding-inline: calc(var(--spacing) / 2);
 			text-decoration: none;
-			@include utils.gradient-text(var(--color-primary));
+			@include m.gradient-text(var(--color-primary));
 		}
 
 		.menu {

@@ -92,11 +92,11 @@ const featuredProjects = allProjects
 </Layout>
 
 <style lang="scss">
-	@use '../styles/utils';
+	@use '../styles/utils/mixins' as m;
 
 	@layer layout {
 		.home-about {
-			@include utils.forward-grid;
+			@include m.forward-grid;
 			align-items: center;
 			font-size: 1.9rem;
 			justify-items: center;
