@@ -86,12 +86,12 @@ const { items } = Astro.props
 			margin-block: 0.25lh;
 			margin-inline: 0;
 
-			p,
-			ul {
+			:global(p),
+			:global(ul) {
 				margin: 0;
 			}
 
-			ul {
+			:global(ul) {
 				list-style-type: disc;
 				padding-inline-start: 1lh;
 			}
