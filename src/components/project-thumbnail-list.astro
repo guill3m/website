@@ -18,7 +18,7 @@ const { items } = Astro.props
 <ul class="project-list">
 	{
 		items.map((project) => (
-			<li>
+			<li class="project">
 				<Link href={`/work/${project.id}/`}>
 					<Picture
 						alt=""
@@ -51,30 +51,31 @@ const { items } = Astro.props
 			margin: 0;
 			padding: 0;
 
-			li {
-				position: relative;
-				transition:
-					filter var(--transition-timing) var(--cubic-bezier-ease-out),
-					opacity var(--transition-timing) var(--cubic-bezier-ease-out);
-
-				&:hover {
-					transition-timing-function: var(--cubic-bezier-ease-in);
-				}
-			}
-
-			&:has(li:hover) li:not(:hover) {
+			&:has(.project:hover) .project:not(:hover) img {
 				opacity: 0.5;
 				filter: sepia(0.75);
 			}
+		}
+
+		.project {
+			border: 1px solid var(--color-background-dark);
+			border-radius: var(--spacing);
+			position: relative;
 
 			a {
 				text-decoration: none;
 			}
 
 			img {
-				border: 1px solid var(--color-background-dark);
 				border-radius: var(--spacing);
+				transition:
+					filter var(--transition-timing) var(--cubic-bezier-ease-out),
+					opacity var(--transition-timing) var(--cubic-bezier-ease-out);
 				width: 100%;
+
+				&:hover {
+					transition-timing-function: var(--cubic-bezier-ease-in);
+				}
 			}
 		}
 
@@ -85,8 +86,8 @@ const { items } = Astro.props
 			border-start-end-radius: var(--spacing);
 			display: inline-block;
 			font-weight: 600;
-			inset-block-end: 0;
-			inset-inline-start: 0;
+			inset-block-end: -1px;
+			inset-inline-start: -1px;
 			padding-block: calc(var(--spacing) / 2);
 			padding-inline: var(--spacing);
 			position: absolute;
