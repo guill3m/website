@@ -1,29 +1,18 @@
 @layer defaults {
-	::view-transition-group(*) {
-		animation-duration: var(--transition-timing);
-		animation-fill-mode: both;
-	}
+	@media (prefers-reduced-motion: no-preference) {
+		::view-transition-group(*) {
+			animation-duration: var(--transition-timing);
+			animation-fill-mode: both;
+		}
 
-	::view-transition-old(*) {
-		animation-timing-function: var(--cubic-bezier-ease-out);
-		mix-blend-mode: plus-lighter;
-	}
-
-	::view-transition-new(*) {
-		animation-timing-function: var(--cubic-bezier-ease-in);
-		mix-blend-mode: plus-lighter;
-	}
-
-	::view-transition-old(*):only-child,
-	::view-transition-new(*):only-child {
-		mix-blend-mode: normal;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		::view-transition-group(*),
 		::view-transition-old(*),
 		::view-transition-new(*) {
-			animation: none !important;
+			mix-blend-mode: plus-lighter;
+		}
+
+		::view-transition-old(*):only-child,
+		::view-transition-new(*):only-child {
+			mix-blend-mode: normal;
 		}
 	}
 

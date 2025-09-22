@@ -1,9 +1,4 @@
 @layer utility {
-	.period {
-		color: var(--color-foreground);
-		view-transition-name: title-period;
-	}
-
 	.hidden {
 		display: none;
 	}
@@ -11,5 +6,11 @@
 	// Google Chrome translation
 	.translated-rtl {
 		direction: rtl;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.period {
+			view-transition-name: title-period;
+		}
 	}
 }

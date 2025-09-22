@@ -77,15 +77,20 @@ const { title, meta, lang = 'en' } = Astro.props
 			grid-template-rows: auto;
 			margin-block: var(--margin-extrasmall) var(--margin-small);
 			margin-inline: 0;
-			view-transition-name: main;
 		}
 
-		::view-transition-old(main) {
-			animation-name: fade-out;
-		}
+		@media (prefers-reduced-motion: no-preference) {
+			.main {
+				view-transition-name: main;
+			}
 
-		::view-transition-new(main) {
-			animation-name: fade-in;
+			::view-transition-old(main) {
+				animation-name: fade-out;
+			}
+
+			::view-transition-new(main) {
+				animation-name: fade-in;
+			}
 		}
 	}
 </style>
