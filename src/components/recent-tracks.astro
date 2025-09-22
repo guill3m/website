@@ -96,6 +96,8 @@ if (isPlaceholder) {
 </aside>
 
 <style lang="scss">
+	@use '../styles/utils/mixins' as m;
+
 	@layer component {
 		.recent-tracks {
 			background: var(--color-background-dark);
@@ -103,6 +105,7 @@ if (isPlaceholder) {
 			grid-column: 1 / span 13;
 			margin-block: var(--margin-medium);
 			padding: 1rlh;
+			@include m.enter-screen-animation-subtle;
 		}
 
 		.recent-tracks-description {

@@ -53,6 +53,8 @@ const { items } = Astro.props
 </ul>
 
 <style lang="scss">
+	@use '../styles/utils/mixins' as m;
+
 	@layer component {
 		.experience-list {
 			margin: 0;
@@ -64,6 +66,7 @@ const { items } = Astro.props
 			line-height: 1.25;
 			margin-block: var(--margin-extrasmall);
 			margin-inline: 0;
+			@include m.enter-screen-animation-subtle;
 		}
 
 		.experience-item-title {

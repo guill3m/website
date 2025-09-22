@@ -33,3 +33,19 @@
 		grid-column: 3 / span 8;
 	}
 }
+
+@mixin enter-screen-animation {
+	@media (prefers-reduced-motion: no-preference) {
+		animation-name: enter-screen;
+		animation-timeline: view();
+		animation-range: 0% 35%;
+	}
+}
+
+@mixin enter-screen-animation-subtle {
+	@media (prefers-reduced-motion: no-preference) {
+		animation-name: enter-screen-subtle;
+		animation-timeline: view();
+		animation-range: 0% 25%;
+	}
+}
