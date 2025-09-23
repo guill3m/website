@@ -78,7 +78,6 @@
 	h2,
 	h3 {
 		font-family: var(--font-stack-serif);
-		line-height: 1.25;
 		margin-block: 1lh 0.5lh;
 		margin-inline: 0;
 	}
@@ -134,7 +133,8 @@
 		font-weight: 600;
 	}
 
-	code {
+	code,
+	small {
 		font-size: 0.9em;
 	}
 
