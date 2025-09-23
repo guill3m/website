@@ -4,17 +4,29 @@
 	}
 
 	html {
-		line-height: 1.5;
-		min-height: 100%;
 		-moz-text-size-adjust: none;
 		-webkit-text-size-adjust: none;
 		text-size-adjust: none;
 	}
 
+	body {
+		line-height: 1.5;
+		min-height: 100svh;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	button,
+	input,
+	label {
+		line-height: 1.2;
+	}
+
 	picture {
 		display: contents;
 	}
-
 	source {
 		display: none;
 	}
@@ -26,8 +38,16 @@
 		vertical-align: middle;
 	}
 
-	small {
-		font-size: 0.8em;
+	button,
+	input,
+	select,
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	textarea:not([rows]) {
+		min-height: 8em;
 	}
 
 	:target {
