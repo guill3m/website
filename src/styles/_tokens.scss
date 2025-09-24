@@ -27,8 +27,9 @@
 		--margin-large: calc(var(--spacing) * 8);
 		--margin-extralarge: calc(var(--spacing) * 13);
 		--spacing: 0.5rlh;
-		--transition-timing: 256ms;
-		--transition-timing-fast: calc(var(--transition-timing) / 2);
+		--transition-duration: 256ms;
+		--transition-duration-fast: calc(var(--transition-duration) / 2);
+		--transition-duration-slow: calc(var(--transition-duration) * 2);
 	}
 
 	@media (prefers-contrast: more) {

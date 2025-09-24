@@ -114,6 +114,16 @@ const featuredProjects = allProjects
 			display: flex;
 			grid-row: 1;
 
+			@media (prefers-reduced-motion: no-preference) {
+				transition:
+					opacity var(--transition-duration-slow) var(--cubic-bezier-ease-out),
+					transform var(--transition-duration-slow) var(--cubic-bezier-ease-out);
+				@starting-style {
+					opacity: 0.75;
+					transform: scale(0.95);
+				}
+			}
+
 			img {
 				filter: drop-shadow(0 0 var(--spacing) #fff);
 				height: 5em;

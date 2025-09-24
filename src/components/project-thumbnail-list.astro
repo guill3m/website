@@ -72,8 +72,8 @@ const { items } = Astro.props
 			img {
 				border-radius: var(--spacing);
 				transition:
-					filter var(--transition-timing) var(--cubic-bezier-ease-out),
-					opacity var(--transition-timing) var(--cubic-bezier-ease-out);
+					filter var(--transition-duration) var(--cubic-bezier-ease-out),
+					opacity var(--transition-duration) var(--cubic-bezier-ease-out);
 				width: 100%;
 
 				&:hover {
@@ -148,10 +148,10 @@ const { items } = Astro.props
 			@media (width >= 52em) {
 				.project {
 					&:nth-child(3n - 2) {
-						animation-timeline: view(-4lh);
+						animation-timeline: view(-3lh);
 					}
 					&:nth-child(3n + 2) {
-						animation-timeline: view(-1.5rlh);
+						animation-timeline: view(-1rlh);
 					}
 				}
 			}

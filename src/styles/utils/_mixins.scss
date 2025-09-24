@@ -38,7 +38,7 @@
 	@media (prefers-reduced-motion: no-preference) {
 		animation-name: enter-screen;
 		animation-timeline: view();
-		animation-range: 0% 35%;
+		animation-range: 0% 30%;
 	}
 }
 
@@ -46,6 +46,6 @@
 	@media (prefers-reduced-motion: no-preference) {
 		animation-name: enter-screen-subtle;
 		animation-timeline: view();
-		animation-range: 0% 25%;
+		animation-range: 0% 20%;
 	}
 }
