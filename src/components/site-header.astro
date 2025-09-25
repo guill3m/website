@@ -41,14 +41,12 @@ import Link from './link.astro'
 			margin-inline-end: var(--margin-small);
 			padding-block: var(--spacing);
 			padding-inline: calc(var(--spacing) / 2);
-			text-decoration: none;
+			text-decoration-color: transparent;
 
 			&:hover,
 			&:focus {
 				color: var(--color-foreground);
-				text-decoration: underline;
-				text-decoration-thickness: 2px;
-				text-underline-offset: 3px;
+				text-decoration-color: var(--color-primary);
 			}
 
 			&:active {
@@ -72,13 +70,11 @@ import Link from './link.astro'
 
 			a {
 				padding: calc(var(--spacing) / 2);
-				text-decoration: none;
+				text-decoration-color: transparent;
 
 				&:hover,
 				&:focus {
-					text-decoration: underline;
-					text-decoration-thickness: 2px;
-					text-underline-offset: 2px;
+					text-decoration-color: var(--color-primary);
 				}
 			}
 		}

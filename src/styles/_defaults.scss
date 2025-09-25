@@ -29,16 +29,34 @@
 		max-width: var(--layout-width);
 	}
 
+	@property --anchor-underline-thickness {
+		syntax: '<length>';
+		inherits: false;
+		initial-value: 0;
+	}
+
 	a {
+		--anchor-underline-thickness: 0.12em;
 		color: var(--color-anchor);
-		transition: color var(--transition-duration) var(--cubic-bezier-ease-out);
-		text-decoration-thickness: 1px;
+		transition-property:
+			color, text-decoration-color, --anchor-underline-thickness;
+		transition-duration: var(--transition-duration);
+		transition-timing-function: var(--cubic-bezier-ease-out);
+		text-decoration: underline;
+		text-decoration-color: var(--color-primary);
+		text-decoration-thickness: var(--anchor-underline-thickness);
+		text-underline-offset: 0.12em;
+
+		@supports not (background: paint(something)) {
+			transition-property:
+				color, text-decoration-color, text-decoration-thickness;
+		}
 
 		&:hover,
 		&:focus {
+			--anchor-underline-thickness: 0.2em;
 			color: var(--color-foreground);
 			transition-timing-function: var(--cubic-bezier-ease-in);
-			text-decoration-thickness: 2px;
 		}
 
 		&:active {
