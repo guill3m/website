@@ -4,6 +4,7 @@
 	}
 
 	html {
+		hanging-punctuation: first allow-end last;
 		-moz-text-size-adjust: none;
 		-webkit-text-size-adjust: none;
 		text-size-adjust: none;
@@ -34,7 +35,7 @@
 	img,
 	svg {
 		height: auto;
-		max-width: 100%;
+		max-inline-size: 100%;
 		vertical-align: middle;
 	}
 
@@ -46,8 +47,26 @@
 		font-size: inherit;
 	}
 
-	textarea:not([rows]) {
-		min-height: 8em;
+	input:not(
+		:where(
+			[type='submit'],
+			[type='checkbox'],
+			[type='radio'],
+			[type='button'],
+			[type='reset']
+		)
+	) {
+		inline-size: 100%;
+	}
+
+	textarea {
+		field-sizing: content;
+		inline-size: 100%;
+		max-inline-size: 100%;
+
+		&:not([rows]) {
+			min-block-size: 6lh;
+		}
 	}
 
 	:target {
@@ -60,6 +79,7 @@
 		}
 
 		html {
+			interpolate-size: allow-keywords;
 			scroll-behavior: smooth;
 		}
 	}
