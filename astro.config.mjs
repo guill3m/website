@@ -50,6 +50,12 @@ export default defineConfig({
 		mdx(),
 		sitemap({
 			lastmod: new Date(),
+			namespaces: {
+				image: false,
+				news: false,
+				video: false,
+				xhtml: false,
+			},
 			serialize(item) {
 				switch (item.url) {
 					case `${site}/`:
