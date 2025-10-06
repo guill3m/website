@@ -20,8 +20,7 @@
 		"@fontsource/source-sans-3": "^5.2.9",
 		"@guill3m/fonts": "^1.0.0",
 		"astro": "^5.14.1",
-		"cheerio": "^1.1.2",
-		"schema-dts": "^1.1.5"
+		"cheerio": "^1.1.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.4",
@@ -36,6 +35,7 @@
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.93.2",
+		"schema-dts": "^1.1.5",
 		"typescript": "^5.9.2",
 		"vitest": "^3.2.4",
 		"wrangler": "^4.40.2"
