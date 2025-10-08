@@ -4,7 +4,7 @@ import type { CreativeWork, WithContext } from 'schema-dts'
 import { getCollection, render } from 'astro:content'
 
 import Layout from '../../layouts/layout.astro'
-import Link from '../../components/link.astro'
+import { components } from '../../helpers/mdx-components'
 import siteMetadata from '../../helpers/site-metadata'
 
 export const getStaticPaths = (async () => {
@@ -63,7 +63,7 @@ const jsonLd: WithContext<CreativeWork> = {
 		<p class="project-subtitle">
 			{project.data.subtitle}.
 		</p>
-		<Content components={{ a: Link }} />
+		<Content components={components} />
 	</article>
 </Layout>
 
