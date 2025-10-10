@@ -44,10 +44,12 @@ const lastUpdatedDate = new Date(lastUpdated ?? '')
 		.page {
 			@include m.text-wrap;
 
-			li a:has(svg) {
-				text-decoration: none;
+			:global(li) {
+				:global(a):has(svg) {
+					text-decoration: none;
+				}
 
-				svg {
+				:global(a) :global(svg) {
 					height: 1em;
 					margin-block-start: -0.25em;
 					width: 1em;
