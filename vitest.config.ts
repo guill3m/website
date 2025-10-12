@@ -9,7 +9,7 @@ export default getViteConfig({
 			exclude: [
 				'astro.config.mjs',
 				'src/actions/index.ts',
-				'src/content/config.ts',
+				'src/content.config.ts',
 				'src/helpers/mdx-components.ts',
 				'src/helpers/site-metadata.ts',
 				'src/pages/**/*.astro',
