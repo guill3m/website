@@ -1,55 +1,5 @@
----
-import Link from './link.astro'
-
-interface ExperienceItem {
-	city?: string
-	date: string
-	description?: string
-	techStack?: string[]
-	title: string
-	titleUnion?: string
-	url?: string
-	where?: string
-}
-
-interface Props {
-	items: ExperienceItem[]
-}
-
-const { items } = Astro.props
----
-
 <ul class="experience-list">
-	{
-		items.map((item) => (
-			<li class="experience-item">
-				<strong class="experience-item-title">
-					<em>{item.title}</em>
-					{item.titleUnion === undefined ? ' at ' : ` ${item.titleUnion} `}
-					{item.where && (
-						<em>
-							<Link href={item.url}>{item.where}</Link>
-						</em>
-					)}
-				</strong>
-				<br />
-				<small class="experience-item-date">
-					{item.city ? `${item.date}. ${item.city}` : item.date}.
-				</small>
-				{item.description && (
-					<div
-						class="experience-item-description"
-						set:html={item.description}
-					/>
-				)}
-				{item.techStack && (
-					<small class="experience-item-stack">
-						<span>Tech stack:</span> {item.techStack.join(', ')}.
-					</small>
-				)}
-			</li>
-		))
-	}
+	<slot />
 </ul>
 
 <style lang="scss">
@@ -59,65 +9,6 @@ const { items } = Astro.props
 		.experience-list {
 			margin: 0;
 			padding: 0;
-		}
-
-		.experience-item {
-			list-style: none;
-			line-height: 1.25;
-			margin-block: var(--margin-extrasmall);
-			margin-inline: 0;
-			@include m.enter-screen-animation-subtle;
-		}
-
-		.experience-item-title {
-			font-size: 1.25rem;
-			font-weight: 300;
-			letter-spacing: -0.01em;
-
-			> em {
-				font-style: normal;
-				font-weight: 700;
-			}
-		}
-
-		.experience-item-date {
-			color: var(--color-primary-dark);
-			font-size: 0.85em;
-		}
-
-		.experience-item-description {
-			line-height: 1.5;
-			margin-block: 0.25lh;
-			margin-inline: 0;
-
-			:global(p),
-			:global(ul) {
-				margin: 0;
-			}
-
-			:global(ul) {
-				list-style-type: disc;
-			}
-		}
-
-		.experience-item-stack {
-			color: var(--color-foreground-light);
-			font-weight: 300;
-
-			span {
-				font-weight: 400;
-			}
-		}
-
-		@media print {
-			.experience-item-title a {
-				color: var(--color-foreground);
-				text-decoration: none;
-
-				&::after {
-					display: none;
-				}
-			}
 		}
 	}
 </style>

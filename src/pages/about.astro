@@ -3,6 +3,7 @@ import { Picture } from 'astro:assets'
 
 import Layout from '../layouts/layout.astro'
 import ExperienceList from '../components/experience-list.astro'
+import ExperienceItem from '../components/experience-item.astro'
 
 import meKidJpg from '../assets/me-kid.jpg'
 
@@ -41,206 +42,284 @@ const meta = {
 		</section>
 		<section class="about-section">
 			<h2 id="experience">Experience.</h2>
-			<ExperienceList
-				items={[
-					{
-						city: 'Hybrid, Berlin',
-						date: 'June 2019 to December 2024',
-						description: `
-							<p>Over the years, my role and team at Ada constantly evolved. From working with and managing a multi-disciplinary team in Marketing, to a hands-on Engineering Manager in a product-focused team:</p>
-							<ul>
-								<li>Spearheaded the transformation of Ada’s website, overseeing a complete redesign, CMS overhaul, and framework migration that boosted end-user performance, efficiency, and usability.</li>
-								<li>Expanded the site from 2 to 6 languages, with over 2.500 pages total, and grew from ~10.000 visitors monthly to over 1 million organic monthly visitors driving hundreds of daily app installs.</li>
-								<li>Facilitated cross-functional collaboration, aligning with stakeholders on tech initiatives and roadmap, driving organisational priorities, and ensuring team execution on high-impact projects.</li>
-								<li>Led the recruitment and managed developers, designers, and SEO managers. Strengthening the team’s ability to consistently deliver results aligned with business priorities.</li>
-								<li>Guided the team through multiple business changes and strategic pivots. Providing mentorship, resources, and support to foster individual growth and team success.</li>
-							</ul>
-						`,
-						techStack: [
-							'React',
-							'Next.js',
-							'Typescript',
-							'Node.js',
-							'SCSS-Modules',
-							'Jest',
-							'Playwright',
-							'Prismic',
-							'Shopify',
-							'OpenTelemetry',
-						],
-						title: 'Team Lead, Web',
-						url: 'https://ada.com',
-						where: 'Ada Health',
-					},
-					{
-						city: 'On-site, Berlin',
-						date: 'July 2018 to May 2019',
-						description: `
-							<p>Joined Ada to bring the development of the company website in-house, a mix of a corporate website and an SEO-driven user-acquisition channel:</p>
-							<ul>
-								<li>Drove the development of the website, optimising for user acquisition. Collaborated closely with designers and copywriters to launch new components, landing pages, and languages.</li>
-								<li>Contributed to the SEO strategy by improving site performance and enhancing discoverability.</li>
-							</ul>
-						`,
-						techStack: [
-							'React',
-							'react-static',
-							'Node.js',
-							'styled-components',
-							'Jest',
-							'Contentful',
-						],
-						title: 'Web Developer',
-						url: 'https://ada.com',
-						where: 'Ada Health',
-					},
-					{
-						city: 'On-site, Berlin',
-						date: 'June 2015 to June 2018',
-						description: `
-							<ul>
-								<li>Led the front-end development and UI design for a suite of web-based financial applications for multinational European corporations. With a focus on performance and user-friendliness.</li>
-								<li>Expanded and improved the design system and component library, streamlining development processes and ensuring visual consistency across applications.</li>
-								<li>Implemented the company’s brand refresh, from logo to stationary to website redesign.</li>
-							</ul>
-						`,
-						techStack: [
-							'Symphony',
-							'PHP',
-							'Twig',
-							'Vue.js',
-							'jQuery',
-							'LESS',
-							'Webpack',
-							'Jest',
-							'Behat',
-							'Selenium',
-						],
-						title: 'UI/UX Developer',
-						url: 'https://universalunits.com',
-						where: 'Universal Units',
-					},
-					{
-						city: 'On-site, Berlin',
-						date: 'October 2013 to May 2015',
-						description: `
-							<ul>
-								<li>Designed and developed the user interface for a suite of web-based financial applications for multinational European corporations. With a focus on performance and user-friendliness.</li>
-								<li>Started and led the development of a scalable design system that improved development efficiency and visual consistency across applications.</li>
-							</ul>
-						`,
-						techStack: [
-							'Symphony',
-							'PHP',
-							'Twig',
-							'jQuery',
-							'LESS',
-							'Gulp.js',
-							'Behat',
-							'Selenium',
-						],
-						title: 'UI/UX Developer',
-						url: 'https://web.archive.org/web/20160817001617/http://www.netdudes.de/',
-						where: 'netdudes',
-					},
-					{
-						city: 'València',
-						date: 'May 2011 to October 2013',
-						description: `
-							<ul>
-								<li>Worked with multiple clients on a diverse range of projects: web design and development, book layout, iconography for signage, video editing, and posters.</li>
-								<li>Continued to work with CuldeSac as a freelance designer on various projects for clients such as Havaianas, TAG Heuer and Nike, among others.</li>
-							</ul>
-						`,
-						techStack: ['WordPress', 'PHP', 'jQuery', 'SCSS'],
-						title: 'Freelance Graphic and Web Designer',
-						titleUnion: '',
-					},
-					{
-						city: 'On-site, València',
-						date: 'April 2012 to April 2013',
-						description: `
-							<p>Built the company websites of a reseller for three major network providers in Spain:</p>
-							<ul>
-								<li>Designed and developed SEO-optimised websites for multiple telecom brands, driving leads and improving search visibility through regular experiments and optimisation.</li>
-								<li>Built a DSL comparison site that served as a critical marketing tool for the company, attracting new leads through targeted SEO strategies while providing value to users.</li>
-							</ul>
-						`,
-						techStack: ['WordPress', 'PHP', 'jQuery', 'SCSS'],
-						title: 'Web Designer and Developer',
-						url: 'https://web.archive.org/web/20160129162203/http://www.ampservicios.com/',
-						where: 'AMP Servicios',
-					},
-					{
-						date: 'November 2010 to May 2011',
-						description: `
-							<p>Joined the “Espacio Creativo” (Interior and Product Design) department of this design studio:</p>
-							<ul>
-								<li>Assisted on projects in editorial design, events and retail spaces graphics, and client presentations.</li>
-								<li>Prepared artwork for print, ensuring the highest quality standards were met.</li>
-							</ul>
-						`,
-						city: 'On-site, València',
-						title: 'Graphic Design Internship',
-						url: 'https://www.culdesac.es',
-						where: 'CuldeSac™',
-					},
-				]}
-			/>
+			<ExperienceList>
+				<ExperienceItem
+					title="Team Lead, Web"
+					organisation="Ada Health"
+					organisationUrl="https://ada.com"
+					date="June 2019 to December 2024"
+					city="Hybrid, Berlin"
+					techStack={[
+						'React',
+						'Next.js',
+						'Typescript',
+						'Node.js',
+						'SCSS-Modules',
+						'Jest',
+						'Playwright',
+						'Prismic',
+						'Shopify',
+						'OpenTelemetry',
+					]}
+				>
+					<p>
+						Over the years, my role and team at Ada constantly evolved. From
+						working with and managing a multi-disciplinary team in Marketing, to
+						a hands-on Engineering Manager in a product-focused team:
+					</p>
+					<ul>
+						<li>
+							Spearheaded the transformation of Ada’s website, overseeing a
+							complete redesign, CMS overhaul, and framework migration that
+							boosted end-user performance, efficiency, and usability.
+						</li>
+						<li>
+							Expanded the site from 2 to 6 languages, with over 2.500 pages
+							total, and grew from ~10.000 visitors monthly to over 1 million
+							organic monthly visitors driving hundreds of daily app installs.
+						</li>
+						<li>
+							Facilitated cross-functional collaboration, aligning with
+							stakeholders on tech initiatives and roadmap, driving
+							organisational priorities, and ensuring team execution on
+							high-impact projects.
+						</li>
+						<li>
+							Led the recruitment and managed developers, designers, and SEO
+							managers. Strengthening the team’s ability to consistently deliver
+							results aligned with business priorities.
+						</li>
+						<li>
+							Guided the team through multiple business changes and strategic
+							pivots. Providing mentorship, resources, and support to foster
+							individual growth and team success.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="Web Developer"
+					organisation="Ada Health"
+					organisationUrl="https://ada.com"
+					date="July 2018 to May 2019"
+					city="On-site, Berlin"
+					techStack={[
+						'React',
+						'react-static',
+						'Node.js',
+						'styled-components',
+						'Jest',
+						'Contentful',
+					]}
+				>
+					<p>
+						Joined Ada to bring the development of the company website in-house,
+						a mix of a corporate website and an SEO-driven user-acquisition
+						channel:
+					</p>
+					<ul>
+						<li>
+							Drove the development of the website, optimising for user
+							acquisition. Collaborated closely with designers and copywriters
+							to launch new components, landing pages, and languages.
+						</li>
+						<li>
+							Contributed to the SEO strategy by improving site performance and
+							enhancing discoverability.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="UI/UX Developer"
+					organisation="Universal Units"
+					organisationUrl="https://universalunits.com"
+					date="June 2015 to June 2018"
+					city="On-site, Berlin"
+					techStack={[
+						'Symphony',
+						'PHP',
+						'Twig',
+						'Vue.js',
+						'jQuery',
+						'LESS',
+						'Webpack',
+						'Jest',
+						'Behat',
+						'Selenium',
+					]}
+				>
+					<ul>
+						<li>
+							Led the front-end development and UI design for a suite of
+							web-based financial applications for multinational European
+							corporations. With a focus on performance and user-friendliness.
+						</li>
+						<li>
+							Expanded and improved the design system and component library,
+							streamlining development processes and ensuring visual consistency
+							across applications.
+						</li>
+						<li>
+							Implemented the company’s brand refresh, from logo to stationary
+							to website redesign.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="UI/UX Developer"
+					organisation="netdudes GmbH"
+					organisationUrl="https://web.archive.org/web/20160817001617/http://www.netdudes.de/"
+					date="October 2013 to May 2015"
+					city="On-site, Berlin"
+					techStack={[
+						'Symphony',
+						'PHP',
+						'Twig',
+						'jQuery',
+						'LESS',
+						'Gulp.js',
+						'Behat',
+						'Selenium',
+					]}
+				>
+					<ul>
+						<li>
+							Designed and developed the user interface for a suite of web-based
+							financial applications for multinational European corporations.
+							With a focus on performance and user-friendliness.
+						</li>
+						<li>
+							Started and led the development of a scalable design system that
+							improved development efficiency and visual consistency across
+							applications.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="Freelance Graphic and Web Designer"
+					date="May 2011 to October 2013"
+					city="València"
+					techStack={['WordPress', 'PHP', 'jQuery', 'SCSS']}
+				>
+					<ul>
+						<li>
+							Worked with multiple clients on a diverse range of projects: web
+							design and development, book layout, iconography for signage,
+							video editing, and posters.
+						</li>
+						<li>
+							Continued to work with CuldeSac as a freelance designer on various
+							projects for clients such as Havaianas, TAG Heuer and Nike, among
+							others.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="Web Designer and Developer"
+					organisation="AMP Servicios"
+					organisationUrl="https://web.archive.org/web/20160129162203/http://www.ampservicios.com/"
+					date="April 2012 to April 2013"
+					city="On-site, València"
+					techStack={['WordPress', 'PHP', 'jQuery', 'SCSS']}
+				>
+					<p>
+						Built the company websites of a reseller for three major network
+						providers in Spain:
+					</p>
+					<ul>
+						<li>
+							Designed and developed SEO-optimised websites for multiple telecom
+							brands, driving leads and improving search visibility through
+							regular experiments and optimisation.
+						</li>
+						<li>
+							Built a DSL comparison site that served as a critical marketing
+							tool for the company, attracting new leads through targeted SEO
+							strategies while providing value to users.
+						</li>
+					</ul>
+				</ExperienceItem>
+				<ExperienceItem
+					title="Graphic Design Internship"
+					organisation="CuldeSac™"
+					organisationUrl="https://www.culdesac.es"
+					date="November 2010 to May 2011"
+					city="On-site, València"
+				>
+					<p>
+						Joined the “Espacio Creativo” (Interior and Product Design)
+						department of this design studio:
+					</p>
+					<ul>
+						<li>
+							Assisted on projects in editorial design, events and retail spaces
+							graphics, and client presentations.
+						</li>
+						<li>
+							Prepared artwork for print, ensuring the highest quality standards
+							were met.
+						</li>
+					</ul>
+				</ExperienceItem>
+			</ExperienceList>
 		</section>
 		<section class="about-section">
 			<h2 id="studies">Studies.</h2>
-			<ExperienceList
-				items={[
-					{
-						date: 'October 2006 to April 2011',
-						title: 'Bachelor’s Degree, Graphic Design',
-						titleUnion: 'at the',
-						url: 'https://www.easdvalencia.com',
-						where: 'EASD València',
-					},
-				]}
-			/>
+			<ExperienceList>
+				<ExperienceItem
+					title="Bachelor’s Degree, Graphic Design"
+					titleUnion=" at the "
+					organisation="EASD València"
+					organisationUrl="https://www.easdvalencia.com"
+					date="October 2006 to April 2011"
+				/>
+			</ExperienceList>
 		</section>
 		<section class="about-section">
 			<h2 id="courses">Courses.</h2>
-			<ExperienceList
-				items={[
-					{
-						city: '359 hours, in-person',
-						date: 'June to October 2006',
-						title: 'Web Design and Multimedia',
-						titleUnion: '',
-					},
-				]}
-			/>
+			<ExperienceList>
+				<ExperienceItem
+					title="Web Design and Multimedia"
+					city="359 hours, in-person"
+					date="June to October 2006"
+				/>
+			</ExperienceList>
 		</section>
 		<section class="about-section">
 			<h2 id="others">Others.</h2>
-			<ExperienceList
-				items={[
-					{
-						city: 'València',
-						date: 'September 2010',
-						description:
-							'Supported the organisation of the Valencia Disseny Week, a week-long event consisting of design-related activities around various locations in Valencia city highlighting the work of Valencian designers. The event was organised by the Association of Designers of the Region of Valencia (ADCV).',
-						title: 'Organisation Assistance',
-						titleUnion: 'at the',
-						url: 'https://www.valenciadissenyweek.com',
-						where: 'Valencia Disseny Week',
-					},
-					{
-						city: 'València',
-						date: 'June 2010',
-						description:
-							'Supported the organisation of a conference composed of a mix of workshops, exhibitions, talks, and book presentations with national and international guests. The conference was organised by the ADCV and considered the most important event about typography and graphic design in Spain.',
-						title: 'Organisation Assistance',
-						titleUnion: 'at the',
-						url: 'https://www.congresotipografia.com',
-						where: '4th International Typography Congress',
-					},
-				]}
-			/>
+			<ExperienceList>
+				<ExperienceItem
+					title="Organisation Assistance"
+					titleUnion=" at the "
+					organisation="Valencia Disseny Week"
+					organisationUrl="https://www.valenciadissenyweek.com"
+					date="September 2010"
+					city="València"
+				>
+					<p>
+						Supported the organisation of the Valencia Disseny Week, a week-long
+						event consisting of design-related activities around various
+						locations in Valencia city highlighting the work of Valencian
+						designers. The event was organised by the Association of Designers
+						of the Region of Valencia (ADCV).
+					</p>
+				</ExperienceItem>
+				<ExperienceItem
+					title="Organisation Assistance"
+					titleUnion=" at the "
+					organisation="4th International Typography Congress"
+					organisationUrl="https://www.congresotipografia.com"
+					date="June 2010"
+					city="València"
+				>
+					<p>
+						Supported the organisation of a conference composed of a mix of
+						workshops, exhibitions, talks, and book presentations with national
+						and international guests. The conference was organised by the ADCV
+						and considered the most important event about typography and graphic
+						design in Spain.
+					</p>
+				</ExperienceItem>
+			</ExperienceList>
 		</section>
 	</article>
 </Layout>
