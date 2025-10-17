@@ -1,80 +1,65 @@
 @font-face {
-	font-family: 'Source Sans 3';
-	font-style: normal;
-	font-display: swap;
-	font-weight: 200;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-200-normal.woff2')
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'Source Sans 3';
+	font-family: 'Bariol';
 	font-style: normal;
 	font-display: swap;
 	font-weight: 300;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-300-normal.woff2')
-		format('woff2');
+	src: url('@guill3m/fonts/bariol/bariol-light.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Source Sans 3';
+	font-family: 'Bariol';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 300;
+	src: url('@guill3m/fonts/bariol/bariol-light-italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Bariol';
 	font-style: normal;
 	font-display: swap;
 	font-weight: 400;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2')
-		format('woff2');
+	src: url('@guill3m/fonts/bariol/bariol-regular.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Source Sans 3';
+	font-family: 'Bariol';
 	font-style: italic;
 	font-display: swap;
 	font-weight: 400;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-400-italic.woff2')
-		format('woff2');
+	src: url('@guill3m/fonts/bariol/bariol-regular-italic.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Source Sans 3';
-	font-style: normal;
-	font-display: swap;
-	font-weight: 600;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-600-normal.woff2')
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'Source Sans 3';
+	font-family: 'Bariol';
 	font-style: normal;
 	font-display: swap;
 	font-weight: 700;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-700-normal.woff2')
-		format('woff2');
+	src: url('@guill3m/fonts/bariol/bariol-bold.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Source Sans 3';
+	font-family: 'Bariol';
 	font-style: italic;
 	font-display: swap;
 	font-weight: 700;
-	src: url('@fontsource/source-sans-3/files/source-sans-3-latin-700-italic.woff2')
-		format('woff2');
+	src: url('@guill3m/fonts/bariol/bariol-bold-italic.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Source Sans 3 Fallback';
+	font-family: 'Bariol Fallback';
 	src: local('Arial');
-	ascent-override: 109.21%;
-	descent-override: 42.66%;
+	ascent-override: 115.08%;
+	descent-override: 29.57%;
 	line-gap-override: 0%;
-	size-adjust: 93.76%;
+	size-adjust: 88.17%;
 }
 
 @font-face {
 	font-family: 'Bw Darius';
 	src: url('@guill3m/fonts/bw-darius/bw-darius-light.woff2') format('woff2');
 	font-display: swap;
-	font-weight: 200;
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -114,8 +99,8 @@
 @font-face {
 	font-family: 'Bw Darius Fallback';
 	src: local('Times New Roman');
-	ascent-override: 78.71%;
-	descent-override: 15.74%;
+	ascent-override: 79.04%;
+	descent-override: 15.81%;
 	line-gap-override: 0%;
-	size-adjust: 127.04%;
+	size-adjust: 126.52%;
 }

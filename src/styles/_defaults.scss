@@ -25,6 +25,7 @@
 
 	body {
 		color: var(--color-foreground);
+		font-variant-numeric: oldstyle-nums;
 		margin: var(--margin-small) auto;
 		max-width: var(--layout-width);
 	}
@@ -148,7 +149,7 @@
 	}
 
 	strong {
-		font-weight: 600;
+		font-weight: 700;
 	}
 
 	small {
