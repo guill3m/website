@@ -18,7 +18,7 @@
 		"@astrojs/mdx": "^4.3.9",
 		"@astrojs/sitemap": "^3.6.0",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^5.15.3",
+		"astro": "^5.15.6",
 		"cheerio": "^1.1.2"
 	},
 	"devDependencies": {
