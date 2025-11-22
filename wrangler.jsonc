@@ -1,15 +1,20 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
+	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "website",
 	"main": "./dist/_worker.js/index.js",
-	"compatibility_date": "2025-08-24",
+	"compatibility_date": "2025-11-21",
 	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist"
 	},
 	"observability": {
-		"enabled": true
+		"logs": {
+			"enabled": true
+		},
+		"traces": {
+			"enabled": true
+		}
 	},
 	"preview_urls": false,
 	"workers_dev": false

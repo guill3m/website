@@ -4,10 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "npm run lint && astro build",
+		"build": "bun run lint && astro build",
 		"preview": "wrangler dev",
 		"astro": "astro",
-		"lint": "wrangler types && npm run lint:format && npm run lint:js && astro check",
+		"lint": "wrangler types && bun run lint:format && bun run lint:js && astro check",
 		"lint:format": "prettier --check .",
 		"lint:js": "eslint",
 		"format": "prettier --write .",
