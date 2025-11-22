@@ -14,29 +14,29 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^12.6.10",
-		"@astrojs/mdx": "^4.3.9",
+		"@astrojs/cloudflare": "^12.6.11",
+		"@astrojs/mdx": "^4.3.12",
 		"@astrojs/sitemap": "^3.6.0",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^5.15.3",
+		"astro": "^5.16.0",
 		"cheerio": "^1.1.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.5",
-		"@eslint/js": "^9.39.0",
+		"@eslint/js": "^9.39.1",
 		"@testing-library/jest-dom": "^6.9.1",
-		"@typescript-eslint/parser": "^8.46.2",
+		"@typescript-eslint/parser": "^8.47.0",
 		"@vitest/coverage-v8": "^3.2.4",
-		"eslint": "^9.39.0",
-		"eslint-plugin-astro": "^1.4.0",
+		"eslint": "^9.39.1",
+		"eslint-plugin-astro": "^1.5.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"happy-dom": "^20.0.10",
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.93.3",
+		"sass": "^1.94.2",
 		"schema-dts": "^1.1.5",
 		"typescript": "^5.9.3",
 		"vitest": "^3.2.4",
-		"wrangler": "^4.45.3"
+		"wrangler": "^4.50.0"
 	}
 }
