@@ -64,8 +64,7 @@
 			color: var(--color-primary);
 		}
 
-		&[href^="https://"]
-		{
+		&[href^='https://'] {
 			&::after {
 				background-color: var(--color-anchor);
 				content: ' ';
