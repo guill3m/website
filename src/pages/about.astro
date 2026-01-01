@@ -19,7 +19,7 @@ const meta = {
 		<h1>{title}<span class="period">.</span></h1>
 		<section class="about-intro">
 			<Picture
-				alt="Me when I was a small kid. There is a white paper on the desk and scattered many colorful crayons, I am looking at the camera and holding one crayon on each hand"
+				alt="Me when I was a small kid. On the desk, there is a white paper and many colorful crayons scatered on top, I am looking at the camera while holding one crayon on each hand"
 				formats={['avif', 'webp']}
 				loading="eager"
 				sizes={[
@@ -43,6 +43,27 @@ const meta = {
 		<section class="about-section">
 			<h2 id="experience">Experience.</h2>
 			<ExperienceList>
+				<ExperienceItem
+					title="Frontend Engineer"
+					organisation="AMBOSS"
+					organisationUrl="https://www.amboss.com/us"
+					date="Since November 2025"
+					city="Hybrid, Berlin"
+					techStack={[
+						'React',
+						'React Router',
+						'Zustand',
+						'Typescript',
+						'Apollo GraphQL',
+						'SCSS-Modules',
+						'Jest',
+						'Playwright',
+					]}
+				>
+					<p>
+						Empowering medical professionals to provide the best possible care.
+					</p>
+				</ExperienceItem>
 				<ExperienceItem
 					title="Team Lead, Web"
 					organisation="Ada Health"
