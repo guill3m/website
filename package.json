@@ -26,7 +26,7 @@
 		"@eslint/js": "^9.39.2",
 		"@testing-library/jest-dom": "^6.9.1",
 		"@typescript-eslint/parser": "^8.53.0",
-		"@vitest/coverage-v8": "^4.0.17",
+		"@vitest/coverage-v8": "^3.2.4",
 		"eslint": "^9.39.2",
 		"eslint-plugin-astro": "^1.5.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
@@ -36,7 +36,7 @@
 		"sass": "^1.97.2",
 		"schema-dts": "^1.1.5",
 		"typescript": "^5.9.3",
-		"vitest": "^4.0.17",
+		"vitest": "^3.2.4",
 		"wrangler": "^4.59.1"
 	}
 }
