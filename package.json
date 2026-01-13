@@ -16,27 +16,27 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.6.12",
 		"@astrojs/mdx": "^4.3.13",
-		"@astrojs/sitemap": "^3.6.0",
+		"@astrojs/sitemap": "^3.6.1",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^5.16.6",
+		"astro": "^5.16.9",
 		"cheerio": "^1.1.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.6",
 		"@eslint/js": "^9.39.2",
 		"@testing-library/jest-dom": "^6.9.1",
-		"@typescript-eslint/parser": "^8.51.0",
-		"@vitest/coverage-v8": "^4.0.16",
+		"@typescript-eslint/parser": "^8.53.0",
+		"@vitest/coverage-v8": "^4.0.17",
 		"eslint": "^9.39.2",
 		"eslint-plugin-astro": "^1.5.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"happy-dom": "^20.0.11",
+		"happy-dom": "^20.1.0",
 		"prettier": "^3.7.4",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.97.1",
+		"sass": "^1.97.2",
 		"schema-dts": "^1.1.5",
 		"typescript": "^5.9.3",
-		"vitest": "^4.0.16",
-		"wrangler": "^4.54.0"
+		"vitest": "^4.0.17",
+		"wrangler": "^4.59.1"
 	}
 }
