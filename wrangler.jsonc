@@ -17,5 +17,6 @@
 		}
 	},
 	"preview_urls": false,
+	"upload_source_maps": true,
 	"workers_dev": false
 }

@@ -88,6 +88,7 @@ export default defineConfig({
 	vite: {
 		build: {
 			cssCodeSplit: false,
+			sourcemap: true,
 		},
 	},
 })
