@@ -18,7 +18,7 @@
 		"@astrojs/mdx": "^4.3.13",
 		"@astrojs/sitemap": "^3.7.0",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^5.17.2",
+		"astro": "^5.18.0",
 		"cheerio": "^1.2.0",
 		"ohash": "^2.0.11"
 	},
@@ -26,18 +26,18 @@
 		"@astrojs/check": "^0.9.6",
 		"@eslint/js": "^9.39.2",
 		"@testing-library/jest-dom": "^6.9.1",
-		"@typescript-eslint/parser": "^8.55.0",
+		"@typescript-eslint/parser": "^8.56.1",
 		"@vitest/coverage-v8": "^3.2.4",
 		"eslint": "^9.39.2",
-		"eslint-plugin-astro": "^1.5.0",
+		"eslint-plugin-astro": "^1.6.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"happy-dom": "^20.6.1",
+		"happy-dom": "^20.8.3",
 		"prettier": "^3.8.1",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.97.3",
 		"schema-dts": "^1.1.5",
 		"typescript": "^5.9.3",
 		"vitest": "^3.2.4",
-		"wrangler": "^4.64.0"
+		"wrangler": "^4.70.0"
 	}
 }
