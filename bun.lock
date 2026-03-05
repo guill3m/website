@@ -11,6 +11,7 @@
         "@guill3m/fonts": "1.1.0",
         "astro": "^5.17.2",
         "cheerio": "^1.2.0",
+        "ohash": "^2.0.11",
       },
       "devDependencies": {
         "@astrojs/check": "^0.9.6",

@@ -69,7 +69,7 @@ export default defineConfig({
 					case `${site}/ai/`:
 						item.priority = 0.7
 						break
-					case `${site}/privacy-policy/`:
+					case `${site}/privacy/`:
 						item.priority = 0.6
 						break
 					default:
