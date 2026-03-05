@@ -1,0 +1,53 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import * as cheerio from 'cheerio'
+import { hash } from 'ohash'
+
+interface Props extends HTMLAttributes<'aside'> {
+	title: string
+}
+
+const { title, ...props } = Astro.props
+const content = cheerio.load(await Astro.slots.render('default'))
+
+const contentHashId = hash({ title, content }).slice(0, 6)
+---
+
+<aside aria-labelledby={contentHashId} class="callout" {...props}>
+	<p class="title" id={contentHashId}>{title}</p>
+	<slot />
+</aside>
+
+<style lang="scss">
+	@layer component {
+		.callout {
+			background-color: var(--color-background-dark);
+			border-inline-start: var(--spacing) solid var(--color-primary-dark);
+			border-radius: var(--spacing);
+			font-family: var(--font-stack-serif);
+			font-size: 1.125rem;
+			font-weight: 300;
+			padding: var(--margin-small);
+			margin-block: var(--margin-small);
+
+			> :global(:is(p, ol, ul)):last-child {
+				margin-block-end: 0;
+			}
+
+			:global(li + li) {
+				margin-block-start: var(--margin-extrasmall);
+			}
+
+			:global(li)::marker {
+				color: var(--color-primary-dark);
+			}
+		}
+
+		.title {
+			color: var(--color-primary-dark);
+			font-size: 1.25rem;
+			font-weight: 700;
+			margin-block-start: 0;
+		}
+	}
+</style>
