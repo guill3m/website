@@ -16,6 +16,7 @@
 		}
 	},
 	"preview_urls": false,
+	"send_metrics": false,
 	"upload_source_maps": true,
 	"workers_dev": false
 }
