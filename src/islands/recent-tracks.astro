@@ -1,8 +1,7 @@
 ---
-import { actions } from 'astro:actions'
 import { Image, Picture } from 'astro:assets'
 
-import type { Track } from '../actions/lastfm'
+import { getRecentTracks, type Track } from '../helpers/lastfm'
 import timeAgo from '../utils/time-ago'
 import { blockText } from '../utils/random'
 
@@ -26,11 +25,10 @@ if (isPlaceholder) {
 		time: 0,
 	}))
 } else {
-	const { data } = await Astro.callAction(actions.lastfm.getRecentTracks, {
+	recentTracks = await getRecentTracks({
 		user,
 		limit,
 	})
-	recentTracks = data ?? []
 }
 ---
 

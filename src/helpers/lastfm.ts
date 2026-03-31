@@ -1,6 +1,4 @@
-import { defineAction } from 'astro:actions'
 import { LASTFM_API_KEY } from 'astro:env/server'
-import { z } from 'astro/zod'
 
 type LastfmUserGetRecentTracksResponse = Readonly<{
 	recenttracks: {
@@ -71,15 +69,4 @@ export async function getRecentTracks({
 		}))
 
 	return tracks
-}
-
-/* v8 ignore next 9 */
-export const lastfm = {
-	getRecentTracks: defineAction({
-		input: z.object({
-			user: z.string(),
-			limit: z.number().default(5),
-		}),
-		handler: getRecentTracks,
-	}),
 }
