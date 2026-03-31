@@ -101,7 +101,7 @@ Sitemap: ${sitemapURL.href}
 `
 
 /* v8 ignore next 4 */
-export const GET: APIRoute = ({ site }) => {
+export const GET = (async ({ site }) => {
 	const sitemapURL = new URL('/sitemap-index.xml', site)
 	return new Response(getRobotsTxt(sitemapURL, aiBots))
-}
+}) satisfies APIRoute

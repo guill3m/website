@@ -34,9 +34,6 @@ export default defineConfig({
 			}),
 		},
 	},
-	experimental: {
-		preserveScriptOrder: true,
-	},
 	image: {
 		remotePatterns: [
 			{

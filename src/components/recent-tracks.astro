@@ -16,7 +16,7 @@ interface Props {
 const { user, limit = 10 } = Astro.props
 const isPlaceholder = user === undefined
 
-let recentTracks: Track[] = []
+let recentTracks: Track[]
 if (isPlaceholder) {
 	recentTracks = Array.from({ length: limit }, () => ({
 		album: '',
@@ -30,7 +30,7 @@ if (isPlaceholder) {
 		user,
 		limit,
 	})
-	recentTracks = data as Track[]
+	recentTracks = data ?? []
 }
 ---
 

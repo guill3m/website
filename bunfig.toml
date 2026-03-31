@@ -4,4 +4,4 @@ telemetry = false
 guill3m = { url = "https://npm.pkg.github.com/", token = "$GITHUB_PACKAGES_TOKEN" }
 
 [run]
-bun = true
+bun = false

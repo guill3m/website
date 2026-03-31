@@ -1,6 +1,6 @@
 import { defineAction } from 'astro:actions'
 import { LASTFM_API_KEY } from 'astro:env/server'
-import { z } from 'astro:content'
+import { z } from 'astro/zod'
 
 type LastfmUserGetRecentTracksResponse = Readonly<{
 	recenttracks: {
