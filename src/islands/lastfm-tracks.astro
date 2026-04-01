@@ -1,0 +1,18 @@
+---
+import RecentTracks from '../components/recent-tracks.astro'
+import { getRecentTracks } from '../helpers/lastfm'
+
+interface Props {
+	user: string
+	limit?: number
+}
+
+const { user, limit = 10 } = Astro.props
+
+const recentTracks = await getRecentTracks({
+	user,
+	limit,
+})
+---
+
+<RecentTracks user={user} tracks={recentTracks} />

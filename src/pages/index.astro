@@ -3,15 +3,17 @@ import type { WebSite, WithContext } from 'schema-dts'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 
+import type { Track } from '../helpers/lastfm'
+
 import Layout from '../layouts/layout.astro'
 import Link from '../components/link.astro'
 import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
-import RecentTracks from '../islands/recent-tracks.astro'
+import RecentTracks from '../components/recent-tracks.astro'
+import LastfmTracks from '../islands/lastfm-tracks.astro'
 import siteMetadata from '../helpers/site-metadata'
 
 import meSvg from '../assets/me.svg'
-
-export const prerender = false
+import { blockText } from '../utils/random'
 
 const site = Astro.site?.toString()
 
@@ -61,6 +63,18 @@ const featuredProjects = allProjects
 		thumbnail: project.data.thumbnail,
 		title: project.data.title,
 	}))
+
+const recentTracksLength = 10
+const recentTracksPlaceholder: Track[] = Array.from(
+	{ length: recentTracksLength },
+	() => ({
+		album: '',
+		artist: blockText(4, 10),
+		albumArt: '',
+		trackName: blockText(4, 10),
+		time: 0,
+	}),
+)
 ---
 
 <Layout title={title} meta={{ title, description }}>
@@ -88,9 +102,18 @@ const featuredProjects = allProjects
 		</p>
 		<ProjectThumbnailList items={featuredProjects} />
 	</section>
-	<RecentTracks user={siteMetadata.author.social.lastfm} server:defer>
-		<RecentTracks slot="fallback" />
-	</RecentTracks>
+	<LastfmTracks
+		limit={recentTracksLength}
+		user={siteMetadata.author.social.lastfm}
+		server:defer
+	>
+		<RecentTracks
+			tracks={recentTracksPlaceholder}
+			user={siteMetadata.author.social.lastfm}
+			isPlaceholder
+			slot="fallback"
+		/>
+	</LastfmTracks>
 </Layout>
 
 <style lang="scss">

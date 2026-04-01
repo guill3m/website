@@ -1,51 +1,31 @@
 ---
 import { Image, Picture } from 'astro:assets'
 
-import { getRecentTracks, type Track } from '../helpers/lastfm'
+import { type Track } from '../helpers/lastfm'
 import timeAgo from '../utils/time-ago'
 import { blockText } from '../utils/random'
 
 import albumPlaceholder from '../assets/placeholder-color-background.png'
 
 interface Props {
-	user?: string
-	limit?: number
+	user: string
+	tracks: Track[]
+	isPlaceholder?: boolean
 }
 
-const { user, limit = 10 } = Astro.props
-const isPlaceholder = user === undefined
-
-let recentTracks: Track[]
-if (isPlaceholder) {
-	recentTracks = Array.from({ length: limit }, () => ({
-		album: '',
-		artist: blockText(4, 10),
-		albumArt: '',
-		trackName: blockText(4, 10),
-		time: 0,
-	}))
-} else {
-	recentTracks = await getRecentTracks({
-		user,
-		limit,
-	})
-}
+const { user, tracks, isPlaceholder = false } = Astro.props
 ---
 
 <aside class:list={['recent-tracks', isPlaceholder && 'is-placeholder']}>
 	<p class="recent-tracks-description">
 		I really enjoy listening to music. These are the latest tracks I’ve
-		scrobbled to {
-			isPlaceholder ? (
-				'my Last.fm profile:'
-			) : (
-				<a href={`https://www.last.fm/user/${user}`}>my Last.fm profile:</a>
-			)
-		}
+		scrobbled to <a href={`https://www.last.fm/user/${user}`}
+			>my Last.fm profile:</a
+		>
 	</p>
 	<ul class="track-list">
 		{
-			recentTracks.map((track) => (
+			tracks.map((track) => (
 				<li
 					class="track"
 					aria-label={
