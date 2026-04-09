@@ -1,4 +1,4 @@
-import { LASTFM_API_KEY } from 'astro:env/server'
+import { env } from 'cloudflare:workers'
 
 type LastfmUserGetRecentTracksResponse = Readonly<{
 	recenttracks: {
@@ -54,7 +54,7 @@ export async function getRecentTracks({
 	limit: number
 }): Promise<Track[]> {
 	const response = await fetch(
-		`${lastfmApiBase}?method=user.getrecenttracks&user=${user}&api_key=${LASTFM_API_KEY}&limit=${limit}&format=json`,
+		`${lastfmApiBase}?method=user.getrecenttracks&user=${user}&api_key=${env.LASTFM_API_KEY}&limit=${limit}&format=json`,
 	)
 	const json: LastfmUserGetRecentTracksResponse = await response.json()
 
