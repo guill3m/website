@@ -15,9 +15,6 @@ import siteMetadata from '../helpers/site-metadata'
 import meSvg from '../assets/me.svg'
 import { blockText } from '../utils/random'
 
-// TEMP: there seems to be some issues on Astro 6 + Cloudflare and server islands when there are no SSR pages, or maybe it is the Cloudflare build ENV as there are some errors showing up there there, need to dig deeper into what's actually failing
-export const prerender = false
-
 const site = Astro.site?.toString()
 
 const title = 'Guillem Andreu - Web Developer and Designer'
