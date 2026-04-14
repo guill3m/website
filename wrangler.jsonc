@@ -3,10 +3,14 @@
 	"name": "website",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"compatibility_date": "2026-03-12",
-	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist"
+	},
+	"secrets": {
+		"required": [
+			"LASTFM_API_KEY"
+		]
 	},
 	"observability": {
 		"logs": {
