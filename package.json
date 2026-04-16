@@ -14,11 +14,11 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^13.1.9",
+		"@astrojs/cloudflare": "^13.1.10",
 		"@astrojs/mdx": "^5.0.3",
 		"@astrojs/sitemap": "^3.7.2",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^6.1.6",
+		"astro": "^6.1.7",
 		"cheerio": "^1.2.0",
 		"ohash": "^2.0.11"
 	},
@@ -32,12 +32,12 @@
 		"eslint-plugin-astro": "^1.7.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"happy-dom": "^20.9.0",
-		"prettier": "^3.8.2",
+		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.99.0",
 		"schema-dts": "^2.0.0",
 		"typescript": "^6.0.2",
 		"vitest": "^3.2.4",
-		"wrangler": "^4.82.2"
+		"wrangler": "^4.83.0"
 	}
 }
