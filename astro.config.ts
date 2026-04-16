@@ -91,7 +91,6 @@ export default defineConfig({
 	trailingSlash: 'always',
 	vite: {
 		build: {
-			cssCodeSplit: false,
 			sourcemap: true,
 		},
 	},
