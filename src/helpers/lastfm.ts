@@ -63,7 +63,11 @@ export async function getRecentTracks({
 		.map((track) => ({
 			artist: track.artist['#text'],
 			album: track.album['#text'],
-			albumArt: track.image[2]?.['#text'] || '',
+			albumArt:
+				track.image[2]?.['#text'] ||
+				track.image[1]?.['#text'] ||
+				track.image[0]?.['#text'] ||
+				'',
 			trackName: track.name,
 			time: Number(track.date.uts) * 1000,
 		}))

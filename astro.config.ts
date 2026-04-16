@@ -34,15 +34,6 @@ export default defineConfig({
 			}),
 		},
 	},
-	image: {
-		remotePatterns: [
-			{
-				protocol: 'https',
-				hostname: 'lastfm.freetls.fastly.net',
-				pathname: '/i/u/**',
-			},
-		],
-	},
 	integrations: [
 		mdx(),
 		sitemap({
