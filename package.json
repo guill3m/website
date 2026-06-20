@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "bun run lint && astro build",
+		"build": "bun run lint && bun run test run && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "wrangler types && bun run lint:format && bun run lint:js && astro check",
@@ -14,30 +14,28 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^13.1.10",
-		"@astrojs/mdx": "^5.0.3",
-		"@astrojs/sitemap": "^3.7.2",
+		"@astrojs/cloudflare": "^13.7.0",
+		"@astrojs/mdx": "^6.0.3",
+		"@astrojs/sitemap": "^3.7.3",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^6.1.7",
+		"astro": "^6.4.8",
 		"cheerio": "^1.2.0",
 		"ohash": "^2.0.11"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.8",
+		"@astrojs/check": "^0.9.9",
+		"@astrojs/node": "^10.1.4",
 		"@eslint/js": "^10.0.1",
-		"@testing-library/jest-dom": "^6.9.1",
-		"@typescript-eslint/parser": "^8.58.2",
-		"@vitest/coverage-v8": "^3.2.4",
-		"eslint": "^10.2.0",
+		"@typescript-eslint/parser": "^8.61.1",
+		"eslint": "^10.5.0",
 		"eslint-plugin-astro": "^1.7.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"happy-dom": "^20.9.0",
-		"prettier": "^3.8.3",
+		"prettier": "^3.8.4",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.99.0",
+		"sass": "^1.101.0",
 		"schema-dts": "^2.0.0",
-		"typescript": "^6.0.2",
-		"vitest": "^3.2.4",
-		"wrangler": "^4.83.0"
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.9",
+		"wrangler": "^4.103.0"
 	}
 }

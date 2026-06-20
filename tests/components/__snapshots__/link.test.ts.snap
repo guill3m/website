@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Link component > external link > default 1`] = `"<a aria-label="External link (opens in a new tab)" href="https://www.test.com" rel="noopener" target="_blank" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">External link</a>"`;
+
+exports[`Link component > external link > with HTML content 1`] = `"<a aria-label="External link (opens in a new tab)" href="https://www.test.com" rel="noopener" target="_blank" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4"><em>External</em> link</a>"`;
+
+exports[`Link component > external link > with additional attributes 1`] = `"<a aria-label="External link (opens in a new tab)" href="https://www.test.com" rel="noopener" target="_blank" class="link" data-testid="test external" id="the-link" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">External link</a>"`;
+
+exports[`Link component > external link > with overwritten aria-label 1`] = `"<a aria-label="Link that opens in a new tab" href="https://www.test.com" rel="noopener" target="_blank" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">External link</a>"`;
+
+exports[`Link component > external link > with rel 1`] = `"<a aria-label="External link (opens in a new tab)" href="https://www.test.com" rel="nofollow noopener" target="_blank" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">External link</a>"`;
+
+exports[`Link component > internal link > default 1`] = `"<a href="/test/" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">Internal link</a>"`;
+
+exports[`Link component > internal link > in a new tab 1`] = `"<a aria-label="Internal link in new tab (opens in a new tab)" href="/test/" target="_blank" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">Internal link in new tab</a>"`;
+
+exports[`Link component > internal link > with HTML content 1`] = `"<a href="/test/" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4"><em>Internal</em> link</a>"`;
+
+exports[`Link component > internal link > with additional attributes 1`] = `"<a href="/test/" class="link" data-testid="test internal" id="the-link" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">Internal link</a>"`;
+
+exports[`Link component > internal link > with rel 1`] = `"<a href="/test/" rel="nofollow" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="39:4">Internal link</a>"`;
+
+exports[`Link component > without href > default 1`] = `"<span data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="43:19">Link without href</span>"`;
+
+exports[`Link component > without href > with HTML content 1`] = `"<span data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="43:19">Link <em>without href</em></span>"`;
+
+exports[`Link component > without href > with additional attributes 1`] = `"<span class="link" data-testid="test non-href" id="the-link" data-astro-source-file="/Users/guill3m/Projects/website/src/components/link.astro" data-astro-source-loc="43:19">Link without href</span>"`;

@@ -100,8 +100,9 @@ Disallow: /`
 Sitemap: ${sitemapURL.href}
 `
 
-/* v8 ignore next 4 */
+/* v8 ignore start */
 export const GET = (async ({ site }) => {
 	const sitemapURL = new URL('/sitemap-index.xml', site)
 	return new Response(getRobotsTxt(sitemapURL, aiBots))
 }) satisfies APIRoute
+/* v8 ignore end */

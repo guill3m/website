@@ -1,41 +1,25 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 import { getViteConfig } from 'astro/config'
-import { coverageConfigDefaults } from 'vitest/config'
+import node from '@astrojs/node'
 
-export default getViteConfig({
-	test: {
-		coverage: {
-			enabled: true,
-			exclude: [
-				'astro.config.mjs',
-				'src/actions/index.ts',
-				'src/content.config.ts',
-				'src/helpers/mdx-components.ts',
-				'src/helpers/site-metadata.ts',
-				'src/pages/**/*.astro',
-				...coverageConfigDefaults.exclude,
-			],
-			provider: 'v8',
-			reporter: ['text', 'text-summary'],
+export default getViteConfig(
+	{
+		test: {
+			coverage: {
+				enabled: true,
+				include: ['src/**/*.astro', 'src/**/*.ts'],
+				exclude: [
+					'src/content.config.ts',
+					'src/helpers/mdx-components.ts',
+					'src/helpers/site-metadata.ts',
+					'src/pages/**/*.astro',
+				],
+				reporter: ['text', 'text-summary'],
+			},
 		},
-		projects: [
-			{
-				extends: true,
-				test: {
-					environment: 'happy-dom',
-					include: ['tests/**/*.browser.test.{ts,js}'],
-					name: 'browser',
-					setupFiles: ['./tests/setup.browser.ts'],
-				},
-			},
-			{
-				extends: true,
-				test: {
-					environment: 'node',
-					include: ['tests/**/*.node.test.{ts,js}'],
-					name: 'node',
-				},
-			},
-		],
 	},
-})
+	{
+		// see https://github.com/withastro/astro/issues/15878
+		adapter: node({ mode: 'standalone' }),
+	},
+)
