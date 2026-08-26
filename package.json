@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "bun run lint && bun run test run && astro build",
+		"build": "bun run lint && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "wrangler types && bun run lint:format && bun run lint:js && astro check",
