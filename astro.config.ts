@@ -78,7 +78,7 @@ export default defineConfig({
 				"child-src 'none'",
 				"connect-src 'self' https://stats.guill3m.me",
 				"frame-ancestors 'none'",
-				"img-src 'self' https://lastfm.freetls.fastly.net/i/u/",
+				"img-src 'self' https://lastfm-img.freetls.fastly.net/i/u/",
 				"media-src 'none'",
 				"object-src 'none'",
 			],
