@@ -48,55 +48,47 @@ const defaultAlternate =
 <title>{metaTitle}</title>
 <meta property="og:title" content={meta?.openGraph?.title ?? metaTitle} />
 {meta?.description && <meta name="description" content={meta.description} />}
-{
-	(meta?.description || meta?.openGraph?.description) && (
-		<meta
-			property="og:description"
-			content={meta?.openGraph?.description ?? meta.description}
-		/>
-	)
-}
+{(meta?.description || meta?.openGraph?.description) && (
+	<meta
+		property="og:description"
+		content={meta?.openGraph?.description ?? meta.description}
+	/>
+)}
 <link rel="canonical" href={canonicalUrl} />
 <meta property="og:url" content={canonicalUrl} />
-{
-	meta?.alternates &&
-		meta.alternates.some((alternate) => alternate.lang !== undefined) && (
-			<>
-				<link
-					rel="alternate"
-					href={getUrlForAlternate(defaultAlternate)}
-					hreflang="x-default"
-				/>
-				<link
-					rel="alternate"
-					href={new URL(Astro.url.pathname, origin)}
-					hreflang={lang}
-				/>
-			</>
-		)
-}
-{
-	meta?.alternates &&
-		meta.alternates.map((alternate) =>
-			alternate.lang ? (
-				<link
-					rel="alternate"
-					href={getUrlForAlternate(alternate.href)}
-					hreflang={alternate.lang}
-				/>
-			) : (
-				<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
-			),
-		)
-}
-<meta property="og:type" content={meta?.openGraph?.type ?? 'website'} />
-{
-	meta?.image?.src && (
+{meta?.alternates &&
+	meta.alternates.some((alternate) => alternate.lang !== undefined) && (
 		<>
-			<meta property="og:image" content={new URL(meta.image.src, origin)} />
-			<meta property="og:image:alt" content={meta.image.alt} />
-			<meta property="og:image:height" content={meta.image.height.toString()} />
-			<meta property="og:image:width" content={meta.image.width.toString()} />
+			<link
+				rel="alternate"
+				href={getUrlForAlternate(defaultAlternate)}
+				hreflang="x-default"
+			/>
+			<link
+				rel="alternate"
+				href={new URL(Astro.url.pathname, origin)}
+				hreflang={lang}
+			/>
 		</>
-	)
-}
+	)}
+{meta?.alternates &&
+	meta.alternates.map((alternate) =>
+		alternate.lang ? (
+			<link
+				rel="alternate"
+				href={getUrlForAlternate(alternate.href)}
+				hreflang={alternate.lang}
+			/>
+		) : (
+			<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
+		),
+	)}
+<meta property="og:type" content={meta?.openGraph?.type ?? 'website'} />
+{meta?.image?.src && (
+	<>
+		<meta property="og:image" content={new URL(meta.image.src, origin)} />
+		<meta property="og:image:alt" content={meta.image.alt} />
+		<meta property="og:image:height" content={meta.image.height.toString()} />
+		<meta property="og:image:width" content={meta.image.width.toString()} />
+	</>
+)}

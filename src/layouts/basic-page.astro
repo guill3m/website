@@ -20,20 +20,21 @@ const lastUpdatedDate = new Date(lastUpdated ?? '')
 
 <BaseLayout title={title} meta={meta}>
 	<article class="page">
-		<h1>{title}<span class="period">.</span></h1>
+		<h1>
+			{title}
+			<span class="period">.</span>
+		</h1>
 		<slot />
-		{
-			lastUpdated && (
-				<p>
-					<em>
-						Last updated on{' '}
-						<time datetime={lastUpdatedDate.toISOString()}>
-							{lastUpdatedDate.toLocaleDateString('en', { dateStyle: 'long' })}.
-						</time>
-					</em>
-				</p>
-			)
-		}
+		{lastUpdated && (
+			<p>
+				<em>
+					Last updated on{' '}
+					<time datetime={lastUpdatedDate.toISOString()}>
+						{lastUpdatedDate.toLocaleDateString('en', { dateStyle: 'long' })}.
+					</time>
+				</em>
+			</p>
+		)}
 	</article>
 </BaseLayout>
 

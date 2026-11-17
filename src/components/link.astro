@@ -28,20 +28,18 @@ if (isExternalLink) {
 }
 ---
 
-{
-	href ? (
-		<a
-			aria-label={linkAriaLabel}
-			href={href}
-			rel={linkRel}
-			target={linkTarget}
-			{...rest}
-		>
-			<slot />
-		</a>
-	) : (
-		<span {...rest}>
-			<slot />
-		</span>
-	)
-}
+{href ? (
+	<a
+		aria-label={linkAriaLabel}
+		href={href}
+		rel={linkRel}
+		target={linkTarget}
+		{...rest}
+	>
+		<slot />
+	</a>
+) : (
+	<span {...rest}>
+		<slot />
+	</span>
+)}

@@ -19,56 +19,53 @@ const { user, tracks, isPlaceholder = false } = Astro.props
 <aside class:list={['recent-tracks', isPlaceholder && 'is-placeholder']}>
 	<p class="recent-tracks-description">
 		I really enjoy listening to music. These are the latest tracks I’ve
-		scrobbled to <a href={`https://www.last.fm/user/${user}`}
-			>my Last.fm profile:</a
-		>
+		scrobbled to{' '}
+		<a href={`https://www.last.fm/user/${user}`}>my Last.fm profile:</a>
 	</p>
 	<ul class="track-list">
-		{
-			tracks.map((track) => (
-				<li
-					class="track"
-					aria-label={
-						isPlaceholder
-							? undefined
-							: `“${track.trackName}” by ${track.artist}, ${timeAgo(track.time)}`
-					}
-				>
-					{isPlaceholder ? (
-						<Image
-							alt=""
-							class="track-album"
-							src={albumPlaceholder}
-							height={60}
-							width={60}
-						/>
-					) : (
-						<Picture
-							alt=""
-							class="track-album"
-							src={track.albumArt}
-							title={`Album: “${track.album}” by ${track.artist}`}
-							height={60}
-							width={60}
-						/>
-					)}
-					<span class="track-details">
-						<strong class="track-name">{track.trackName}</strong>
-						<br />
-						<span>{track.artist}</span>
-						<br />
-						<time
-							class="track-time"
-							datetime={
-								isPlaceholder ? undefined : new Date(track.time).toISOString()
-							}
-						>
-							{isPlaceholder ? blockText(5, 7) : timeAgo(track.time)}
-						</time>
-					</span>
-				</li>
-			))
-		}
+		{tracks.map((track) => (
+			<li
+				class="track"
+				aria-label={
+					isPlaceholder
+						? undefined
+						: `“${track.trackName}” by ${track.artist}, ${timeAgo(track.time)}`
+				}
+			>
+				{isPlaceholder ? (
+					<Image
+						alt=""
+						class="track-album"
+						src={albumPlaceholder}
+						height={60}
+						width={60}
+					/>
+				) : (
+					<Picture
+						alt=""
+						class="track-album"
+						src={track.albumArt}
+						title={`Album: “${track.album}” by ${track.artist}`}
+						height={60}
+						width={60}
+					/>
+				)}
+				<span class="track-details">
+					<strong class="track-name">{track.trackName}</strong>
+					<br />
+					<span>{track.artist}</span>
+					<br />
+					<time
+						class="track-time"
+						datetime={
+							isPlaceholder ? undefined : new Date(track.time).toISOString()
+						}
+					>
+						{isPlaceholder ? blockText(5, 7) : timeAgo(track.time)}
+					</time>
+				</span>
+			</li>
+		))}
 	</ul>
 </aside>
 

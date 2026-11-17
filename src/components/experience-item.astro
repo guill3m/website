@@ -24,32 +24,30 @@ const {
 
 <li class="experience-item">
 	<strong class="experience-item-title">
-		<em>{title}</em>{organisation && titleUnion}{
-			organisation && (
+		<em>{title}</em>
+		{organisation && (
+			<>
+				{titleUnion}
 				<em>
 					<Link href={organisationUrl}>{organisation}</Link>
 				</em>
-			)
-		}
+			</>
+		)}
 	</strong>
 	<br />
 	<small class="experience-item-date">
 		{city ? `${date}. ${city}` : date}.
 	</small>
-	{
-		Astro.slots.has('default') && (
-			<div class="experience-item-description">
-				<slot />
-			</div>
-		)
-	}
-	{
-		techStack && (
-			<small class="experience-item-stack">
-				<span>Tech stack:</span> {techStack.join(', ')}.
-			</small>
-		)
-	}
+	{Astro.slots.has('default') && (
+		<div class="experience-item-description">
+			<slot />
+		</div>
+	)}
+	{techStack && (
+		<small class="experience-item-stack">
+			<span>Tech stack:</span> {techStack.join(', ')}.
+		</small>
+	)}
 </li>
 
 <style lang="scss">

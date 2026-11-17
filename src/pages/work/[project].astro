@@ -59,10 +59,11 @@ const jsonLd: WithContext<CreativeWork> = {
 			type="application/ld+json"
 			set:html={JSON.stringify(jsonLd)}
 		/>
-		<h1>{project.data.title}<span class="period">.</span></h1>
-		<p class="project-subtitle">
-			{project.data.subtitle}.
-		</p>
+		<h1>
+			{project.data.title}
+			<span class="period">.</span>
+		</h1>
+		<p class="project-subtitle">{project.data.subtitle}.</p>
 		<Content components={components} />
 	</article>
 </Layout>

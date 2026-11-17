@@ -14,28 +14,28 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^14.2.5",
-		"@astrojs/mdx": "^7.0.8",
-		"@astrojs/sitemap": "^3.7.3",
+		"@astrojs/cloudflare": "^14.4.8",
+		"@astrojs/mdx": "^8.1.6",
+		"@astrojs/sitemap": "^3.7.5",
 		"@guill3m/fonts": "1.1.0",
-		"astro": "^7.2.7",
+		"astro": "^7.4.12",
 		"cheerio": "^1.2.0",
 		"ohash": "^2.0.12"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.10",
+		"@astrojs/check": "^0.9.12",
 		"@eslint/js": "^10.0.1",
-		"@typescript-eslint/parser": "^8.68.0",
-		"@vitest/coverage-v8": "^4.1.11",
-		"eslint": "^10.9.1",
-		"eslint-plugin-astro": "^3.1.0",
+		"@typescript-eslint/parser": "^8.73.0",
+		"@vitest/coverage-v8": "^5.1.0",
+		"eslint": "^10.15.0",
+		"eslint-plugin-astro": "^3.2.1",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"prettier": "^3.9.6",
-		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.103.1",
-		"schema-dts": "^2.0.0",
+		"prettier": "^3.10.1",
+		"prettier-plugin-astro": "^1.1.2",
+		"sass": "^1.108.2",
+		"schema-dts": "^2.1.0",
 		"typescript": "^6.0.3",
-		"vitest": "^4.1.11",
-		"wrangler": "^4.126.0"
+		"vitest": "^5.1.0",
+		"wrangler": "^4.164.0"
 	}
 }

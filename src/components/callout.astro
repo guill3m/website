@@ -14,7 +14,9 @@ const contentHashId = hash({ title, content }).slice(0, 6)
 ---
 
 <aside aria-labelledby={contentHashId} class="callout" {...props}>
-	<p class="title" id={contentHashId}>{title}</p>
+	<p class="title" id={contentHashId}>
+		{title}
+	</p>
 	<slot />
 </aside>
 

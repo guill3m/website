@@ -16,28 +16,26 @@ const { items } = Astro.props
 ---
 
 <ul class="project-list">
-	{
-		items.map((project) => (
-			<li class="project">
-				<Link href={`/work/${project.id}/`}>
-					<Picture
-						alt=""
-						formats={['avif', 'webp']}
-						sizes={[
-							'(min-width: 52em) calc((100vw - 3rlh - 1rlh) / 3)',
-							'(min-width: 35em) calc((100vw - 3rlh - 0.5rlh) / 2)',
-							'calc(100vw - 3rlh)',
-						].join()}
-						src={project.thumbnail}
-						height={500}
-						width={900}
-						widths={[500, 640, 750, project.thumbnail.width]}
-					/>
-					<span class="project-title">{project.title}</span>
-				</Link>
-			</li>
-		))
-	}
+	{items.map((project) => (
+		<li class="project">
+			<Link href={`/work/${project.id}/`}>
+				<Picture
+					alt=""
+					formats={['avif', 'webp']}
+					sizes={[
+						'(min-width: 52em) calc((100vw - 3rlh - 1rlh) / 3)',
+						'(min-width: 35em) calc((100vw - 3rlh - 0.5rlh) / 2)',
+						'calc(100vw - 3rlh)',
+					].join()}
+					src={project.thumbnail}
+					height={500}
+					width={900}
+					widths={[500, 640, 750, project.thumbnail.width]}
+				/>
+				<span class="project-title">{project.title}</span>
+			</Link>
+		</li>
+	))}
 </ul>
 
 <style lang="scss">
