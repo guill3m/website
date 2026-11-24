@@ -56,33 +56,31 @@ const defaultAlternate =
 )}
 <link rel="canonical" href={canonicalUrl} />
 <meta property="og:url" content={canonicalUrl} />
-{meta?.alternates &&
-	meta.alternates.some((alternate) => alternate.lang !== undefined) && (
-		<>
-			<link
-				rel="alternate"
-				href={getUrlForAlternate(defaultAlternate)}
-				hreflang="x-default"
-			/>
-			<link
-				rel="alternate"
-				href={new URL(Astro.url.pathname, origin)}
-				hreflang={lang}
-			/>
-		</>
-	)}
-{meta?.alternates &&
-	meta.alternates.map((alternate) =>
-		alternate.lang ? (
-			<link
-				rel="alternate"
-				href={getUrlForAlternate(alternate.href)}
-				hreflang={alternate.lang}
-			/>
-		) : (
-			<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
-		),
-	)}
+{meta?.alternates?.some((alternate) => alternate.lang !== undefined) && (
+	<>
+		<link
+			rel="alternate"
+			href={getUrlForAlternate(defaultAlternate)}
+			hreflang="x-default"
+		/>
+		<link
+			rel="alternate"
+			href={new URL(Astro.url.pathname, origin)}
+			hreflang={lang}
+		/>
+	</>
+)}
+{meta?.alternates?.map((alternate) =>
+	alternate.lang ? (
+		<link
+			rel="alternate"
+			href={getUrlForAlternate(alternate.href)}
+			hreflang={alternate.lang}
+		/>
+	) : (
+		<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
+	),
+)}
 <meta property="og:type" content={meta?.openGraph?.type ?? 'website'} />
 {meta?.image?.src && (
 	<>

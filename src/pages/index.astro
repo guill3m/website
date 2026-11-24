@@ -78,6 +78,7 @@ const recentTracksPlaceholder: Track[] = Array.from(
 ---
 
 <Layout title={title} meta={{ title, description }}>
+	<!-- biome-ignore lint/nursery/noAstroSetHtmlDirective: jsonLd is known safe -->
 	<script
 		is:inline
 		slot="head-meta"

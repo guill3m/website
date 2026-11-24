@@ -15,7 +15,7 @@ const linkTarget = target ?? (isExternalLink ? '_blank' : undefined)
 const linkContent = cheerio.load(await Astro.slots.render('default'))
 const linkText = linkContent('body').text().trim()
 
-let ariaLabelOpensInNewTab: string | undefined = undefined
+let ariaLabelOpensInNewTab: string | undefined
 if (linkTarget === '_blank') {
 	ariaLabelOpensInNewTab = `${linkText} (opens in a new tab)`
 }
