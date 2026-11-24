@@ -1,9 +1,10 @@
 ---
+import type { JsxChild } from 'typescript'
 import type { PageMetadata } from '../components/page-meta.astro'
 import BaseLayout from './layout.astro'
 
 interface Props {
-	children: any
+	children: JsxChild | JsxChild[]
 	frontmatter: {
 		title: string
 		meta?: PageMetadata
@@ -18,12 +19,9 @@ const {
 const lastUpdatedDate = new Date(lastUpdated ?? '')
 ---
 
-<BaseLayout title={title} meta={meta}>
+<BaseLayout meta={meta} title={title}>
 	<article class="page">
-		<h1>
-			{title}
-			<span class="period">.</span>
-		</h1>
+		<h1>{title}<span class="period">.</span></h1>
 		<slot />
 		{lastUpdated && (
 			<p>

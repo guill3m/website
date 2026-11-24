@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, test } from 'vitest'
 import { experimental_AstroContainer as AstroContainer } from 'astro/container'
+import { beforeEach, describe, expect, test } from 'vitest'
 
 import PageMetadata from '../../src/components/page-meta.astro'
 

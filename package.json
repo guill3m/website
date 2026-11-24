@@ -3,13 +3,12 @@
 	"version": "4.5.0",
 	"private": true,
 	"scripts": {
-		"dev": "astro dev",
-		"build": "bun run lint && astro build",
-		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "wrangler types && bun run lint:format && biome check && astro check",
-		"lint:format": "prettier --check .",
-		"format": "prettier --write .",
+		"build": "bun run lint && astro build",
+		"dev": "astro dev",
+		"format": "biome check --write",
+		"lint": "wrangler types && biome check && astro check",
+		"preview": "astro preview",
 		"test": "vitest"
 	},
 	"dependencies": {
@@ -25,8 +24,6 @@
 		"@astrojs/check": "^0.9.12",
 		"@biomejs/biome": "^2.6.9",
 		"@vitest/coverage-v8": "^5.1.1",
-		"prettier": "^3.10.1",
-		"prettier-plugin-astro": "^1.1.2",
 		"sass": "^1.108.2",
 		"schema-dts": "^2.1.0",
 		"typescript": "^6.0.3",

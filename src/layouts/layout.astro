@@ -8,19 +8,19 @@ import {
 } from 'astro:env/client'
 
 import type { HTMLAttributes } from 'astro/types'
-import PageMeta, { type PageMetadata } from '../components/page-meta.astro'
-import SiteHeader from '../components/site-header.astro'
-import SiteFooter from '../components/site-footer.astro'
+import type { JsxChild } from 'typescript'
+import iconSvg from '../assets/icon.svg'
 import SocialIconSprite from '../assets/social-icon-sprite.svg'
+import PageMeta, { type PageMetadata } from '../components/page-meta.astro'
+import SiteFooter from '../components/site-footer.astro'
+import SiteHeader from '../components/site-header.astro'
 import siteMetadata from '../helpers/site-metadata.ts'
 
-import iconSvg from '../assets/icon.svg'
-
 interface Props {
-	children: any
-	title: string
-	meta?: PageMetadata
+	children: JsxChild | JsxChild[]
 	lang?: HTMLAttributes<'html'>['lang']
+	meta?: PageMetadata
+	title: string
 }
 
 const { title, meta, lang = 'en' } = Astro.props
@@ -31,34 +31,34 @@ const { title, meta, lang = 'en' } = Astro.props
 	<head>
 		<meta charset="UTF-8" />
 		<meta
-			name="viewport"
 			content="width=device-width,initial-scale=1,viewport-fit=cover"
+			name="viewport"
 		/>
-		<PageMeta title={title} meta={meta} />
-		<meta property="og:site_name" content="Guillem Andreu" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
-		<link rel="icon" type="image/svg+xml" href={iconSvg.src} sizes="any" />
-		<meta name="author" content={siteMetadata.author.name} />
-		<link rel="author" href={new URL('/humans.txt', Astro.site)} />
-		<link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
-		<meta name="pinterest" content="nopin" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="expect" href="#main" blocking="render" />
+		<PageMeta meta={meta} title={title} />
+		<meta content="Guillem Andreu" property="og:site_name" />
+		<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon" />
+		<link href={iconSvg.src} rel="icon" sizes="any" type="image/svg+xml" />
+		<meta content={siteMetadata.author.name} name="author" />
+		<link href={new URL('/humans.txt', Astro.site)} rel="author" />
+		<link href={new URL('/sitemap-index.xml', Astro.site)} rel="sitemap" />
+		<meta content="nopin" name="pinterest" />
+		<meta content={Astro.generator} name="generator" />
+		<link blocking="render" href="#main" rel="expect" />
 		<slot name="head-meta" />
 		{UMAMI_ANALYTICS_HOST && UMAMI_ANALYTICS_ID && UMAMI_ANALYTICS_SCRIPT && (
 			<script
-				is:inline
-				defer
 				data-domains={Astro.url.host}
 				data-host-url={UMAMI_ANALYTICS_HOST}
 				data-website-id={UMAMI_ANALYTICS_ID}
+				defer
+				is:inline
 				src={UMAMI_ANALYTICS_SCRIPT}
 			/>
 		)}
 	</head>
 	<body>
 		<SiteHeader />
-		<main id="main" class="main">
+		<main class="main" id="main">
 			<slot>Hello world!</slot>
 		</main>
 		<SiteFooter />

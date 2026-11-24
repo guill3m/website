@@ -3,24 +3,13 @@ import Link from './link.astro'
 ---
 
 <header class="header">
-	<a href="/" class="logo">
-		{' '}
-		Guillem Andreu.{' '}
-	</a>
+	<a class="logo" href="/">Guillem Andreu.</a>
 	<nav class="menu">
 		<ul>
-			<li>
-				<Link href="/about/">About me.</Link>
-			</li>
-			<li>
-				<Link href="/work/">My work.</Link>
-			</li>
-			<li>
-				<Link href="/contact/">Contact.</Link>
-			</li>
-			<li>
-				<Link href="/uses/">Uses.</Link>
-			</li>
+			<li><Link href="/about/">About me.</Link></li>
+			<li><Link href="/work/">My work.</Link></li>
+			<li><Link href="/contact/">Contact.</Link></li>
+			<li><Link href="/uses/">Uses.</Link></li>
 		</ul>
 	</nav>
 </header>

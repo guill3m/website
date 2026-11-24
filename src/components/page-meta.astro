@@ -2,14 +2,13 @@
 import type { HTMLAttributes } from 'astro/types'
 
 export interface PageMetadata {
-	title?: string
-	description?: string
 	alternates?: {
 		isDefault?: boolean
 		lang?: HTMLAttributes<'html'>['lang']
 		href: URL | string
 	}[]
 	canonical?: URL
+	description?: string
 	image?: {
 		alt: string
 		src: string
@@ -21,12 +20,13 @@ export interface PageMetadata {
 		title?: string
 		description?: string
 	}
+	title?: string
 }
 
 interface Props {
-	title: string
-	meta?: PageMetadata
 	lang?: HTMLAttributes<'html'>['lang']
+	meta?: PageMetadata
+	title: string
 }
 
 function getUrlForAlternate(href: URL | string): URL {
@@ -46,47 +46,47 @@ const defaultAlternate =
 ---
 
 <title>{metaTitle}</title>
-<meta property="og:title" content={meta?.openGraph?.title ?? metaTitle} />
-{meta?.description && <meta name="description" content={meta.description} />}
+<meta content={meta?.openGraph?.title ?? metaTitle} property="og:title" />
+{meta?.description && <meta content={meta.description} name="description" />}
 {(meta?.description || meta?.openGraph?.description) && (
 	<meta
-		property="og:description"
 		content={meta?.openGraph?.description ?? meta.description}
+		property="og:description"
 	/>
 )}
-<link rel="canonical" href={canonicalUrl} />
-<meta property="og:url" content={canonicalUrl} />
+<link href={canonicalUrl} rel="canonical" />
+<meta content={canonicalUrl} property="og:url" />
 {meta?.alternates?.some((alternate) => alternate.lang !== undefined) && (
 	<>
 		<link
-			rel="alternate"
 			href={getUrlForAlternate(defaultAlternate)}
 			hreflang="x-default"
+			rel="alternate"
 		/>
 		<link
-			rel="alternate"
 			href={new URL(Astro.url.pathname, origin)}
 			hreflang={lang}
+			rel="alternate"
 		/>
 	</>
 )}
 {meta?.alternates?.map((alternate) =>
 	alternate.lang ? (
 		<link
-			rel="alternate"
 			href={getUrlForAlternate(alternate.href)}
 			hreflang={alternate.lang}
+			rel="alternate"
 		/>
 	) : (
-		<link rel="alternate" href={getUrlForAlternate(alternate.href)} />
+		<link href={getUrlForAlternate(alternate.href)} rel="alternate" />
 	),
 )}
-<meta property="og:type" content={meta?.openGraph?.type ?? 'website'} />
+<meta content={meta?.openGraph?.type ?? 'website'} property="og:type" />
 {meta?.image?.src && (
 	<>
-		<meta property="og:image" content={new URL(meta.image.src, origin)} />
-		<meta property="og:image:alt" content={meta.image.alt} />
-		<meta property="og:image:height" content={meta.image.height.toString()} />
-		<meta property="og:image:width" content={meta.image.width.toString()} />
+		<meta content={new URL(meta.image.src, origin)} property="og:image" />
+		<meta content={meta.image.alt} property="og:image:alt" />
+		<meta content={meta.image.height.toString()} property="og:image:height" />
+		<meta content={meta.image.width.toString()} property="og:image:width" />
 	</>
 )}

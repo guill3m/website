@@ -1,43 +1,52 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.6.9/schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true,
-	},
 	"files": {
 		"includes": [
 			"**",
 			"!**/.astro/*",
 			"!!**/.vscode/*",
 			"!!**/.wrangler/*",
-			"!!**/dist",
+			"!!**/dist/*",
 			"!**/public/*",
-		],
-	},
-	"html": {
-		"experimentalFullSupportEnabled": true,
+			"!**/worker-configuration.d.ts"
+		]
 	},
 	"assist": {
-		"enabled": false,
+		"enabled": true,
+		"actions": {
+			"preset": "recommended",
+			"source": {
+				"noDuplicateClasses": "on",
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedEnumMembers": "on",
+				"useSortedInterfaceMembers": "on",
+				"useSortedPackageJson": "on",
+				"useSortedProperties": "on"
+			}
+		}
 	},
 	"formatter": {
-		"enabled": false,
+		"enabled": true,
+		"useEditorconfig": true
 	},
 	"linter": {
 		"enabled": true,
 		"domains": {
 			"astro": "recommended",
 			"project": "recommended",
-			"types": "recommended",
+			"types": "recommended"
 		},
 		"rules": {
 			"preset": "recommended",
 			"correctness": {
-				"noUndeclaredDependencies": "error",
+				"noUndeclaredDependencies": "error"
+			},
+			"style": {
+				"useImportType": "error"
 			},
 			"suspicious": {
-				"noDeprecatedImports": "warn",
+				"noDeprecatedImports": "warn"
 			},
 			"nursery": {
 				"noAstroComponentDefaultExport": "error",
@@ -49,8 +58,32 @@
 				"noUselessTypeAssertion": "warn",
 				"noUselessTypeConversion": "info",
 				"useAstroClientOnlyDirectiveValue": "error",
-				"useAtomicUpdates": "info",
-			},
-		},
+				"useAtomicUpdates": "info"
+				// "useLogicalProperties": "warn"
+			}
+		}
 	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"trailingCommas": "all"
+		}
+	},
+	"html": {
+		"experimentalFullSupportEnabled": true,
+		"formatter": {
+			"enabled": true,
+			"selfCloseVoidElements": "always"
+		}
+	},
+	"markdown": {
+		"analyzeEmbeds": true,
+		"parser": {
+			"frontmatter": true
+		},
+		"formatter": {
+			"indentStyle": "space"
+		}
+	}
 }

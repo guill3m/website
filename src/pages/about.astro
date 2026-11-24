@@ -1,11 +1,9 @@
 ---
 import { Picture } from 'astro:assets'
-
-import Layout from '../layouts/layout.astro'
-import ExperienceList from '../components/experience-list.astro'
-import ExperienceItem from '../components/experience-item.astro'
-
 import meKidJpg from '../assets/me-kid.jpg'
+import ExperienceItem from '../components/experience-item.astro'
+import ExperienceList from '../components/experience-list.astro'
+import Layout from '../layouts/layout.astro'
 
 const title = 'About me'
 const meta = {
@@ -14,12 +12,9 @@ const meta = {
 }
 ---
 
-<Layout title={title} meta={meta}>
+<Layout meta={meta} title={title}>
 	<article class="about-page">
-		<h1>
-			{title}
-			<span class="period">.</span>
-		</h1>
+		<h1>{title}<span class="period">.</span></h1>
 		<section class="about-intro">
 			<Picture
 				alt="Me when I was a small kid. On the desk, there is a white paper and many colorful crayons scatered on top, I am looking at the camera while holding one crayon on each hand"
@@ -47,11 +42,10 @@ const meta = {
 			<h2 id="experience">Experience.</h2>
 			<ExperienceList>
 				<ExperienceItem
-					title="Frontend Engineer"
+					city="Hybrid, Berlin"
+					date="Since November 2025"
 					organisation="AMBOSS"
 					organisationUrl="https://www.amboss.com/us"
-					date="Since November 2025"
-					city="Hybrid, Berlin"
 					techStack={[
 						'React',
 						'React Router',
@@ -62,17 +56,18 @@ const meta = {
 						'Jest',
 						'Playwright',
 					]}
+					title="Frontend Engineer"
 				>
 					<p>
-						Empowering medical professionals to provide the best possible care.
+						Empowering all medical professionals to provide the best possible
+						care.
 					</p>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Team Lead, Web"
+					city="Hybrid, Berlin"
+					date="June 2019 to December 2024"
 					organisation="Ada Health"
 					organisationUrl="https://ada.com"
-					date="June 2019 to December 2024"
-					city="Hybrid, Berlin"
 					techStack={[
 						'React',
 						'Next.js',
@@ -85,6 +80,7 @@ const meta = {
 						'Shopify',
 						'OpenTelemetry',
 					]}
+					title="Team Lead, Web"
 				>
 					<p>
 						Over the years, my role and team at Ada constantly evolved. From
@@ -121,11 +117,10 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Web Developer"
+					city="On-site, Berlin"
+					date="July 2018 to May 2019"
 					organisation="Ada Health"
 					organisationUrl="https://ada.com"
-					date="July 2018 to May 2019"
-					city="On-site, Berlin"
 					techStack={[
 						'React',
 						'react-static',
@@ -134,6 +129,7 @@ const meta = {
 						'Jest',
 						'Contentful',
 					]}
+					title="Web Developer"
 				>
 					<p>
 						Joined Ada to bring the development of the company website in-house,
@@ -153,11 +149,10 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="UI/UX Developer"
+					city="On-site, Berlin"
+					date="June 2015 to June 2018"
 					organisation="Universal Units"
 					organisationUrl="https://universalunits.com"
-					date="June 2015 to June 2018"
-					city="On-site, Berlin"
 					techStack={[
 						'Symphony',
 						'PHP',
@@ -170,6 +165,7 @@ const meta = {
 						'Behat',
 						'Selenium',
 					]}
+					title="UI/UX Developer"
 				>
 					<ul>
 						<li>
@@ -189,11 +185,10 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="UI/UX Developer"
+					city="On-site, Berlin"
+					date="October 2013 to May 2015"
 					organisation="netdudes GmbH"
 					organisationUrl="https://web.archive.org/web/20160817001617/http://www.netdudes.de/"
-					date="October 2013 to May 2015"
-					city="On-site, Berlin"
 					techStack={[
 						'Symphony',
 						'PHP',
@@ -204,6 +199,7 @@ const meta = {
 						'Behat',
 						'Selenium',
 					]}
+					title="UI/UX Developer"
 				>
 					<ul>
 						<li>
@@ -219,10 +215,10 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Freelance Graphic and Web Designer"
-					date="May 2011 to October 2013"
 					city="València"
+					date="May 2011 to October 2013"
 					techStack={['WordPress', 'PHP', 'jQuery', 'SCSS']}
+					title="Freelance Graphic and Web Designer"
 				>
 					<ul>
 						<li>
@@ -238,12 +234,12 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Web Designer and Developer"
+					city="On-site, València"
+					date="April 2012 to April 2013"
 					organisation="AMP Servicios"
 					organisationUrl="https://web.archive.org/web/20160129162203/http://www.ampservicios.com/"
-					date="April 2012 to April 2013"
-					city="On-site, València"
 					techStack={['WordPress', 'PHP', 'jQuery', 'SCSS']}
+					title="Web Designer and Developer"
 				>
 					<p>
 						Built the company websites of a reseller for three major network
@@ -263,11 +259,11 @@ const meta = {
 					</ul>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Graphic Design Internship"
+					city="On-site, València"
+					date="November 2010 to May 2011"
 					organisation="CuldeSac™"
 					organisationUrl="https://www.culdesac.es"
-					date="November 2010 to May 2011"
-					city="On-site, València"
+					title="Graphic Design Internship"
 				>
 					<p>
 						Joined the “Espacio Creativo” (Interior and Product Design)
@@ -290,11 +286,11 @@ const meta = {
 			<h2 id="studies">Studies.</h2>
 			<ExperienceList>
 				<ExperienceItem
-					title="Bachelor’s Degree, Graphic Design"
-					titleUnion=" at the "
+					date="October 2006 to April 2011"
 					organisation="EASD València"
 					organisationUrl="https://www.easdvalencia.com"
-					date="October 2006 to April 2011"
+					title="Bachelor’s Degree, Graphic Design"
+					titleUnion=" at the "
 				/>
 			</ExperienceList>
 		</section>
@@ -302,9 +298,9 @@ const meta = {
 			<h2 id="courses">Courses.</h2>
 			<ExperienceList>
 				<ExperienceItem
-					title="Web Design and Multimedia"
 					city="359 hours, in-person"
 					date="June to October 2006"
+					title="Web Design and Multimedia"
 				/>
 			</ExperienceList>
 		</section>
@@ -312,12 +308,12 @@ const meta = {
 			<h2 id="others">Others.</h2>
 			<ExperienceList>
 				<ExperienceItem
-					title="Organisation Assistance"
-					titleUnion=" at the "
+					city="València"
+					date="September 2010"
 					organisation="Valencia Disseny Week"
 					organisationUrl="https://www.valenciadissenyweek.com"
-					date="September 2010"
-					city="València"
+					title="Organisation Assistance"
+					titleUnion=" at the "
 				>
 					<p>
 						Supported the organisation of the Valencia Disseny Week, a week-long
@@ -328,12 +324,12 @@ const meta = {
 					</p>
 				</ExperienceItem>
 				<ExperienceItem
-					title="Organisation Assistance"
-					titleUnion=" at the "
+					city="València"
+					date="June 2010"
 					organisation="4th International Typography Congress"
 					organisationUrl="https://www.congresotipografia.com"
-					date="June 2010"
-					city="València"
+					title="Organisation Assistance"
+					titleUnion=" at the "
 				>
 					<p>
 						Supported the organisation of a conference composed of a mix of

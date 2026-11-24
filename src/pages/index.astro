@@ -1,18 +1,15 @@
 ---
-import type { WebSite, WithContext } from 'schema-dts'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-
-import type { Track } from '../helpers/lastfm'
-
-import Layout from '../layouts/layout.astro'
+import type { WebSite, WithContext } from 'schema-dts'
+import meSvg from '../assets/me.svg'
 import Link from '../components/link.astro'
 import ProjectThumbnailList from '../components/project-thumbnail-list.astro'
 import RecentTracks from '../components/recent-tracks.astro'
-import LastfmTracks from '../islands/lastfm-tracks.astro'
+import type { Track } from '../helpers/lastfm'
 import siteMetadata from '../helpers/site-metadata'
-
-import meSvg from '../assets/me.svg'
+import LastfmTracks from '../islands/lastfm-tracks.astro'
+import Layout from '../layouts/layout.astro'
 import { blockText } from '../utils/random'
 
 const site = Astro.site?.toString()
@@ -77,12 +74,12 @@ const recentTracksPlaceholder: Track[] = Array.from(
 )
 ---
 
-<Layout title={title} meta={{ title, description }}>
+<Layout meta={{ title, description }} title={title}>
 	<!-- biome-ignore lint/nursery/noAstroSetHtmlDirective: jsonLd is known safe -->
 	<script
-		is:inline
 		slot="head-meta"
 		type="application/ld+json"
+		is:inline
 		set:html={JSON.stringify(jsonLd)}
 	/>
 	<section class="home-about">
@@ -97,9 +94,7 @@ const recentTracksPlaceholder: Track[] = Array.from(
 		</div>
 	</section>
 	<section class="home-work">
-		<p>
-			Here are some of the <Link href="/work/">things I make</Link>:
-		</p>
+		<p>Here are some of the <Link href="/work/">things I make</Link>:</p>
 		<ProjectThumbnailList items={featuredProjects} />
 	</section>
 	<LastfmTracks
@@ -108,10 +103,10 @@ const recentTracksPlaceholder: Track[] = Array.from(
 		server:defer
 	>
 		<RecentTracks
-			tracks={recentTracksPlaceholder}
-			user={siteMetadata.author.social.lastfm}
 			isPlaceholder
 			slot="fallback"
+			tracks={recentTracksPlaceholder}
+			user={siteMetadata.author.social.lastfm}
 		/>
 	</LastfmTracks>
 </Layout>

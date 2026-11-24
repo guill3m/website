@@ -3,8 +3,8 @@ import RecentTracks from '../components/recent-tracks.astro'
 import { getRecentTracks } from '../helpers/lastfm'
 
 interface Props {
-	user: string
 	limit?: number
+	user: string
 }
 
 const { user, limit = 10 } = Astro.props
@@ -15,4 +15,4 @@ const recentTracks = await getRecentTracks({
 })
 ---
 
-<RecentTracks user={user} tracks={recentTracks} />
+<RecentTracks tracks={recentTracks} user={user} />

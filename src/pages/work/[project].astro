@@ -1,11 +1,10 @@
 ---
+import { getCollection, render } from 'astro:content'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 import type { CreativeWork, WithContext } from 'schema-dts'
-import { getCollection, render } from 'astro:content'
-
-import Layout from '../../layouts/layout.astro'
 import { components } from '../../helpers/mdx-components'
 import siteMetadata from '../../helpers/site-metadata'
+import Layout from '../../layouts/layout.astro'
 
 export const getStaticPaths = (async () => {
 	const projects = await getCollection('project')
@@ -46,24 +45,21 @@ const jsonLd: WithContext<CreativeWork> = {
 ---
 
 <Layout
-	title={project.data.title}
 	meta={{
 		title: `${project.data.title} - Work - Guillem Andreu`,
 		description: project.data.excerpt,
 		image: { alt: '', ...project.data.thumbnail },
 	}}
+	title={project.data.title}
 >
 	<article class="project">
 		<!-- biome-ignore lint/nursery/noAstroSetHtmlDirective: jsonLd is known safe -->
 		<script
-			is:inline
 			type="application/ld+json"
+			is:inline
 			set:html={JSON.stringify(jsonLd)}
 		/>
-		<h1>
-			{project.data.title}
-			<span class="period">.</span>
-		</h1>
+		<h1>{project.data.title}<span class="period">.</span></h1>
 		<p class="project-subtitle">{project.data.subtitle}.</p>
 		<Content components={components} />
 	</article>

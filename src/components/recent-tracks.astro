@@ -1,16 +1,14 @@
 ---
 import { Image, Picture } from 'astro:assets'
-
-import type { Track } from '../helpers/lastfm'
-import timeAgo from '../utils/time-ago'
-import { blockText } from '../utils/random'
-
 import albumPlaceholder from '../assets/placeholder-color-background.png'
+import type { Track } from '../helpers/lastfm'
+import { blockText } from '../utils/random'
+import timeAgo from '../utils/time-ago'
 
 interface Props {
-	user: string
-	tracks: Track[]
 	isPlaceholder?: boolean
+	tracks: Track[]
+	user: string
 }
 
 const { user, tracks, isPlaceholder = false } = Astro.props
@@ -25,28 +23,28 @@ const { user, tracks, isPlaceholder = false } = Astro.props
 	<ul class="track-list">
 		{tracks.map((track) => (
 			<li
-				class="track"
 				aria-label={
 					isPlaceholder
 						? undefined
 						: `“${track.trackName}” by ${track.artist}, ${timeAgo(track.time)}`
 				}
+				class="track"
 			>
 				{isPlaceholder ? (
 					<Image
 						alt=""
 						class="track-album"
-						src={albumPlaceholder}
 						height={60}
+						src={albumPlaceholder}
 						width={60}
 					/>
 				) : (
 					<Picture
 						alt=""
 						class="track-album"
+						height={60}
 						src={track.albumArt}
 						title={`Album: “${track.album}” by ${track.artist}`}
-						height={60}
 						width={60}
 					/>
 				)}

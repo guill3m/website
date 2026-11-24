@@ -8,9 +8,7 @@
 		"directory": "./dist"
 	},
 	"secrets": {
-		"required": [
-			"LASTFM_API_KEY"
-		]
+		"required": ["LASTFM_API_KEY"]
 	},
 	"observability": {
 		"logs": {

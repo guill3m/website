@@ -1,24 +1,24 @@
 @mixin forward-grid {
 	display: grid;
-	gap: var(--layout-gap);
-	grid-column: 1 / span 13;
 	grid-template-columns: subgrid;
+	grid-column: 1 / span 13;
+	gap: var(--layout-gap);
 }
 
 @mixin gradient-text($color) {
-	background-clip: text;
+	color: transparent;
 	background-image: linear-gradient(
 		to bottom,
 		$color,
 		$color 35%,
 		hsl(from $color h s calc(l - 10))
 	);
+	background-clip: text;
 	background-size: auto 1lh;
-	color: transparent;
 
 	@media print {
-		background: none;
 		color: $color;
+		background: none;
 	}
 }
 
